@@ -35,15 +35,13 @@
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
     "status": "Em prontidão",
-    "tipo": "centro",
-    "offset": [-0.0015, -0.0015]
+    "tipo": "base"
   },
   "08": {
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
     "status": "Em prontidão",
-    "tipo": "centro",
-    "offset": [-0.0015, 0.0015]
+    "tipo": "base"
   },
   "09": {
     "municipio": "Barra",
@@ -56,8 +54,7 @@
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
     "status": "Em prontidão",
-    "tipo": "centro",
-    "offset": [0.0015, 0.0015]
+    "tipo": "base"
   },
   "11": {
     "municipio": "Barreiras",
@@ -70,8 +67,7 @@
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
     "status": "Em prontidão",
-    "tipo": "centro",
-    "offset": [0.0015, -0.0015]
+    "tipo": "base"
   },
   "14": {
     "municipio": "Barreiras",
