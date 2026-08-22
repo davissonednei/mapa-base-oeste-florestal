@@ -33,6 +33,15 @@
     }
   }
 
+  // O WMS não se atualiza sozinho: força nova consulta ao CENSIPAM para não manter eventos já extintos em cache.
+  function atualizarCensipam(){
+    if(typeof censipamLayer === "undefined") return;
+    censipamLayer.setParams({
+      CQL_FILTER:"id_status_evento IN (1,2)",
+      _:Date.now()
+    });
+  }
+
   function collapseSpider(){
     if(!spiderState) return;
     [...spiderState.lines,...spiderState.markers].forEach(layer => {
@@ -112,6 +121,12 @@
 
   map.on("click", collapseSpider);
   map.on("zoomstart", collapseSpider);
+
+  // Mantém a camada do Painel do Fogo fresca durante o uso do mapa.
+  atualizarCensipam();
+  setInterval(atualizarCensipam,120000);
+  window.addEventListener("focus",atualizarCensipam);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)atualizarCensipam()});
 
   // Garante a coordenada real da Base Oeste e a nova renderização após o GeoJSON carregar.
   const waitForMap = setInterval(() => {
