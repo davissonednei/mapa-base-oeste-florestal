@@ -7,10 +7,9 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "APA do Rio Preto",
-    "status": "Em Combate (APA)",
-    "lat": -11.380204,
-    "lng": -46.362290
+    "local": "Sede municipal",
+    "status": "Em prontidão",
+    "tipo": "centro"
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
