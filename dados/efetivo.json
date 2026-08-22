@@ -64,6 +64,7 @@
   "11": [
     {"posto":"SD","nome":"ALEX ALVES","funcao":"CMD","numero":176},
     {"posto":"SD","nome":"ALISSON","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"CASTRO COSTA","funcao":"","numero":null},
     {"posto":"SD","nome":"FLORES","funcao":"","numero":null},
     {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null}
   ],
@@ -76,7 +77,6 @@
   ],
   "14": [
     {"posto":"SD","nome":"BALBINO","funcao":"","numero":null},
-    {"posto":"SD","nome":"CASTRO COSTA","funcao":"","numero":null},
     {"posto":"SD","nome":"DANIEL LEITE","funcao":"CMD","numero":null},
     {"posto":"SD","nome":"MARINHO","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"SANTOS","funcao":"","numero":null}
