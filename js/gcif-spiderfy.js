@@ -5,11 +5,28 @@
     .gcif-cluster-icon{background:transparent!important;border:none!important}
     .gcif-cluster-bubble{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;gap:2px;background:#fff;border:3px solid #0d1721;box-shadow:0 4px 14px rgba(0,0,0,.42);font:900 18px/1 Inter,Segoe UI,Arial,sans-serif;color:#0d1721;cursor:pointer}
     .gcif-cluster-bubble span{font-size:20px}.gcif-cluster-bubble b{min-width:17px;height:17px;padding:0 4px;border-radius:999px;display:grid;place-items:center;background:#0d1721;color:#fff;font-size:10px;margin-left:-5px;margin-top:-19px}
+    .accordion-title{display:flex!important;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;user-select:none;padding:9px 8px;margin:9px 0 0!important;border:1px solid #213243;border-radius:9px;background:#0a151f;color:#b8c8d4!important;transition:.15s ease}
+    .accordion-title:hover{border-color:#334b60;background:#0d1a26}
+    .accordion-title .acc-arrow{font-size:15px;line-height:1;transition:transform .18s ease;color:#f59e0b}
+    .accordion-title.open .acc-arrow{transform:rotate(180deg)}
+    .accordion-panel{display:none!important;margin-top:6px}
+    .accordion-panel.open{display:flex!important}
+    .gcif-nav-list{flex-direction:column;gap:5px}
+    .gcif-nav{width:100%;display:grid;grid-template-columns:1fr auto;gap:8px;text-align:left;padding:9px 10px;border:1px solid transparent;border-radius:9px;background:#0a151f;color:white;cursor:pointer}
+    .gcif-nav:hover{border-color:#334b60;background:#0d1a26}
+    .gcif-nav-name{font-size:12px;font-weight:800}.gcif-nav-meta{font-size:9px;color:#9dafbe;margin-top:3px}
+    .gcif-nav-status{align-self:center;font-size:8px;font-weight:900;border-radius:999px;padding:5px 7px;white-space:nowrap}
+    .gcif-nav-status.status-prontidao{border:1px solid rgba(34,197,94,.45);background:rgba(34,197,94,.12);color:#9cebb8}
+    .gcif-nav-status.status-prevencao{border:1px solid rgba(245,158,11,.45);background:rgba(245,158,11,.12);color:#ffd18a}
+    .gcif-nav-status.status-combate{border:1px solid rgba(239,68,68,.45);background:rgba(239,68,68,.12);color:#ff9c9c}
+    .gcif-nav-status.status-neutro{border:1px solid rgba(148,163,184,.4);background:rgba(148,163,184,.1);color:#cbd5e1}
+    @media(max-width:820px){.accordion-title{display:flex!important}.accordion-panel{display:none!important}.accordion-panel.open{display:flex!important}}
   `;
   document.head.appendChild(style);
 
   const BASE_OESTE_EXATA = L.latLng(-12.148524, -44.996610);
   const EVENTOS_CACHE_URL = "dados/eventos_fogo.json";
+  const gcifNavRefs = new Map();
   let spiderState = null;
 
   /*
@@ -21,6 +38,52 @@
   if(map.hasLayer(censipamLayer)) map.removeLayer(censipamLayer);
   const eventosApiLayer = L.layerGroup().addTo(map);
   let eventosApiCarregados = 0;
+
+  const notice = document.querySelector(".notice");
+  if(notice){
+    notice.innerHTML = "<b>Atualização automática:</b> informações operacionais e monitoramento integrado são sincronizados continuamente para manter o mapa atualizado.";
+  }
+
+  function configurarAccordion(titulo,painel){
+    if(!titulo||!painel) return;
+    titulo.classList.add("accordion-title");
+    const texto=titulo.textContent.trim();
+    titulo.innerHTML=`<span>${texto}</span><span class="acc-arrow">⌄</span>`;
+    painel.classList.add("accordion-panel");
+    titulo.setAttribute("role","button");
+    titulo.setAttribute("tabindex","0");
+    titulo.setAttribute("aria-expanded","false");
+    const toggle=()=>{
+      const abriu=!painel.classList.contains("open");
+      painel.classList.toggle("open",abriu);
+      titulo.classList.toggle("open",abriu);
+      titulo.setAttribute("aria-expanded",String(abriu));
+    };
+    titulo.addEventListener("click",toggle);
+    titulo.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
+  }
+
+  function prepararSidebar(){
+    const titulos=[...document.querySelectorAll(".section-title")];
+    const tituloMunicipios=titulos.find(el=>el.textContent.includes("Municípios da área Oeste"));
+    const listaMunicipios=document.getElementById("munList");
+    configurarAccordion(tituloMunicipios,listaMunicipios);
+
+    const tituloBases=titulos.find(el=>el.textContent.includes("Bases do PLANOP"));
+    if(tituloBases&&!document.getElementById("gcifNavList")){
+      const titulo=document.createElement("div");
+      titulo.className="section-title";
+      titulo.textContent="Guarnições / GCIFs";
+      const lista=document.createElement("div");
+      lista.id="gcifNavList";
+      lista.className="gcif-nav-list";
+      tituloBases.parentNode.insertBefore(titulo,tituloBases);
+      tituloBases.parentNode.insertBefore(lista,tituloBases);
+      configurarAccordion(titulo,lista);
+    }
+  }
+
+  prepararSidebar();
 
   const censipamBtn = document.getElementById("toggleCensipam");
   if(censipamBtn){
@@ -152,8 +215,8 @@
     spiderState = null;
   }
 
-  function expandGrupo(grupo, clusterMarker){
-    if(spiderState?.clusterMarker === clusterMarker){
+  function expandGrupo(grupo, clusterMarker, focusId=null){
+    if(spiderState?.clusterMarker === clusterMarker && !focusId){
       collapseSpider();
       return;
     }
@@ -165,6 +228,7 @@
     const n = grupo.ids.length;
     const radius = n <= 4 ? 62 : Math.min(92, 55 + n * 5);
     const lines = [], markers = [];
+    let focusMarker=null;
 
     grupo.ids.forEach((id,i) => {
       const angle = -Math.PI / 2 + (Math.PI * 2 * i / n);
@@ -181,16 +245,47 @@
       }).addTo(guarnicaoLayer);
       marker.bindTooltip(`GCIF ${id}`,{direction:"top",offset:[0,-17]});
       marker.bindPopup(() => popupGrupo({ids:[id]}),{maxWidth:440});
+      if(id===focusId) focusMarker=marker;
       lines.push(line); markers.push(marker);
     });
 
     spiderState = {clusterMarker,lines,markers};
+    if(focusMarker) setTimeout(()=>focusMarker.openPopup(),50);
+  }
+
+  function irParaGcif(id){
+    const ref=gcifNavRefs.get(id);
+    if(!ref) return;
+    const alvo=[ref.grupo.lat,ref.grupo.lng];
+    const zoom=Math.max(map.getZoom(),13);
+    map.setView(alvo,zoom,{animate:true});
+    setTimeout(()=>{
+      if(ref.cluster) expandGrupo(ref.grupo,ref.marker,id);
+      else ref.marker.openPopup();
+    },250);
+  }
+
+  function renderListaGcifs(){
+    const box=document.getElementById("gcifNavList");
+    if(!box) return;
+    box.innerHTML="";
+    Object.keys(GCIFS_DATA).sort((a,b)=>Number(a)-Number(b)).forEach(id=>{
+      const g=GCIFS_DATA[id];
+      const btn=document.createElement("button");
+      btn.className="gcif-nav";
+      const viatura=VIATURAS.porGcif?.[id];
+      const detalhe=[g.municipio,viatura?`🚒 ${viatura}`:null].filter(Boolean).join(" • ");
+      btn.innerHTML=`<div><div class="gcif-nav-name">GCIF ${id}</div><div class="gcif-nav-meta">${detalhe}</div></div><span class="gcif-nav-status ${statusClasse(g.status)}">${g.status||"—"}</span>`;
+      btn.onclick=()=>irParaGcif(id);
+      box.appendChild(btn);
+    });
   }
 
   // Substitui somente a renderização dos marcadores; dados, popups e regras continuam no index.
   renderGCIFs = function(){
     collapseSpider();
     guarnicaoLayer.clearLayers();
+    gcifNavRefs.clear();
     const grupos = agruparGcifs(), latlngs = [];
 
     for(const grupo of grupos){
@@ -206,12 +301,14 @@
           if(e.originalEvent) L.DomEvent.stopPropagation(e.originalEvent);
           expandGrupo(grupo, marker);
         });
+        grupo.ids.forEach(id=>gcifNavRefs.set(id,{marker,grupo,cluster:true}));
       }else{
         marker = L.marker([grupo.lat,grupo.lng],{
           icon:guarnicaoIcon,keyboard:false
         }).addTo(guarnicaoLayer);
         marker.bindTooltip(tituloGrupo(grupo.ids),{direction:"top",offset:[0,-17]});
         marker.bindPopup(() => popupGrupo(grupo),{maxWidth:440});
+        gcifNavRefs.set(grupo.ids[0],{marker,grupo,cluster:false});
       }
       latlngs.push([grupo.lat,grupo.lng]);
     }
@@ -219,6 +316,7 @@
     gcifBounds = latlngs.length ? L.latLngBounds(latlngs) : null;
     document.getElementById("gcifCount").textContent = Object.keys(GCIFS_DATA).length;
     document.getElementById("pointCount").textContent = grupos.length;
+    renderListaGcifs();
   };
 
   map.on("click", collapseSpider);
