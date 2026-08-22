@@ -38,9 +38,10 @@
   },
   "08": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Barrocão de Cima",
+    "status": "Em Combate",
+    "lat": -12.2484869924709,
+    "lng": -45.08126847705962
   },
   "09": {
     "municipio": "Barra",
