@@ -45,10 +45,10 @@
   },
   "09": {
     "municipio": "Barra",
-    "local": "Sede municipal (posição provisória)",
-    "status": "Em Combate",
-    "tipo": "centro",
-    "aprox": true
+    "local": "Base Barra",
+    "status": "Em prontidão",
+    "lat": -11.091654738871627,
+    "lng": -43.172578971164576
   },
   "10": {
     "municipio": "Barreiras",
