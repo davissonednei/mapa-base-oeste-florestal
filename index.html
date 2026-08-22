@@ -125,6 +125,8 @@ const BASES=[
  {id:"sul",nome:"Base Sul",cidade:"Porto Seguro",cor:"#14b8a6"}
 ];
 
+const COBERTURA_MANUAL=new Set(["barra"]);
+
 const DIST_PORTARIA={
  "angical":"41,7 km","baianopolis":"58 km","barreiras":"0 km","buritirama":"263 km",
  "catolandia":"42 km","cotegipe":"103 km","cristopolis":"69 km","formosa do rio preto":"154 km",
@@ -146,127 +148,59 @@ const contextLayer=L.layerGroup().addTo(map);
 const baseLayer=L.layerGroup().addTo(map);
 const fireLayer=L.layerGroup().addTo(map);
 
-// Camada oficial do Painel do Fogo / CENSIPAM.
-// WMS = imagem georreferenciada servida diretamente pelo GeoServer.
 map.createPane("censipamPane");
 map.getPane("censipamPane").style.zIndex = 450;
 map.getPane("censipamPane").style.pointerEvents = "none";
 
 const censipamLayer = L.tileLayer.wms(
   "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wms",
-  {
-    layers: "painel_do_fogo:tb_evento",
-    format: "image/png",
-    transparent: true,
-    version: "1.1.1",
-    opacity: 0.86,
-    pane: "censipamPane",
-    attribution: "CENSIPAM — Painel do Fogo"
-  }
+  {layers:"painel_do_fogo:tb_evento",format:"image/png",transparent:true,version:"1.1.1",opacity:.86,pane:"censipamPane",attribution:"CENSIPAM — Painel do Fogo"}
 ).addTo(map);
 
 const apiStatus = document.getElementById("apiStatus");
 let censipamConfirmed = false;
-
-censipamLayer.on("load", () => {
-  censipamConfirmed = true;
-  apiStatus.classList.remove("err");
-  apiStatus.classList.add("ok");
-  apiStatus.querySelector("span:last-child").textContent =
-    "Painel do Fogo conectado — Eventos de Fogo carregados";
-});
-
-censipamLayer.on("tileerror", () => {
-  if (censipamConfirmed) return;
-  apiStatus.classList.remove("ok");
-  apiStatus.classList.add("err");
-  apiStatus.querySelector("span:last-child").textContent =
-    "CENSIPAM não respondeu nesta tentativa";
-});
+censipamLayer.on("load", () => {censipamConfirmed=true;apiStatus.classList.remove("err");apiStatus.classList.add("ok");apiStatus.querySelector("span:last-child").textContent="Painel do Fogo conectado — Eventos de Fogo carregados";});
+censipamLayer.on("tileerror", () => {if(censipamConfirmed)return;apiStatus.classList.remove("ok");apiStatus.classList.add("err");apiStatus.querySelector("span:last-child").textContent="CENSIPAM não respondeu nesta tentativa";});
 
 let baBounds=null,westBounds=null,featureLayers={},centers={},records=[];
-
-function norm(s){
- return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
-}
-function featureName(f){
- const p=f.properties||{};
- return p.nome||p.NM_MUN||p.name||p.NAME||p.NOME||p.municipio||p.MUNICIPIO||"";
-}
-function hav(a,b){
- const R=6371,rad=x=>x*Math.PI/180;
- const dLat=rad(b.lat-a.lat),dLng=rad(b.lng-a.lng);
- const x=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLng/2)**2;
- return 2*R*Math.asin(Math.sqrt(x));
-}
+function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();}
+function featureName(f){const p=f.properties||{};return p.nome||p.NM_MUN||p.name||p.NAME||p.NOME||p.municipio||p.MUNICIPIO||"";}
+function hav(a,b){const R=6371,rad=x=>x*Math.PI/180;const dLat=rad(b.lat-a.lat),dLng=rad(b.lng-a.lng);const x=Math.sin(dLat/2)**2+Math.cos(rad(a.lat))*Math.cos(rad(b.lat))*Math.sin(dLng/2)**2;return 2*R*Math.asin(Math.sqrt(x));}
 function fmtKm(x){return Math.round(x)+" km";}
 function badge(txt){return `<span class="badge">${txt}</span>`;}
 
 function popup(rec){
  const official=DIST_PORTARIA[norm(rec.nome)];
  const comp=rec.second;
- return `
- <div class="popup-title">${rec.nome}</div>
- <div style="margin-bottom:8px">${rec.nearest.id==="oeste"?badge("OESTE É A BASE MAIS PRÓXIMA"):badge(rec.nearest.nome.toUpperCase()+" MAIS PRÓXIMA")}</div>
- <div class="popup-row"><span>Base mais próxima</span><b>${rec.nearest.nome}</b></div>
- <div class="popup-row"><span>Distância geográfica</span><b>${fmtKm(rec.nearestKm)}</b></div>
- <div class="popup-row"><span>Distância até Base Oeste</span><b>${fmtKm(rec.westKm)}</b></div>
- <div class="popup-row"><span>2ª base mais próxima</span><b>${comp.nome} • ${fmtKm(rec.secondKm)}</b></div>
- ${official?`<div class="popup-row"><span>Distância já cadastrada na V1</span><b>${official}</b></div>`:""}
- <div class="popup-foot">As distâncias geográficas são aproximações em linha reta entre centros municipais. Servem para comparação rápida; não substituem distância rodoviária/tempo de deslocamento.</div>`;
+ const manual=COBERTURA_MANUAL.has(norm(rec.nome));
+ const rotulo=manual?"COBERTURA OESTE — INCLUSÃO MANUAL":(rec.nearest.id==="oeste"?"OESTE É A BASE MAIS PRÓXIMA":rec.nearest.nome.toUpperCase()+" MAIS PRÓXIMA");
+ return `<div class="popup-title">${rec.nome}</div><div style="margin-bottom:8px">${badge(rotulo)}</div><div class="popup-row"><span>Base mais próxima</span><b>${rec.nearest.nome}</b></div><div class="popup-row"><span>Distância geográfica</span><b>${fmtKm(rec.nearestKm)}</b></div><div class="popup-row"><span>Distância até Base Oeste</span><b>${fmtKm(rec.westKm)}</b></div><div class="popup-row"><span>2ª base mais próxima</span><b>${comp.nome} • ${fmtKm(rec.secondKm)}</b></div>${official?`<div class="popup-row"><span>Distância já cadastrada na V1</span><b>${official}</b></div>`:""}<div class="popup-foot">As distâncias geográficas são aproximações em linha reta entre centros municipais. Servem para comparação rápida; não substituem distância rodoviária/tempo de deslocamento.</div>`;
 }
 
 function makeMunicipioLayer(feature,rec,isWest){
- const layer=L.geoJSON(feature,{
-   style:{
-     color:isWest?"#f59e0b":"#697887",
-     weight:isWest?1.8:.65,
-     fillColor:isWest?"#f59e0b":rec.nearest.cor,
-     fillOpacity:isWest?.30:.08
-   }
- });
- layer.eachLayer(l=>{
-   l.bindTooltip(rec.nome,{sticky:true,direction:"top"});
-   l.bindPopup(popup(rec));
-   l.on("mouseover",()=>l.setStyle({weight:2.8,fillOpacity:isWest?.46:.20}));
-   l.on("mouseout",()=>l.setStyle({weight:isWest?1.8:.65,fillOpacity:isWest?.30:.08}));
- });
+ const layer=L.geoJSON(feature,{style:{color:isWest?"#f59e0b":"#697887",weight:isWest?1.8:.65,fillColor:isWest?"#f59e0b":rec.nearest.cor,fillOpacity:isWest?.30:.08}});
+ layer.eachLayer(l=>{l.bindTooltip(rec.nome,{sticky:true,direction:"top"});l.bindPopup(popup(rec));l.on("mouseover",()=>l.setStyle({weight:2.8,fillOpacity:isWest?.46:.20}));l.on("mouseout",()=>l.setStyle({weight:isWest?1.8:.65,fillOpacity:isWest?.30:.08}));});
  return layer;
 }
 
+function isCoberturaOeste(rec){return rec.nearest.id==="oeste"||COBERTURA_MANUAL.has(norm(rec.nome));}
+
 function buildList(){
  const box=document.getElementById("munList"); box.innerHTML="";
- const west=records.filter(r=>r.nearest.id==="oeste").sort((a,b)=>a.westKm-b.westKm);
+ const west=records.filter(isCoberturaOeste).sort((a,b)=>a.westKm-b.westKm);
  document.getElementById("westCount").textContent=west.length;
  west.forEach(r=>{
-   const b=document.createElement("button");
-   b.className="mun";b.dataset.name=r.nome;
+   const b=document.createElement("button");b.className="mun";b.dataset.name=r.nome;
    const official=DIST_PORTARIA[norm(r.nome)];
-   b.innerHTML=`<div><div class="mun-name">${r.nome}</div><div class="mun-meta">${official?"Distância cadastrada: "+official:"Estimativa em linha reta"}</div></div><div class="km">${fmtKm(r.westKm)}</div>`;
-   b.addEventListener("click",()=>{
-     const layer=featureLayers[norm(r.nome)];
-     if(layer){map.fitBounds(layer.getBounds(),{padding:[28,28],maxZoom:9});layer.openPopup();}
-   });
+   const manual=COBERTURA_MANUAL.has(norm(r.nome));
+   b.innerHTML=`<div><div class="mun-name">${r.nome}</div><div class="mun-meta">${manual?"Inclusão manual na cobertura Oeste":(official?"Distância cadastrada: "+official:"Estimativa em linha reta")}</div></div><div class="km">${fmtKm(r.westKm)}</div>`;
+   b.addEventListener("click",()=>{const layer=featureLayers[norm(r.nome)];if(layer){map.fitBounds(layer.getBounds(),{padding:[28,28],maxZoom:9});layer.openPopup();}});
    box.appendChild(b);
  });
 }
 
-document.getElementById("search").addEventListener("input",e=>{
- const q=norm(e.target.value);
- if(!q)return;
- const rec=records.find(r=>norm(r.nome).includes(q));
- if(rec){
-   const layer=featureLayers[norm(rec.nome)];
-   if(layer){map.fitBounds(layer.getBounds(),{padding:[30,30],maxZoom:9});layer.openPopup();}
- }
-});
-function toggle(id,layer){
- const b=document.getElementById(id);
- b.addEventListener("click",()=>{
-   if(map.hasLayer(layer)){map.removeLayer(layer);b.classList.add("off")}
-   else{map.addLayer(layer);b.classList.remove("off")}
- });
-}
+document.getElementById("search").addEventListener("input",e=>{const q=norm(e.target.value);if(!q)return;const rec=records.find(r=>norm(r.nome).includes(q));if(rec){const layer=featureLayers[norm(rec.nome)];if(layer){map.fitBounds(layer.getBounds(),{padding:[30,30],maxZoom:9});layer.openPopup();}}});
+function toggle(id,layer){const b=document.getElementById(id);b.addEventListener("click",()=>{if(map.hasLayer(layer)){map.removeLayer(layer);b.classList.add("off")}else{map.addLayer(layer);b.classList.remove("off")}});}
 toggle("toggleWest",westLayer);toggle("toggleContext",contextLayer);toggle("toggleBases",baseLayer);toggle("toggleFire",fireLayer);toggle("toggleCensipam",censipamLayer);
 document.getElementById("fitWest").addEventListener("click",()=>{if(westBounds)map.fitBounds(westBounds,{padding:[18,18]})});
 document.getElementById("fitBA").addEventListener("click",()=>{if(baBounds)map.fitBounds(baBounds,{padding:[12,12]})});
@@ -275,90 +209,27 @@ const baseIcon=(emoji,size=30)=>L.divIcon({className:"base-pin",html:`<div class
 const fireIcon=L.divIcon({className:"fire-pin",html:'<div class="pin">🔥</div>',iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-18]});
 
 async function getGeo(){
- const urls=[
-  "https://cdn.jsdelivr.net/gh/henriquemalvar/br-geojson@main/dist/municipios/BA.geojson",
-  "https://raw.githubusercontent.com/henriquemalvar/br-geojson/main/dist/municipios/BA.geojson"
- ];
- let lastErr;
- for(const u of urls){
-   try{
-     const r=await fetch(u);
-     if(!r.ok)throw new Error("HTTP "+r.status);
-     return await r.json();
-   }catch(e){lastErr=e;}
- }
- throw lastErr||new Error("GeoJSON indisponível");
+ const urls=["https://cdn.jsdelivr.net/gh/henriquemalvar/br-geojson@main/dist/municipios/BA.geojson","https://raw.githubusercontent.com/henriquemalvar/br-geojson/main/dist/municipios/BA.geojson"];
+ let lastErr;for(const u of urls){try{const r=await fetch(u);if(!r.ok)throw new Error("HTTP "+r.status);return await r.json();}catch(e){lastErr=e;}}throw lastErr||new Error("GeoJSON indisponível");
 }
 
 async function init(){
  const loading=document.getElementById("loading");
  try{
-   const geo=await getGeo();
-   if(!geo.features||!geo.features.length)throw new Error("GeoJSON vazio");
-
-   // Calcula centro aproximado de cada município.
-   for(const f of geo.features){
-     const nome=featureName(f);
-     if(!nome)continue;
-     const temp=L.geoJSON(f);
-     const c=temp.getBounds().getCenter();
-     centers[norm(nome)]={lat:c.lat,lng:c.lng,nome};
-   }
-
-   // Encontra centros dos 6 municípios-sede das bases.
-   for(const b of BASES){
-     const c=centers[norm(b.cidade)];
-     if(!c)throw new Error("Não localizou sede: "+b.cidade);
-     b.lat=c.lat;b.lng=c.lng;
-   }
-
-   // Classifica cada município pela base geograficamente mais próxima.
-   for(const f of geo.features){
-     const nome=featureName(f); if(!nome)continue;
-     const c=centers[norm(nome)]; if(!c)continue;
-     const ds=BASES.map(b=>({b,km:hav(c,b)})).sort((a,b)=>a.km-b.km);
-     const oeste=ds.find(x=>x.b.id==="oeste");
-     const rec={nome,center:c,nearest:ds[0].b,nearestKm:ds[0].km,second:ds[1].b,secondKm:ds[1].km,westKm:oeste.km,feature:f};
-     records.push(rec);
-   }
-
+   const geo=await getGeo();if(!geo.features||!geo.features.length)throw new Error("GeoJSON vazio");
+   for(const f of geo.features){const nome=featureName(f);if(!nome)continue;const temp=L.geoJSON(f);const c=temp.getBounds().getCenter();centers[norm(nome)]={lat:c.lat,lng:c.lng,nome};}
+   for(const b of BASES){const c=centers[norm(b.cidade)];if(!c)throw new Error("Não localizou sede: "+b.cidade);b.lat=c.lat;b.lng=c.lng;}
+   for(const f of geo.features){const nome=featureName(f);if(!nome)continue;const c=centers[norm(nome)];if(!c)continue;const ds=BASES.map(b=>({b,km:hav(c,b)})).sort((a,b)=>a.km-b.km);const oeste=ds.find(x=>x.b.id==="oeste");records.push({nome,center:c,nearest:ds[0].b,nearestKm:ds[0].km,second:ds[1].b,secondKm:ds[1].km,westKm:oeste.km,feature:f});}
    const full=L.geoJSON(geo);baBounds=full.getBounds();
-
    const westFeatures=[];
-   for(const rec of records){
-     const isWest=rec.nearest.id==="oeste";
-     const layer=makeMunicipioLayer(rec.feature,rec,isWest);
-     layer.eachLayer(l=>featureLayers[norm(rec.nome)]=l);
-     if(isWest){layer.eachLayer(l=>westLayer.addLayer(l));westFeatures.push(rec.feature);}
-     else layer.eachLayer(l=>contextLayer.addLayer(l));
-   }
+   for(const rec of records){const isWest=isCoberturaOeste(rec);const layer=makeMunicipioLayer(rec.feature,rec,isWest);layer.eachLayer(l=>featureLayers[norm(rec.nome)]=l);if(isWest){layer.eachLayer(l=>westLayer.addLayer(l));westFeatures.push(rec.feature);}else layer.eachLayer(l=>contextLayer.addLayer(l));}
    if(westFeatures.length)westBounds=L.geoJSON({type:"FeatureCollection",features:westFeatures}).getBounds();
-
-   // Bases
-   for(const b of BASES){
-     const icon=baseIcon(b.id==="oeste"?"🚒":"●",b.id==="oeste"?36:24);
-     const m=L.marker([b.lat,b.lng],{icon}).addTo(baseLayer);
-     m.bindPopup(`<div class="popup-title">${b.id==="oeste"?"🚒 ":""}${b.nome}</div><div class="popup-row"><span>Sede</span><b>${b.cidade}/BA</b></div><div class="popup-foot">Base prevista no PLANOP Florestal Bahia 2025/2026.</div>`);
-   }
-
-   // Ocorrências demonstrativas no centro do município.
-   OCC.forEach(o=>{
-     const c=centers[norm(o.municipio)];
-     if(c)L.marker([c.lat,c.lng],{icon:fireIcon}).addTo(fireLayer).bindPopup(`<div class="popup-title">🔥 ${o.municipio}</div><div class="popup-row"><span>Status</span><b>${o.status}</b></div><div class="popup-row"><span>Data</span><b>${o.data}</b></div><div class="popup-foot">Marcador CBMBA demonstrativo. A camada do CENSIPAM acima é externa e carregada ao vivo.</div>`);
-   });
-
-   buildList();
-   if(westBounds)map.fitBounds(westBounds,{padding:[18,18]});
-   loading.textContent="Cobertura por proximidade calculada";
-   setTimeout(()=>loading.style.display="none",1200);
- }catch(e){
-   console.error(e);
-   loading.classList.add("error");
-   loading.textContent="Falha ao carregar os limites municipais. Verifique a internet.";
- }
+   for(const b of BASES){const icon=baseIcon(b.id==="oeste"?"🚒":"●",b.id==="oeste"?36:24);const m=L.marker([b.lat,b.lng],{icon}).addTo(baseLayer);m.bindPopup(`<div class="popup-title">${b.id==="oeste"?"🚒 ":""}${b.nome}</div><div class="popup-row"><span>Sede</span><b>${b.cidade}/BA</b></div><div class="popup-foot">Base prevista no PLANOP Florestal Bahia 2025/2026.</div>`);}
+   OCC.forEach(o=>{const c=centers[norm(o.municipio)];if(c)L.marker([c.lat,c.lng],{icon:fireIcon}).addTo(fireLayer).bindPopup(`<div class="popup-title">🔥 ${o.municipio}</div><div class="popup-row"><span>Status</span><b>${o.status}</b></div><div class="popup-row"><span>Data</span><b>${o.data}</b></div><div class="popup-foot">Marcador CBMBA demonstrativo. A camada do CENSIPAM acima é externa e carregada ao vivo.</div>`);});
+   buildList();if(westBounds)map.fitBounds(westBounds,{padding:[18,18]});loading.textContent="Cobertura por proximidade calculada";setTimeout(()=>loading.style.display="none",1200);
+ }catch(e){console.error(e);loading.classList.add("error");loading.textContent="Falha ao carregar os limites municipais. Verifique a internet.";}
 }
-init();
-setTimeout(()=>map.invalidateSize(),250);
+init();setTimeout(()=>map.invalidateSize(),250);
 </script>
 </body>
 </html>
