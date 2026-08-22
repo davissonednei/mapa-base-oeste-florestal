@@ -40,8 +40,8 @@
     "municipio": "Barreiras",
     "local": "Barrocão de Cima",
     "status": "Em Combate",
-    "lat": -12.197550,
-    "lng": -45.008278
+    "lat": -12.223292,
+    "lng": -45.061713
   },
   "09": {
     "municipio": "Barra",
@@ -78,16 +78,14 @@
     "municipio": "Barreiras",
     "local": "Chácara do Pajé",
     "status": "Em Combate",
-    "lat": -12.245000,
-    "lng": -45.075000,
-    "aprox": true
+    "lat": -12.190093,
+    "lng": -45.151750
   },
   "16": {
     "municipio": "Barreiras",
     "local": "Chácara do Pajé",
     "status": "Em Combate",
-    "lat": -12.245000,
-    "lng": -45.075000,
-    "aprox": true
+    "lat": -12.190093,
+    "lng": -45.151750
   }
 }
