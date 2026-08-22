@@ -9,64 +9,108 @@
   document.head.appendChild(style);
 
   const BASE_OESTE_EXATA = L.latLng(-12.148524, -44.996610);
+  const EVENTOS_API_URL = "https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?sigla_estado=BA";
   let spiderState = null;
 
   /*
-   * O mapa principal usava tb_evento, que inclui o universo de eventos do Painel do Fogo.
-   * Para reproduzir a camada operacional exibida no painel, usamos a camada
-   * CENSIPAM - Frente de Fogo (24h), publicada no mesmo GeoServer.
+   * Fonte oficial do Painel do Fogo 5.0.
+   * A própria documentação da API informa que /eventos retorna somente os
+   * eventos ativos ou em observação que estão aparecendo no Painel do Fogo
+   * no momento da execução. Isso evita as manchas/fantasmas das camadas WMS.
    */
-  const frenteFogo24hLayer = L.tileLayer.wms(
-    "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wms",
-    {
-      layers:"painel_do_fogo:mv_indicadores_queimadas",
-      format:"image/png",
-      transparent:true,
-      version:"1.1.1",
-      opacity:1,
-      pane:"censipamPane",
-      attribution:"CENSIPAM — Frente de Fogo (24h)"
-    }
-  );
-
-  // Retira a antiga camada de eventos e deixa somente a Frente de Fogo (24h).
   if(map.hasLayer(censipamLayer)) map.removeLayer(censipamLayer);
-  frenteFogo24hLayer.addTo(map);
+  const eventosApiLayer = L.layerGroup().addTo(map);
+  let eventosApiCarregados = 0;
 
   const censipamBtn = document.getElementById("toggleCensipam");
   if(censipamBtn){
-    censipamBtn.innerHTML = "🔥 Frente de Fogo 24h";
+    censipamBtn.innerHTML = "🔥 Eventos de Fogo";
     censipamBtn.classList.remove("off");
     censipamBtn.onclick = () => {
-      if(map.hasLayer(frenteFogo24hLayer)){
-        map.removeLayer(frenteFogo24hLayer);
+      if(map.hasLayer(eventosApiLayer)){
+        map.removeLayer(eventosApiLayer);
         censipamBtn.classList.add("off");
       }else{
-        frenteFogo24hLayer.addTo(map);
+        eventosApiLayer.addTo(map);
         censipamBtn.classList.remove("off");
       }
     };
   }
 
-  // Atualiza a legenda sem precisar alterar a estrutura do index principal.
   document.querySelectorAll(".legend-row").forEach(row => {
-    if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Frente de Fogo (24h) — CENSIPAM";
+    if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Eventos ativos/observação — API CENSIPAM";
   });
 
-  // O status passa a refletir a nova camada operacional.
-  if(typeof apiStatus !== "undefined"){
+  function setApiStatus(tipo,texto){
+    if(typeof apiStatus === "undefined") return;
     apiStatus.classList.remove("ok","err");
-    apiStatus.querySelector("span:last-child").textContent = "Conectando à Frente de Fogo (24h) do CENSIPAM…";
-    frenteFogo24hLayer.on("load",()=>{
-      apiStatus.classList.remove("err");
-      apiStatus.classList.add("ok");
-      apiStatus.querySelector("span:last-child").textContent = "CENSIPAM conectado — Frente de Fogo das últimas 24h";
-    });
-    frenteFogo24hLayer.on("tileerror",()=>{
-      apiStatus.classList.remove("ok");
-      apiStatus.classList.add("err");
-      apiStatus.querySelector("span:last-child").textContent = "Frente de Fogo (24h) não respondeu nesta tentativa";
-    });
+    if(tipo) apiStatus.classList.add(tipo);
+    const alvo=apiStatus.querySelector("span:last-child");
+    if(alvo) alvo.textContent=texto;
+  }
+
+  function eventoGeoJson(evento){
+    if(!evento?.geom?.coordinates?.length) return null;
+    return {
+      type:"Feature",
+      properties:{
+        id_evento:evento.id_evento,
+        status_evento:evento.status_evento,
+        municipio:evento.municipio,
+        dt_maxima:evento.dt_maxima,
+        dt_ultima_visao:evento.dt_ultima_visao,
+        area_total_evento:evento.area_total_evento
+      },
+      geometry:{
+        type:evento.geom.type || "Polygon",
+        coordinates:evento.geom.coordinates
+      }
+    };
+  }
+
+  function popupEvento(evento){
+    const municipio=evento.municipio||"Município não informado";
+    const status=evento.status_evento||"Ativo / em observação";
+    const ultima=evento.dt_ultima_visao?new Date(evento.dt_ultima_visao).toLocaleString("pt-BR"):"—";
+    const area=Number.isFinite(evento.area_total_evento)?evento.area_total_evento.toLocaleString("pt-BR",{maximumFractionDigits:1}):"—";
+    return `<div class="popup-title">🔥 Evento ${evento.id_evento}</div><div class="popup-row"><span>Município</span><b>${municipio}</b></div><div class="popup-row"><span>Status</span><b>${status}</b></div><div class="popup-row"><span>Última visão</span><b>${ultima}</b></div><div class="popup-row"><span>Área total</span><b>${area}</b></div><div class="popup-foot">Fonte direta: API oficial do Painel do Fogo / CENSIPAM.</div>`;
+  }
+
+  async function atualizarCensipam(){
+    try{
+      setApiStatus(null,"Consultando eventos atuais no Painel do Fogo…");
+      const sep=EVENTOS_API_URL.includes("?")?"&":"?";
+      const r=await fetch(`${EVENTOS_API_URL}${sep}_=${Date.now()}`,{cache:"no-store"});
+      if(!r.ok) throw new Error(`HTTP ${r.status}`);
+      const eventos=await r.json();
+      if(!Array.isArray(eventos)) throw new Error("Resposta inválida da API");
+
+      const novos=[];
+      for(const evento of eventos){
+        const feature=eventoGeoJson(evento);
+        if(!feature) continue;
+        const layer=L.geoJSON(feature,{
+          pane:"censipamPane",
+          style:{
+            color:"#9ca3af",
+            weight:2,
+            opacity:.95,
+            fillColor:"#9ca3af",
+            fillOpacity:.28
+          },
+          interactive:false
+        });
+        novos.push(layer);
+      }
+
+      eventosApiLayer.clearLayers();
+      novos.forEach(layer=>eventosApiLayer.addLayer(layer));
+      eventosApiCarregados=eventos.length;
+      setApiStatus("ok",`Painel do Fogo sincronizado — ${eventosApiCarregados} evento(s) ativo(s)/em observação na Bahia`);
+    }catch(e){
+      console.warn("Falha ao consultar API oficial do Painel do Fogo",e);
+      setApiStatus("err","API do Painel do Fogo não respondeu nesta tentativa; mantendo a última leitura válida");
+    }
   }
 
   const clusterIcon = count => L.divIcon({
@@ -89,11 +133,6 @@
         break;
       }
     }
-  }
-
-  // Força nova consulta ao CENSIPAM para evitar imagens WMS antigas em cache.
-  function atualizarCensipam(){
-    frenteFogo24hLayer.setParams({_:Date.now()});
   }
 
   function collapseSpider(){
@@ -176,7 +215,7 @@
   map.on("click", collapseSpider);
   map.on("zoomstart", collapseSpider);
 
-  // Mantém a camada do Painel do Fogo fresca durante o uso do mapa.
+  // A API é a fonte de verdade; sincroniza a cada 2 minutos e ao retornar à aba.
   atualizarCensipam();
   setInterval(atualizarCensipam,120000);
   window.addEventListener("focus",atualizarCensipam);
