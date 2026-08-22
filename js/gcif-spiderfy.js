@@ -9,14 +9,14 @@
   document.head.appendChild(style);
 
   const BASE_OESTE_EXATA = L.latLng(-12.148524, -44.996610);
-  const EVENTOS_API_URL = "https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?sigla_estado=BA";
+  const EVENTOS_CACHE_URL = "dados/eventos_fogo.json";
   let spiderState = null;
 
   /*
-   * Fonte oficial do Painel do Fogo 5.0.
-   * A própria documentação da API informa que /eventos retorna somente os
-   * eventos ativos ou em observação que estão aparecendo no Painel do Fogo
-   * no momento da execução. Isso evita as manchas/fantasmas das camadas WMS.
+   * O navegador no GitHub Pages não consulta mais a API CENSIPAM diretamente.
+   * A sincronização é feita no servidor pelo GitHub Actions e gravada em
+   * dados/eventos_fogo.json. Assim evitamos bloqueio CORS e exibimos exatamente
+   * a resposta oficial de /api/v1/eventos?sigla_estado=BA.
    */
   if(map.hasLayer(censipamLayer)) map.removeLayer(censipamLayer);
   const eventosApiLayer = L.layerGroup().addTo(map);
@@ -73,17 +73,18 @@
     const status=evento.status_evento||"Ativo / em observação";
     const ultima=evento.dt_ultima_visao?new Date(evento.dt_ultima_visao).toLocaleString("pt-BR"):"—";
     const area=Number.isFinite(evento.area_total_evento)?evento.area_total_evento.toLocaleString("pt-BR",{maximumFractionDigits:1}):"—";
-    return `<div class="popup-title">🔥 Evento ${evento.id_evento}</div><div class="popup-row"><span>Município</span><b>${municipio}</b></div><div class="popup-row"><span>Status</span><b>${status}</b></div><div class="popup-row"><span>Última visão</span><b>${ultima}</b></div><div class="popup-row"><span>Área total</span><b>${area}</b></div><div class="popup-foot">Fonte direta: API oficial do Painel do Fogo / CENSIPAM.</div>`;
+    return `<div class="popup-title">🔥 Evento ${evento.id_evento}</div><div class="popup-row"><span>Município</span><b>${municipio}</b></div><div class="popup-row"><span>Status</span><b>${status}</b></div><div class="popup-row"><span>Última visão</span><b>${ultima}</b></div><div class="popup-row"><span>Área total</span><b>${area}</b></div><div class="popup-foot">Fonte: API oficial do Painel do Fogo / CENSIPAM.</div>`;
   }
 
   async function atualizarCensipam(){
     try{
-      setApiStatus(null,"Consultando eventos atuais no Painel do Fogo…");
-      const sep=EVENTOS_API_URL.includes("?")?"&":"?";
-      const r=await fetch(`${EVENTOS_API_URL}${sep}_=${Date.now()}`,{cache:"no-store"});
+      setApiStatus(null,"Carregando última sincronização do Painel do Fogo…");
+      const r=await fetch(`${EVENTOS_CACHE_URL}?v=${Date.now()}`,{cache:"no-store"});
       if(!r.ok) throw new Error(`HTTP ${r.status}`);
-      const eventos=await r.json();
-      if(!Array.isArray(eventos)) throw new Error("Resposta inválida da API");
+      const payload=await r.json();
+      const eventos=Array.isArray(payload)?payload:payload?.eventos;
+      const atualizadoEm=Array.isArray(payload)?null:payload?.atualizado_em;
+      if(!Array.isArray(eventos)) throw new Error("Cache inválido");
 
       const novos=[];
       for(const evento of eventos){
@@ -98,7 +99,8 @@
             fillColor:"#9ca3af",
             fillOpacity:.28
           },
-          interactive:false
+          interactive:true,
+          onEachFeature:(_,l)=>l.bindPopup(()=>popupEvento(evento),{maxWidth:390})
         });
         novos.push(layer);
       }
@@ -106,10 +108,17 @@
       eventosApiLayer.clearLayers();
       novos.forEach(layer=>eventosApiLayer.addLayer(layer));
       eventosApiCarregados=eventos.length;
-      setApiStatus("ok",`Painel do Fogo sincronizado — ${eventosApiCarregados} evento(s) ativo(s)/em observação na Bahia`);
+
+      if(atualizadoEm){
+        const d=new Date(atualizadoEm);
+        const hora=Number.isNaN(d.getTime())?"":` • ${d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})}`;
+        setApiStatus("ok",`Painel do Fogo sincronizado — ${eventosApiCarregados} evento(s) na Bahia${hora}`);
+      }else{
+        setApiStatus(null,"Aguardando primeira sincronização automática do CENSIPAM…");
+      }
     }catch(e){
-      console.warn("Falha ao consultar API oficial do Painel do Fogo",e);
-      setApiStatus("err","API do Painel do Fogo não respondeu nesta tentativa; mantendo a última leitura válida");
+      console.warn("Falha ao ler cache do Painel do Fogo",e);
+      setApiStatus("err","Falha ao carregar a sincronização do Painel do Fogo");
     }
   }
 
@@ -215,7 +224,7 @@
   map.on("click", collapseSpider);
   map.on("zoomstart", collapseSpider);
 
-  // A API é a fonte de verdade; sincroniza a cada 2 minutos e ao retornar à aba.
+  // O navegador só lê o cache local; o servidor sincroniza a API oficial a cada 5 minutos.
   atualizarCensipam();
   setInterval(atualizarCensipam,120000);
   window.addEventListener("focus",atualizarCensipam);
