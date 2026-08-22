@@ -1,0 +1,94 @@
+{
+  "02": {
+    "municipio": "Formosa do Rio Preto",
+    "status": "Em Combate",
+    "lat": -11.322781,
+    "lng": -45.015124
+  },
+  "03": {
+    "municipio": "Formosa do Rio Preto",
+    "local": "APA do Rio Preto",
+    "status": "Em Combate (APA)",
+    "lat": -11.380204,
+    "lng": -46.362290
+  },
+  "04": {
+    "municipio": "Luís Eduardo Magalhães",
+    "status": "Em Combate",
+    "lat": -12.088009,
+    "lng": -45.766309
+  },
+  "05": {
+    "municipio": "Formosa do Rio Preto",
+    "status": "Em Combate",
+    "lat": -11.322781,
+    "lng": -45.015124
+  },
+  "06": {
+    "municipio": "Barreiras",
+    "local": "Vau da Boa Esperança",
+    "status": "Em Combate",
+    "lat": -12.202620,
+    "lng": -45.223270
+  },
+  "07": {
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em Combate",
+    "tipo": "base"
+  },
+  "08": {
+    "municipio": "Barreiras",
+    "local": "Vau da Boa Esperança",
+    "status": "Em Combate",
+    "lat": -12.202620,
+    "lng": -45.223270
+  },
+  "09": {
+    "municipio": "Barra",
+    "status": "Ações preventivas",
+    "tipo": "centro"
+  },
+  "10": {
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em Combate",
+    "tipo": "base"
+  },
+  "11": {
+    "municipio": "Barreiras",
+    "local": "Pau Louro",
+    "status": "Em Combate",
+    "lat": -11.968630,
+    "lng": -44.886620
+  },
+  "13": {
+    "municipio": "Barreiras",
+    "status": "Em prontidão",
+    "tipo": "centro",
+    "offset": [0.025, 0.018]
+  },
+  "14": {
+    "municipio": "Barreiras",
+    "local": "Pau Louro",
+    "status": "Em Combate",
+    "lat": -11.968630,
+    "lng": -44.886620
+  },
+  "15": {
+    "municipio": "Barreiras",
+    "local": "Chácara do Pajé",
+    "status": "Em Combate",
+    "lat": -12.245000,
+    "lng": -45.075000,
+    "aprox": true
+  },
+  "16": {
+    "municipio": "Barreiras",
+    "local": "Chácara do Pajé",
+    "status": "Em Combate",
+    "lat": -12.245000,
+    "lng": -45.075000,
+    "aprox": true
+  }
+}
