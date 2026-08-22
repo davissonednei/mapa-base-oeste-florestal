@@ -24,7 +24,7 @@
   `;
   document.head.appendChild(style);
 
-  const BASE_OESTE_EXATA = L.latLng(-12.148524, -44.996610);
+  const BASE_OESTE_EXATA = L.latLng(-12.150803, -44.998157);
   const EVENTOS_CACHE_URL = "dados/eventos_fogo.json";
   const gcifNavRefs = new Map();
   let spiderState = null;
