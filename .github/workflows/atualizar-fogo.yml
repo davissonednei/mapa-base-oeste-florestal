@@ -1,0 +1,70 @@
+name: Atualizar eventos do Painel do Fogo
+
+on:
+  push:
+    paths:
+      - '.github/workflows/atualizar-fogo.yml'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-eventos-censipam
+  cancel-in-progress: true
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar repositório
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Consultar API oficial do CENSIPAM
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --silent --show-error --location \
+            --retry 3 --retry-delay 5 --connect-timeout 20 --max-time 90 \
+            'https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?sigla_estado=BA' \
+            -o /tmp/eventos.json
+
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+
+          with open('/tmp/eventos.json', 'r', encoding='utf-8') as f:
+              eventos = json.load(f)
+
+          if not isinstance(eventos, list):
+              raise SystemExit('Resposta da API não é uma lista de eventos')
+
+          payload = {
+              'atualizado_em': datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+              'eventos': eventos,
+          }
+
+          with open('dados/eventos_fogo.json', 'w', encoding='utf-8') as f:
+              json.dump(payload, f, ensure_ascii=False, indent=2)
+              f.write('\n')
+          PY
+
+      - name: Publicar somente se houver nova leitura
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- dados/eventos_fogo.json; then
+            echo 'Sem alteração.'
+            exit 0
+          fi
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add dados/eventos_fogo.json
+          git commit -m 'Atualiza eventos do Painel do Fogo'
+          git pull --rebase origin main
+          git push origin HEAD:main
