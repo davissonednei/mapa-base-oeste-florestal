@@ -9,7 +9,8 @@
     "municipio": "Formosa do Rio Preto",
     "local": "Sede municipal",
     "status": "Em prontidão",
-    "tipo": "centro"
+    "lat": -11.043930,
+    "lng": -45.207421
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
