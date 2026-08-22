@@ -58,10 +58,9 @@
   },
   "11": {
     "municipio": "Barreiras",
-    "local": "Pau Louro",
+    "local": "Base Florestal Oeste",
     "status": "Em Combate",
-    "lat": -11.968630,
-    "lng": -44.886620
+    "tipo": "base"
   },
   "13": {
     "municipio": "Barreiras",
@@ -71,10 +70,9 @@
   },
   "14": {
     "municipio": "Barreiras",
-    "local": "Pau Louro",
+    "local": "Base Florestal Oeste",
     "status": "Em Combate",
-    "lat": -11.968630,
-    "lng": -44.886620
+    "tipo": "base"
   },
   "15": {
     "municipio": "Barreiras",
