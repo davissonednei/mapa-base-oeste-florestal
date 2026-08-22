@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-22T22:58:19.393555Z",
+  "atualizado_em": "2026-08-22T23:16:06.499893Z",
   "eventos": [
     {
       "id_evento": 6801503,
@@ -41237,7 +41237,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -63038,7 +63038,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-21T16:18:00Z",
       "dt_maxima": "2026-08-22T17:37:00Z",
-      "dt_ultima_visao": "2026-08-22T22:20:20Z",
+      "dt_ultima_visao": "2026-08-22T22:50:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 8.945262155542672,
       "latitude": -11.124711818986622,
@@ -66408,7 +66408,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-22T18:17:00Z",
-      "dt_ultima_visao": "2026-08-22T22:40:20Z",
+      "dt_ultima_visao": "2026-08-22T23:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 7.807701580365234,
       "latitude": -11.443968677012927,
@@ -67692,7 +67692,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-22T18:17:00Z",
-      "dt_ultima_visao": "2026-08-22T22:20:20Z",
+      "dt_ultima_visao": "2026-08-22T22:50:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 18.860176006258584,
       "latitude": -11.964609896644292,
