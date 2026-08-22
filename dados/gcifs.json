@@ -40,10 +40,10 @@
   },
   "08": {
     "municipio": "Barreiras",
-    "local": "Vau da Boa Esperança",
-    "status": "Em Combate",
-    "lat": -12.202620,
-    "lng": -45.223270
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "centro",
+    "offset": [-0.0015, 0.0015]
   },
   "09": {
     "municipio": "Barra",
@@ -66,9 +66,10 @@
   },
   "13": {
     "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
     "status": "Em prontidão",
     "tipo": "centro",
-    "offset": [0.025, 0.018]
+    "offset": [0.0015, -0.0015]
   },
   "14": {
     "municipio": "Barreiras",
