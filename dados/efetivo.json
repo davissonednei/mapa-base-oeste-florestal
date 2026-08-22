@@ -1,0 +1,98 @@
+{
+  "01": [
+    {"posto":"ASP","nome":"DAVISSON","funcao":"STAFF - Logística","numero":null},
+    {"posto":"TEN","nome":"SAMPAIO","funcao":"STAFF - Viaturas","numero":null},
+    {"posto":"SUB TEN","nome":"SHEILA","funcao":"STAFF - Logística","numero":null}
+  ],
+  "02": [
+    {"posto":"ASP","nome":"BRUNO","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"GALVÃO","funcao":"CONDUTOR","numero":235},
+    {"posto":"SD","nome":"MACEDO","funcao":"","numero":null},
+    {"posto":"SD","nome":"RENÊ","funcao":"","numero":null}
+  ],
+  "03": [
+    {"posto":"SD","nome":"FERNANDES","funcao":"","numero":null},
+    {"posto":"SD","nome":"ÍTALO","funcao":"","numero":95},
+    {"posto":"SD","nome":"LOPES","funcao":"CONDUTOR","numero":null},
+    {"posto":"SGT","nome":"MOTA","funcao":"CMD","numero":null}
+  ],
+  "04": [
+    {"posto":"SD","nome":"ADENAILTON","funcao":"","numero":null},
+    {"posto":"SGT","nome":"HENRIQUE","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"OSÓRIO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"PASCOAL","funcao":"","numero":null}
+  ],
+  "05": [
+    {"posto":"SGT","nome":"FÁBIO","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"JULLIE","funcao":"","numero":null},
+    {"posto":"SD","nome":"MENESES","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"THALLES","funcao":"","numero":null}
+  ],
+  "06": [
+    {"posto":"SD","nome":"CARDOSO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"CAZUMBA","funcao":"","numero":null},
+    {"posto":"SGT","nome":"CLÁUDIO","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"FAUSTINO","funcao":"","numero":146},
+    {"posto":"SD","nome":"FRANCYELLE","funcao":"","numero":null}
+  ],
+  "07": [
+    {"posto":"SGT","nome":"LAÉRCIO","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"MARIA LUIZA","funcao":"","numero":null},
+    {"posto":"SD","nome":"PABLO","funcao":"","numero":null},
+    {"posto":"SD","nome":"PINTO","funcao":"CONDUTOR","numero":null}
+  ],
+  "08": [
+    {"posto":"SD","nome":"BORGES","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"CORREIA DE MELO","funcao":"","numero":null},
+    {"posto":"SD","nome":"IDELMAR","funcao":"","numero":null},
+    {"posto":"SD","nome":"NONATO","funcao":"CONDUTOR","numero":195},
+    {"posto":"SD","nome":"RODRIGO","funcao":"","numero":null}
+  ],
+  "09": [
+    {"posto":"SD","nome":"AMORIM","funcao":"","numero":null},
+    {"posto":"SD","nome":"EDERSON","funcao":"","numero":null},
+    {"posto":"SD","nome":"PAIXÃO","funcao":"","numero":null},
+    {"posto":"SD","nome":"ROBÉRIO","funcao":"CMD","numero":92},
+    {"posto":"SD","nome":"XAVIER","funcao":"CONDUTOR","numero":null}
+  ],
+  "10": [
+    {"posto":"SD","nome":"BARBOSA","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"IRACEMA","funcao":"CMD","numero":97},
+    {"posto":"SD","nome":"PEREIRA","funcao":"","numero":null},
+    {"posto":"SD","nome":"RAYLAN","funcao":"","numero":null}
+  ],
+  "11": [
+    {"posto":"SD","nome":"ALEX ALVES","funcao":"CMD","numero":176},
+    {"posto":"SD","nome":"ALISSON","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"FLORES","funcao":"","numero":null},
+    {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null}
+  ],
+  "13": [
+    {"posto":"SGT","nome":"ELMO","funcao":"CMD","numero":10},
+    {"posto":"SD","nome":"FREDERICO","funcao":"CONDUTOR","numero":180},
+    {"posto":"SD","nome":"JURACI","funcao":"","numero":null},
+    {"posto":"SD","nome":"KAYO","funcao":"","numero":null},
+    {"posto":"SD","nome":"MARCO AURÉLIO","funcao":"","numero":null}
+  ],
+  "14": [
+    {"posto":"SD","nome":"BALBINO","funcao":"","numero":null},
+    {"posto":"SD","nome":"CASTRO COSTA","funcao":"","numero":null},
+    {"posto":"SD","nome":"DANIEL LEITE","funcao":"CMD","numero":null},
+    {"posto":"SD","nome":"MARINHO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"SANTOS","funcao":"","numero":null}
+  ],
+  "15": [
+    {"posto":"SD","nome":"BISPO","funcao":"","numero":228},
+    {"posto":"SD","nome":"BORGES","funcao":"","numero":null},
+    {"posto":"SD","nome":"ÍCARO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"JOSÉ","funcao":"","numero":null},
+    {"posto":"SD","nome":"VICTOR SILVA","funcao":"CMD","numero":null}
+  ],
+  "16": [
+    {"posto":"SD","nome":"CAVALCANTE","funcao":"","numero":null},
+    {"posto":"SD","nome":"FANELLI","funcao":"","numero":null},
+    {"posto":"SD","nome":"JOSEMAR","funcao":"CMD","numero":233},
+    {"posto":"SD","nome":"PASSOS","funcao":"","numero":null},
+    {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
+  ]
+}
