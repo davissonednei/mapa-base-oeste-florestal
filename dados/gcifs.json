@@ -34,8 +34,9 @@
   "07": {
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
-    "status": "Em Combate",
-    "tipo": "base"
+    "status": "Em prontidão",
+    "tipo": "centro",
+    "offset": [-0.0015, -0.0015]
   },
   "08": {
     "municipio": "Barreiras",
@@ -52,8 +53,9 @@
   "10": {
     "municipio": "Barreiras",
     "local": "Base Florestal Oeste",
-    "status": "Em Combate",
-    "tipo": "base"
+    "status": "Em prontidão",
+    "tipo": "centro",
+    "offset": [0.0015, 0.0015]
   },
   "11": {
     "municipio": "Barreiras",
