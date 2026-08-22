@@ -46,7 +46,7 @@ aside{background:var(--panel);border-right:1px solid var(--line);overflow:auto;p
 .legend{position:absolute;z-index:600;right:13px;bottom:20px;min-width:190px;background:rgba(7,16,25,.94);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:9px 11px;font-size:10px;line-height:1.8;box-shadow:0 5px 20px rgba(0,0,0,.25)}
 .legend-row{display:flex;align-items:center;gap:7px}.legend-box{width:11px;height:11px;border-radius:2px;flex:none}
 .pin{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:white;border:2px solid white;font-size:20px;box-shadow:0 4px 12px rgba(0,0,0,.38)}
-.base-pin,.fire-pin{background:transparent;border:none}
+.base-pin,.guarnicao-pin,.fire-pin{background:transparent;border:none}
 .base-mini{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:white;border:2px solid white;font-size:13px;box-shadow:0 3px 8px rgba(0,0,0,.32)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#0d1721;color:#f5f7fa}.leaflet-popup-content{margin:14px 15px;min-width:240px}
 .popup-title{font-size:16px;font-weight:800;margin-bottom:8px}.popup-row{display:flex;justify-content:space-between;gap:15px;font-size:11px;margin:5px 0}.popup-row span:first-child{color:#9dafbe}.popup-foot{font-size:9px;line-height:1.4;color:#7f93a4;border-top:1px solid #263949;padding-top:8px;margin-top:8px}.badge{display:inline-block;font-size:9px;border-radius:999px;padding:3px 6px;border:1px solid rgba(245,158,11,.28);background:rgba(245,158,11,.08);color:#ffd18a}
@@ -77,7 +77,7 @@ aside{background:var(--panel);border-right:1px solid var(--line);overflow:auto;p
  <div class="layers">
    <button id="toggleWest" class="layer-btn">🟧 Área Oeste</button>
    <button id="toggleContext" class="layer-btn">🗺 Outras áreas</button>
-   <button id="toggleBases" class="layer-btn">🚒 Bases</button>
+   <button id="toggleBases" class="layer-btn">🏠 Bases</button>
    <button id="toggleFire" class="layer-btn">🔥 CBMBA</button>
    <button id="toggleCensipam" class="layer-btn">🛰️ CENSIPAM</button>
  </div>
@@ -106,7 +106,8 @@ aside{background:var(--panel);border-right:1px solid var(--line);overflow:auto;p
  <div class="legend">
    <div class="legend-row"><span class="legend-box" style="background:#f59e0b"></span><b>Base Oeste mais próxima</b></div>
    <div class="legend-row"><span class="legend-box" style="background:#606f7d"></span>Outra base mais próxima</div>
-   <div class="legend-row">🚒 Base florestal</div>
+   <div class="legend-row">🏠 Base florestal</div>
+   <div class="legend-row">🚒 Guarnição</div>
    <div class="legend-row">🔥 Ocorrência CBMBA</div>
    <div class="legend-row">🛰️ Eventos de Fogo — CENSIPAM</div>
  </div>
@@ -215,6 +216,7 @@ document.getElementById("fitWest").addEventListener("click",()=>{if(westBounds)m
 document.getElementById("fitBA").addEventListener("click",()=>{if(baBounds)map.fitBounds(baBounds,{padding:[12,12]})});
 
 const baseIcon=(emoji,size=30)=>L.divIcon({className:"base-pin",html:`<div class="${size===36?"pin":"base-mini"}">${emoji}</div>`,iconSize:[size,size],iconAnchor:[size/2,size/2],popupAnchor:[0,-size/2]});
+const guarnicaoIcon=L.divIcon({className:"guarnicao-pin",html:'<div class="pin">🚒</div>',iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-18]});
 const fireIcon=L.divIcon({className:"fire-pin",html:'<div class="pin">🔥</div>',iconSize:[36,36],iconAnchor:[18,18],popupAnchor:[0,-18]});
 
 async function getGeo(){
@@ -233,7 +235,7 @@ async function init(){
    const westFeatures=[];
    for(const rec of records){const isWest=isCoberturaOeste(rec);const layer=makeMunicipioLayer(rec.feature,rec,isWest);layer.eachLayer(l=>featureLayers[norm(rec.nome)]=l);if(isWest){layer.eachLayer(l=>westLayer.addLayer(l));westFeatures.push(rec.feature);}else layer.eachLayer(l=>contextLayer.addLayer(l));}
    if(westFeatures.length)westBounds=L.geoJSON({type:"FeatureCollection",features:westFeatures}).getBounds();
-   for(const b of BASES){const icon=baseIcon(b.id==="oeste"?"🚒":"●",b.id==="oeste"?36:24);const m=L.marker([b.lat,b.lng],{icon}).addTo(baseLayer);m.bindPopup(`<div class="popup-title">${b.id==="oeste"?"🚒 ":""}${b.nome}</div><div class="popup-row"><span>Sede</span><b>${b.cidade}/BA</b></div><div class="popup-foot">Base prevista no PLANOP Florestal Bahia 2025/2026.</div>`);}
+   for(const b of BASES){const icon=baseIcon("🏠",b.id==="oeste"?36:28);const m=L.marker([b.lat,b.lng],{icon}).addTo(baseLayer);m.bindPopup(`<div class="popup-title">🏠 ${b.nome}</div><div class="popup-row"><span>Sede</span><b>${b.cidade}/BA</b></div><div class="popup-foot">Base prevista no PLANOP Florestal Bahia 2025/2026.</div>`);}
    OCC.forEach(o=>{const c=centers[norm(o.municipio)];if(c)L.marker([c.lat,c.lng],{icon:fireIcon}).addTo(fireLayer).bindPopup(`<div class="popup-title">🔥 ${o.municipio}</div><div class="popup-row"><span>Status</span><b>${o.status}</b></div><div class="popup-row"><span>Data</span><b>${o.data}</b></div><div class="popup-foot">Marcador CBMBA demonstrativo. A camada do CENSIPAM acima é externa e carregada ao vivo.</div>`);});
    buildList();if(westBounds)map.fitBounds(westBounds,{padding:[18,18]});loading.textContent="Cobertura por proximidade calculada";setTimeout(()=>loading.style.display="none",1200);
  }catch(e){console.error(e);loading.classList.add("error");loading.textContent="Falha ao carregar os limites municipais. Verifique a internet.";}
