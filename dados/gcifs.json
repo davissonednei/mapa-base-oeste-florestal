@@ -26,10 +26,9 @@
   },
   "06": {
     "municipio": "Barreiras",
-    "local": "Vau da Boa Esperança",
-    "status": "Em Combate",
-    "lat": -12.202620,
-    "lng": -45.223270
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "07": {
     "municipio": "Barreiras",
