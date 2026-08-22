@@ -11,6 +11,64 @@
   const BASE_OESTE_EXATA = L.latLng(-12.148524, -44.996610);
   let spiderState = null;
 
+  /*
+   * O mapa principal usava tb_evento, que inclui o universo de eventos do Painel do Fogo.
+   * Para reproduzir a camada operacional exibida no painel, usamos a camada
+   * CENSIPAM - Frente de Fogo (24h), publicada no mesmo GeoServer.
+   */
+  const frenteFogo24hLayer = L.tileLayer.wms(
+    "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wms",
+    {
+      layers:"painel_do_fogo:mv_indicadores_queimadas",
+      format:"image/png",
+      transparent:true,
+      version:"1.1.1",
+      opacity:1,
+      pane:"censipamPane",
+      attribution:"CENSIPAM — Frente de Fogo (24h)"
+    }
+  );
+
+  // Retira a antiga camada de eventos e deixa somente a Frente de Fogo (24h).
+  if(map.hasLayer(censipamLayer)) map.removeLayer(censipamLayer);
+  frenteFogo24hLayer.addTo(map);
+
+  const censipamBtn = document.getElementById("toggleCensipam");
+  if(censipamBtn){
+    censipamBtn.innerHTML = "🔥 Frente de Fogo 24h";
+    censipamBtn.classList.remove("off");
+    censipamBtn.onclick = () => {
+      if(map.hasLayer(frenteFogo24hLayer)){
+        map.removeLayer(frenteFogo24hLayer);
+        censipamBtn.classList.add("off");
+      }else{
+        frenteFogo24hLayer.addTo(map);
+        censipamBtn.classList.remove("off");
+      }
+    };
+  }
+
+  // Atualiza a legenda sem precisar alterar a estrutura do index principal.
+  document.querySelectorAll(".legend-row").forEach(row => {
+    if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Frente de Fogo (24h) — CENSIPAM";
+  });
+
+  // O status passa a refletir a nova camada operacional.
+  if(typeof apiStatus !== "undefined"){
+    apiStatus.classList.remove("ok","err");
+    apiStatus.querySelector("span:last-child").textContent = "Conectando à Frente de Fogo (24h) do CENSIPAM…";
+    frenteFogo24hLayer.on("load",()=>{
+      apiStatus.classList.remove("err");
+      apiStatus.classList.add("ok");
+      apiStatus.querySelector("span:last-child").textContent = "CENSIPAM conectado — Frente de Fogo das últimas 24h";
+    });
+    frenteFogo24hLayer.on("tileerror",()=>{
+      apiStatus.classList.remove("ok");
+      apiStatus.classList.add("err");
+      apiStatus.querySelector("span:last-child").textContent = "Frente de Fogo (24h) não respondeu nesta tentativa";
+    });
+  }
+
   const clusterIcon = count => L.divIcon({
     className: "gcif-cluster-icon",
     html: `<div class="gcif-cluster-bubble"><span>🚒</span><b>${count}</b></div>`,
@@ -33,13 +91,9 @@
     }
   }
 
-  // O WMS não se atualiza sozinho: força nova consulta ao CENSIPAM para não manter eventos já extintos em cache.
+  // Força nova consulta ao CENSIPAM para evitar imagens WMS antigas em cache.
   function atualizarCensipam(){
-    if(typeof censipamLayer === "undefined") return;
-    censipamLayer.setParams({
-      CQL_FILTER:"id_status_evento IN (1,2)",
-      _:Date.now()
-    });
+    frenteFogo24hLayer.setParams({_:Date.now()});
   }
 
   function collapseSpider(){
