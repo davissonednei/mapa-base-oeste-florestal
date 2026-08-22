@@ -75,16 +75,14 @@
   },
   "15": {
     "municipio": "Barreiras",
-    "local": "Chácara do Pajé",
-    "status": "Em Combate",
-    "lat": -12.190093,
-    "lng": -45.151750
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "16": {
     "municipio": "Barreiras",
-    "local": "Chácara do Pajé",
-    "status": "Em Combate",
-    "lat": -12.190093,
-    "lng": -45.151750
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   }
 }
