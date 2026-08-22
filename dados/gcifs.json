@@ -47,8 +47,10 @@
   },
   "09": {
     "municipio": "Barra",
-    "status": "Ações preventivas",
-    "tipo": "centro"
+    "local": "Sede municipal (posição provisória)",
+    "status": "Em Combate",
+    "tipo": "centro",
+    "aprox": true
   },
   "10": {
     "municipio": "Barreiras",
