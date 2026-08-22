@@ -69,7 +69,7 @@ aside{background:var(--panel);border-right:1px solid var(--line);overflow:auto;p
  <div class="summary">
    <div class="card"><strong id="westCount">—</strong><span>OESTE MAIS PRÓXIMA</span></div>
    <div class="card"><strong>6</strong><span>BASES FLORESTAIS</span></div>
-   <div class="card"><strong id="fireCount">2</strong><span>🔥 DEMONSTRAÇÃO</span></div>
+   <div class="card"><strong id="fireCount">0</strong><span>🔥 OCORRÊNCIAS CBMBA</span></div>
  </div>
  <div class="notice"><b>Importante:</b> a área laranja é calculada pela menor distância geográfica entre o centro do município e as 6 bases do PLANOP. Não representa delimitação oficial de responsabilidade.</div>
  <div id="apiStatus" class="api-status"><span class="api-dot"></span><span>Conectando ao Painel do Fogo do CENSIPAM…</span></div>
@@ -136,10 +136,7 @@ const DIST_PORTARIA={
  "luis eduardo magalhaes":"85 km"
 };
 
-const OCC=[
- {municipio:"São Desidério",status:"Demonstração",data:"Exemplo"},
- {municipio:"Formosa do Rio Preto",status:"Demonstração",data:"Exemplo"}
-];
+const OCC=[];
 
 const map=L.map("map",{zoomControl:true,minZoom:5}).setView([-12.3,-44.7],6);
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
@@ -236,7 +233,7 @@ async function init(){
    for(const rec of records){const isWest=isCoberturaOeste(rec);const layer=makeMunicipioLayer(rec.feature,rec,isWest);layer.eachLayer(l=>featureLayers[norm(rec.nome)]=l);if(isWest){layer.eachLayer(l=>westLayer.addLayer(l));westFeatures.push(rec.feature);}else layer.eachLayer(l=>contextLayer.addLayer(l));}
    if(westFeatures.length)westBounds=L.geoJSON({type:"FeatureCollection",features:westFeatures}).getBounds();
    for(const b of BASES){const icon=baseIcon("🏠",b.id==="oeste"?36:28);const m=L.marker([b.lat,b.lng],{icon}).addTo(baseLayer);m.bindPopup(`<div class="popup-title">🏠 ${b.nome}</div><div class="popup-row"><span>Sede</span><b>${b.cidade}/BA</b></div><div class="popup-foot">Base prevista no PLANOP Florestal Bahia 2025/2026.</div>`);}
-   OCC.forEach(o=>{const c=centers[norm(o.municipio)];if(c)L.marker([c.lat,c.lng],{icon:fireIcon}).addTo(fireLayer).bindPopup(`<div class="popup-title">🔥 ${o.municipio}</div><div class="popup-row"><span>Status</span><b>${o.status}</b></div><div class="popup-row"><span>Data</span><b>${o.data}</b></div><div class="popup-foot">Marcador CBMBA demonstrativo. A camada do CENSIPAM acima é externa e carregada ao vivo.</div>`);});
+   OCC.forEach(o=>{const c=centers[norm(o.municipio)];if(c)L.marker([c.lat,c.lng],{icon:fireIcon}).addTo(fireLayer).bindPopup(`<div class="popup-title">🔥 ${o.municipio}</div><div class="popup-row"><span>Status</span><b>${o.status}</b></div><div class="popup-row"><span>Data</span><b>${o.data}</b></div><div class="popup-foot">Ocorrência CBMBA.</div>`);});
    buildList();if(westBounds)map.fitBounds(westBounds,{padding:[18,18]});loading.textContent="Cobertura por proximidade calculada";setTimeout(()=>loading.style.display="none",1200);
  }catch(e){console.error(e);loading.classList.add("error");loading.textContent="Falha ao carregar os limites municipais. Verifique a internet.";}
 }
