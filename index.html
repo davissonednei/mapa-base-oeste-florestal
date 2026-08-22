@@ -154,12 +154,21 @@ map.getPane("censipamPane").style.pointerEvents = "none";
 
 const censipamLayer = L.tileLayer.wms(
   "https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wms",
-  {layers:"painel_do_fogo:tb_evento",format:"image/png",transparent:true,version:"1.1.1",opacity:.86,pane:"censipamPane",attribution:"CENSIPAM — Painel do Fogo"}
+  {
+    layers:"painel_do_fogo:tb_evento",
+    format:"image/png",
+    transparent:true,
+    version:"1.1.1",
+    opacity:.86,
+    CQL_FILTER:"id_status_evento IN (1,2)",
+    pane:"censipamPane",
+    attribution:"CENSIPAM — Painel do Fogo"
+  }
 ).addTo(map);
 
 const apiStatus = document.getElementById("apiStatus");
 let censipamConfirmed = false;
-censipamLayer.on("load", () => {censipamConfirmed=true;apiStatus.classList.remove("err");apiStatus.classList.add("ok");apiStatus.querySelector("span:last-child").textContent="Painel do Fogo conectado — Eventos de Fogo carregados";});
+censipamLayer.on("load", () => {censipamConfirmed=true;apiStatus.classList.remove("err");apiStatus.classList.add("ok");apiStatus.querySelector("span:last-child").textContent="Painel do Fogo conectado — apenas eventos ativos/em espera";});
 censipamLayer.on("tileerror", () => {if(censipamConfirmed)return;apiStatus.classList.remove("ok");apiStatus.classList.add("err");apiStatus.querySelector("span:last-child").textContent="CENSIPAM não respondeu nesta tentativa";});
 
 let baBounds=null,westBounds=null,featureLayers={},centers={},records=[];
