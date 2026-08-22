@@ -14,9 +14,10 @@
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
-    "status": "Em Combate",
-    "lat": -11.952137,
-    "lng": -45.491619
+    "local": "Base Luís Eduardo Magalhães",
+    "status": "Em prontidão",
+    "lat": -12.084869709284002,
+    "lng": -45.806862201783765
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
@@ -32,15 +33,15 @@
   },
   "07": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.25314,
-    "lng": -45.07533
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "08": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.25314,
-    "lng": -45.07533
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "09": {
     "municipio": "Barra",
@@ -51,9 +52,9 @@
   },
   "10": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.25314,
-    "lng": -45.07533
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "11": {
     "municipio": "Barreiras",
