@@ -94,5 +94,11 @@
     {"posto":"SD","nome":"JOSEMAR","funcao":"CMD","numero":233},
     {"posto":"SD","nome":"PASSOS","funcao":"","numero":null},
     {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
+  ],
+  "STAFF": [
+    {"posto":"TEN CEL","nome":"JOSIEL DOS SANTOS FERREIRA","funcao":"STAFF","numero":null},
+    {"posto":"CAP","nome":"THIERS MALTEZ SANTANA VIEIRA","funcao":"STAFF","numero":null},
+    {"posto":"SGT","nome":"GUILHERME VICENTE SANTANA DA SILVA","funcao":"STAFF","numero":null},
+    {"posto":"SGT","nome":"ANDERSON FABRICIO CARMO DA SILVA","funcao":"STAFF","numero":null}
   ]
 }
