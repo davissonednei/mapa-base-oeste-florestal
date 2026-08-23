@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-23T20:46:12.909967Z",
+  "atualizado_em": "2026-08-23T20:59:55.755666Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -12548,7 +12548,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-15T15:54:00Z",
       "dt_maxima": "2026-08-23T17:20:00Z",
-      "dt_ultima_visao": "2026-08-23T20:30:20Z",
+      "dt_ultima_visao": "2026-08-23T20:40:20Z",
       "persistencia_dias": 8,
       "area_total_evento": 59.69389744005906,
       "latitude": -12.254367512995593,
@@ -33734,7 +33734,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-20T16:01:00Z",
       "dt_maxima": "2026-08-23T17:20:00Z",
-      "dt_ultima_visao": "2026-08-23T20:30:20Z",
+      "dt_ultima_visao": "2026-08-23T20:40:20Z",
       "persistencia_dias": 3,
       "area_total_evento": 8.658285119687902,
       "latitude": -13.09474545546184,
@@ -79406,7 +79406,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-23T15:58:00Z",
       "dt_maxima": "2026-08-23T17:20:00Z",
-      "dt_ultima_visao": "2026-08-23T17:20:00Z",
+      "dt_ultima_visao": "2026-08-23T20:40:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 8.65123762339407,
       "latitude": -14.236308100360448,
@@ -81488,7 +81488,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-23T16:01:00Z",
       "dt_maxima": "2026-08-23T17:20:00Z",
-      "dt_ultima_visao": "2026-08-23T20:00:20Z",
+      "dt_ultima_visao": "2026-08-23T20:40:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 4.915739564885624,
       "latitude": -9.821008246386365,
