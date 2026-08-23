@@ -39,7 +39,7 @@
     .quick-status.status-combate{color:#ff9c9c;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}.quick-status.status-prontidao{color:#9cebb8;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35)}.quick-status.status-deslocamento{color:#ffd18a;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.35)}.quick-status.status-neutro{color:#cbd5e1;background:rgba(148,163,184,.1);border:1px solid rgba(148,163,184,.35)}
     .quick-body{padding:9px 10px}.quick-place{font-size:10px;color:#9dafbe;margin-bottom:8px}.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}.quick-metric{border:1px solid #1f3040;border-radius:8px;background:#0d1a26;padding:7px}.quick-metric span{display:block;font-size:8px;color:#8399ab;text-transform:uppercase;font-weight:800}.quick-metric b{display:block;font-size:11px;color:#fff;margin-top:3px}
     .quick-line{font-size:10px;line-height:1.45;margin-top:5px;color:#dbe6ee}.quick-line span{color:#8298aa}.quick-resource{margin-top:7px;border:1px solid rgba(56,189,248,.3);background:rgba(56,189,248,.08);color:#b8e8ff;border-radius:8px;padding:7px 8px;font-size:10px;font-weight:800}
-    @media(max-width:1180px){.ops-stat{min-width:60px;padding:4px 6px}.ops-stat b{font-size:14px}.ops-stat:nth-child(6){display:none}}
+    @media(max-width:1180px){.ops-stat{min-width:60px;padding:4px 6px}.ops-stat b{font-size:14px}.ops-stat:nth-child(7){display:none}}
     @media(max-width:920px){.header-ops-summary{display:none}}
     @media(max-width:820px){.accordion-title{display:flex!important}.accordion-panel{display:none!important}.accordion-panel.open{display:flex!important}}
   `;
@@ -104,14 +104,16 @@
     const combate=contar("combate");
     const prontidao=contar("prontidao");
     const deslocamento=ids.filter(id=>norm(GCIFS_DATA[id]?.status).includes("desloc")).length;
-    const efetivo=Object.values(EFETIVO_GCIFS||{}).reduce((s,e)=>s+(Array.isArray(e)?e.length:0),0);
+    const efetivoGcifs=Object.entries(EFETIVO_GCIFS||{}).filter(([id])=>id!=="STAFF").reduce((s,[,e])=>s+(Array.isArray(e)?e.length:0),0);
+    const staff=(EFETIVO_GCIFS?.STAFF||[]).length;
     const viaturas=ids.filter(id=>VIATURAS?.porGcif?.[id]).length;
     box.innerHTML=`
       <div class="ops-stat"><b>${ids.length}</b><span>GCIFs</span></div>
       <div class="ops-stat combate"><b>${combate}</b><span>Combate</span></div>
       <div class="ops-stat prontidao"><b>${prontidao}</b><span>Prontidão</span></div>
       <div class="ops-stat deslocamento"><b>${deslocamento}</b><span>Desloc.</span></div>
-      <div class="ops-stat"><b>${efetivo}</b><span>BM</span></div>
+      <div class="ops-stat"><b>${efetivoGcifs}</b><span>BM GCIF</span></div>
+      <div class="ops-stat"><b>${staff}</b><span>STAFF</span></div>
       <div class="ops-stat"><b>${viaturas}</b><span>Viaturas</span></div>`;
   }
 
@@ -407,6 +409,7 @@
     if(q.length<2) return [];
     const resultados=[];
     for(const [id,equipe] of Object.entries(EFETIVO_GCIFS||{})){
+      if(id==="STAFF") continue;
       for(const m of equipe||[]){
         const texto=norm(`${m.posto||""} ${m.nome||""} ${m.funcao||""} ${m.numero??""} ${m.equipamento||""}`);
         if(texto.includes(q)) resultados.push({tipo:"militar",id,titulo:`${m.posto} ${m.nome}`,sub:`GCIF ${id}${m.funcao?` • ${m.funcao}`:""}${m.equipamento?` • ${m.equipamento}`:""}`});
