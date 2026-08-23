@@ -32,9 +32,9 @@
   },
   "07": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.257332,
-    "lng": -45.076621
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "08": {
     "municipio": "Barreiras",
@@ -56,15 +56,15 @@
   },
   "11": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.270948,
-    "lng": -45.040856
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "13": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.257332,
-    "lng": -45.076621
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "14": {
     "municipio": "Barra",
