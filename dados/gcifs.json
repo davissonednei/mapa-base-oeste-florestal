@@ -56,7 +56,8 @@
   },
   "11": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
+    "local": "Base Florestal Oeste • Obs.: ida à farmácia",
+    "observacao": "Ida à farmácia",
     "status": "Em prontidão",
     "tipo": "base"
   },
