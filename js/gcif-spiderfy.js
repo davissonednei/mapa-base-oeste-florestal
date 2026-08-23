@@ -1,10 +1,10 @@
-/* Carrega o núcleo do mapa e aplica melhorias de interação operacional. */
+/* Carrega o núcleo do mapa e aplica interações operacionais sem conflito entre camadas. */
 (() => {
   const EVENTOS_CACHE_TOKEN = "dados/eventos_fogo.json";
   let eventosFogoCache = [];
+  let aoAtualizarEventos = null;
 
-  /* Captura a mesma resposta já usada pelo núcleo para enriquecer os cartões,
-     sem fazer uma segunda chamada ao CENSIPAM. */
+  /* Captura a resposta que o próprio núcleo já busca no cache local. */
   const fetchOriginal = window.fetch.bind(window);
   window.fetch = async (...args) => {
     const resposta = await fetchOriginal(...args);
@@ -13,23 +13,32 @@
       if (url.includes(EVENTOS_CACHE_TOKEN)) {
         resposta.clone().json().then(payload => {
           const eventos = Array.isArray(payload) ? payload : payload?.eventos;
-          if (Array.isArray(eventos)) eventosFogoCache = eventos;
+          if (Array.isArray(eventos)) {
+            eventosFogoCache = eventos;
+            if (typeof aoAtualizarEventos === "function") aoAtualizarEventos();
+          }
         }).catch(() => {});
       }
     } catch (e) {}
     return resposta;
   };
 
-  /* Eventos de fogo ficam acima dos polígonos municipais, mas abaixo dos marcadores. */
+  /* Pane dos eventos: acima dos municípios, abaixo de bases/GCIFs. */
   try {
     if (!map.getPane("censipamPane")) map.createPane("censipamPane");
     const pane = map.getPane("censipamPane");
     pane.style.zIndex = 450;
     pane.style.pointerEvents = "auto";
+
+    if (!map.getPane("fireHitPane")) map.createPane("fireHitPane");
+    const hitPane = map.getPane("fireHitPane");
+    hitPane.style.zIndex = 470;
+    hitPane.style.pointerEvents = "auto";
   } catch (e) {}
 
   const core = document.createElement("script");
   core.src = `js/gcif-spiderfy-core.js?v=${Date.now()}`;
+
   core.onload = () => {
     try {
       const mapEl = map.getContainer();
@@ -38,9 +47,10 @@
       let selecionarMunicipio = false;
       let rulerAtiva = false;
 
-      const extraStyle = document.createElement("style");
-      extraStyle.textContent = `
+      const style = document.createElement("style");
+      style.textContent = `
         .municipio-select-mode{cursor:pointer!important}
+        .fire-hit-path{cursor:pointer!important}
         .fire-card{min-width:305px;max-width:355px;font-family:Inter,Segoe UI,Arial,sans-serif}
         .fire-card-head{display:flex;align-items:center;gap:9px;padding-bottom:9px;margin-bottom:9px;border-bottom:1px solid #263949}
         .fire-card-icon{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(239,68,68,.13);border:1px solid rgba(239,68,68,.32);font-size:19px;flex:none}
@@ -57,7 +67,7 @@
         .ruler-hud.show{display:block}.ruler-hud-head{display:flex;align-items:center;gap:8px}.ruler-hud-title{font-weight:900;margin-right:auto}.ruler-total{font-size:17px;font-weight:900;color:#ffd18a;margin:6px 0 2px}.ruler-help{font-size:9px;font-weight:600;color:#9dafbe}.ruler-actions{display:flex;gap:6px;margin-top:8px}.ruler-mini{border:1px solid #33495d;border-radius:7px;background:#101d29;color:#e7eef4;padding:5px 8px;font-size:9px;font-weight:800;cursor:pointer}.ruler-mini:hover{background:#17293a}.ruler-label{background:#071019!important;border:1px solid #f59e0b!important;color:#fff!important;border-radius:999px!important;padding:3px 6px!important;font:800 9px/1 Inter,Segoe UI,Arial,sans-serif!important;box-shadow:0 2px 7px rgba(0,0,0,.28)!important}.ruler-label:before{display:none!important}
         @media(max-width:820px){.ruler-hud{left:10px;bottom:12px;min-width:220px;max-width:calc(100% - 20px)}}
       `;
-      document.head.appendChild(extraStyle);
+      document.head.appendChild(style);
 
       function normalizar(txt) {
         return String(txt || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -102,12 +112,14 @@
       }
 
       function areaEventoHa(evento) {
-        const hectaresDireto = numero(evento?.area_total_evento_ha, evento?.area_ha, evento?.area_total_ha);
-        if (hectaresDireto !== null) return hectaresDireto;
-        const metrosQuadrados = numero(evento?.area_total_evento);
-        if (metrosQuadrados !== null) return metrosQuadrados / 10000;
         const km2 = numero(evento?.area_km2);
-        return km2 === null ? null : km2 * 100;
+        if (km2 !== null) return km2 * 100;
+        const ha = numero(evento?.area_total_evento_ha, evento?.area_ha, evento?.area_total_ha);
+        if (ha !== null) return ha;
+        const direta = numero(evento?.area_total_evento);
+        if (direta === null) return null;
+        /* O serviço já apareceu com valores em ha e em m² em estruturas distintas. */
+        return direta > 10000 ? direta / 10000 : direta;
       }
 
       function localizarEvento(id) {
@@ -140,39 +152,88 @@
           </div>
           <div class="fire-card-grid">
             <div class="fire-card-metric"><span>Última detecção</span><b>${formatarData(ultimaRaw)}</b></div>
-            <div class="fire-card-metric"><span>Idade da detecção</span><b>${idade}</b></div>
+            <div class="fire-card-metric"><span>Idade</span><b>${idade}</b></div>
             <div class="fire-card-metric"><span>Duração</span><b>${duracao}</b></div>
             <div class="fire-card-metric"><span>Área</span><b>${area}</b></div>
           </div>
           <div class="fire-card-row"><span>Município</span><b>${municipio}</b></div>
           <div class="fire-card-row"><span>Primeira detecção</span><b>${formatarData(primeiraRaw)}</b></div>
           <div class="fire-card-row"><span>Coordenadas</span><b>${coords}</b></div>
-          <div class="fire-card-foot">Dados sincronizados com o Painel do Fogo. Horários apresentados no fuso da Bahia.</div>
+          <div class="fire-card-foot">Dados sincronizados com o Painel do Fogo. Horários no fuso da Bahia.</div>
         </div>`;
       }
 
-      /* Enriquece apenas os popups de evento que o núcleo já cria. */
+      /* Se um popup antigo do núcleo abrir, troca pelo cartão novo. */
       map.on("popupopen", e => {
         try {
           const popup = e.popup;
-          const el = popup.getElement();
-          const texto = el?.textContent || "";
+          const texto = popup.getElement()?.textContent || "";
           const achou = texto.match(/Evento\s+#?(\d+)/i);
           if (!achou) return;
           const evento = localizarEvento(achou[1]);
-          if (!evento) return;
-          popup.setContent(htmlCartaoEvento(evento));
-        } catch (err) {
-          console.warn("Falha ao montar cartão do evento de fogo", err);
-        }
+          if (evento) popup.setContent(htmlCartaoEvento(evento));
+        } catch (err) {}
       });
 
-      /* ---------- MODO DE SELEÇÃO DE MUNICÍPIO ---------- */
+      /* ---------- ÁREA CLICÁVEL DOS EVENTOS DE FOGO ---------- */
+      const fireHitLayer = L.layerGroup().addTo(map);
+
+      function eventoAte24h(evento) {
+        const d = dataValida(evento?.dt_ultima_visao || evento?.dt_maxima || evento?.dt_max_evento);
+        if (!d) return false;
+        const idade = Date.now() - d.getTime();
+        return idade >= -3600000 && idade <= 24 * 60 * 60 * 1000;
+      }
+
+      function geometriaEvento(evento) {
+        const geom = evento?.geom;
+        if (!geom || !geom.coordinates?.length) return null;
+        return {type:"Feature", properties:{id_evento:evento.id_evento}, geometry:{type:geom.type || "Polygon", coordinates:geom.coordinates}};
+      }
+
+      function configurarCliqueEvento(layer, evento) {
+        layer.options.bubblingMouseEvents = false;
+        layer.bindPopup(() => htmlCartaoEvento(evento), {maxWidth:390, closeButton:true});
+        layer.on("click", ev => {
+          if (ev.originalEvent) L.DomEvent.stopPropagation(ev.originalEvent);
+        });
+      }
+
+      function reconstruirAreasClicaveisFogo() {
+        fireHitLayer.clearLayers();
+        for (const evento of eventosFogoCache) {
+          if (!eventoAte24h(evento)) continue;
+          const feature = geometriaEvento(evento);
+          if (feature) {
+            const hit = L.geoJSON(feature, {
+              pane:"fireHitPane",
+              interactive:true,
+              bubblingMouseEvents:false,
+              style:{color:"#000", weight:12, opacity:.001, fillColor:"#000", fillOpacity:.001, className:"fire-hit-path"},
+              onEachFeature:(_, layer) => configurarCliqueEvento(layer, evento)
+            });
+            hit.addTo(fireHitLayer);
+          }
+          const lat = numero(evento?.latitude, evento?.lat);
+          const lng = numero(evento?.longitude, evento?.lng, evento?.lon);
+          if (lat !== null && lng !== null) {
+            const alvo = L.circleMarker([lat,lng], {
+              pane:"fireHitPane", radius:13, interactive:true, bubblingMouseEvents:false,
+              color:"#000", weight:1, opacity:.001, fillColor:"#000", fillOpacity:.001
+            }).addTo(fireHitLayer);
+            configurarCliqueEvento(alvo, evento);
+          }
+        }
+      }
+      aoAtualizarEventos = reconstruirAreasClicaveisFogo;
+      reconstruirAreasClicaveisFogo();
+
+      /* ---------- MUNICÍPIOS: VISÍVEIS, MAS SEM ROUBAR CLIQUE ---------- */
       const municipioBtn = document.createElement("button");
       municipioBtn.id = "toggleMunicipioSelect";
       municipioBtn.className = "map-btn";
       municipioBtn.innerHTML = "🗺️ MUNICÍPIO";
-      municipioBtn.title = "Ativar clique nos municípios";
+      municipioBtn.title = "Ativar consulta de município";
       mapActions?.appendChild(municipioBtn);
 
       function percorrerPaths(layer, fn) {
@@ -184,25 +245,50 @@
         if (typeof layer.getElement === "function") fn(layer);
       }
 
-      function aplicarInteratividadeMunicipios() {
-        const podeClicar = selecionarMunicipio && !rulerAtiva;
+      function manterMunicipiosPassivos() {
         [westLayer, contextLayer].forEach(grupo => {
           percorrerPaths(grupo, layer => {
-            if (layer.options) layer.options.interactive = podeClicar;
+            if (layer.options) layer.options.interactive = false;
             const el = layer.getElement?.();
-            if (el) el.style.pointerEvents = podeClicar ? "auto" : "none";
+            if (el) el.style.pointerEvents = "none";
           });
         });
-        mapEl.classList.toggle("municipio-select-mode", podeClicar);
+        mapEl.classList.toggle("municipio-select-mode", selecionarMunicipio && !rulerAtiva);
       }
 
       function setMunicipioSelect(ativa) {
         selecionarMunicipio = ativa;
         municipioBtn.classList.toggle("active", ativa);
         municipioBtn.innerHTML = ativa ? "🗺️ MUNICÍPIO ✓" : "🗺️ MUNICÍPIO";
-        municipioBtn.title = ativa ? "Desativar seleção de município" : "Ativar clique nos municípios";
+        municipioBtn.title = ativa ? "Clique no mapa para consultar o município" : "Ativar consulta de município";
         if (ativa) map.closePopup();
-        aplicarInteratividadeMunicipios();
+        manterMunicipiosPassivos();
+      }
+
+      function encontrarMunicipioNoPonto(latlng) {
+        const ponto = map.latLngToLayerPoint(latlng);
+        let encontrado = null;
+        const procurar = grupo => {
+          if (encontrado || !map.hasLayer(grupo)) return;
+          grupo.eachLayer(geo => {
+            if (encontrado) return;
+            const testar = layer => {
+              if (encontrado) return;
+              if (typeof layer.eachLayer === "function") {
+                layer.eachLayer(testar);
+                return;
+              }
+              try {
+                if (typeof layer._containsPoint === "function" && layer._containsPoint(ponto)) encontrado = layer;
+              } catch (e) {}
+            };
+            testar(geo);
+          });
+        };
+        /* Oeste primeiro, depois as demais áreas. */
+        procurar(westLayer);
+        procurar(contextLayer);
+        return encontrado;
       }
 
       municipioBtn.onclick = () => {
@@ -216,13 +302,22 @@
       };
 
       [westLayer, contextLayer].forEach(grupo => {
-        grupo.on?.("layeradd", () => requestAnimationFrame(aplicarInteratividadeMunicipios));
+        grupo.on?.("layeradd", () => requestAnimationFrame(manterMunicipiosPassivos));
       });
-      setTimeout(aplicarInteratividadeMunicipios, 0);
-      setTimeout(aplicarInteratividadeMunicipios, 500);
-      setTimeout(aplicarInteratividadeMunicipios, 1500);
+      setTimeout(manterMunicipiosPassivos, 0);
+      setTimeout(manterMunicipiosPassivos, 500);
+      setTimeout(manterMunicipiosPassivos, 1500);
 
-      /* Coordenadas também é um modo exclusivo de clique. */
+      map.on("click", e => {
+        if (!selecionarMunicipio || rulerAtiva) return;
+        const alvoDom = e.originalEvent?.target;
+        if (alvoDom?.closest?.(".leaflet-marker-icon,.leaflet-control,.fire-hit-path")) return;
+        const layer = encontrarMunicipioNoPonto(e.latlng);
+        if (!layer) return;
+        const popup = layer.getPopup?.();
+        if (popup) layer.openPopup(e.latlng);
+      });
+
       document.getElementById("toggleCoords")?.addEventListener("click", () => {
         if (selecionarMunicipio) setMunicipioSelect(false);
       }, true);
@@ -236,19 +331,17 @@
       L.DomEvent.disableClickPropagation(rulerHud);
       L.DomEvent.disableScrollPropagation(rulerHud);
 
-      const rulerBtn = document.getElementById("toggleRuler") || document.createElement("button");
-      if (!rulerBtn.id) {
-        rulerBtn.id = "toggleRuler";
-        rulerBtn.className = "map-btn";
-        rulerBtn.innerHTML = "📏 RÉGUA";
-        rulerBtn.title = "Medir distância em linha reta";
-        mapActions?.appendChild(rulerBtn);
-      }
+      const rulerBtn = document.createElement("button");
+      rulerBtn.id = "toggleRuler";
+      rulerBtn.className = "map-btn";
+      rulerBtn.innerHTML = "📏 RÉGUA";
+      rulerBtn.title = "Medir distância em linha reta";
+      mapActions?.appendChild(rulerBtn);
 
       let rulerPontos = [];
       let rulerPreview = null;
 
-      function formatarDistanciaMedida(metros) {
+      function formatarDistancia(metros) {
         if (!Number.isFinite(metros)) return "—";
         if (metros < 1000) return `${Math.round(metros).toLocaleString("pt-BR")} m`;
         return `${(metros / 1000).toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2})} km`;
@@ -260,38 +353,30 @@
         return total;
       }
 
-      function atualizarRulerHud() {
+      function atualizarHud() {
         const total = document.getElementById("rulerTotal");
         const help = document.getElementById("rulerHelp");
-        if (total) total.textContent = formatarDistanciaMedida(distanciaAcumulada());
-        if (help) {
-          help.textContent = rulerPontos.length === 0
-            ? "Clique no mapa para marcar o primeiro ponto."
-            : rulerPontos.length === 1
-              ? "Clique em outro ponto para medir."
-              : `${rulerPontos.length} pontos • clique para continuar a medição.`;
-        }
+        if (total) total.textContent = formatarDistancia(distanciaAcumulada());
+        if (help) help.textContent = rulerPontos.length === 0 ? "Clique no mapa para marcar o primeiro ponto." : rulerPontos.length === 1 ? "Clique em outro ponto para medir." : `${rulerPontos.length} pontos • clique para continuar a medição.`;
       }
 
       function desenharRegua() {
         rulerLayer.clearLayers();
         rulerPreview = null;
-        if (rulerPontos.length > 1) {
-          L.polyline(rulerPontos, {color:"#f59e0b", weight:3, opacity:.95, interactive:false}).addTo(rulerLayer);
-        }
+        if (rulerPontos.length > 1) L.polyline(rulerPontos, {color:"#f59e0b", weight:3, opacity:.95, interactive:false}).addTo(rulerLayer);
         rulerPontos.forEach((p, i) => {
           const acumulada = i === 0 ? 0 : distanciaAcumulada(i + 1);
           const ponto = L.circleMarker(p, {radius:5, color:"#071019", weight:2, fillColor:"#f59e0b", fillOpacity:1, interactive:false}).addTo(rulerLayer);
-          ponto.bindTooltip(formatarDistanciaMedida(acumulada), {permanent:true, direction:"top", offset:[0,-5], className:"ruler-label"});
+          ponto.bindTooltip(formatarDistancia(acumulada), {permanent:true, direction:"top", offset:[0,-5], className:"ruler-label"});
         });
-        atualizarRulerHud();
+        atualizarHud();
       }
 
       function limparRegua() {
         rulerPontos = [];
         rulerLayer.clearLayers();
         rulerPreview = null;
-        atualizarRulerHud();
+        atualizarHud();
       }
 
       function setReguaAtiva(ativa) {
@@ -306,20 +391,14 @@
             if (typeof coordsEnabled !== "undefined" && coordsEnabled) document.getElementById("toggleCoords")?.click();
           } catch (e) {}
           map.closePopup();
-          atualizarRulerHud();
-        } else {
-          limparRegua();
-        }
-        aplicarInteratividadeMunicipios();
+          atualizarHud();
+        } else limparRegua();
+        manterMunicipiosPassivos();
       }
 
       rulerBtn.onclick = () => setReguaAtiva(!rulerAtiva);
       document.getElementById("rulerClear").onclick = limparRegua;
-      document.getElementById("rulerUndo").onclick = () => {
-        if (!rulerPontos.length) return;
-        rulerPontos.pop();
-        desenharRegua();
-      };
+      document.getElementById("rulerUndo").onclick = () => { if (rulerPontos.length) { rulerPontos.pop(); desenharRegua(); } };
       document.getElementById("rulerClose").onclick = () => setReguaAtiva(false);
 
       map.on("click", e => {
@@ -330,11 +409,8 @@
       map.on("mousemove", e => {
         if (!rulerAtiva || !rulerPontos.length) return;
         const ultimo = rulerPontos[rulerPontos.length - 1];
-        if (!rulerPreview) {
-          rulerPreview = L.polyline([ultimo, e.latlng], {color:"#f59e0b", weight:2, opacity:.65, dashArray:"6 6", interactive:false}).addTo(rulerLayer);
-        } else {
-          rulerPreview.setLatLngs([ultimo, e.latlng]);
-        }
+        if (!rulerPreview) rulerPreview = L.polyline([ultimo,e.latlng], {color:"#f59e0b", weight:2, opacity:.65, dashArray:"6 6", interactive:false}).addTo(rulerLayer);
+        else rulerPreview.setLatLngs([ultimo,e.latlng]);
       });
       document.addEventListener("keydown", e => {
         if (!rulerAtiva) return;
@@ -346,12 +422,12 @@
         }
       });
 
-      /* Municípios começam visíveis, porém passivos. */
-      aplicarInteratividadeMunicipios();
+      manterMunicipiosPassivos();
     } catch (e) {
-      console.warn("Falha ao aplicar melhorias operacionais do mapa", e);
+      console.warn("Falha ao aplicar interações operacionais", e);
     }
   };
+
   core.onerror = () => console.error("Falha ao carregar o núcleo do mapa operacional");
   document.head.appendChild(core);
 })();
