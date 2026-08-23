@@ -45,9 +45,10 @@
   },
   "09": {
     "municipio": "Barra",
-    "status": "Em Combate",
-    "lat": -11.001282,
-    "lng": -43.107754
+    "local": "Base Barra",
+    "status": "Em prontidão",
+    "lat": -11.091654738871627,
+    "lng": -43.172578971164576
   },
   "10": {
     "municipio": "Barreiras",
