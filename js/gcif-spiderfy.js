@@ -437,7 +437,10 @@
 
   const searchOperacional=document.getElementById("search");
   if(searchOperacional){
-    searchOperacional.addEventListener("input",e=>renderResultadosBusca(e.target.value));
+    searchOperacional.addEventListener("input",e=>{
+      e.stopImmediatePropagation();
+      renderResultadosBusca(e.target.value);
+    },true);
     searchOperacional.addEventListener("keydown",e=>{
       if(e.key!=="Enter") return;
       const primeiro=document.querySelector("#opsSearchResults .ops-search-item");
