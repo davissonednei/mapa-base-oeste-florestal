@@ -102,8 +102,10 @@
       }
 
       function areaEventoHa(evento) {
-        const direta = numero(evento?.area_ha, evento?.area_total_ha, evento?.area_total_evento);
-        if (direta !== null) return direta;
+        const hectaresDireto = numero(evento?.area_total_evento_ha, evento?.area_ha, evento?.area_total_ha);
+        if (hectaresDireto !== null) return hectaresDireto;
+        const metrosQuadrados = numero(evento?.area_total_evento);
+        if (metrosQuadrados !== null) return metrosQuadrados / 10000;
         const km2 = numero(evento?.area_km2);
         return km2 === null ? null : km2 * 100;
       }
