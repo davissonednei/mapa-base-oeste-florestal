@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-23T02:48:24.804664Z",
+  "atualizado_em": "2026-08-23T03:36:41.962737Z",
   "eventos": [
     {
       "id_evento": 6801503,
@@ -45600,8 +45600,8 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  , Barra Velha do Monte Pascoal -  , Barra Velha -  ",
-      "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO",
+      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha do Monte Pascoal -  , Barra Velha -  , Barra Velha -  ",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -66488,7 +66488,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-22T23:29:00Z",
-      "dt_ultima_visao": "2026-08-23T02:30:20Z",
+      "dt_ultima_visao": "2026-08-23T03:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 7.954408617843797,
       "latitude": -11.443863401776959,
