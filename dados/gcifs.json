@@ -1,9 +1,9 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048563375056217,
-    "lng": -45.2064785269875
+    "status": "Em Combate",
+    "lat": -11.336016,
+    "lng": -44.95812
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -20,9 +20,9 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048563375056217,
-    "lng": -45.2064785269875
+    "status": "Em Combate",
+    "lat": -11.336016,
+    "lng": -44.95812
   },
   "06": {
     "municipio": "Barreiras",
@@ -68,10 +68,10 @@
   },
   "14": {
     "municipio": "Barra",
-    "local": "Deslocamento para Base Barra",
-    "status": "Em deslocamento",
-    "lat": -11.091788,
-    "lng": -43.172619
+    "local": "Base Barra",
+    "status": "Em prontidão",
+    "lat": -11.091654738871627,
+    "lng": -43.172578971164576
   },
   "15": {
     "municipio": "Barreiras",
