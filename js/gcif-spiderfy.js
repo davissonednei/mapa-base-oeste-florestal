@@ -47,8 +47,10 @@
 
   const BASE_OESTE_EXATA = L.latLng(-12.150803, -44.998157);
   const EVENTOS_CACHE_URL = "dados/eventos_fogo.json";
-  const LIMITE_HORAS_CENSIPAM = 12;
-  const LIMITE_MS_CENSIPAM = LIMITE_HORAS_CENSIPAM * 60 * 60 * 1000;
+  const LIMITE_MIN_HORAS_CENSIPAM = 12;
+  const LIMITE_MAX_HORAS_CENSIPAM = 24;
+  const LIMITE_MIN_MS_CENSIPAM = LIMITE_MIN_HORAS_CENSIPAM * 60 * 60 * 1000;
+  const LIMITE_MAX_MS_CENSIPAM = LIMITE_MAX_HORAS_CENSIPAM * 60 * 60 * 1000;
   const gcifNavRefs = new Map();
   let spiderState = null;
   let gcifSelecionada = null;
@@ -162,7 +164,7 @@
 
   const censipamBtn = document.getElementById("toggleCensipam");
   if(censipamBtn){
-    censipamBtn.innerHTML = "🔥 Eventos de Fogo (12h)";
+    censipamBtn.innerHTML = "🔥 Eventos de Fogo (12–24h)";
     censipamBtn.classList.remove("off");
     censipamBtn.onclick = () => {
       if(map.hasLayer(eventosApiLayer)){
@@ -176,7 +178,7 @@
   }
 
   document.querySelectorAll(".legend-row").forEach(row => {
-    if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Eventos com detecção nas últimas 12h — API CENSIPAM";
+    if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Eventos com detecção entre 12 e 24h — API CENSIPAM";
   });
 
   function setApiStatus(tipo,texto){
@@ -206,12 +208,13 @@
     };
   }
 
-  function eventoDentroDas12h(evento,agora=Date.now()){
+  function eventoEntre12e24h(evento,agora=Date.now()){
     const data=evento?.dt_ultima_visao || evento?.dt_maxima;
     if(!data) return false;
     const instante=new Date(data).getTime();
     if(!Number.isFinite(instante)) return false;
-    return (agora-instante) <= LIMITE_MS_CENSIPAM;
+    const idade=agora-instante;
+    return idade >= LIMITE_MIN_MS_CENSIPAM && idade <= LIMITE_MAX_MS_CENSIPAM;
   }
 
   function popupEvento(evento){
@@ -219,7 +222,7 @@
     const status=evento.status_evento||"Ativo / em observação";
     const ultima=evento.dt_ultima_visao?new Date(evento.dt_ultima_visao).toLocaleString("pt-BR"):"—";
     const area=Number.isFinite(evento.area_total_evento)?evento.area_total_evento.toLocaleString("pt-BR",{maximumFractionDigits:1}):"—";
-    return `<div class="popup-title">🔥 Evento ${evento.id_evento}</div><div class="popup-row"><span>Município</span><b>${municipio}</b></div><div class="popup-row"><span>Status</span><b>${status}</b></div><div class="popup-row"><span>Última visão</span><b>${ultima}</b></div><div class="popup-row"><span>Área total</span><b>${area}</b></div><div class="popup-foot">Fonte: API oficial do Painel do Fogo / CENSIPAM. Exibição limitada às últimas 12h.</div>`;
+    return `<div class="popup-title">🔥 Evento ${evento.id_evento}</div><div class="popup-row"><span>Município</span><b>${municipio}</b></div><div class="popup-row"><span>Status</span><b>${status}</b></div><div class="popup-row"><span>Última visão</span><b>${ultima}</b></div><div class="popup-row"><span>Área total</span><b>${area}</b></div><div class="popup-foot">Fonte: API oficial do Painel do Fogo / CENSIPAM. Exibição limitada a detecções entre 12 e 24h.</div>`;
   }
 
   async function atualizarCensipam(){
@@ -233,7 +236,7 @@
       if(!Array.isArray(eventos)) throw new Error("Cache inválido");
 
       const agora=Date.now();
-      const eventosRecentes=eventos.filter(evento=>eventoDentroDas12h(evento,agora));
+      const eventosRecentes=eventos.filter(evento=>eventoEntre12e24h(evento,agora));
       const novos=[];
       for(const evento of eventosRecentes){
         const feature=eventoGeoJson(evento);
@@ -260,7 +263,7 @@
       if(atualizadoEm){
         const d=new Date(atualizadoEm);
         const hora=Number.isNaN(d.getTime())?"":` • ${d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})}`;
-        setApiStatus("ok",`Painel do Fogo — ${eventosApiCarregados} evento(s) com detecção nas últimas 12h${hora}`);
+        setApiStatus("ok",`Painel do Fogo — ${eventosApiCarregados} evento(s) com detecção entre 12 e 24h${hora}`);
       }else{
         setApiStatus(null,"Aguardando primeira sincronização automática do CENSIPAM…");
       }
