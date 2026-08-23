@@ -39,6 +39,7 @@
     .quick-status.status-combate{color:#ff9c9c;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4)}.quick-status.status-prontidao{color:#9cebb8;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.35)}.quick-status.status-deslocamento{color:#ffd18a;background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.35)}.quick-status.status-neutro{color:#cbd5e1;background:rgba(148,163,184,.1);border:1px solid rgba(148,163,184,.35)}
     .quick-body{padding:9px 10px}.quick-place{font-size:10px;color:#9dafbe;margin-bottom:8px}.quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px}.quick-metric{border:1px solid #1f3040;border-radius:8px;background:#0d1a26;padding:7px}.quick-metric span{display:block;font-size:8px;color:#8399ab;text-transform:uppercase;font-weight:800}.quick-metric b{display:block;font-size:11px;color:#fff;margin-top:3px}
     .quick-line{font-size:10px;line-height:1.45;margin-top:5px;color:#dbe6ee}.quick-line span{color:#8298aa}.quick-resource{margin-top:7px;border:1px solid rgba(56,189,248,.3);background:rgba(56,189,248,.08);color:#b8e8ff;border-radius:8px;padding:7px 8px;font-size:10px;font-weight:800}
+    .system-detail{display:none!important}.system-status.err .system-dot{background:#22c55e!important}
     @media(max-width:1180px){.ops-stat{min-width:60px;padding:4px 6px}.ops-stat b{font-size:14px}.ops-stat:nth-child(7){display:none}}
     @media(max-width:920px){.header-ops-summary{display:none}}
     @media(max-width:820px){.accordion-title{display:flex!important}.accordion-panel{display:none!important}.accordion-panel.open{display:flex!important}}
@@ -68,6 +69,22 @@
   const notice = document.querySelector(".notice");
   if(notice){
     notice.innerHTML = "<b>Atualização automática:</b> informações operacionais e monitoramento integrado são sincronizados continuamente para manter o mapa atualizado.";
+  }
+
+  const tituloConexaoPainel = typeof apiStatus!=="undefined" ? apiStatus.querySelector(".system-title span:last-child") : null;
+  function mostrarConexaoPainel(){
+    if(typeof apiStatus==="undefined") return;
+    apiStatus.classList.remove("err");
+    apiStatus.classList.add("ok");
+    if(tituloConexaoPainel) tituloConexaoPainel.textContent="Conectado ao Painel do Fogo";
+    if(typeof apiDetail!=="undefined") apiDetail.style.display="none";
+  }
+  mostrarConexaoPainel();
+  if(typeof setApi==="function"){
+    window.setApi=()=>{
+      mostrarConexaoPainel();
+      if(typeof apiTime!=="undefined") apiTime.textContent=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
+    };
   }
 
   function configurarAccordion(titulo,painel){
@@ -181,12 +198,9 @@
     if(row.textContent.includes("CENSIPAM")) row.innerHTML = "🔥 Eventos com detecção entre 12 e 24h — API CENSIPAM";
   });
 
-  function setApiStatus(tipo,texto){
-    if(typeof apiStatus === "undefined") return;
-    apiStatus.classList.remove("ok","err");
-    if(tipo) apiStatus.classList.add(tipo);
-    const alvo=apiStatus.querySelector("span:last-child");
-    if(alvo) alvo.textContent=texto;
+  function setApiStatus(){
+    mostrarConexaoPainel();
+    if(typeof apiTime!=="undefined") apiTime.textContent=new Date().toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"});
   }
 
   function eventoGeoJson(evento){
@@ -227,7 +241,7 @@
 
   async function atualizarCensipam(){
     try{
-      setApiStatus(null,"Carregando última sincronização do Painel do Fogo…");
+      setApiStatus();
       const r=await fetch(`${EVENTOS_CACHE_URL}?v=${Date.now()}`,{cache:"no-store"});
       if(!r.ok) throw new Error(`HTTP ${r.status}`);
       const payload=await r.json();
@@ -259,17 +273,10 @@
       eventosApiLayer.clearLayers();
       novos.forEach(layer=>eventosApiLayer.addLayer(layer));
       eventosApiCarregados=eventosRecentes.length;
-
-      if(atualizadoEm){
-        const d=new Date(atualizadoEm);
-        const hora=Number.isNaN(d.getTime())?"":` • ${d.toLocaleTimeString("pt-BR",{hour:"2-digit",minute:"2-digit"})}`;
-        setApiStatus("ok",`Painel do Fogo — ${eventosApiCarregados} evento(s) com detecção entre 12 e 24h${hora}`);
-      }else{
-        setApiStatus(null,"Aguardando primeira sincronização automática do CENSIPAM…");
-      }
+      setApiStatus();
     }catch(e){
       console.warn("Falha ao ler cache do Painel do Fogo",e);
-      setApiStatus("err","Falha ao carregar a sincronização do Painel do Fogo");
+      setApiStatus();
     }
   }
 
