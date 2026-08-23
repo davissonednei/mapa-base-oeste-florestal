@@ -1,9 +1,4 @@
 {
-  "01": [
-    {"posto":"ASP","nome":"DAVISSON","funcao":"STAFF - Logística","numero":null},
-    {"posto":"TEN","nome":"SAMPAIO","funcao":"STAFF - Viaturas","numero":null},
-    {"posto":"SUB TEN","nome":"SHEILA","funcao":"STAFF - Logística","numero":null}
-  ],
   "02": [
     {"posto":"ASP","nome":"BRUNO","funcao":"CMD","numero":null},
     {"posto":"SD","nome":"GALVÃO","funcao":"CONDUTOR","numero":235},
@@ -96,6 +91,9 @@
     {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
   ],
   "STAFF": [
+    {"posto":"ASP","nome":"DAVISSON","funcao":"STAFF - Logística","numero":null},
+    {"posto":"TEN","nome":"SAMPAIO","funcao":"STAFF - Viaturas","numero":null},
+    {"posto":"SUB TEN","nome":"SHEILA","funcao":"STAFF - Logística","numero":null},
     {"posto":"TEN CEL","nome":"JOSIEL DOS SANTOS FERREIRA","funcao":"STAFF","numero":null},
     {"posto":"CAP","nome":"THIERS MALTEZ SANTANA VIEIRA","funcao":"STAFF","numero":null},
     {"posto":"SGT","nome":"GUILHERME VICENTE SANTANA DA SILVA","funcao":"STAFF","numero":null},
