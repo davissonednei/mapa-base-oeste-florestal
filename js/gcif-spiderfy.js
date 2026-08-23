@@ -544,6 +544,146 @@
   window.addEventListener("focus",atualizarCensipam);
   document.addEventListener("visibilitychange",()=>{if(!document.hidden)atualizarCensipam()});
 
+  // Régua de distância: cliques sucessivos medem a distância geodésica acumulada.
+  const rulerStyle=document.createElement("style");
+  rulerStyle.textContent=`
+    .ruler-mode{cursor:crosshair!important}
+    .ruler-mode .leaflet-interactive,.ruler-mode .leaflet-marker-icon,.ruler-mode .leaflet-tooltip{pointer-events:none!important}
+    .ruler-hud{display:none;position:absolute;z-index:690;left:14px;bottom:18px;min-width:245px;max-width:330px;padding:10px 11px;border:1px solid #33495d;border-radius:10px;background:rgba(7,16,25,.96);color:#f8fafc;box-shadow:0 6px 20px rgba(0,0,0,.28);font:700 11px/1.3 Inter,Segoe UI,Arial,sans-serif;backdrop-filter:blur(7px)}
+    .ruler-hud.show{display:block}.ruler-hud-head{display:flex;align-items:center;gap:8px}.ruler-hud-title{font-weight:900;margin-right:auto}.ruler-total{font-size:17px;font-weight:900;color:#ffd18a;margin:6px 0 2px}.ruler-help{font-size:9px;font-weight:600;color:#9dafbe}.ruler-actions{display:flex;gap:6px;margin-top:8px}.ruler-mini{border:1px solid #33495d;border-radius:7px;background:#101d29;color:#e7eef4;padding:5px 8px;font-size:9px;font-weight:800;cursor:pointer}.ruler-mini:hover{background:#17293a}.ruler-label{background:#071019!important;border:1px solid #f59e0b!important;color:#fff!important;border-radius:999px!important;padding:3px 6px!important;font:800 9px/1 Inter,Segoe UI,Arial,sans-serif!important;box-shadow:0 2px 7px rgba(0,0,0,.28)!important}.ruler-label:before{display:none!important}
+    @media(max-width:820px){.ruler-hud{left:10px;bottom:12px;min-width:220px;max-width:calc(100% - 20px)}}
+  `;
+  document.head.appendChild(rulerStyle);
+
+  const rulerLayer=L.layerGroup().addTo(map);
+  const rulerMapEl=map.getContainer();
+  const rulerActions=document.querySelector(".map-actions");
+  const rulerHud=document.createElement("div");
+  rulerHud.className="ruler-hud";
+  rulerHud.innerHTML=`<div class="ruler-hud-head"><span>📏</span><span class="ruler-hud-title">Medir distância</span></div><div class="ruler-total" id="rulerTotal">0 m</div><div class="ruler-help" id="rulerHelp">Clique no mapa para marcar o primeiro ponto.</div><div class="ruler-actions"><button class="ruler-mini" id="rulerUndo">↶ Desfazer</button><button class="ruler-mini" id="rulerClear">Limpar</button><button class="ruler-mini" id="rulerClose">Fechar</button></div>`;
+  document.querySelector(".map-wrap")?.appendChild(rulerHud);
+  L.DomEvent.disableClickPropagation(rulerHud);
+  L.DomEvent.disableScrollPropagation(rulerHud);
+
+  const rulerBtn=document.createElement("button");
+  rulerBtn.id="toggleRuler";
+  rulerBtn.className="map-btn";
+  rulerBtn.innerHTML="📏 RÉGUA";
+  rulerBtn.title="Medir distância em linha reta";
+  rulerActions?.appendChild(rulerBtn);
+
+  let rulerAtiva=false;
+  let rulerPontos=[];
+  let rulerPreview=null;
+
+  function formatarDistanciaMedida(metros){
+    if(!Number.isFinite(metros)) return "—";
+    if(metros<1000) return `${Math.round(metros).toLocaleString("pt-BR")} m`;
+    return `${(metros/1000).toLocaleString("pt-BR",{minimumFractionDigits:2,maximumFractionDigits:2})} km`;
+  }
+
+  function distanciaAcumulada(ate=rulerPontos.length){
+    let total=0;
+    for(let i=1;i<Math.min(ate,rulerPontos.length);i++) total+=map.distance(rulerPontos[i-1],rulerPontos[i]);
+    return total;
+  }
+
+  function atualizarRulerHud(){
+    const total=document.getElementById("rulerTotal");
+    const help=document.getElementById("rulerHelp");
+    if(total) total.textContent=formatarDistanciaMedida(distanciaAcumulada());
+    if(help){
+      help.textContent=rulerPontos.length===0
+        ?"Clique no mapa para marcar o primeiro ponto."
+        :rulerPontos.length===1
+          ?"Clique em outro ponto para medir."
+          :`${rulerPontos.length} pontos • clique para continuar a medição.`;
+    }
+  }
+
+  function desenharRegua(){
+    rulerLayer.clearLayers();
+    rulerPreview=null;
+    if(rulerPontos.length>1){
+      L.polyline(rulerPontos,{color:"#f59e0b",weight:3,opacity:.95,interactive:false}).addTo(rulerLayer);
+    }
+    rulerPontos.forEach((p,i)=>{
+      const acumulada=i===0?0:distanciaAcumulada(i+1);
+      const ponto=L.circleMarker(p,{radius:5,color:"#071019",weight:2,fillColor:"#f59e0b",fillOpacity:1,interactive:false}).addTo(rulerLayer);
+      ponto.bindTooltip(formatarDistanciaMedida(acumulada),{permanent:true,direction:"top",offset:[0,-5],className:"ruler-label"});
+    });
+    atualizarRulerHud();
+  }
+
+  function limparRegua(){
+    rulerPontos=[];
+    rulerLayer.clearLayers();
+    rulerPreview=null;
+    atualizarRulerHud();
+  }
+
+  function desligarCoordenadasParaRegua(){
+    try{
+      if(typeof coordsEnabled!=="undefined"&&coordsEnabled){
+        coordsEnabled=false;
+        if(typeof coordBtn!=="undefined"){
+          coordBtn.classList.remove("active");
+          coordBtn.innerHTML="📍 COORDENADAS";
+        }
+        if(typeof coordEl!=="undefined"&&coordEl) coordEl.classList.remove("on","copied");
+        if(typeof mapContainer!=="undefined"&&mapContainer) mapContainer.classList.remove("coord-copy-mode");
+      }
+    }catch(e){}
+  }
+
+  function setReguaAtiva(ativa){
+    rulerAtiva=ativa;
+    rulerBtn.classList.toggle("active",ativa);
+    rulerBtn.innerHTML=ativa?"📏 RÉGUA ✓":"📏 RÉGUA";
+    rulerHud.classList.toggle("show",ativa);
+    rulerMapEl.classList.toggle("ruler-mode",ativa);
+    if(ativa){
+      desligarCoordenadasParaRegua();
+      map.closePopup();
+      atualizarRulerHud();
+    }else{
+      limparRegua();
+    }
+  }
+
+  rulerBtn.onclick=()=>setReguaAtiva(!rulerAtiva);
+  document.getElementById("rulerClear").onclick=limparRegua;
+  document.getElementById("rulerUndo").onclick=()=>{
+    if(!rulerPontos.length) return;
+    rulerPontos.pop();
+    desenharRegua();
+  };
+  document.getElementById("rulerClose").onclick=()=>setReguaAtiva(false);
+
+  map.on("click",e=>{
+    if(!rulerAtiva) return;
+    rulerPontos.push(e.latlng);
+    desenharRegua();
+  });
+  map.on("mousemove",e=>{
+    if(!rulerAtiva||!rulerPontos.length) return;
+    const ultimo=rulerPontos[rulerPontos.length-1];
+    if(!rulerPreview){
+      rulerPreview=L.polyline([ultimo,e.latlng],{color:"#f59e0b",weight:2,opacity:.65,dashArray:"6 6",interactive:false}).addTo(rulerLayer);
+    }else{
+      rulerPreview.setLatLngs([ultimo,e.latlng]);
+    }
+  });
+  document.addEventListener("keydown",e=>{
+    if(!rulerAtiva) return;
+    if(e.key==="Escape") setReguaAtiva(false);
+    if((e.key==="Backspace"||e.key==="Delete")&&rulerPontos.length){
+      e.preventDefault();
+      rulerPontos.pop();
+      desenharRegua();
+    }
+  });
+
   // Garante a coordenada real da Base Oeste e a nova renderização após o GeoJSON carregar.
   const waitForMap = setInterval(() => {
     if(!mapReady) return;
