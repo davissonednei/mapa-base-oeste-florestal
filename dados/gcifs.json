@@ -1,9 +1,9 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em Combate",
-    "lat": -11.315527,
-    "lng": -45.002918
+    "status": "Em prontidão",
+    "lat": -11.048563375056217,
+    "lng": -45.2064785269875
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -20,9 +20,9 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em Combate",
-    "lat": -11.315527,
-    "lng": -45.002918
+    "status": "Em prontidão",
+    "lat": -11.048563375056217,
+    "lng": -45.2064785269875
   },
   "06": {
     "municipio": "Barreiras",
