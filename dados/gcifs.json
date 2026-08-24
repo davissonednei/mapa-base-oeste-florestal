@@ -14,9 +14,11 @@
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
-    "status": "Em Combate",
-    "lat": -12.011332,
-    "lng": -45.528181
+    "local": "Base da GCIF 04",
+    "status": "Em prontidão",
+    "tipo": "base",
+    "lat": -12.150895773856597,
+    "lng": -44.998055335878355
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
