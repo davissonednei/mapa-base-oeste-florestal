@@ -25,24 +25,25 @@
 
     if (!map.getPane('terrainPane')) map.createPane('terrainPane');
     const terrainPane = map.getPane('terrainPane');
-    terrainPane.style.zIndex = 210;
+    terrainPane.style.zIndex = 390;
     terrainPane.style.pointerEvents = 'none';
-    terrainPane.style.mixBlendMode = 'multiply';
 
+    /* OpenTopoMap por cima da imagem de satélite: relevo, curvas de nível e altitude ficam perceptíveis. */
     const terrainLayer = L.tileLayer(
-      'https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}',
+      'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
       {
         pane: 'terrainPane',
-        opacity: 0.5,
-        maxZoom: 19,
-        attribution: 'Relevo © Esri'
+        opacity: 0.48,
+        maxZoom: 17,
+        subdomains: 'abc',
+        attribution: 'Relevo © OpenTopoMap, dados © OpenStreetMap'
       }
     );
 
     const style = document.createElement('style');
     style.textContent = `
       .terrain-toggle{display:none;position:absolute;z-index:690;right:13px;bottom:148px;align-items:center;gap:8px;padding:7px 9px;border:1px solid #33495d;border-radius:10px;background:rgba(7,16,25,.94);color:#e8eef4;box-shadow:0 4px 16px rgba(0,0,0,.25);backdrop-filter:blur(7px);font:800 9px/1 Inter,Segoe UI,Arial,sans-serif;user-select:none}
-      .terrain-toggle.show{display:flex}.terrain-toggle span{white-space:nowrap}.terrain-switch{position:relative;width:32px;height:18px;flex:none}.terrain-switch input{position:absolute;opacity:0;width:0;height:0}.terrain-slider{position:absolute;inset:0;border-radius:999px;background:#263949;border:1px solid #41596d;cursor:pointer;transition:.15s ease}.terrain-slider:before{content:'';position:absolute;width:12px;height:12px;left:2px;top:2px;border-radius:50%;background:#b8c5cf;transition:.15s ease}.terrain-switch input:checked + .terrain-slider{background:rgba(245,158,11,.30);border-color:#f59e0b}.terrain-switch input:checked + .terrain-slider:before{transform:translateX(14px);background:#ffd18a}
+      .terrain-toggle.show{display:flex}.terrain-toggle.on{border-color:#f59e0b;background:rgba(28,20,8,.96);color:#ffd18a}.terrain-toggle span{white-space:nowrap}.terrain-switch{position:relative;width:32px;height:18px;flex:none}.terrain-switch input{position:absolute;opacity:0;width:0;height:0}.terrain-slider{position:absolute;inset:0;border-radius:999px;background:#263949;border:1px solid #41596d;cursor:pointer;transition:.15s ease}.terrain-slider:before{content:'';position:absolute;width:12px;height:12px;left:2px;top:2px;border-radius:50%;background:#b8c5cf;transition:.15s ease}.terrain-switch input:checked + .terrain-slider{background:rgba(245,158,11,.30);border-color:#f59e0b}.terrain-switch input:checked + .terrain-slider:before{transform:translateX(14px);background:#ffd18a}
       @media(max-width:820px){.terrain-toggle{right:8px;bottom:142px;padding:6px 8px;font-size:8px}}
     `;
     document.head.appendChild(style);
@@ -65,15 +66,18 @@
     function sincronizarRelevo() {
       const sat = sateliteAtivo();
       control.classList.toggle('show', sat);
+      control.classList.toggle('on', sat && check.checked);
       if (sat && check.checked) {
         if (!map.hasLayer(terrainLayer)) terrainLayer.addTo(map);
+        terrainLayer.bringToFront();
       } else if (map.hasLayer(terrainLayer)) {
         map.removeLayer(terrainLayer);
       }
     }
 
     check.addEventListener('change', sincronizarRelevo);
-    satBtn.addEventListener('click', () => setTimeout(sincronizarRelevo, 0));
+    satBtn.addEventListener('click', () => setTimeout(sincronizarRelevo, 20));
+    map.on('layeradd layerremove', () => setTimeout(sincronizarRelevo, 0));
     sincronizarRelevo();
   }
 
