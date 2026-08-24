@@ -1,9 +1,15 @@
-/* Busca lateral por ID dos eventos sincronizados do Painel do Fogo / CENSIPAM. */
+/* Busca lateral por ID dos eventos do Painel do Fogo / CENSIPAM.
+   Usa o cache local para velocidade e consulta WFS oficial como fallback,
+   permitindo localizar eventos que ainda não entraram no JSON sincronizado. */
 (() => {
   const EVENTOS_URL = 'dados/eventos_fogo.json';
+  const WFS_URL = 'https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wfs';
+  const WFS_TYPENAME = 'painel_do_fogo:tb_evento';
+
   let eventos = [];
   let highlightLayer = null;
   let timerHighlight = null;
+  let carregandoCache = null;
 
   const esc = valor => String(valor ?? '')
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -18,22 +24,116 @@
     return null;
   };
 
+  function extrairId(valor, permitirNumeroCurto=false) {
+    const bruto = String(valor || '').trim();
+    const explicito = /^(?:evento|id\s*(?:do\s*)?evento)\s*#?/i.test(bruto);
+    const limpo = bruto
+      .replace(/^(?:evento|id\s*(?:do\s*)?evento)\s*#?\s*/i, '')
+      .replace(/^#\s*/, '')
+      .trim();
+    if (!/^\d+$/.test(limpo)) return null;
+    if (!explicito && !permitirNumeroCurto && limpo.length < 4) return null;
+    return limpo;
+  }
+
   async function carregarEventos() {
+    if (carregandoCache) return carregandoCache;
+    carregandoCache = (async () => {
+      try {
+        const r = await fetch(`${EVENTOS_URL}?v=${Date.now()}`, {cache:'no-store'});
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const payload = await r.json();
+        const lista = Array.isArray(payload) ? payload : payload?.eventos;
+        if (Array.isArray(lista)) eventos = lista;
+        const busca = document.getElementById('search');
+        if (busca?.value) render(busca.value);
+      } catch (e) {
+        console.warn('Falha ao carregar eventos para busca por ID', e);
+      } finally {
+        carregandoCache = null;
+      }
+      return eventos;
+    })();
+    return carregandoCache;
+  }
+
+  function idsIguais(a, b) {
+    const sa = String(a ?? '').trim();
+    const sb = String(b ?? '').trim();
+    if (sa === sb) return true;
+    if (/^\d+$/.test(sa) && /^\d+$/.test(sb)) return Number(sa) === Number(sb);
+    return false;
+  }
+
+  function localizarLocal(id) {
+    return eventos.find(e => idsIguais(e?.id_evento, id)) || null;
+  }
+
+  function featureParaEvento(feature, idSolicitado) {
+    if (!feature) return null;
+    const props = feature.properties || {};
+    const evento = {...props};
+    if (feature.geometry) evento.geom = feature.geometry;
+    if (evento.id_evento === undefined || evento.id_evento === null) evento.id_evento = idSolicitado;
+    return evento;
+  }
+
+  async function buscarWfs(id) {
+    const idNumerico = Number(id);
+    if (!Number.isFinite(idNumerico)) return null;
+
+    const params = new URLSearchParams({
+      service: 'WFS',
+      version: '1.1.0',
+      request: 'GetFeature',
+      typeName: WFS_TYPENAME,
+      outputFormat: 'application/json',
+      maxFeatures: '2',
+      CQL_FILTER: `id_evento=${idNumerico}`
+    });
+
     try {
-      const r = await fetch(`${EVENTOS_URL}?v=${Date.now()}`, {cache:'no-store'});
+      const r = await fetch(`${WFS_URL}?${params.toString()}&_=${Date.now()}`, {cache:'no-store'});
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       const payload = await r.json();
-      const lista = Array.isArray(payload) ? payload : payload?.eventos;
-      if (Array.isArray(lista)) eventos = lista;
-      const busca = document.getElementById('search');
-      if (busca?.value) render(busca.value);
+      const features = Array.isArray(payload?.features) ? payload.features : [];
+      const exata = features.find(f => idsIguais(f?.properties?.id_evento, id)) || features[0];
+      return featureParaEvento(exata, id);
     } catch (e) {
-      console.warn('Falha ao carregar eventos para busca por ID', e);
+      console.warn(`Falha na consulta WFS do evento ${id}`, e);
+      return null;
     }
   }
 
-  function localizar(id) {
-    return eventos.find(e => String(e?.id_evento ?? '') === String(id)) || null;
+  async function buscarApiDireta(id) {
+    /* Segundo fallback. Algumas versões da API aceitam id_evento como filtro;
+       se o servidor ignorar o parâmetro, ainda validamos o ID localmente. */
+    const url = `https://panorama.sipam.gov.br/painel-do-fogo/api/v1/eventos?id_evento=${encodeURIComponent(id)}`;
+    try {
+      const r = await fetch(url, {cache:'no-store'});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const payload = await r.json();
+      const lista = Array.isArray(payload) ? payload : payload?.eventos;
+      if (!Array.isArray(lista)) return null;
+      return lista.find(e => idsIguais(e?.id_evento, id)) || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  async function resolverEvento(id) {
+    let evento = localizarLocal(id);
+    if (evento) return evento;
+
+    /* Garante que uma busca feita muito cedo não dependa do carregamento assíncrono do cache. */
+    await carregarEventos();
+    evento = localizarLocal(id);
+    if (evento) return evento;
+
+    evento = await buscarWfs(id);
+    if (evento) return evento;
+
+    return await buscarApiDireta(id);
   }
 
   function popupHtml(evento) {
@@ -69,14 +169,32 @@
     } catch (e) {}
   }
 
-  function irParaEvento(id) {
-    if (typeof map === 'undefined' || typeof L === 'undefined') return;
-    const evento = localizar(id);
-    if (!evento) return;
+  function feedback(texto, classe='') {
+    const box = document.getElementById('opsSearchResults');
+    if (!box) return;
+    box.querySelectorAll('.ops-event-search-feedback').forEach(el => el.remove());
+    if (!texto) return;
+    const item = document.createElement('div');
+    item.className = `ops-search-item ops-event-search-feedback ${classe}`.trim();
+    item.style.cursor = 'default';
+    item.innerHTML = `<b>${esc(texto)}</b>`;
+    box.insertBefore(item, box.firstChild);
+    box.classList.add('show');
+  }
+
+  async function irParaEvento(id) {
+    if (typeof map === 'undefined' || typeof L === 'undefined') return false;
+
+    feedback(`Buscando evento ${id}...`);
+    const evento = await resolverEvento(id);
+    if (!evento) {
+      feedback(`Evento ${id} não encontrado`, 'event-search-not-found');
+      return false;
+    }
 
     let alvo = null;
     let feature = null;
-    const geom = evento?.geom;
+    const geom = evento?.geom || evento?.geometry;
     if (geom?.coordinates?.length) {
       feature = {type:'Feature', properties:{id_evento:evento.id_evento}, geometry:{type:geom.type || 'Polygon', coordinates:geom.coordinates}};
       try {
@@ -97,60 +215,84 @@
         map.setView(alvo, Math.max(map.getZoom(), 14), {animate:true});
       }
     }
-    if (!alvo) return;
 
+    if (!alvo) {
+      feedback(`Evento ${id} encontrado, mas sem geometria utilizável`, 'event-search-not-found');
+      return false;
+    }
+
+    feedback('');
     destacar(feature, alvo);
     setTimeout(() => {
       L.popup({maxWidth:390, closeButton:true}).setLatLng(alvo).setContent(popupHtml(evento)).openOn(map);
     }, 320);
+    return true;
   }
 
   function render(valor) {
     const box = document.getElementById('opsSearchResults');
     if (!box) return;
-    box.querySelectorAll('.ops-event-search-item').forEach(el => el.remove());
+    box.querySelectorAll('.ops-event-search-item,.ops-event-search-feedback').forEach(el => el.remove());
 
     const bruto = String(valor || '').trim();
-    const explicito = /^evento\s*#?/i.test(bruto);
-    const termo = bruto.replace(/^evento\s*#?\s*/i, '').trim();
-    if (!termo || (!explicito && !/^\d{4,}$/.test(termo))) return;
+    const id = extrairId(bruto);
+    const explicito = /^(?:evento|id\s*(?:do\s*)?evento)\s*#?/i.test(bruto);
+    const termo = bruto.replace(/^(?:evento|id\s*(?:do\s*)?evento)\s*#?\s*/i, '').replace(/^#\s*/, '').trim();
+    if (!id && !explicito) return;
+    if (!/^\d+$/.test(termo)) return;
 
     const encontrados = eventos
       .filter(evento => String(evento?.id_evento ?? '').includes(termo))
-      .sort((a,b) => Number(String(b?.id_evento ?? '') === termo) - Number(String(a?.id_evento ?? '') === termo))
-      .slice(0, 6);
-    if (!encontrados.length) return;
+      .sort((a,b) => Number(idsIguais(b?.id_evento, termo)) - Number(idsIguais(a?.id_evento, termo)))
+      .slice(0, 8);
 
     const frag = document.createDocumentFragment();
     for (const evento of encontrados) {
-      const id = String(evento.id_evento);
+      const eventId = String(evento.id_evento);
       const btn = document.createElement('button');
       btn.className = 'ops-search-item ops-event-search-item';
-      btn.dataset.eventId = id;
+      btn.dataset.eventId = eventId;
       const titulo = document.createElement('b');
-      titulo.textContent = `🔥 Evento ${id}`;
+      titulo.textContent = `🔥 Evento ${eventId}`;
       const detalhe = document.createElement('small');
       detalhe.textContent = [evento.municipio || evento.nm_municipio, evento.status_evento || 'CENSIPAM'].filter(Boolean).join(' • ');
       btn.append(titulo, detalhe);
       btn.onmousedown = ev => ev.preventDefault();
-      btn.onclick = () => { box.classList.remove('show'); irParaEvento(id); };
+      btn.onclick = () => { box.classList.remove('show'); irParaEvento(eventId); };
       frag.appendChild(btn);
     }
-    box.insertBefore(frag, box.firstChild);
-    box.classList.add('show');
+
+    if (encontrados.length) {
+      box.insertBefore(frag, box.firstChild);
+      box.classList.add('show');
+    }
   }
 
   function instalar(tentativa=0) {
     const busca = document.getElementById('search');
     const box = document.getElementById('opsSearchResults');
     if (!busca || !box || typeof map === 'undefined' || typeof L === 'undefined') {
-      if (tentativa < 80) setTimeout(() => instalar(tentativa + 1), 100);
+      if (tentativa < 100) setTimeout(() => instalar(tentativa + 1), 100);
       return;
     }
-    if (busca.dataset.eventSearchReady === '1') return;
-    busca.dataset.eventSearchReady = '1';
+    if (busca.dataset.eventSearchReady === '2') return;
+    busca.dataset.eventSearchReady = '2';
     busca.placeholder = 'Buscar município, GCIF, militar, viatura ou ID do evento...';
+
     busca.addEventListener('input', e => render(e.target.value));
+
+    /* Enter vira uma busca direta e determinística por ID. O listener em captura
+       impede que a busca lateral normal tente tratar o mesmo número como outra coisa. */
+    busca.addEventListener('keydown', e => {
+      if (e.key !== 'Enter') return;
+      const id = extrairId(busca.value);
+      if (!id) return;
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      irParaEvento(id);
+    }, true);
+
     carregarEventos();
     setInterval(carregarEventos, 120000);
   }
