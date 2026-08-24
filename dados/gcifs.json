@@ -1,54 +1,52 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048563375056217,
-    "lng": -45.2064785269875
+    "status": "Em Combate",
+    "lat": -11.41918,
+    "lng": -45.115972
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
     "local": "Base da GCIF 03",
-    "status": "Em prontidão",
+    "status": "Em Combate",
     "lat": -11.423621,
     "lng": -46.324193
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
-    "local": "Base Luís Eduardo Magalhães",
-    "status": "Em prontidão",
-    "lat": -12.084869709284002,
-    "lng": -45.806862201783765
+    "status": "Em Combate",
+    "lat": -12.011332,
+    "lng": -45.528181
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048563375056217,
-    "lng": -45.2064785269875
+    "status": "Em Combate",
+    "lat": -11.41918,
+    "lng": -45.115972
   },
   "06": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.219878,
+    "lng": -45.14097
   },
   "07": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.26941,
+    "lng": -45.080853
   },
   "08": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.219878,
+    "lng": -45.14097
   },
   "09": {
     "municipio": "Barra",
-    "local": "Base Barra",
-    "status": "Em prontidão",
-    "lat": -11.091654738871627,
-    "lng": -43.172578971164576
+    "status": "Em Combate",
+    "lat": -11.868718,
+    "lng": -45.331165
   },
   "10": {
     "municipio": "Barreiras",
@@ -64,27 +62,26 @@
   },
   "13": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.26941,
+    "lng": -45.080853
   },
   "14": {
     "municipio": "Barra",
-    "local": "Base Barra",
-    "status": "Em prontidão",
-    "lat": -11.091654738871627,
-    "lng": -43.172578971164576
+    "status": "Em Combate",
+    "lat": -11.868718,
+    "lng": -45.331165
   },
   "15": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.219878,
+    "lng": -45.14097
   },
   "16": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "status": "Em Combate",
+    "lat": -12.219878,
+    "lng": -45.14097
   }
 }
