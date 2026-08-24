@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-24T04:08:11.744854Z",
+  "atualizado_em": "2026-08-24T04:57:13.868239Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -25663,7 +25663,7 @@
     },
     {
       "id_evento": 6840559,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-20T03:25:00Z",
       "dt_maxima": "2026-08-23T04:10:00Z",
       "dt_ultima_visao": "2026-08-23T04:10:00Z",
@@ -29743,7 +29743,7 @@
     },
     {
       "id_evento": 6841126,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-20T16:01:00Z",
       "dt_maxima": "2026-08-23T04:44:00Z",
       "dt_ultima_visao": "2026-08-23T04:44:00Z",
@@ -49937,7 +49937,7 @@
     },
     {
       "id_evento": 6846644,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-22T03:23:00Z",
       "dt_maxima": "2026-08-23T04:10:00Z",
       "dt_ultima_visao": "2026-08-23T04:10:00Z",
@@ -62559,7 +62559,7 @@
     },
     {
       "id_evento": 6847166,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-22T15:58:00Z",
       "dt_maxima": "2026-08-23T04:46:00Z",
       "dt_ultima_visao": "2026-08-23T04:46:00Z",
@@ -64059,7 +64059,7 @@
     },
     {
       "id_evento": 6847196,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-22T15:58:00Z",
       "dt_maxima": "2026-08-23T04:46:00Z",
       "dt_ultima_visao": "2026-08-23T04:46:00Z",
@@ -70023,7 +70023,7 @@
     },
     {
       "id_evento": 6849718,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-23T03:23:00Z",
       "dt_maxima": "2026-08-23T04:44:00Z",
       "dt_ultima_visao": "2026-08-24T01:40:20Z",
@@ -70399,7 +70399,7 @@
     },
     {
       "id_evento": 6849721,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-23T03:23:00Z",
       "dt_maxima": "2026-08-23T04:46:00Z",
       "dt_ultima_visao": "2026-08-23T04:46:00Z",
@@ -71139,7 +71139,7 @@
     },
     {
       "id_evento": 6849725,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-23T03:25:00Z",
       "dt_maxima": "2026-08-23T04:10:00Z",
       "dt_ultima_visao": "2026-08-23T04:10:00Z",
