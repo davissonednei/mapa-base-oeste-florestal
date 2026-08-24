@@ -52,10 +52,12 @@
     "tipo": "base"
   },
   "09": {
-    "municipio": "Barra",
-    "status": "Em Combate",
-    "lat": -11.040147,
-    "lng": -43.24121
+    "municipio": "Formosa do Rio Preto",
+    "local": "Base da GCIF 09 — Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "tipo": "base",
+    "lat": -11.048484685307116,
+    "lng": -45.20653945940747
   },
   "10": {
     "municipio": "Barreiras",
@@ -77,10 +79,12 @@
     "tipo": "base"
   },
   "14": {
-    "municipio": "Barra",
-    "status": "Em Combate",
-    "lat": -11.040147,
-    "lng": -43.24121
+    "municipio": "Formosa do Rio Preto",
+    "local": "Base da GCIF 14 — Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "tipo": "base",
+    "lat": -11.048484685307116,
+    "lng": -45.20653945940747
   },
   "15": {
     "municipio": "Barreiras",
