@@ -86,8 +86,8 @@
   },
   "16": {
     "municipio": "Barreiras",
-    "status": "Em Combate",
-    "lat": -12.219878,
-    "lng": -45.14097
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   }
 }
