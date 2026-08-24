@@ -1,9 +1,11 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em Combate",
-    "lat": -11.41918,
-    "lng": -45.115972
+    "local": "Base da GCIF 02 — Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "tipo": "base",
+    "lat": -11.048606481157286,
+    "lng": -45.20652291328169
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -25,9 +27,11 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "status": "Em Combate",
-    "lat": -11.41918,
-    "lng": -45.115972
+    "local": "Base da GCIF 05 — Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "tipo": "base",
+    "lat": -11.048606481157286,
+    "lng": -45.20652291328169
   },
   "06": {
     "municipio": "Barreiras",
