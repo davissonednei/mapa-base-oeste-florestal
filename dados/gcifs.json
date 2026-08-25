@@ -1,10 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
+    "local": "Base de Formosa do Rio Preto",
     "status": "Em Combate",
-    "lat": -11.41347,
-    "lng": -45.132533
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -25,10 +25,10 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
+    "local": "Base de Formosa do Rio Preto",
     "status": "Em Combate",
-    "lat": -11.41347,
-    "lng": -45.132533
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "06": {
     "municipio": "Barreiras",
