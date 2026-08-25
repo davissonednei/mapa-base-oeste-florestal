@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-25T10:49:25.419682Z",
+  "atualizado_em": "2026-08-25T11:11:48.321812Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -44498,7 +44498,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-25T04:27:00Z",
-      "dt_ultima_visao": "2026-08-25T10:30:21Z",
+      "dt_ultima_visao": "2026-08-25T10:50:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 12.086090763514342,
       "latitude": -11.440328302596615,
@@ -73163,7 +73163,7 @@
       "pais": "BRA",
       "municipio": "Abaíra - BA, Rio do Pires - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
