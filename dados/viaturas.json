@@ -16,9 +16,9 @@
     "16": "AR 1624"
   },
   "frota": {
-    "AR 0110": {"condutor":"SD PINTO","gcif":"15"},
+    "AR 0110": {"condutor":"SD ÍCARO","gcif":"15"},
     "AR 0113": {"condutor":"SD NONATO","gcif":"08"},
-    "AR 0210": {"condutor":"SD ICARO","gcif":"07"},
+    "AR 0210": {"condutor":"SD PINTO","gcif":"07"},
     "AR 0227": {"condutor":"SD CARDOSO","gcif":"06"},
     "AR 0340": {"condutor":"","gcif":null},
     "AR 0625": {"condutor":"SD LOPES NASCIMENTO","gcif":"03"},
