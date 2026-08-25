@@ -39,7 +39,6 @@
   "08": [
     {"posto":"SD","nome":"BORGES","funcao":"CMD","numero":null},
     {"posto":"SD","nome":"CORREIA DE MELO","funcao":"","numero":null},
-    {"posto":"SD","nome":"IDELMAR","funcao":"","numero":null},
     {"posto":"SD","nome":"NONATO","funcao":"CONDUTOR","numero":195},
     {"posto":"SD","nome":"RODRIGO","funcao":"","numero":null,"equipamento":"🎮🚁 DRONE"}
   ],
@@ -60,8 +59,13 @@
     {"posto":"SD","nome":"ALEX ALVES","funcao":"CMD","numero":176},
     {"posto":"SD","nome":"ALISSON","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"FLORES","funcao":"","numero":null},
-    {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null},
-    {"posto":"SD","nome":"MARINHO","funcao":"","numero":null}
+    {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null}
+  ],
+  "12": [
+    {"posto":"SD","nome":"BISPO","funcao":"CMD","numero":228},
+    {"posto":"SD","nome":"MARINHO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"IDELMAR","funcao":"","numero":null},
+    {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
   ],
   "13": [
     {"posto":"SGT","nome":"ELMO","funcao":"CMD","numero":10},
@@ -77,7 +81,6 @@
     {"posto":"SD","nome":"SANTOS","funcao":"","numero":null}
   ],
   "15": [
-    {"posto":"SD","nome":"BISPO","funcao":"","numero":228},
     {"posto":"SD","nome":"BORGES","funcao":"","numero":null},
     {"posto":"SD","nome":"ÍCARO","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"JOSÉ","funcao":"","numero":null},
@@ -87,8 +90,7 @@
     {"posto":"SD","nome":"CAVALCANTE","funcao":"","numero":null},
     {"posto":"SD","nome":"FANELLI","funcao":"","numero":null},
     {"posto":"SD","nome":"JOSEMAR","funcao":"CMD","numero":233},
-    {"posto":"SD","nome":"PASSOS","funcao":"","numero":null},
-    {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
+    {"posto":"SD","nome":"PASSOS","funcao":"","numero":null}
   ],
   "STAFF": [
     {"posto":"ASP","nome":"DAVISSON","funcao":"STAFF - Logística","numero":null},
