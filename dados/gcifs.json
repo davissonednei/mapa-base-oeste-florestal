@@ -69,6 +69,12 @@
     "status": "Em prontidão",
     "tipo": "base"
   },
+  "12": {
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
+  },
   "13": {
     "municipio": "Não informado",
     "local": "Posição atual",
