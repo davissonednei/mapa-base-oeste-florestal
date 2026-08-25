@@ -7,6 +7,7 @@
         'jaborandi',
         'feira da mata',
         'coribe',
+        'sao felix do coribe',
         'carinhanha',
         'serra do ramalho',
         'serra dourada',
