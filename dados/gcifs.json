@@ -38,8 +38,8 @@
   },
   "07": {
     "municipio": "Barra",
-    "local": "Em deslocamento",
-    "status": "Em deslocamento",
+    "local": "Posição atual",
+    "status": "Em prontidão",
     "lat": -12.174756530820794,
     "lng": -43.22503280000063
   },
