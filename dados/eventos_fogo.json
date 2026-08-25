@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-25T04:00:55.812596Z",
+  "atualizado_em": "2026-08-25T05:16:31.724134Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -17539,7 +17539,7 @@
     },
     {
       "id_evento": 6832001,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-17T15:52:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T04:25:00Z",
@@ -33329,7 +33329,7 @@
     },
     {
       "id_evento": 6843606,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-21T04:02:00Z",
       "dt_maxima": "2026-08-24T04:46:00Z",
       "dt_ultima_visao": "2026-08-24T04:46:00Z",
@@ -39461,7 +39461,7 @@
     },
     {
       "id_evento": 6844097,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-21T15:41:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T04:25:00Z",
@@ -46620,7 +46620,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-24T23:09:00Z",
-      "dt_ultima_visao": "2026-08-25T03:40:20Z",
+      "dt_ultima_visao": "2026-08-25T03:50:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 10.758619646743773,
       "latitude": -11.441424148314447,
@@ -47997,7 +47997,7 @@
     },
     {
       "id_evento": 6846689,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-24T04:46:00Z",
       "dt_ultima_visao": "2026-08-24T19:30:20Z",
@@ -74829,7 +74829,7 @@
       "pais": "BRA",
       "municipio": "Abaíra - BA, Rio do Pires - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PICO DO BARBADO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DO BARBADO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -79215,7 +79215,7 @@
     },
     {
       "id_evento": 6850731,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-23T16:43:00Z",
       "dt_maxima": "2026-08-24T04:46:00Z",
       "dt_ultima_visao": "2026-08-24T04:46:00Z",
@@ -79803,7 +79803,7 @@
     },
     {
       "id_evento": 6852572,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T03:06:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T04:25:00Z",
@@ -80159,7 +80159,7 @@
     },
     {
       "id_evento": 6852602,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T03:49:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T04:25:00Z",
@@ -80435,7 +80435,7 @@
     },
     {
       "id_evento": 6852611,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T03:49:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T04:25:00Z",
@@ -81347,7 +81347,7 @@
     },
     {
       "id_evento": 6852719,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T04:25:00Z",
       "dt_maxima": "2026-08-24T04:25:00Z",
       "dt_ultima_visao": "2026-08-24T18:20:20Z",
