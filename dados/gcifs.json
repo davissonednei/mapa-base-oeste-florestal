@@ -7,9 +7,11 @@
     "lng": -45.132533
   },
   "03": {
-    "municipio": "Formosa do Rio Preto",
-    "local": "Local não informado",
-    "status": "Em Combate"
+    "municipio": "Não informado",
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -12.093399472534783,
+    "lng": -45.72983237560296
   },
   "04": {
     "municipio": "Não informado",
