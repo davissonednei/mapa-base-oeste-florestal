@@ -45,7 +45,7 @@
   "09": [
     {"posto":"SD","nome":"AMORIM","funcao":"","numero":null},
     {"posto":"SD","nome":"EDERSON","funcao":"","numero":null},
-    {"posto":"SD","nome":"PAIXÃO","funcao":"","numero":null},
+    {"posto":"SD","nome":"PAIXÃO","funcao":"","numero":228},
     {"posto":"SD","nome":"ROBÉRIO","funcao":"CMD","numero":92},
     {"posto":"SD","nome":"XAVIER","funcao":"CONDUTOR","numero":null}
   ],
@@ -62,7 +62,7 @@
     {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null}
   ],
   "12": [
-    {"posto":"SD","nome":"BISPO","funcao":"CMD","numero":228},
+    {"posto":"SD","nome":"BISPO","funcao":"CMD","numero":null},
     {"posto":"SD","nome":"MARINHO","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"IDELMAR","funcao":"","numero":null},
     {"posto":"SD","nome":"PURIFICAÇÃO","funcao":"","numero":null}
