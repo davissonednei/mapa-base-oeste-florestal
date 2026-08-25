@@ -1,28 +1,35 @@
-/* Compatibilidade: preserva o loader operacional existente, amplia a cobertura e adiciona busca por ID de evento. */
+/* Compatibilidade operacional + campo de atuação oficial da Base Oeste + busca por ID de evento. */
 (() => {
+  const CAMPO_ATUACAO_OESTE = new Set([
+    'angical',
+    'baianopolis',
+    'barreiras',
+    'buritirama',
+    'catolandia',
+    'cotegipe',
+    'cristopolis',
+    'formosa do rio preto',
+    'mansidao',
+    'muquem do sao francisco',
+    'riachao das neves',
+    'santa rita de cassia',
+    'sao desiderio',
+    'wanderley',
+    'barra',
+    'luis eduardo magalhaes'
+  ]);
+
   try {
-    if (typeof COBERTURA_MANUAL !== 'undefined' && COBERTURA_MANUAL?.add) {
-      [
-        'cocos',
-        'jaborandi',
-        'feira da mata',
-        'coribe',
-        'sao felix do coribe',
-        'carinhanha',
-        'serra do ramalho',
-        'serra dourada',
-        'tabocas do brejo velho',
-        'brejolandia',
-        'muquem do sao francisco',
-        'sitio do mato',
-        'canapolis',
-        'santa maria da vitoria',
-        'santana',
-        'baianopolis'
-      ].forEach(nome => COBERTURA_MANUAL.add(nome));
+    /* A cobertura deixa de ser calculada por proximidade: vale exatamente a relação operacional acima. */
+    isCoberturaOeste = rec => CAMPO_ATUACAO_OESTE.has(norm(rec.nome));
+
+    /* Mantém a compatibilidade com trechos antigos que consultam COBERTURA_MANUAL. */
+    if (typeof COBERTURA_MANUAL !== 'undefined' && COBERTURA_MANUAL?.clear) {
+      COBERTURA_MANUAL.clear();
+      CAMPO_ATUACAO_OESTE.forEach(nome => COBERTURA_MANUAL.add(nome));
     }
   } catch (e) {
-    console.warn('Falha ao ampliar a cobertura manual da Base Oeste', e);
+    console.warn('Falha ao aplicar o campo de atuação oficial da Base Oeste', e);
   }
 
   const base = document.createElement('script');
