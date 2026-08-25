@@ -1,43 +1,37 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base da GCIF 02 — Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "tipo": "base",
-    "lat": -11.048606481157286,
-    "lng": -45.20652291328169
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.41347,
+    "lng": -45.132533
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base da GCIF 03",
-    "status": "Em prontidão",
-    "tipo": "base",
-    "lat": -11.423621,
-    "lng": -46.324193
+    "local": "Local não informado",
+    "status": "Em Combate"
   },
   "04": {
-    "municipio": "Luís Eduardo Magalhães",
-    "local": "Posição atual",
-    "status": "Em prontidão",
-    "lat": -12.090049,
-    "lng": -45.79651,
+    "municipio": "Não informado",
+    "local": "Local não informado",
+    "status": "Em Combate",
     "base_lat": -12.150895773856597,
     "base_lng": -44.998055335878355,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base da GCIF 05 — Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "tipo": "base",
-    "lat": -11.048606481157286,
-    "lng": -45.20652291328169
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.41347,
+    "lng": -45.132533
   },
   "06": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Monitoramento",
+    "status": "Monitoramento",
+    "lat": -12.192149,
+    "lng": -45.153819
   },
   "07": {
     "municipio": "Barreiras",
@@ -47,30 +41,31 @@
   },
   "08": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Monitoramento",
+    "status": "Monitoramento",
+    "lat": -12.192149,
+    "lng": -45.153819
   },
   "09": {
-    "municipio": "Formosa do Rio Preto",
-    "local": "Base da GCIF 09 — Formosa do Rio Preto",
+    "municipio": "Barra",
+    "local": "Posição atual",
     "status": "Em prontidão",
-    "tipo": "base",
-    "lat": -11.048484685307116,
-    "lng": -45.20653945940747
+    "lat": -11.091696852583201,
+    "lng": -43.172589699999996
   },
   "10": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
+    "municipio": "Barra",
+    "local": "Posição atual",
     "status": "Em prontidão",
-    "tipo": "base",
-    "observacao": "Indo à borracharia e depois buscar almoço"
+    "lat": -11.091696852583201,
+    "lng": -43.172589699999996
   },
   "11": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Monitoramento",
+    "status": "Monitoramento",
+    "lat": -11.866906,
+    "lng": -45.3217
   },
   "13": {
     "municipio": "Barreiras",
@@ -88,14 +83,16 @@
   },
   "15": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Monitoramento",
+    "status": "Monitoramento",
+    "lat": -12.192149,
+    "lng": -45.153819
   },
   "16": {
     "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "local": "Monitoramento",
+    "status": "Monitoramento",
+    "lat": -12.192149,
+    "lng": -45.153819
   }
 }
