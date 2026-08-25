@@ -55,10 +55,10 @@
   },
   "10": {
     "municipio": "Barra",
-    "local": "Posição atual",
-    "status": "Em prontidão",
-    "lat": -11.091696852583201,
-    "lng": -43.172589699999996
+    "local": "Em deslocamento",
+    "status": "Em deslocamento",
+    "lat": -12.140174,
+    "lng": -43.389149
   },
   "11": {
     "municipio": "Barreiras",
@@ -74,12 +74,11 @@
     "tipo": "base"
   },
   "14": {
-    "municipio": "Formosa do Rio Preto",
-    "local": "Base da GCIF 14 — Formosa do Rio Preto",
+    "municipio": "Barra",
+    "local": "Posição atual",
     "status": "Em prontidão",
-    "tipo": "base",
-    "lat": -11.048484685307116,
-    "lng": -45.20653945940747
+    "lat": -11.091696852583201,
+    "lng": -43.172589699999996
   },
   "15": {
     "municipio": "Barreiras",
