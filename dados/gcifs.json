@@ -7,16 +7,18 @@
     "lng": -45.132533
   },
   "03": {
-    "municipio": "Não informado",
+    "municipio": "Formosa do Rio Preto",
     "local": "Posição atual",
     "status": "Em Combate",
-    "lat": -12.093399472534783,
-    "lng": -45.72983237560296
+    "lat": -11.416167,
+    "lng": -46.348579
   },
   "04": {
     "municipio": "Não informado",
-    "local": "Local não informado",
+    "local": "Posição atual",
     "status": "Em Combate",
+    "lat": -12.093326037380711,
+    "lng": -45.72984310443837,
     "base_lat": -12.150895773856597,
     "base_lng": -44.998055335878355,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
