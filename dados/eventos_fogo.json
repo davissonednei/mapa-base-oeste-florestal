@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-26T16:10:22.629983Z",
+  "atualizado_em": "2026-08-26T16:57:01.044676Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -415,7 +415,7 @@
     },
     {
       "id_evento": 6820396,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-13T04:34:00Z",
       "dt_maxima": "2026-08-25T16:41:00Z",
       "dt_ultima_visao": "2026-08-25T16:41:00Z",
@@ -41423,7 +41423,7 @@
     },
     {
       "id_evento": 6847067,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-22T15:22:00Z",
       "dt_maxima": "2026-08-25T16:41:00Z",
       "dt_ultima_visao": "2026-08-25T16:41:00Z",
@@ -69660,7 +69660,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-24T03:49:00Z",
       "dt_maxima": "2026-08-26T04:53:00Z",
-      "dt_ultima_visao": "2026-08-26T15:50:21Z",
+      "dt_ultima_visao": "2026-08-26T16:40:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 6.5162894768401225,
       "latitude": -12.133621754027331,
@@ -74315,7 +74315,7 @@
     },
     {
       "id_evento": 6853407,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T16:26:00Z",
       "dt_maxima": "2026-08-25T16:41:00Z",
       "dt_ultima_visao": "2026-08-25T16:41:00Z",
@@ -74663,7 +74663,7 @@
     },
     {
       "id_evento": 6853825,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-24T17:00:00Z",
       "dt_maxima": "2026-08-25T16:41:00Z",
       "dt_ultima_visao": "2026-08-25T16:41:00Z",
@@ -85312,7 +85312,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-25T16:05:00Z",
       "dt_maxima": "2026-08-25T18:34:00Z",
-      "dt_ultima_visao": "2026-08-26T15:50:21Z",
+      "dt_ultima_visao": "2026-08-26T16:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 8.374677100732947,
       "latitude": -9.775587490837413,
@@ -88629,7 +88629,7 @@
     },
     {
       "id_evento": 6855886,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-08-25T16:05:00Z",
       "dt_maxima": "2026-08-25T16:41:00Z",
       "dt_ultima_visao": "2026-08-25T16:41:00Z",
