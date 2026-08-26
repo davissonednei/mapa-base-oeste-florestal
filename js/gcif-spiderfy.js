@@ -37,12 +37,54 @@
   monitoramentoStyle.textContent = `
     .marker-neutro{background:#facc15!important}
     .quick-status.status-neutro{color:#fde68a!important;background:rgba(250,204,21,.12)!important;border-color:rgba(250,204,21,.45)!important}
+    .ops-stat.monitoramento{border-color:rgba(250,204,21,.38)!important;background:rgba(250,204,21,.08)!important}
+    .ops-stat.monitoramento b{color:#fde68a!important}
+    @media(max-width:1180px){
+      #headerOpsSummary .ops-stat:nth-child(7){display:flex}
+      #headerOpsSummary .ops-stat:nth-child(8){display:none}
+    }
   `;
   document.head.appendChild(monitoramentoStyle);
+
+  function normCompat(s){
+    return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+  }
+
+  function atualizarMonitoramentoResumo(){
+    const box = document.getElementById('headerOpsSummary');
+    if(!box || typeof GCIFS_DATA === 'undefined') return;
+
+    const quantidade = Object.values(GCIFS_DATA || {}).filter(g => normCompat(g?.status).includes('monitor')).length;
+    let card = box.querySelector('.ops-stat.monitoramento');
+
+    if(!card){
+      card = document.createElement('div');
+      card.className = 'ops-stat monitoramento';
+      card.innerHTML = '<b>0</b><span>Monitor.</span>';
+    }
+
+    const valor = card.querySelector('b');
+    if(valor && valor.textContent !== String(quantidade)) valor.textContent = String(quantidade);
+
+    const cards = [...box.querySelectorAll('.ops-stat')];
+    const deslocamento = cards.find(el => normCompat(el.querySelector('span')?.textContent).startsWith('desloc'));
+    const prontidao = cards.find(el => normCompat(el.querySelector('span')?.textContent).startsWith('pront'));
+
+    if(deslocamento && card.nextElementSibling !== deslocamento){
+      box.insertBefore(card, deslocamento);
+    }else if(!deslocamento && prontidao && prontidao.nextElementSibling !== card){
+      prontidao.after(card);
+    }
+  }
+
+  const resumoObserver = new MutationObserver(() => atualizarMonitoramentoResumo());
+  resumoObserver.observe(document.documentElement, {childList:true, subtree:true});
+  atualizarMonitoramentoResumo();
 
   const base = document.createElement('script');
   base.src = `js/gcif-spiderfy-base.js?v=${Date.now()}`;
   base.onload = () => {
+    atualizarMonitoramentoResumo();
     const buscaEvento = document.createElement('script');
     buscaEvento.src = `js/event-search.js?v=${Date.now()}`;
     buscaEvento.onerror = () => console.error('Falha ao carregar busca por ID de evento');
