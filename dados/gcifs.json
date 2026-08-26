@@ -1,8 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Ocorrência — local não informado",
-    "status": "Em ocorrência"
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.029132,
+    "lng": -45.103033
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
