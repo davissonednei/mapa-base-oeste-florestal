@@ -31,10 +31,11 @@
     "lng": -45.151054
   },
   "06": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Luís Eduardo Magalhães",
+    "local": "Base da GCIF 04 — Luís Eduardo Magalhães",
+    "status": "Em deslocamento",
+    "lat": -12.150895773856597,
+    "lng": -44.998055335878355
   },
   "07": {
     "municipio": "Barra",
