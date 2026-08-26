@@ -1,10 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.392660,
-    "lng": -45.151054
+    "local": "Pousada em Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -25,10 +25,10 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.392660,
-    "lng": -45.151054
+    "local": "Pousada em Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "06": {
     "municipio": "Luís Eduardo Magalhães",
