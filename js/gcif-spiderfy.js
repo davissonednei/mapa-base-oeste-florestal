@@ -32,6 +32,14 @@
     console.warn('Falha ao aplicar o campo de atuação oficial da Base Oeste', e);
   }
 
+  /* Convenção operacional: monitoramento é representado em amarelo. */
+  const monitoramentoStyle = document.createElement('style');
+  monitoramentoStyle.textContent = `
+    .marker-neutro{background:#facc15!important}
+    .quick-status.status-neutro{color:#fde68a!important;background:rgba(250,204,21,.12)!important;border-color:rgba(250,204,21,.45)!important}
+  `;
+  document.head.appendChild(monitoramentoStyle);
+
   const base = document.createElement('script');
   base.src = `js/gcif-spiderfy-base.js?v=${Date.now()}`;
   base.onload = () => {
