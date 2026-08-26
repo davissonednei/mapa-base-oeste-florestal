@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-26T09:52:33.693966Z",
+  "atualizado_em": "2026-08-26T10:20:33.916610Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -34926,7 +34926,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-26T04:53:00Z",
-      "dt_ultima_visao": "2026-08-26T04:53:00Z",
+      "dt_ultima_visao": "2026-08-26T10:00:21Z",
       "persistencia_dias": 4,
       "area_total_evento": 16.40793879450311,
       "latitude": -11.436047852657211,
