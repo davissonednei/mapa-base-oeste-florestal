@@ -76,11 +76,10 @@
     "tipo": "base"
   },
   "13": {
-    "municipio": "Não informado",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.802451,
-    "lng": -44.883700
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "14": {
     "municipio": "Barra",
@@ -96,10 +95,9 @@
     "tipo": "base"
   },
   "16": {
-    "municipio": "Não informado",
-    "local": "Apoio à GCIF 13",
-    "status": "Em Combate",
-    "lat": -11.802451,
-    "lng": -44.883700
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste — no supermercado",
+    "status": "Em prontidão",
+    "tipo": "base"
   }
 }
