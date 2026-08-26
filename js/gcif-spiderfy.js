@@ -52,6 +52,28 @@
   `;
   document.head.appendChild(monitoramentoStyle);
 
+  /* Copia no formato aceito diretamente pelo Google Maps: latitude, longitude. */
+  try {
+    if (typeof copyCoords === 'function' && typeof copyText === 'function') {
+      copyCoords = async function(latlng){
+        updateCoords(latlng);
+        const txt = `${latlng.lat.toFixed(6)}, ${latlng.lng.toFixed(6)}`;
+        const ok = await copyText(txt);
+        if(!coordEl) return;
+        coordEl.classList.toggle('copied', ok);
+        coordEl.innerHTML = ok ? `✓ Copiado: ${txt}` : `<b>⚑</b> ${txt}`;
+        setTimeout(() => {
+          if(coordsEnabled){
+            coordEl.classList.remove('copied');
+            updateCoords(lastCoord);
+          }
+        }, 900);
+      };
+    }
+  } catch (e) {
+    console.warn('Falha ao aplicar formato decimal de cópia de coordenadas', e);
+  }
+
   function normCompat(s){
     return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
   }
