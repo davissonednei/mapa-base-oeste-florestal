@@ -16,9 +16,9 @@
   "04": {
     "municipio": "Não informado",
     "local": "Posição atual",
-    "status": "Em monitoramento",
-    "lat": -12.028293,
-    "lng": -46.016208,
+    "status": "Em Combate",
+    "lat": -11.888985898423753,
+    "lng": -45.82514675551719,
     "base_lat": -12.150895773856597,
     "base_lng": -44.998055335878355,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
