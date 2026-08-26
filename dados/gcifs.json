@@ -19,8 +19,8 @@
     "status": "Em Combate",
     "lat": -11.888985898423753,
     "lng": -45.82514675551719,
-    "base_lat": -12.150895773856597,
-    "base_lng": -44.998055335878355,
+    "base_lat": -12.08484699693512,
+    "base_lng": -45.80686448717999,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
   },
   "05": {
@@ -34,8 +34,8 @@
     "municipio": "Luís Eduardo Magalhães",
     "local": "Base da GCIF 04 — Luís Eduardo Magalhães",
     "status": "Em deslocamento",
-    "lat": -12.150895773856597,
-    "lng": -44.998055335878355
+    "lat": -12.08484699693512,
+    "lng": -45.80686448717999
   },
   "07": {
     "municipio": "Barra",
