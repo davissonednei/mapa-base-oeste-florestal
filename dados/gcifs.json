@@ -1,10 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base de Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.392660,
+    "lng": -45.151054
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -16,19 +16,19 @@
   "04": {
     "municipio": "Não informado",
     "local": "Posição atual",
-    "status": "Em prontidão",
-    "lat": -11.987439,
-    "lng": -45.921306,
+    "status": "Em monitoramento",
+    "lat": -12.028293,
+    "lng": -46.016208,
     "base_lat": -12.150895773856597,
     "base_lng": -44.998055335878355,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base de Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.392660,
+    "lng": -45.151054
   },
   "06": {
     "municipio": "Barreiras",
@@ -76,10 +76,11 @@
     "tipo": "base"
   },
   "13": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.802451,
+    "lng": -44.883700
   },
   "14": {
     "municipio": "Barra",
@@ -95,9 +96,10 @@
     "tipo": "base"
   },
   "16": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Apoio à GCIF 13",
+    "status": "Em Combate",
+    "lat": -11.802451,
+    "lng": -44.883700
   }
 }
