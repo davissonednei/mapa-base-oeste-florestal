@@ -27,8 +27,7 @@
     {"posto":"SD","nome":"CARDOSO","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"CAZUMBA","funcao":"","numero":null},
     {"posto":"SGT","nome":"CLÁUDIO","funcao":"CMD","numero":null},
-    {"posto":"SD","nome":"FAUSTINO","funcao":"","numero":146},
-    {"posto":"SD","nome":"FRANCYELLE","funcao":"","numero":null}
+    {"posto":"SD","nome":"FAUSTINO","funcao":"","numero":146}
   ],
   "07": [
     {"posto":"SGT","nome":"LAÉRCIO","funcao":"CMD","numero":null},
@@ -59,7 +58,8 @@
     {"posto":"SD","nome":"ALEX ALVES","funcao":"CMD","numero":176},
     {"posto":"SD","nome":"ALISSON","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"FLORES","funcao":"","numero":null},
-    {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null}
+    {"posto":"SD","nome":"HUGO SOUZA","funcao":"","numero":null},
+    {"posto":"SD","nome":"FRANCYELLE","funcao":"","numero":null}
   ],
   "12": [
     {"posto":"SD","nome":"BISPO","funcao":"CMD","numero":null},
