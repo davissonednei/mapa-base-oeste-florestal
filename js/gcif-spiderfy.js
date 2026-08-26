@@ -32,13 +32,19 @@
     console.warn('Falha ao aplicar o campo de atuação oficial da Base Oeste', e);
   }
 
-  /* Convenção operacional: monitoramento é representado em amarelo. */
+  /* Convenção operacional: monitoramento em amarelo e deslocamento em azul. */
   const monitoramentoStyle = document.createElement('style');
   monitoramentoStyle.textContent = `
     .marker-neutro{background:#facc15!important}
     .quick-status.status-neutro{color:#fde68a!important;background:rgba(250,204,21,.12)!important;border-color:rgba(250,204,21,.45)!important}
     .ops-stat.monitoramento{border-color:rgba(250,204,21,.38)!important;background:rgba(250,204,21,.08)!important}
     .ops-stat.monitoramento b{color:#fde68a!important}
+
+    .marker-deslocamento{background:#38bdf8!important}
+    .quick-status.status-deslocamento{color:#bae6fd!important;background:rgba(56,189,248,.12)!important;border-color:rgba(56,189,248,.45)!important}
+    .ops-stat.deslocamento{border-color:rgba(56,189,248,.38)!important;background:rgba(56,189,248,.08)!important}
+    .ops-stat.deslocamento b{color:#7dd3fc!important}
+
     @media(max-width:1180px){
       #headerOpsSummary .ops-stat:nth-child(7){display:flex}
       #headerOpsSummary .ops-stat:nth-child(8){display:none}
