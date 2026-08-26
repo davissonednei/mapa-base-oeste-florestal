@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-08-26T14:06:41.522929Z",
+  "atualizado_em": "2026-08-26T14:56:31.058657Z",
   "eventos": [
     {
       "id_evento": 6817936,
@@ -34926,7 +34926,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-22T03:45:00Z",
       "dt_maxima": "2026-08-26T04:53:00Z",
-      "dt_ultima_visao": "2026-08-26T13:50:21Z",
+      "dt_ultima_visao": "2026-08-26T14:40:21Z",
       "persistencia_dias": 4,
       "area_total_evento": 16.40793879450311,
       "latitude": -11.436047852657211,
@@ -69652,7 +69652,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-24T03:49:00Z",
       "dt_maxima": "2026-08-26T04:53:00Z",
-      "dt_ultima_visao": "2026-08-26T13:50:21Z",
+      "dt_ultima_visao": "2026-08-26T14:40:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 6.5162894768401225,
       "latitude": -12.133621754027331,
