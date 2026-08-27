@@ -25,11 +25,20 @@
     .report-loading{padding:70px 20px;text-align:center;font-size:12px;color:#64748b}.report-error{padding:30px;color:#b91c1c;font-size:11px}
     @media(max-width:900px){.daily-report-overlay{padding:8px}.daily-report-body{padding:14px}.report-summary{grid-template-columns:repeat(3,1fr)}.report-doc-head{flex-direction:column}.report-doc-meta{text-align:left}.report-move{grid-template-columns:52px 90px 1fr}.report-staff-grid{grid-template-columns:1fr}.daily-report-top{align-items:flex-start;flex-wrap:wrap}.daily-report-top-title{width:100%}}
     @media print{
-      @page{size:A4 landscape;margin:10mm}
+      @page{size:A4 portrait;margin:10mm}
       body>*:not(#dailyReportOverlay){display:none!important}
       #dailyReportOverlay{display:block!important;position:static!important;background:white!important;padding:0!important;overflow:visible!important;backdrop-filter:none!important}
       .daily-report-shell{width:100%!important;box-shadow:none!important;border-radius:0!important;overflow:visible!important}
-      .daily-report-top{display:none!important}.daily-report-body{padding:0!important}.report-summary{grid-template-columns:repeat(6,1fr)!important}.report-table-wrap{overflow:visible!important}.report-section{break-inside:auto}.report-doc-head{margin-top:0}.report-move,.report-kpi,.report-staff{box-shadow:none!important}
+      .daily-report-top{display:none!important}.daily-report-body{padding:0!important}.report-summary{grid-template-columns:repeat(3,1fr)!important}.report-table-wrap{overflow:visible!important}.report-section{break-inside:auto}.report-doc-head{margin-top:0;gap:10px!important}.report-move,.report-kpi,.report-staff{box-shadow:none!important}
+      .report-move{grid-template-columns:45px 78px 1fr!important;gap:6px!important;padding:7px!important}
+      .report-table{font-size:7.5px!important;table-layout:fixed!important}
+      .report-table th,.report-table td{padding:5px!important;overflow-wrap:anywhere!important;word-break:normal!important}
+      .report-table th:nth-child(1),.report-table td:nth-child(1){width:8%!important}
+      .report-table th:nth-child(2),.report-table td:nth-child(2){width:12%!important}
+      .report-table th:nth-child(3),.report-table td:nth-child(3){width:24%!important}
+      .report-table th:nth-child(4),.report-table td:nth-child(4){width:14%!important}
+      .report-table th:nth-child(5),.report-table td:nth-child(5){width:42%!important}
+      .report-person{margin-bottom:1px!important}
     }
   `;
   document.head.appendChild(style);
@@ -61,7 +70,7 @@
   }
 
   function escapeHtml(value){
-    return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[ch]));
+    return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#039;'}[ch]));
   }
 
   async function loadJson(url){
@@ -150,9 +159,59 @@
     return viaturas?.porGcif?.[id] || '—';
   }
 
+  /* Precedência hierárquica. Dentro do mesmo posto, preserva a ordem do cadastro,
+     que passa a ser a referência de antiguidade quando não houver outro campo específico. */
+  function postoPriority(posto){
+    const p = norm(posto).replace(/[º°\.]/g,'').replace(/\s+/g,' ').trim();
+    const tabela = {
+      'cel':0, 'coronel':0,
+      'ten cel':1, 'tc':1, 'tenente coronel':1,
+      'maj':2, 'major':2,
+      'cap':3, 'capitao':3,
+      '1 ten':4, 'primeiro tenente':4,
+      'ten':4, 'tenente':4,
+      '2 ten':5, 'segundo tenente':5,
+      'asp':6, 'aspirante':6, 'aspirante a oficial':6,
+      'sub ten':7, 'subten':7, 'subtenente':7,
+      '1 sgt':8, 'primeiro sargento':8,
+      '2 sgt':9, 'segundo sargento':9,
+      '3 sgt':10, 'terceiro sargento':10,
+      'sgt':10, 'sargento':10,
+      'cb':11, 'cabo':11,
+      'sd':12, 'soldado':12
+    };
+    return tabela[p] ?? 99;
+  }
+
+  function functionPriority(p){
+    const f = norm(p?.funcao);
+    if(f.includes('cmd')) return 0;
+    if(f.includes('condutor')) return 1;
+    if(p?.numero != null) return 2;
+    return 3;
+  }
+
+  function orderedPeople(list, prioritizeFunction = true){
+    if(!Array.isArray(list)) return [];
+    return list
+      .map((p,index) => ({p,index}))
+      .sort((a,b) => {
+        if(prioritizeFunction){
+          const fa = functionPriority(a.p);
+          const fb = functionPriority(b.p);
+          if(fa !== fb) return fa - fb;
+        }
+        const pa = postoPriority(a.p?.posto);
+        const pb = postoPriority(b.p?.posto);
+        if(pa !== pb) return pa - pb;
+        return a.index - b.index;
+      })
+      .map(x => x.p);
+  }
+
   function peopleHtml(list){
     if(!Array.isArray(list) || !list.length) return '<span class="report-muted">Sem efetivo cadastrado</span>';
-    return list.map(p => {
+    return orderedPeople(list, true).map(p => {
       const funcao = p.funcao ? ` • ${escapeHtml(p.funcao)}` : '';
       const numero = p.numero != null ? ` • Florestal ${escapeHtml(p.numero)}` : '';
       const equipamento = p.equipamento ? ` • ${escapeHtml(p.equipamento)}` : '';
@@ -215,7 +274,7 @@
         </tr>`;
       }).join('');
 
-      const staffRows = (efetivo.STAFF || []).map(p => `<div class="report-staff"><strong>${escapeHtml(p.posto)} ${escapeHtml(p.nome)}</strong><br><span class="report-muted">${escapeHtml(p.funcao || 'STAFF')}${p.numero != null ? ` • Florestal ${escapeHtml(p.numero)}` : ''}</span></div>`).join('');
+      const staffRows = orderedPeople(efetivo.STAFF || [], false).map(p => `<div class="report-staff"><strong>${escapeHtml(p.posto)} ${escapeHtml(p.nome)}</strong><br><span class="report-muted">${escapeHtml(p.funcao || 'STAFF')}${p.numero != null ? ` • Florestal ${escapeHtml(p.numero)}` : ''}</span></div>`).join('');
 
       body.innerHTML = `
         <div class="report-doc-head">
