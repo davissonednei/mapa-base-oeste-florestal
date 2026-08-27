@@ -271,6 +271,13 @@
       "lat": -11.048723986892952,
       "lng": -45.20648815169614,
       "descricao": "GCIF 03 chegou à pousada em Formosa do Rio Preto, juntando-se à GCIF 05; ambas permanecem em prontidão."
+    },
+    {
+      "hora": "20:36",
+      "gcifs": ["13", "15"],
+      "status": "Em prontidão",
+      "local": "Base Florestal Oeste",
+      "descricao": "GCIFs 13 e 15 retornaram à Base Florestal Oeste e ficaram em prontidão."
     }
   ]
 }
