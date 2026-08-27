@@ -96,9 +96,9 @@
     {"posto":"ASP","nome":"DAVISSON","funcao":"STAFF - Logística","numero":null},
     {"posto":"TEN","nome":"SAMPAIO","funcao":"STAFF - Viaturas","numero":null},
     {"posto":"SUB TEN","nome":"SHEILA","funcao":"STAFF - Logística","numero":null},
-    {"posto":"TEN CEL","nome":"JOSIEL DOS SANTOS FERREIRA","funcao":"STAFF","numero":null},
-    {"posto":"CAP","nome":"THIERS MALTEZ SANTANA VIEIRA","funcao":"STAFF","numero":null},
-    {"posto":"SGT","nome":"GUILHERME VICENTE SANTANA DA SILVA","funcao":"STAFF","numero":null},
-    {"posto":"SGT","nome":"ANDERSON FABRICIO CARMO DA SILVA","funcao":"STAFF","numero":null}
+    {"posto":"TEN CEL","nome":"JOSIEL DOS SANTOS FERREIRA","funcao":"STAFF - Comandante da Base","numero":null},
+    {"posto":"CAP","nome":"THIERS MALTEZ SANTANA VIEIRA","funcao":"STAFF - Logística da Base","numero":null},
+    {"posto":"SGT","nome":"GUILHERME VICENTE SANTANA DA SILVA","funcao":"STAFF - Viatura","numero":null},
+    {"posto":"SGT","nome":"ANDERSON FABRICIO CARMO DA SILVA","funcao":"STAFF - Apoio Administrativo","numero":null}
   ]
 }
