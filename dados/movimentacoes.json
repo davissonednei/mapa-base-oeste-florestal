@@ -201,6 +201,14 @@
       "descricao": "GCIF 06 empregada em combate no ponto informado."
     },
     {
+      "hora": "17:00",
+      "gcifs": ["14"],
+      "status": "Em prontidão",
+      "local": "DISEP de Barra",
+      "descricao": "Registro retroativo/correção: após deslocamento de Muquém do São Francisco para Barra, a GCIF 14 chegou ao DISEP de Barra às 17:00 e permaneceu em prontidão.",
+      "tipo": "registro retroativo"
+    },
+    {
       "hora": "17:15",
       "gcifs": ["14"],
       "status": "Em Combate",
@@ -209,15 +217,6 @@
       "lng": -43.37679,
       "descricao": "Registro retroativo: a GCIF 14 realizou combate no ponto para o qual havia se deslocado. Horário exato do combate não informado; informação recebida posteriormente.",
       "tipo": "registro retroativo"
-    },
-    {
-      "hora": "17:15",
-      "gcifs": ["14"],
-      "status": "Em prontidão",
-      "local": "Base em Barra",
-      "lat": -12.174756530820794,
-      "lng": -43.22503280000063,
-      "descricao": "GCIF 14 retornou à base em Barra e ficou em prontidão."
     },
     {
       "hora": "17:34",
