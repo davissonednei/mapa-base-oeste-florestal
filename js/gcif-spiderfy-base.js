@@ -1,5 +1,18 @@
 /* Loader do mapa operacional: mantém uma única régua visível e adiciona camadas auxiliares. */
 (() => {
+  function carregarRelatorioDiario() {
+    if (document.getElementById('relatorioDiarioScript') || typeof window.openDailyOperationalReport === 'function') return;
+    const script = document.createElement('script');
+    script.id = 'relatorioDiarioScript';
+    script.src = `js/relatorio-diario.js?v=${Date.now()}`;
+    script.onerror = () => console.error('Falha ao carregar relatório operacional diário');
+    document.head.appendChild(script);
+  }
+
+  /* Este loader já é carregado com cache-buster pelo mapa. O relatório entra por aqui
+     para aparecer mesmo quando o navegador ainda estiver usando uma versão antiga do entrypoint. */
+  carregarRelatorioDiario();
+
   const actions = document.querySelector('.map-actions');
   if (!actions) return;
 
@@ -244,6 +257,7 @@
     organizarRegua();
     instalarRelevo();
     instalarProximidadesCensipam();
+    carregarRelatorioDiario();
     setTimeout(organizarRegua, 100);
     setTimeout(organizarRegua, 600);
     setTimeout(organizarRegua, 1600);
