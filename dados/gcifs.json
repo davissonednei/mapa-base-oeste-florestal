@@ -8,10 +8,10 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Em deslocamento para a Base da GCIF 03 — Formosa do Rio Preto",
+    "local": "Em deslocamento para ponto informado em Formosa do Rio Preto",
     "status": "Em deslocamento",
-    "lat": -11.429085,
-    "lng": -46.334157,
+    "lat": -11.048740518457949,
+    "lng": -45.20648590464411,
     "base_lat": -11.429085,
     "base_lng": -46.334157,
     "base_local": "Base da GCIF 03 — Formosa do Rio Preto"
