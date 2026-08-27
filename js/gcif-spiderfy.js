@@ -87,31 +87,71 @@
     return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
   }
 
+  /* O relatório deve sair em folha A4 normal (retrato), não deitado. */
+  function aplicarImpressaoRetrato(){
+    if(document.getElementById('relatorioPrintPortraitStyle')) return;
+    const style = document.createElement('style');
+    style.id = 'relatorioPrintPortraitStyle';
+    style.textContent = `
+      @media print{
+        @page{size:A4 portrait;margin:10mm}
+        .report-summary{grid-template-columns:repeat(3,1fr)!important}
+        .report-doc-head{gap:10px!important}
+        .report-move{grid-template-columns:45px 78px 1fr!important;gap:6px!important;padding:7px!important}
+        .report-table{font-size:7.5px!important;table-layout:fixed!important}
+        .report-table th,.report-table td{padding:5px!important;overflow-wrap:anywhere!important;word-break:normal!important}
+        .report-table th:nth-child(1),.report-table td:nth-child(1){width:8%!important}
+        .report-table th:nth-child(2),.report-table td:nth-child(2){width:12%!important}
+        .report-table th:nth-child(3),.report-table td:nth-child(3){width:24%!important}
+        .report-table th:nth-child(4),.report-table td:nth-child(4){width:14%!important}
+        .report-table th:nth-child(5),.report-table td:nth-child(5){width:42%!important}
+        .report-person{margin-bottom:1px!important}
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   function carregarRelatorioDiario(){
     return new Promise((resolve,reject) => {
-      if(typeof window.openDailyOperationalReport === 'function') return resolve();
+      if(typeof window.openDailyOperationalReport === 'function'){
+        aplicarImpressaoRetrato();
+        return resolve();
+      }
       const existente = document.getElementById('relatorioDiarioScript');
       if(existente){
-        existente.addEventListener('load', () => resolve(), {once:true});
+        existente.addEventListener('load', () => { aplicarImpressaoRetrato(); resolve(); }, {once:true});
         existente.addEventListener('error', () => reject(new Error('Falha ao carregar relatório operacional diário')), {once:true});
         setTimeout(() => {
-          if(typeof window.openDailyOperationalReport === 'function') resolve();
+          if(typeof window.openDailyOperationalReport === 'function'){
+            aplicarImpressaoRetrato();
+            resolve();
+          }
         }, 300);
         return;
       }
       const script = document.createElement('script');
       script.id = 'relatorioDiarioScript';
       script.src = `js/relatorio-diario.js?v=${Date.now()}`;
-      script.onload = () => resolve();
+      script.onload = () => { aplicarImpressaoRetrato(); resolve(); };
       script.onerror = () => reject(new Error('Falha ao carregar relatório operacional diário'));
       document.head.appendChild(script);
     });
   }
 
   function prepararAcessoRelatorio(){
-    const painel = document.getElementById('baseList');
+    let painel = document.getElementById('baseList');
     const titulo = [...document.querySelectorAll('.section-title')].find(el => normCompat(el.textContent).includes('bases do planop'));
-    if(!titulo || !painel) return false;
+    if(!titulo) return false;
+
+    /* O HTML antigo não tinha id na lista de bases; identifica pela posição e passa a ter. */
+    if(!painel){
+      const candidato = titulo.nextElementSibling;
+      if(candidato && candidato.classList.contains('base-list')){
+        painel = candidato;
+        painel.id = 'baseList';
+      }
+    }
+    if(!painel) return false;
 
     if(!titulo.dataset.reportAccordion){
       titulo.dataset.reportAccordion = '1';
