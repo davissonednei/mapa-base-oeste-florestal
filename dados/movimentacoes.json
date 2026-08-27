@@ -278,6 +278,15 @@
       "status": "Em prontidão",
       "local": "Base Florestal Oeste",
       "descricao": "GCIFs 13 e 15 retornaram à Base Florestal Oeste e ficaram em prontidão."
+    },
+    {
+      "hora": "20:47",
+      "gcifs": ["02"],
+      "status": "Em prontidão",
+      "local": "Pousada em Formosa do Rio Preto",
+      "lat": -11.048723986892952,
+      "lng": -45.20648815169614,
+      "descricao": "GCIF 02 retornou à base em Formosa do Rio Preto e ficou em prontidão."
     }
   ]
 }
