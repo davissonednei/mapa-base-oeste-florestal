@@ -1,17 +1,17 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.029132,
-    "lng": -45.103033
+    "local": "Pousada em Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
-    "status": "Em monitoramento",
-    "lat": -11.416167,
-    "lng": -46.348579
+    "local": "Pousada em Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
@@ -39,45 +39,42 @@
   },
   "07": {
     "municipio": "Barra",
-    "local": "Posição atual",
+    "local": "Base em Barra",
     "status": "Em prontidão",
     "lat": -12.174756530820794,
     "lng": -43.22503280000063
   },
   "08": {
-    "municipio": "Não informado",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.976651262838947,
-    "lng": -44.894230853983686
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "09": {
     "municipio": "Barra",
-    "local": "Posição atual",
-    "status": "Em Combate",
+    "local": "Base em Barra",
+    "status": "Em prontidão",
     "lat": -11.091696852583201,
     "lng": -43.172589699999996
   },
   "10": {
     "municipio": "Barra",
-    "local": "Posição atual",
+    "local": "Base em Barra",
     "status": "Em prontidão",
     "lat": -12.174756530820794,
     "lng": -43.22503280000063
   },
   "11": {
-    "municipio": "Não informado",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.988746508170577,
-    "lng": -44.936755862110786
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "12": {
-    "municipio": "Não informado",
-    "local": "Posição atual",
-    "status": "Em Combate",
-    "lat": -11.976651262838947,
-    "lng": -44.894230853983686
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "13": {
     "municipio": "Barreiras",
@@ -87,8 +84,8 @@
   },
   "14": {
     "municipio": "Barra",
-    "local": "Posição atual",
-    "status": "Em Combate",
+    "local": "Base em Barra",
+    "status": "Em prontidão",
     "lat": -11.091696852583201,
     "lng": -43.172589699999996
   },
