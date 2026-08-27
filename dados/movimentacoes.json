@@ -106,6 +106,13 @@
       "local": "Base Florestal Oeste",
       "descricao": "Situação da GCIF 15 confirmada na Base Florestal Oeste, em prontidão.",
       "tipo": "confirmação"
+    },
+    {
+      "hora": "14:48",
+      "gcifs": ["08"],
+      "status": "Em prontidão",
+      "local": "Base Florestal Oeste",
+      "descricao": "GCIF 08 retornou à Base Florestal Oeste e ficou em prontidão."
     }
   ]
 }
