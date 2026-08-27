@@ -88,8 +88,10 @@
   },
   "14": {
     "municipio": "Barra",
-    "local": "DISEP de Barra",
-    "status": "Em prontidão"
+    "local": "Base em Barra",
+    "status": "Em prontidão",
+    "lat": -11.091696852583201,
+    "lng": -43.172589699999996
   },
   "15": {
     "municipio": "Não informado",
