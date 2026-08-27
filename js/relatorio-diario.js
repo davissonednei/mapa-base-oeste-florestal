@@ -20,6 +20,7 @@
     .daily-report-body{padding:24px}.report-doc-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;border-bottom:3px solid #17202a;padding-bottom:14px;margin-bottom:16px}.report-doc-head h1{font-size:22px;line-height:1.1;margin:0 0 5px}.report-doc-head p{margin:2px 0;font-size:11px;color:#52606d}.report-doc-meta{text-align:right;font-size:10px;color:#52606d;line-height:1.45}
     .report-summary{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0 20px}.report-kpi{border:1px solid #d8e0e7;border-radius:10px;padding:10px;background:white}.report-kpi b{display:block;font-size:20px}.report-kpi span{display:block;font-size:8px;color:#657482;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}.report-kpi.combate{border-top:3px solid #ef4444}.report-kpi.prontidao{border-top:3px solid #22c55e}.report-kpi.monitoramento{border-top:3px solid #eab308}.report-kpi.deslocamento{border-top:3px solid #38bdf8}
     .report-section{margin-top:22px}.report-section-title{font-size:13px;font-weight:950;text-transform:uppercase;letter-spacing:.07em;color:#17202a;border-bottom:1px solid #ccd6df;padding-bottom:7px;margin-bottom:10px}.report-section-note{font-size:9px;color:#71808e;margin-top:-5px;margin-bottom:10px}
+    .report-disclaimer{margin:0 0 12px;padding:9px 11px;border:1px solid #f6d68a;border-left:4px solid #d97706;border-radius:8px;background:#fffbeb;color:#7c4a03;font-size:9px;line-height:1.45;break-inside:avoid}.report-disclaimer strong{font-weight:950}
     .report-timeline{display:flex;flex-direction:column;gap:7px}.report-move{display:grid;grid-template-columns:58px 115px 1fr;gap:10px;border:1px solid #dbe3ea;border-radius:10px;background:white;padding:10px 11px;break-inside:avoid}.report-time{font-size:12px;font-weight:950;color:#334155}.report-gcif{font-size:11px;font-weight:950}.report-move-main{font-size:10px;line-height:1.45}.report-move-main b{font-size:11px}.report-coord{font:9px/1.35 Consolas,monospace;color:#64748b;margin-top:3px}.report-resource{font-size:9px;color:#52606d;margin-top:4px}.report-status{display:inline-block;font-size:8px;font-weight:900;border-radius:999px;padding:3px 6px;margin-left:5px;border:1px solid #cbd5e1}.report-status.combate{color:#b91c1c;background:#fef2f2;border-color:#fecaca}.report-status.prontidao{color:#15803d;background:#f0fdf4;border-color:#bbf7d0}.report-status.prevencao{color:#a16207;background:#fffbeb;border-color:#fde68a}.report-status.monitoramento{color:#854d0e;background:#fefce8;border-color:#fde047}.report-status.deslocamento{color:#0369a1;background:#f0f9ff;border-color:#bae6fd}
     .report-table-wrap{overflow-x:auto;border:1px solid #dbe3ea;border-radius:10px}.report-table{width:100%;border-collapse:collapse;background:white;font-size:9px}.report-table th{background:#eef3f7;text-align:left;padding:8px;border-bottom:1px solid #dbe3ea;color:#475569;text-transform:uppercase;font-size:8px;letter-spacing:.04em}.report-table td{padding:8px;vertical-align:top;border-bottom:1px solid #edf1f4;line-height:1.35}.report-table tr:last-child td{border-bottom:0}.report-table .gcif-id{font-size:12px;font-weight:950;white-space:nowrap}.report-person{display:block;margin-bottom:2px}.report-person strong{font-weight:850}.report-muted{color:#6b7a88}.report-staff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.report-staff{border:1px solid #dbe3ea;border-radius:9px;background:white;padding:8px 10px;font-size:9px;line-height:1.4;break-inside:avoid}.report-foot{margin-top:24px;padding-top:10px;border-top:1px solid #cfd8e1;font-size:8px;color:#71808e;line-height:1.45}
     .report-loading{padding:70px 20px;text-align:center;font-size:12px;color:#64748b}.report-error{padding:30px;color:#b91c1c;font-size:11px}
@@ -57,6 +58,19 @@
   function formatDateBR(key){
     const [y,m,d] = key.split('-');
     return `${d}/${m}/${y}`;
+  }
+
+  /* Horários operacionais do relatório são aproximados: arredonda para o bloco de 10 minutos mais próximo.
+     O horário original continua preservado em movimentacoes.json para rastreabilidade interna. */
+  function approximateOperationalTime(value){
+    const m = String(value || '').trim().match(/^(\d{1,2}):(\d{2})$/);
+    if(!m) return value || '—';
+    let total = (Number(m[1]) * 60) + Number(m[2]);
+    total = Math.round(total / 10) * 10;
+    total = ((total % 1440) + 1440) % 1440;
+    const h = String(Math.floor(total / 60)).padStart(2,'0');
+    const min = String(total % 60).padStart(2,'0');
+    return `${h}:${min}`;
   }
 
   function statusClass(status){
@@ -251,7 +265,7 @@
         const idsLabel = (item.gcifs || []).map(id => `GCIF ${id}`).join(', ') || 'Registro';
         const coords = Number.isFinite(item.lat) && Number.isFinite(item.lng) ? `${item.lat}, ${item.lng}` : '';
         return `<div class="report-move">
-          <div class="report-time">${escapeHtml(item.hora || '—')}</div>
+          <div class="report-time">${escapeHtml(approximateOperationalTime(item.hora))}</div>
           <div class="report-gcif">${escapeHtml(idsLabel)}</div>
           <div class="report-move-main">
             <b>${escapeHtml(item.descricao || item.local || 'Movimentação operacional')}</b><span class="report-status ${statusClass(item.status)}">${escapeHtml(item.status || '—')}</span>
@@ -292,6 +306,7 @@
 
         <section class="report-section">
           <div class="report-section-title">1. Movimentações e alterações operacionais do dia</div>
+          <div class="report-disclaimer"><strong>Observação sobre os horários:</strong> os horários apresentados neste relatório são aproximados e arredondados em intervalos de 10 minutos, em razão da dinâmica e dos procedimentos logísticos da operação. Não devem ser interpretados como registro cronológico exato.</div>
           <div class="report-section-note">Histórico cronológico registrado no mapa operacional. O efetivo e a viatura exibidos em cada registro correspondem à composição cadastrada da GCIF.</div>
           <div class="report-timeline">${movementRows}</div>
         </section>
@@ -307,7 +322,7 @@
           <div class="report-staff-grid">${staffRows || '<div class="report-muted">Sem STAFF cadastrado.</div>'}</div>
         </section>
 
-        <div class="report-foot">Relatório gerado automaticamente a partir dos registros do Mapa Operacional da Base Florestal Oeste. Alterações posteriores no efetivo, viaturas ou situação das GCIFs serão refletidas na próxima atualização do relatório.</div>`;
+        <div class="report-foot">Relatório gerado automaticamente a partir dos registros do Mapa Operacional da Base Florestal Oeste. Os horários operacionais são aproximados e arredondados por motivos logísticos. Alterações posteriores no efetivo, viaturas ou situação das GCIFs serão refletidas na próxima atualização do relatório.</div>`;
     }catch(err){
       console.error('Falha ao gerar relatório diário', err);
       body.innerHTML = `<div class="report-error"><strong>Não foi possível gerar o relatório.</strong><br>${escapeHtml(err.message || err)}</div>`;
