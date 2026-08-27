@@ -139,6 +139,13 @@
       "local": "GCIF 09 → GCIF 14",
       "descricao": "SD Paixão (Florestal 228) saiu da GCIF 09 e passou a integrar a GCIF 14.",
       "tipo": "efetivo"
+    },
+    {
+      "hora": "15:13",
+      "gcifs": ["11"],
+      "status": "Em prontidão",
+      "local": "Base Florestal Oeste",
+      "descricao": "GCIF 11 retornou à Base Florestal Oeste e ficou em prontidão."
     }
   ]
 }
