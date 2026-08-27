@@ -227,6 +227,15 @@
       "lat": -11.429085,
       "lng": -46.334157,
       "descricao": "GCIF 03 iniciou deslocamento para sua base em Formosa do Rio Preto."
+    },
+    {
+      "hora": "17:54",
+      "gcifs": ["03"],
+      "status": "Em deslocamento",
+      "local": "Ponto informado em Formosa do Rio Preto",
+      "lat": -11.048740518457949,
+      "lng": -45.20648590464411,
+      "descricao": "Posição/destino da GCIF 03 em deslocamento atualizada para o ponto informado."
     }
   ]
 }
