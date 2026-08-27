@@ -141,6 +141,14 @@
       "tipo": "efetivo"
     },
     {
+      "hora": "15:10",
+      "gcifs": ["12"],
+      "status": "Em prontidão",
+      "local": "Base Florestal Oeste",
+      "descricao": "Registro retroativo: GCIF 12 chegou à Base Florestal Oeste às 15:10 e permaneceu em prontidão.",
+      "tipo": "registro retroativo"
+    },
+    {
       "hora": "15:13",
       "gcifs": ["11"],
       "status": "Em prontidão",
