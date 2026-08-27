@@ -113,10 +113,16 @@
   base.src = `js/gcif-spiderfy-base.js?v=${Date.now()}`;
   base.onload = () => {
     atualizarMonitoramentoResumo();
+
     const buscaEvento = document.createElement('script');
     buscaEvento.src = `js/event-search.js?v=${Date.now()}`;
     buscaEvento.onerror = () => console.error('Falha ao carregar busca por ID de evento');
     document.head.appendChild(buscaEvento);
+
+    const relatorioDiario = document.createElement('script');
+    relatorioDiario.src = `js/relatorio-diario.js?v=${Date.now()}`;
+    relatorioDiario.onerror = () => console.error('Falha ao carregar relatório operacional diário');
+    document.head.appendChild(relatorioDiario);
   };
   base.onerror = () => console.error('Falha ao carregar o mapa operacional');
   document.head.appendChild(base);
