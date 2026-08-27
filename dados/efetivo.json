@@ -44,7 +44,6 @@
   "09": [
     {"posto":"SD","nome":"AMORIM","funcao":"","numero":null},
     {"posto":"SD","nome":"EDERSON","funcao":"","numero":null},
-    {"posto":"SD","nome":"PAIXÃO","funcao":"","numero":228},
     {"posto":"SD","nome":"ROBÉRIO","funcao":"CMD","numero":92},
     {"posto":"SD","nome":"XAVIER","funcao":"CONDUTOR","numero":null}
   ],
@@ -78,7 +77,8 @@
     {"posto":"SD","nome":"BALBINO","funcao":"","numero":null},
     {"posto":"SD","nome":"CASTRO COSTA","funcao":"","numero":null},
     {"posto":"SD","nome":"DANIEL LEITE","funcao":"CONDUTOR","numero":null},
-    {"posto":"SD","nome":"SANTOS","funcao":"","numero":null}
+    {"posto":"SD","nome":"SANTOS","funcao":"","numero":null},
+    {"posto":"SD","nome":"PAIXÃO","funcao":"","numero":228}
   ],
   "15": [
     {"posto":"SD","nome":"BORGES","funcao":"","numero":null},
