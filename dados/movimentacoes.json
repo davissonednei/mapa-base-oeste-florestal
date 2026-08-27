@@ -210,6 +210,15 @@
       "lat": -12.174756530820794,
       "lng": -43.22503280000063,
       "descricao": "GCIF 14 retornou à base em Barra e ficou em prontidão."
+    },
+    {
+      "hora": "17:34",
+      "gcifs": ["03"],
+      "status": "Em deslocamento",
+      "local": "Base da GCIF 03 — Formosa do Rio Preto",
+      "lat": -11.429085,
+      "lng": -46.334157,
+      "descricao": "GCIF 03 iniciou deslocamento para sua base em Formosa do Rio Preto."
     }
   ]
 }
