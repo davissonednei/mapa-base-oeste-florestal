@@ -45,6 +45,15 @@
     .ops-stat.deslocamento{border-color:rgba(56,189,248,.38)!important;background:rgba(56,189,248,.08)!important}
     .ops-stat.deslocamento b{color:#7dd3fc!important}
 
+    .report-base-title{display:flex!important;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;user-select:none;padding:9px 8px;margin:9px 0 0!important;border:1px solid #213243;border-radius:9px;background:#0a151f;color:#b8c8d4!important;transition:.15s ease}
+    .report-base-title:hover{border-color:#334b60;background:#0d1a26}
+    .report-base-title .report-arrow{font-size:15px;line-height:1;transition:transform .18s ease;color:#f59e0b}
+    .report-base-title.open .report-arrow{transform:rotate(180deg)}
+    #baseList.report-base-panel{display:none!important;margin-top:6px}
+    #baseList.report-base-panel.open{display:flex!important}
+    .report-launch-btn{width:100%;min-height:42px;margin:8px 0 3px;border:1px solid rgba(56,189,248,.38);border-radius:9px;background:linear-gradient(180deg,rgba(14,116,144,.24),rgba(8,47,73,.28));color:#d9f3ff;font-size:10px;font-weight:900;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
+    .report-launch-btn:hover{border-color:#38bdf8;background:rgba(14,116,144,.32)}
+
     @media(max-width:1180px){
       #headerOpsSummary .ops-stat:nth-child(7){display:flex}
       #headerOpsSummary .ops-stat:nth-child(8){display:none}
@@ -77,6 +86,88 @@
   function normCompat(s){
     return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
   }
+
+  function carregarRelatorioDiario(){
+    return new Promise((resolve,reject) => {
+      if(typeof window.openDailyOperationalReport === 'function') return resolve();
+      const existente = document.getElementById('relatorioDiarioScript');
+      if(existente){
+        existente.addEventListener('load', () => resolve(), {once:true});
+        existente.addEventListener('error', () => reject(new Error('Falha ao carregar relatório operacional diário')), {once:true});
+        setTimeout(() => {
+          if(typeof window.openDailyOperationalReport === 'function') resolve();
+        }, 300);
+        return;
+      }
+      const script = document.createElement('script');
+      script.id = 'relatorioDiarioScript';
+      script.src = `js/relatorio-diario.js?v=${Date.now()}`;
+      script.onload = () => resolve();
+      script.onerror = () => reject(new Error('Falha ao carregar relatório operacional diário'));
+      document.head.appendChild(script);
+    });
+  }
+
+  function prepararAcessoRelatorio(){
+    const painel = document.getElementById('baseList');
+    const titulo = [...document.querySelectorAll('.section-title')].find(el => normCompat(el.textContent).includes('bases do planop'));
+    if(!titulo || !painel) return false;
+
+    if(!titulo.dataset.reportAccordion){
+      titulo.dataset.reportAccordion = '1';
+      titulo.classList.add('report-base-title');
+      const texto = titulo.textContent.trim();
+      titulo.innerHTML = `<span>${texto}</span><span class="report-arrow">⌄</span>`;
+      titulo.setAttribute('role','button');
+      titulo.setAttribute('tabindex','0');
+      titulo.setAttribute('aria-expanded','false');
+      painel.classList.add('report-base-panel');
+      const toggle = () => {
+        const abriu = !painel.classList.contains('open');
+        painel.classList.toggle('open', abriu);
+        titulo.classList.toggle('open', abriu);
+        titulo.setAttribute('aria-expanded', String(abriu));
+      };
+      titulo.addEventListener('click', toggle);
+      titulo.addEventListener('keydown', e => {
+        if(e.key === 'Enter' || e.key === ' '){
+          e.preventDefault();
+          toggle();
+        }
+      });
+    }
+
+    if(!document.getElementById('dailyReportButton')){
+      const btn = document.createElement('button');
+      btn.id = 'dailyReportButton';
+      btn.className = 'report-launch-btn';
+      btn.type = 'button';
+      btn.innerHTML = '<span>📄</span><span>RELATÓRIO OPERACIONAL DO DIA</span>';
+      btn.addEventListener('click', async () => {
+        btn.disabled = true;
+        const antigo = btn.innerHTML;
+        btn.innerHTML = '<span>⏳</span><span>CARREGANDO RELATÓRIO...</span>';
+        try{
+          await carregarRelatorioDiario();
+          if(typeof window.openDailyOperationalReport !== 'function') throw new Error('Relatório indisponível');
+          window.openDailyOperationalReport();
+        }catch(e){
+          console.error(e);
+          alert('Não foi possível abrir o relatório. Atualize a página e tente novamente.');
+        }finally{
+          btn.disabled = false;
+          btn.innerHTML = antigo;
+        }
+      });
+      painel.insertAdjacentElement('afterend', btn);
+    }
+    return true;
+  }
+
+  prepararAcessoRelatorio();
+  const relatorioObserver = new MutationObserver(() => prepararAcessoRelatorio());
+  relatorioObserver.observe(document.documentElement,{childList:true,subtree:true});
+  setTimeout(() => relatorioObserver.disconnect(), 20000);
 
   function atualizarMonitoramentoResumo(){
     const box = document.getElementById('headerOpsSummary');
@@ -113,16 +204,14 @@
   base.src = `js/gcif-spiderfy-base.js?v=${Date.now()}`;
   base.onload = () => {
     atualizarMonitoramentoResumo();
+    prepararAcessoRelatorio();
 
     const buscaEvento = document.createElement('script');
     buscaEvento.src = `js/event-search.js?v=${Date.now()}`;
     buscaEvento.onerror = () => console.error('Falha ao carregar busca por ID de evento');
     document.head.appendChild(buscaEvento);
 
-    const relatorioDiario = document.createElement('script');
-    relatorioDiario.src = `js/relatorio-diario.js?v=${Date.now()}`;
-    relatorioDiario.onerror = () => console.error('Falha ao carregar relatório operacional diário');
-    document.head.appendChild(relatorioDiario);
+    carregarRelatorioDiario().catch(e => console.error(e));
   };
   base.onerror = () => console.error('Falha ao carregar o mapa operacional');
   document.head.appendChild(base);
