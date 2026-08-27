@@ -1,17 +1,20 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.492881,
+    "lng": -45.095962
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
+    "local": "Base da GCIF 03 — Formosa do Rio Preto",
     "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "lat": -11.429085,
+    "lng": -46.334157,
+    "base_lat": -11.429085,
+    "base_lng": -46.334157,
+    "base_local": "Base da GCIF 03 — Formosa do Rio Preto"
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
@@ -25,10 +28,10 @@
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição atual",
+    "status": "Em Combate",
+    "lat": -11.169029,
+    "lng": -45.066602
   },
   "06": {
     "municipio": "Luís Eduardo Magalhães",
@@ -84,10 +87,10 @@
   },
   "14": {
     "municipio": "Barra",
-    "local": "Base em Barra",
-    "status": "Em prontidão",
-    "lat": -11.091696852583201,
-    "lng": -43.172589699999996
+    "local": "Destino de combate",
+    "status": "Em deslocamento",
+    "lat": -12.144217,
+    "lng": -43.37679
   },
   "15": {
     "municipio": "Barreiras",
