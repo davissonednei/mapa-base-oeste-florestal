@@ -155,6 +155,33 @@
       "lat": -11.169352,
       "lng": -45.065918,
       "descricao": "Posição da GCIF 05 em combate atualizada para o ponto informado."
+    },
+    {
+      "hora": "16:39",
+      "gcifs": ["02"],
+      "status": "Em Combate",
+      "local": "Mesma ocorrência da GCIF 05",
+      "lat": -11.170192,
+      "lng": -45.061927,
+      "descricao": "GCIF 02 se juntou à GCIF 05 na mesma ocorrência, permanecendo em combate."
+    },
+    {
+      "hora": "16:39",
+      "gcifs": ["16"],
+      "status": "Em prontidão",
+      "local": "Base da GCIF 16 — Oliveira dos Brejinhos",
+      "lat": -12.316878977848237,
+      "lng": -42.86306296574233,
+      "descricao": "GCIF 16 passou para prontidão no local já informado em Oliveira dos Brejinhos."
+    },
+    {
+      "hora": "16:39",
+      "gcifs": ["06"],
+      "status": "Em Combate",
+      "local": "Posição de combate",
+      "lat": -12.071756826566212,
+      "lng": -45.48951946210956,
+      "descricao": "GCIF 06 empregada em combate no ponto informado."
     }
   ]
 }
