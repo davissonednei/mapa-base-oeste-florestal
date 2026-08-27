@@ -102,10 +102,13 @@
     "tipo": "base"
   },
   "16": {
-    "municipio": "Não informado",
-    "local": "Destino de combate",
-    "status": "Em deslocamento",
-    "lat": -12.320723,
-    "lng": -42.885167
+    "municipio": "Oliveira dos Brejinhos",
+    "local": "Base da GCIF 16 — Oliveira dos Brejinhos",
+    "status": "Em prontidão",
+    "lat": -12.316878977848237,
+    "lng": -42.86306296574233,
+    "base_lat": -12.316878977848237,
+    "base_lng": -42.86306296574233,
+    "base_local": "Base da GCIF 16 — Oliveira dos Brejinhos"
   }
 }
