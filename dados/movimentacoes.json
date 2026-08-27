@@ -253,6 +253,15 @@
       "lat": -11.091696852583201,
       "lng": -43.172589699999996,
       "descricao": "GCIF 14 posicionada no mesmo ponto da GCIF 09, permanecendo em prontidão."
+    },
+    {
+      "hora": "20:06",
+      "gcifs": ["06"],
+      "status": "Em prontidão",
+      "local": "Base da GCIF 04 — Luís Eduardo Magalhães",
+      "lat": -12.08484699693512,
+      "lng": -45.80686448717999,
+      "descricao": "GCIF 06 retornou à base em Luís Eduardo Magalhães e ficou em prontidão."
     }
   ]
 }
