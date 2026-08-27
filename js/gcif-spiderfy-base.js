@@ -9,9 +9,77 @@
     document.head.appendChild(script);
   }
 
+  function instalarAcessoRelatorioSidebar() {
+    const painel = document.getElementById('baseList') || document.querySelector('aside .base-list');
+    if (!painel) return false;
+    if (!painel.id) painel.id = 'baseList';
+
+    const titulo = painel.previousElementSibling;
+    if (titulo && titulo.classList.contains('section-title') && !titulo.dataset.baseAccordionReady) {
+      titulo.dataset.baseAccordionReady = '1';
+      titulo.classList.add('accordion-title');
+      const texto = titulo.textContent.trim();
+      titulo.innerHTML = `<span>${texto}</span><span class="acc-arrow">⌄</span>`;
+      painel.classList.add('accordion-panel');
+      titulo.setAttribute('role', 'button');
+      titulo.setAttribute('tabindex', '0');
+      titulo.setAttribute('aria-expanded', 'false');
+      const toggle = () => {
+        const abriu = !painel.classList.contains('open');
+        painel.classList.toggle('open', abriu);
+        titulo.classList.toggle('open', abriu);
+        titulo.setAttribute('aria-expanded', String(abriu));
+      };
+      titulo.addEventListener('click', toggle);
+      titulo.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggle();
+        }
+      });
+    }
+
+    if (!document.getElementById('dailyReportButton')) {
+      const style = document.createElement('style');
+      style.id = 'dailyReportSidebarStyle';
+      style.textContent = `
+        #dailyReportButton{width:100%;min-height:42px;margin:9px 0 4px;border:1px solid rgba(56,189,248,.45);border-radius:9px;background:linear-gradient(180deg,rgba(14,116,144,.26),rgba(8,47,73,.34));color:#e5f7ff;font:900 10px/1.2 Inter,Segoe UI,Arial,sans-serif;letter-spacing:.04em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+        #dailyReportButton:hover{border-color:#38bdf8;background:rgba(14,116,144,.36)}
+        #baseList.accordion-panel{display:none!important;margin-top:6px}
+        #baseList.accordion-panel.open{display:flex!important}
+      `;
+      document.head.appendChild(style);
+
+      const btn = document.createElement('button');
+      btn.id = 'dailyReportButton';
+      btn.type = 'button';
+      btn.innerHTML = '<span>📄</span><span>RELATÓRIO OPERACIONAL DO DIA</span>';
+      btn.addEventListener('click', () => {
+        if (typeof window.openDailyOperationalReport === 'function') {
+          window.openDailyOperationalReport();
+          return;
+        }
+        carregarRelatorioDiario();
+        const inicio = Date.now();
+        const aguardar = setInterval(() => {
+          if (typeof window.openDailyOperationalReport === 'function') {
+            clearInterval(aguardar);
+            window.openDailyOperationalReport();
+          } else if (Date.now() - inicio > 5000) {
+            clearInterval(aguardar);
+            alert('O relatório ainda não carregou. Atualize a página e tente novamente.');
+          }
+        }, 100);
+      });
+      painel.insertAdjacentElement('afterend', btn);
+    }
+    return true;
+  }
+
   /* Este loader já é carregado com cache-buster pelo mapa. O relatório entra por aqui
      para aparecer mesmo quando o navegador ainda estiver usando uma versão antiga do entrypoint. */
   carregarRelatorioDiario();
+  instalarAcessoRelatorioSidebar();
 
   const actions = document.querySelector('.map-actions');
   if (!actions) return;
@@ -250,6 +318,7 @@
 
   instalarRelevo();
   instalarProximidadesCensipam();
+  instalarAcessoRelatorioSidebar();
 
   const app = document.createElement('script');
   app.src = `js/gcif-spiderfy-app.js?v=${Date.now()}`;
@@ -257,7 +326,11 @@
     organizarRegua();
     instalarRelevo();
     instalarProximidadesCensipam();
+    instalarAcessoRelatorioSidebar();
     carregarRelatorioDiario();
+    setTimeout(instalarAcessoRelatorioSidebar, 100);
+    setTimeout(instalarAcessoRelatorioSidebar, 600);
+    setTimeout(instalarAcessoRelatorioSidebar, 1600);
     setTimeout(organizarRegua, 100);
     setTimeout(organizarRegua, 600);
     setTimeout(organizarRegua, 1600);
