@@ -191,6 +191,25 @@
       "lat": -12.071756826566212,
       "lng": -45.48951946210956,
       "descricao": "GCIF 06 empregada em combate no ponto informado."
+    },
+    {
+      "hora": "17:15",
+      "gcifs": ["14"],
+      "status": "Em Combate",
+      "local": "Ponto anteriormente informado",
+      "lat": -12.144217,
+      "lng": -43.37679,
+      "descricao": "Registro retroativo: a GCIF 14 realizou combate no ponto para o qual havia se deslocado. Horário exato do combate não informado; informação recebida posteriormente.",
+      "tipo": "registro retroativo"
+    },
+    {
+      "hora": "17:15",
+      "gcifs": ["14"],
+      "status": "Em prontidão",
+      "local": "Base em Barra",
+      "lat": -12.174756530820794,
+      "lng": -43.22503280000063,
+      "descricao": "GCIF 14 retornou à base em Barra e ficou em prontidão."
     }
   ]
 }
