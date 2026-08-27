@@ -1,10 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição atual",
+    "local": "Posição de combate — mesma ocorrência da GCIF 05",
     "status": "Em Combate",
-    "lat": -11.489084,
-    "lng": -45.098883
+    "lat": -11.170192,
+    "lng": -45.061927
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -35,10 +35,10 @@
   },
   "06": {
     "municipio": "Luís Eduardo Magalhães",
-    "local": "Base da GCIF 04 — Luís Eduardo Magalhães",
-    "status": "Em prontidão",
-    "lat": -12.08484699693512,
-    "lng": -45.80686448717999
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -12.071756826566212,
+    "lng": -45.48951946210956
   },
   "07": {
     "municipio": "Barra",
@@ -102,7 +102,7 @@
   "16": {
     "municipio": "Oliveira dos Brejinhos",
     "local": "Base da GCIF 16 — Oliveira dos Brejinhos",
-    "status": "Em deslocamento",
+    "status": "Em prontidão",
     "lat": -12.316878977848237,
     "lng": -42.86306296574233,
     "base_lat": -12.316878977848237,
