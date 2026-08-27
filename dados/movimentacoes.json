@@ -131,6 +131,14 @@
       "lat": -11.147907987952522,
       "lng": -45.061974290910584,
       "descricao": "GCIF 05 empregada em combate no ponto informado."
+    },
+    {
+      "hora": "15:04",
+      "gcifs": ["09", "14"],
+      "status": "Alteração de efetivo",
+      "local": "GCIF 09 → GCIF 14",
+      "descricao": "SD Paixão (Florestal 228) saiu da GCIF 09 e passou a integrar a GCIF 14.",
+      "tipo": "efetivo"
     }
   ]
 }
