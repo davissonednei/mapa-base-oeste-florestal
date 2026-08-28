@@ -49,10 +49,9 @@
   },
   "08": {
     "municipio": "Barreiras",
-    "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -12.163482,
-    "lng": -45.032616
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "09": {
     "municipio": "Barra",
