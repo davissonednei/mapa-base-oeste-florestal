@@ -68,7 +68,7 @@
   ],
   "13": [
     {"posto":"SGT","nome":"ELMO","funcao":"CMD","numero":10},
-    {"posto":"SD","nome":"FREDERICO","funcao":"CONDUTOR","numero":180},
+    {"posto":"SD","nome":"ÍCARO","funcao":"CONDUTOR","numero":null},
     {"posto":"SD","nome":"JURACI","funcao":"","numero":null},
     {"posto":"SD","nome":"KAYO","funcao":"","numero":null},
     {"posto":"SD","nome":"MARCO AURÉLIO","funcao":"","numero":null}
@@ -82,7 +82,7 @@
   ],
   "15": [
     {"posto":"SD","nome":"BORGES","funcao":"","numero":null},
-    {"posto":"SD","nome":"ÍCARO","funcao":"CONDUTOR","numero":null},
+    {"posto":"SD","nome":"FREDERICO","funcao":"CONDUTOR","numero":180},
     {"posto":"SD","nome":"JOSÉ","funcao":"","numero":null},
     {"posto":"SD","nome":"VICTOR SILVA","funcao":"CMD","numero":null}
   ],
