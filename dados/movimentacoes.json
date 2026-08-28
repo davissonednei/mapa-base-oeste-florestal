@@ -379,6 +379,14 @@
       "status": "Em prontidão",
       "local": "Base Florestal Oeste",
       "descricao": "GCIFs 12 e 13 retornaram à Base Florestal Oeste e ficaram em prontidão."
+    },
+    {
+      "hora": "14:44",
+      "gcifs": ["13", "15"],
+      "status": "Alteração de efetivo",
+      "local": "Permuta GCIF 13 ↔ GCIF 15",
+      "descricao": "SD Frederico (Florestal 180) e SD Ícaro foram permutados entre as GCIFs 13 e 15. SD Ícaro passou a conduzir a AR 1411 (GCIF 13) e SD Frederico passou a conduzir a AR 0110 (GCIF 15).",
+      "tipo": "efetivo"
     }
   ]
 }
