@@ -8,10 +8,10 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -11.157097,
-    "lng": -45.564442,
+    "local": "Pousada em Formosa do Rio Preto",
+    "status": "Em prontidão",
+    "lat": -11.048723986892952,
+    "lng": -45.20648815169614,
     "base_lat": -11.429085,
     "base_lng": -46.334157,
     "base_local": "Base da GCIF 03 — Formosa do Rio Preto"
