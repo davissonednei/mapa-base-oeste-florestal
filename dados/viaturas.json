@@ -33,7 +33,7 @@
     "AR 2011": {"condutor":"","gcif":null},
     "AR 7005": {"condutor":"SGT CARMO","gcif":null},
     "AR 7149": {"condutor":"","gcif":null},
-    "AR 7155": {"condutor":"SD ALISSON","gcif":"11"},
+    "AR 7155": {"condutor":"SD ALISSON","gcif":"11","observacao":"Oficina"},
     "AR 7163": {"condutor":"SD MENEZES","gcif":"05"},
     "SAT 0870": {"condutor":"SD OSÓRIO","gcif":"04"}
   }
