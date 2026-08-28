@@ -396,6 +396,25 @@
       "lat": -11.475294253720612,
       "lng": -45.07294293253903,
       "descricao": "GCIFs 08 e 12 seguiram para o mesmo ponto informado e foram empregadas em combate."
+    },
+    {
+      "hora": "14:58",
+      "gcifs": ["08", "12"],
+      "status": "Em deslocamento",
+      "local": "Ponto registrado diretamente no mapa",
+      "lat": -11.492213,
+      "lng": -45.067293,
+      "descricao": "Registro retroativo da alteração feita diretamente no GitHub: GCIFs 08 e 12 passaram a constar em deslocamento para o ponto registrado.",
+      "tipo": "registro retroativo"
+    },
+    {
+      "hora": "15:17",
+      "gcifs": ["11"],
+      "status": "Em deslocamento",
+      "local": "Destino informado",
+      "lat": -12.764200251617394,
+      "lng": -45.952913880571344,
+      "descricao": "GCIF 11 iniciou deslocamento para o ponto informado."
     }
   ]
 }
