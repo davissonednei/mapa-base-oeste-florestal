@@ -8,10 +8,10 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614,
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.157097,
+    "lng": -45.564442,
     "base_lat": -11.429085,
     "base_lng": -46.334157,
     "base_local": "Base da GCIF 03 — Formosa do Rio Preto"
@@ -80,10 +80,11 @@
     "tipo": "base"
   },
   "13": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.776444,
+    "lng": -44.910747
   },
   "14": {
     "municipio": "Barra",
@@ -93,10 +94,11 @@
     "lng": -43.172589699999996
   },
   "15": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.776444,
+    "lng": -44.910747
   },
   "16": {
     "municipio": "Oliveira dos Brejinhos",
