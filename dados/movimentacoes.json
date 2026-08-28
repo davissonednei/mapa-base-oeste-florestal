@@ -303,10 +303,10 @@
       "hora": "07:36",
       "gcifs": ["13", "15"],
       "status": "Em Combate",
-      "local": "Posição de combate",
-      "lat": -11.776444,
-      "lng": -44.910747,
-      "descricao": "GCIFs 13 e 15 empregadas em combate no mesmo ponto informado."
+      "local": "Posição de combate corrigida",
+      "lat": -11.930565642189768,
+      "lng": -44.995409844027755,
+      "descricao": "Correção de localização: GCIFs 13 e 15 saíram para o ponto informado e permanecem em combate."
     },
     {
       "hora": "07:41",
