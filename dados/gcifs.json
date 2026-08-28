@@ -50,9 +50,9 @@
   "08": {
     "municipio": "Não informado",
     "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -11.475294253720612,
-    "lng": -45.07294293253903
+    "status": "Em deslocamento",
+    "lat": -11.492213,
+    "lng": -45.067293
   },
   "09": {
     "municipio": "Barra",
@@ -77,9 +77,9 @@
   "12": {
     "municipio": "Não informado",
     "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -11.475294253720612,
-    "lng": -45.07294293253903
+    "status": "Em deslocamento",
+    "lat": -11.492213,
+    "lng": -45.067293
   },
   "13": {
     "municipio": "Barreiras",
