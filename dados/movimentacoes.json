@@ -414,6 +414,15 @@
       "lat": -12.08484699693512,
       "lng": -45.80686448717999,
       "descricao": "GCIF 04 retornou à base em Luís Eduardo Magalhães e ficou em prontidão."
+    },
+    {
+      "hora": "18:40",
+      "gcifs": ["02", "05"],
+      "status": "Em prontidão",
+      "local": "Pousada em Formosa do Rio Preto",
+      "lat": -11.048723986892952,
+      "lng": -45.20648815169614,
+      "descricao": "GCIFs 02 e 05 chegaram à base em Formosa do Rio Preto às 18:40 e ficaram em prontidão."
     }
   ]
 }
