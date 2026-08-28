@@ -356,6 +356,15 @@
       "status": "Em prontidão",
       "local": "Base Florestal Oeste",
       "descricao": "GCIF 08 retornou de monitoramento para a Base Florestal Oeste e ficou em prontidão."
+    },
+    {
+      "hora": "13:53",
+      "gcifs": ["04"],
+      "status": "Em Combate",
+      "local": "Posição de combate",
+      "lat": -11.572305,
+      "lng": -45.513614,
+      "descricao": "Posição da GCIF 04 em combate atualizada para o ponto informado."
     }
   ]
 }
