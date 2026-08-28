@@ -335,6 +335,15 @@
       "status": "Em Combate",
       "local": "Local de combate não informado — GCIF 06",
       "descricao": "GCIF 06 passou para combate; localização atual não informada."
+    },
+    {
+      "hora": "07:57",
+      "gcifs": ["08"],
+      "status": "Em Combate",
+      "local": "Posição de combate",
+      "lat": -12.163482,
+      "lng": -45.032616,
+      "descricao": "GCIF 08 empregada em combate no ponto informado."
     }
   ]
 }
