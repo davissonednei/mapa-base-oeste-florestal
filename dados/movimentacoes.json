@@ -307,6 +307,34 @@
       "lat": -11.776444,
       "lng": -44.910747,
       "descricao": "GCIFs 13 e 15 empregadas em combate no mesmo ponto informado."
+    },
+    {
+      "hora": "07:41",
+      "gcifs": ["02"],
+      "status": "Em Combate",
+      "local": "Local de combate não informado — GCIF 02",
+      "descricao": "GCIF 02 passou para combate; localização atual não informada."
+    },
+    {
+      "hora": "07:41",
+      "gcifs": ["04"],
+      "status": "Em Combate",
+      "local": "Local de combate não informado — GCIF 04",
+      "descricao": "GCIF 04 passou para combate; localização atual não informada."
+    },
+    {
+      "hora": "07:41",
+      "gcifs": ["05"],
+      "status": "Em Combate",
+      "local": "Local de combate não informado — GCIF 05",
+      "descricao": "GCIF 05 passou para combate; localização atual não informada."
+    },
+    {
+      "hora": "07:41",
+      "gcifs": ["06"],
+      "status": "Em Combate",
+      "local": "Local de combate não informado — GCIF 06",
+      "descricao": "GCIF 06 passou para combate; localização atual não informada."
     }
   ]
 }
