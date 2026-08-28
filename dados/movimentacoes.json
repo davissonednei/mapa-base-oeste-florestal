@@ -387,6 +387,15 @@
       "local": "Permuta GCIF 13 ↔ GCIF 15",
       "descricao": "SD Frederico (Florestal 180) e SD Ícaro foram permutados entre as GCIFs 13 e 15. SD Ícaro passou a conduzir a AR 1411 (GCIF 13) e SD Frederico passou a conduzir a AR 0110 (GCIF 15).",
       "tipo": "efetivo"
+    },
+    {
+      "hora": "14:49",
+      "gcifs": ["08", "12"],
+      "status": "Em Combate",
+      "local": "Posição de combate",
+      "lat": -11.475294253720612,
+      "lng": -45.07294293253903,
+      "descricao": "GCIFs 08 e 12 seguiram para o mesmo ponto informado e foram empregadas em combate."
     }
   ]
 }
