@@ -396,6 +396,15 @@
       "lat": -12.764200251617394,
       "lng": -45.952913880571344,
       "descricao": "GCIF 11 iniciou deslocamento para o ponto informado."
+    },
+    {
+      "hora": "16:03",
+      "gcifs": ["03"],
+      "status": "Em prontidão",
+      "local": "Pousada em Formosa do Rio Preto",
+      "lat": -11.048723986892952,
+      "lng": -45.20648815169614,
+      "descricao": "GCIF 03 retornou à base em Formosa do Rio Preto e ficou em prontidão."
     }
   ]
 }
