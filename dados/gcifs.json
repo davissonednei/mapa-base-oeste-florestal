@@ -95,11 +95,10 @@
     "lng": -43.172589699999996
   },
   "15": {
-    "municipio": "Não informado",
-    "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -11.930565642189768,
-    "lng": -44.995409844027755
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "16": {
     "municipio": "Oliveira dos Brejinhos",
