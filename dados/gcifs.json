@@ -75,10 +75,11 @@
     "tipo": "base"
   },
   "12": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate — junto às GCIFs 13 e 15",
+    "status": "Em Combate",
+    "lat": -11.930565642189768,
+    "lng": -44.995409844027755
   },
   "13": {
     "municipio": "Não informado",
