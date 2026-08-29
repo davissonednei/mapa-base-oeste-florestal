@@ -51,14 +51,14 @@
     {"hora":"18:20","gcifs":["03"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIF 03 retornou à base em Formosa do Rio Preto e ficou em prontidão."},
     {"hora":"18:31","gcifs":["04"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 04 retornou à base em Luís Eduardo Magalhães e ficou em prontidão."},
     {"hora":"18:40","gcifs":["02","05"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIFs 02 e 05 chegaram à base em Formosa do Rio Preto às 18:40 e ficaram em prontidão."},
-    {"hora":"20:40","gcifs":["14"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIF 14 chegou à Base Florestal Oeste às 20:40 e permaneceu em prontidão.","tipo":"registro retroativo"},
+    {"hora":"20:40","gcifs":["14"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIF 14 chegou à Base Florestal Oeste às 20:40 e ficou em prontidão.","tipo":"registro retroativo"},
     {"hora":"21:54","gcifs":["06"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"Registro retroativo: GCIF 06 chegou à base em Luís Eduardo Magalhães às 21:54 e ficou em prontidão.","tipo":"registro retroativo"}
   ],
   "2026-08-29": [
     {"hora":"05:12","gcifs":["08","12"],"status":"Em deslocamento","local":"Destino de combate","lat":-11.491366,"lng":-45.069351,"descricao":"GCIFs 08 e 12 iniciaram deslocamento às 05:12 para combate no ponto informado."},
     {"hora":"07:50","gcifs":["11"],"status":"Em Combate","local":"Posição de combate","lat":-12.781602,"lng":-45.947227,"descricao":"GCIF 11 em combate no ponto informado desde 07:50."},
     {"hora":"08:10","gcifs":["04"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-11.572305,"lng":-45.513614,"descricao":"GCIF 04 passou para monitoramento no ponto informado às 08:10."},
-    {"hora":"08:20","gcifs":["02","05"],"status":"Em Combate","local":"Posição de combate","lat":-11.239309,"lng":-45.048092,"descricao":"GCIFs 02 e 05 empregadas em combate no mesmo ponto às 08:20."},
+    {"hora":"08:20","gcifs":["02","05"],"status":"Em Combate","local":"Posição de combate corrigida","lat":-11.25743,"lng":-45.09284,"descricao":"Correção da posição inicial: GCIFs 02 e 05 estão em combate neste ponto desde 08:20."},
     {"hora":"09:03","gcifs":["13"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-11.930565642189768,"lng":-44.995409844027755,"descricao":"GCIF 13 passou para monitoramento no ponto informado."},
     {"hora":"09:03","gcifs":["06"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-12.07150802156333,"lng":-45.48951495430973,"descricao":"GCIF 06 passou para monitoramento no ponto informado."}
   ]
