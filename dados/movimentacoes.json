@@ -57,6 +57,8 @@
     {"hora":"05:12","gcifs":["08","12"],"status":"Em deslocamento","local":"Destino de combate","lat":-11.491366,"lng":-45.069351,"descricao":"GCIFs 08 e 12 iniciaram deslocamento às 05:12 para combate no ponto informado."},
     {"hora":"07:50","gcifs":["11"],"status":"Em Combate","local":"Posição de combate","lat":-12.781602,"lng":-45.947227,"descricao":"GCIF 11 em combate no ponto informado desde 07:50."},
     {"hora":"08:10","gcifs":["04"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-11.572305,"lng":-45.513614,"descricao":"GCIF 04 passou para monitoramento no ponto informado às 08:10."},
-    {"hora":"08:20","gcifs":["02","05"],"status":"Em Combate","local":"Posição de combate","lat":-11.239309,"lng":-45.048092,"descricao":"GCIFs 02 e 05 empregadas em combate no mesmo ponto às 08:20."}
+    {"hora":"08:20","gcifs":["02","05"],"status":"Em Combate","local":"Posição de combate","lat":-11.239309,"lng":-45.048092,"descricao":"GCIFs 02 e 05 empregadas em combate no mesmo ponto às 08:20."},
+    {"hora":"09:03","gcifs":["13"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-11.930565642189768,"lng":-44.995409844027755,"descricao":"GCIF 13 passou para monitoramento no ponto informado."},
+    {"hora":"09:03","gcifs":["06"],"status":"Em monitoramento","local":"Posição de monitoramento","lat":-12.07150802156333,"lng":-45.48951495430973,"descricao":"GCIF 06 passou para monitoramento no ponto informado."}
   ]
 }
