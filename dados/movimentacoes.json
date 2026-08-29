@@ -67,6 +67,7 @@
     {"hora":"13:19","gcifs":["14"],"status":"Em deslocamento","local":"Destino informado","lat":-12.901729,"lng":-45.867237,"descricao":"GCIF 14 iniciou deslocamento para o ponto informado."},
     {"hora":"13:20","gcifs":["13"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIF 13 retornou à Base Florestal Oeste e ficou em prontidão."},
     {"hora":"13:23","gcifs":["11"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIF 11 chegou à Base Florestal Oeste e ficou em prontidão."},
-    {"hora":"13:23","gcifs":["13"],"status":"Em deslocamento","local":"Destino não informado","descricao":"GCIF 13 iniciou deslocamento a partir da Base Florestal Oeste; destino não informado."}
+    {"hora":"13:23","gcifs":["13"],"status":"Em deslocamento","local":"Destino não informado","descricao":"GCIF 13 iniciou deslocamento a partir da Base Florestal Oeste; destino não informado."},
+    {"hora":"14:04","gcifs":["13"],"status":"Em Combate","local":"Posição de combate","lat":-12.177168,"lng":-44.98734,"descricao":"GCIF 13 chegou ao ponto informado e passou para combate."}
   ]
 }
