@@ -69,11 +69,10 @@
     "lng": -43.22503280000063
   },
   "11": {
-    "municipio": "Não informado",
-    "local": "Posição de combate",
-    "status": "Em Combate",
-    "lat": -12.781602,
-    "lng": -45.947227
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "12": {
     "municipio": "Não informado",
@@ -83,10 +82,9 @@
     "lng": -45.069351
   },
   "13": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Destino não informado",
+    "status": "Em deslocamento"
   },
   "14": {
     "municipio": "Não informado",
