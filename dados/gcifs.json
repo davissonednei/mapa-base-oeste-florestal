@@ -70,8 +70,8 @@
   },
   "11": {
     "municipio": "Não informado",
-    "local": "Ponto informado — junto à GCIF 14",
-    "status": "Em prontidão",
+    "local": "Posição de combate",
+    "status": "Em Combate",
     "lat": -12.908473,
     "lng": -45.86518
   },
@@ -91,8 +91,8 @@
   },
   "14": {
     "municipio": "Não informado",
-    "local": "Destino informado",
-    "status": "Em deslocamento",
+    "local": "Posição de combate",
+    "status": "Em Combate",
     "lat": -12.908473,
     "lng": -45.86518
   },
