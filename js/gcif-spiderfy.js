@@ -251,6 +251,11 @@
     buscaEvento.onerror = () => console.error('Falha ao carregar busca por ID de evento');
     document.head.appendChild(buscaEvento);
 
+    const ventoAnimado = document.createElement('script');
+    ventoAnimado.src = `js/wind-animation.js?v=${Date.now()}`;
+    ventoAnimado.onerror = () => console.error('Falha ao carregar animação de vento');
+    document.head.appendChild(ventoAnimado);
+
     carregarRelatorioDiario().catch(e => console.error(e));
   };
   base.onerror = () => console.error('Falha ao carregar o mapa operacional');
