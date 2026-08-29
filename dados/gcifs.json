@@ -8,13 +8,13 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
+    "local": "Base temporária da GCIF 03",
     "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614,
-    "base_lat": -11.429085,
-    "base_lng": -46.334157,
-    "base_local": "Base da GCIF 03 — Formosa do Rio Preto"
+    "lat": -11.173606367950294,
+    "lng": -45.82171846212338,
+    "base_lat": -11.173606367950294,
+    "base_lng": -45.82171846212338,
+    "base_local": "Base temporária da GCIF 03"
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
