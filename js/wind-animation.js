@@ -1,6 +1,6 @@
 /* Camada animada de vento para o mapa operacional.
-   Mantém o botão VENTO ao lado de MUNICÍPIO, mas substitui o WMS estático
-   por partículas animadas usando vento a 10 m (GFS via Open-Meteo). */
+   Mantém o botão VENTO ao lado de MUNICÍPIO, usa partículas para direção
+   e projeta a velocidade do vento em km/h sobre o mapa. */
 (() => {
   if (window.__windAnimationInstalled) return;
   window.__windAnimationInstalled = true;
@@ -19,6 +19,7 @@
   let particles = [];
   let samples = [];
   let field = null;
+  let speedLayer = null;
   let raf = 0;
   let lastFrame = 0;
   let refreshTimer = 0;
@@ -39,6 +40,29 @@
     wrap.appendChild(canvas);
     ctx = canvas.getContext('2d', {alpha:true});
     resizeCanvas();
+    return true;
+  }
+
+  function assegurarVelocidades() {
+    if (typeof map === 'undefined' || typeof L === 'undefined') return false;
+    if (!map.getPane('windSpeedPane')) map.createPane('windSpeedPane');
+    const pane = map.getPane('windSpeedPane');
+    pane.style.zIndex = 427;
+    pane.style.pointerEvents = 'none';
+
+    if (!document.getElementById('windSpeedStyle')) {
+      const style = document.createElement('style');
+      style.id = 'windSpeedStyle';
+      style.textContent = `
+        .wind-speed-label{background:transparent!important;border:0!important;pointer-events:none!important}
+        .wind-speed-value{display:inline-flex;align-items:baseline;justify-content:center;gap:2px;min-width:48px;height:23px;padding:0 7px;border:1px solid rgba(186,230,253,.58);border-radius:999px;background:rgba(7,16,25,.76);color:#f0f9ff;box-shadow:0 2px 8px rgba(0,0,0,.24);backdrop-filter:blur(3px);font:900 10px/1 Inter,Segoe UI,Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+        .wind-speed-value small{font-size:7px;color:#bae6fd;font-weight:800}
+        @media(max-width:820px){.wind-speed-value{min-width:44px;height:21px;padding:0 6px;font-size:9px}.wind-speed-value small{font-size:6px}}
+      `;
+      document.head.appendChild(style);
+    }
+
+    if (!speedLayer) speedLayer = L.layerGroup();
     return true;
   }
 
@@ -82,11 +106,44 @@
       .map(v => (Math.round(v * 4) / 4).toFixed(2)).join('|');
   }
 
+  function renderizarVelocidades() {
+    if (!ativo || !samples.length || !assegurarVelocidades()) return;
+    speedLayer.clearLayers();
+    if (!map.hasLayer(speedLayer)) speedLayer.addTo(map);
+
+    const size = map.getSize();
+    const mobile = size.x < 760;
+    const colsDesejadas = mobile ? [1, 4, 6] : [1, 3, 5, 7];
+    const rowsDesejadas = mobile ? [1, 3, 5] : [1, 3, 5];
+
+    for (const r of rowsDesejadas) {
+      for (const c of colsDesejadas) {
+        const s = samples[r * GRID_COLS + c];
+        if (!s || !Number.isFinite(s.speed)) continue;
+        const valor = Math.round(s.speed);
+        const icon = L.divIcon({
+          className: 'wind-speed-label',
+          html: `<span class="wind-speed-value">${valor}<small>km/h</small></span>`,
+          iconSize: [54, 23],
+          iconAnchor: [27, 12]
+        });
+        L.marker([s.lat, s.lng], {
+          pane: 'windSpeedPane',
+          icon,
+          interactive: false,
+          keyboard: false,
+          opacity: .92
+        }).addTo(speedLayer);
+      }
+    }
+  }
+
   async function carregarVento(force=false) {
     if (!ativo || fetching || typeof map === 'undefined') return;
     const chave = chaveBounds();
     if (!force && samples.length && chave === cacheKey && Date.now() - lastFetchAt < CACHE_MS) {
       construirCampo();
+      renderizarVelocidades();
       return;
     }
 
@@ -133,6 +190,7 @@
       lastFetchAt = Date.now();
       construirCampo();
       criarParticulas();
+      renderizarVelocidades();
       if (btn) {
         const media = samples.reduce((s, x) => s + x.speed, 0) / samples.length;
         btn.title = `Vento animado a 10 m • GFS/Open-Meteo • média visível ${media.toFixed(0)} km/h`;
@@ -246,6 +304,7 @@
     if (ativo) return;
     ativo = true;
     assegurarCanvas();
+    assegurarVelocidades();
     if (canvas) canvas.style.display = 'block';
     if (btn) {
       btn.classList.add('active');
@@ -266,6 +325,10 @@
     clearInterval(refreshTimer);
     if (ctx && canvas) ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (canvas) canvas.style.display = 'none';
+    if (speedLayer) {
+      speedLayer.clearLayers();
+      if (map.hasLayer(speedLayer)) map.removeLayer(speedLayer);
+    }
     if (btn) {
       btn.classList.remove('active');
       btn.innerHTML = '🌬️ VENTO';
@@ -280,7 +343,7 @@
     if (municipio.nextElementSibling !== btn) municipio.insertAdjacentElement('afterend', btn);
     btn.disabled = false;
     btn.style.opacity = '';
-    btn.title = 'Vento animado a 10 m • direção e velocidade';
+    btn.title = 'Vento animado a 10 m • direção e velocidade projetada em km/h';
     if (btn.dataset.animatedWindReady === '1') return true;
     btn.dataset.animatedWindReady = '1';
     btn.addEventListener('click', e => {
@@ -294,11 +357,13 @@
       if (!ativo) return;
       resizeCanvas();
       construirCampo();
+      renderizarVelocidades();
     });
     map.on('movestart zoomstart', () => {
       if (!ativo || !ctx || !canvas) return;
       cancelAnimationFrame(raf);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (speedLayer) speedLayer.clearLayers();
     });
     map.on('moveend zoomend', () => {
       if (!ativo) return;
@@ -316,6 +381,7 @@
 
   function instalar() {
     assegurarCanvas();
+    assegurarVelocidades();
     if (takeoverButton()) return;
     const obs = new MutationObserver(() => {
       if (takeoverButton()) obs.disconnect();
