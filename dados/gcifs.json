@@ -1,10 +1,10 @@
 {
   "02": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.239309,
+    "lng": -45.048092
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
@@ -18,20 +18,20 @@
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
-    "local": "Base da GCIF 04 — Luís Eduardo Magalhães",
-    "status": "Em prontidão",
-    "lat": -12.08484699693512,
-    "lng": -45.80686448717999,
+    "local": "Posição de monitoramento",
+    "status": "Em monitoramento",
+    "lat": -11.572305,
+    "lng": -45.513614,
     "base_lat": -12.08484699693512,
     "base_lng": -45.80686448717999,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
   },
   "05": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Pousada em Formosa do Rio Preto",
-    "status": "Em prontidão",
-    "lat": -11.048723986892952,
-    "lng": -45.20648815169614
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.239309,
+    "lng": -45.048092
   },
   "06": {
     "municipio": "Luís Eduardo Magalhães",
@@ -70,10 +70,10 @@
   },
   "11": {
     "municipio": "Não informado",
-    "local": "Destino informado",
-    "status": "Em deslocamento",
-    "lat": -12.764200251617394,
-    "lng": -45.952913880571344
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -12.781602,
+    "lng": -45.947227
   },
   "12": {
     "municipio": "Não informado",
