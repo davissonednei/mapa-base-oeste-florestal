@@ -49,8 +49,8 @@
   },
   "08": {
     "municipio": "Não informado",
-    "local": "Destino de combate",
-    "status": "Em deslocamento",
+    "local": "Posição de combate",
+    "status": "Em Combate",
     "lat": -11.491366,
     "lng": -45.069351
   },
@@ -77,8 +77,8 @@
   },
   "12": {
     "municipio": "Não informado",
-    "local": "Destino de combate",
-    "status": "Em deslocamento",
+    "local": "Posição de combate",
+    "status": "Em Combate",
     "lat": -11.491366,
     "lng": -45.069351
   },
