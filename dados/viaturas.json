@@ -13,11 +13,11 @@
     "12": "AR 0340",
     "13": "AR 1411",
     "14": "AR 1022",
-    "15": "AR 0110",
+    "15": "AR 1207",
     "16": "AR 1624"
   },
   "frota": {
-    "AR 0110": {"condutor":"SD FREDERICO","gcif":"15"},
+    "AR 0110": {"condutor":"","gcif":null},
     "AR 0113": {"condutor":"SD NONATO","gcif":"08"},
     "AR 0210": {"condutor":"SD PINTO","gcif":"07"},
     "AR 0227": {"condutor":"SD CARDOSO","gcif":"06"},
@@ -26,7 +26,7 @@
     "AR 0910": {"condutor":"SD XAVIER","gcif":"09"},
     "AR 1022": {"condutor":"SD DANIEL LEITE","gcif":"14"},
     "AR 1121": {"condutor":"SD GALVÃO","gcif":"02"},
-    "AR 1207": {"condutor":"","gcif":null},
+    "AR 1207": {"condutor":"SD FREDERICO","gcif":"15"},
     "AR 1316": {"condutor":"SD BARBOSA","gcif":"10"},
     "AR 1411": {"condutor":"SD ÍCARO","gcif":"13"},
     "AR 1624": {"condutor":"SD FANELI","gcif":"16"},
