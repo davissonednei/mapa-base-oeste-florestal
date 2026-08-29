@@ -73,6 +73,7 @@
     {"hora":"16:17","gcifs":["15"],"status":"Alteração de viatura","local":"GCIF 15","descricao":"GCIF 15 passou a operar com a AR 1207, conduzida por SD Frederico. A AR 0110 ficou sem condutor e sem vínculo com GCIF.","tipo":"viatura"},
     {"hora":"17:00","gcifs":["06"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 06 retornou à base em Luís Eduardo Magalhães e ficou em prontidão."},
     {"hora":"17:24","gcifs":["11","14"],"status":"Em Combate","local":"Posição de combate","lat":-12.908473,"lng":-45.86518,"descricao":"GCIFs 11 e 14 passaram para combate no mesmo ponto informado."},
-    {"hora":"17:41","gcifs":["03"],"status":"Em prontidão","local":"Base temporária da GCIF 03","lat":-11.173606367950294,"lng":-45.82171846212338,"descricao":"GCIF 03 posicionada em prontidão no ponto informado, definido como sua base temporária a partir deste registro."}
+    {"hora":"17:41","gcifs":["03"],"status":"Em prontidão","local":"Base temporária da GCIF 03","lat":-11.173606367950294,"lng":-45.82171846212338,"descricao":"GCIF 03 posicionada em prontidão no ponto informado, definido como sua base temporária a partir deste registro."},
+    {"hora":"18:13","gcifs":["08","12"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 08 e 12 retornaram à Base Florestal Oeste e ficaram em prontidão."}
   ]
 }
