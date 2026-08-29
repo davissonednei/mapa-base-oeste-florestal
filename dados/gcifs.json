@@ -90,11 +90,10 @@
     "lng": -44.995409844027755
   },
   "14": {
-    "municipio": "Barra",
-    "local": "Base em Barra",
+    "municipio": "Barreiras",
+    "local": "Base Florestal Oeste",
     "status": "Em prontidão",
-    "lat": -11.091696852583201,
-    "lng": -43.172589699999996
+    "tipo": "base"
   },
   "15": {
     "municipio": "Barreiras",
