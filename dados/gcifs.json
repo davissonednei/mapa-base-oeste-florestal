@@ -84,10 +84,10 @@
   },
   "13": {
     "municipio": "Não informado",
-    "local": "Posição de monitoramento",
-    "status": "Em monitoramento",
-    "lat": -11.930565642189768,
-    "lng": -44.995409844027755
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -12.173547014422732,
+    "lng": -44.98638525003264
   },
   "14": {
     "municipio": "Barreiras",
