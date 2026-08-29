@@ -161,6 +161,135 @@
     sincronizarRelevo();
   }
 
+  function instalarVentoCensipam() {
+    if (typeof map === 'undefined' || typeof L === 'undefined') return false;
+
+    const municipio = document.getElementById('toggleMunicipioSelect');
+    if (!municipio) return false;
+
+    const existente = document.getElementById('toggleWind');
+    if (existente) {
+      if (municipio.nextElementSibling !== existente) municipio.insertAdjacentElement('afterend', existente);
+      return true;
+    }
+
+    const WMS = 'https://panorama.sipam.gov.br/geoserver/painel_do_fogo/wms';
+    if (!map.getPane('windPane')) map.createPane('windPane');
+    const pane = map.getPane('windPane');
+    pane.style.zIndex = 425;
+    pane.style.pointerEvents = 'none';
+
+    const btn = document.createElement('button');
+    btn.id = 'toggleWind';
+    btn.className = 'map-btn';
+    btn.type = 'button';
+    btn.disabled = true;
+    btn.innerHTML = '🌬️ VENTO';
+    btn.title = 'Localizando a camada de vento do Painel do Fogo…';
+    btn.style.opacity = '.58';
+    municipio.insertAdjacentElement('afterend', btn);
+
+    let windLayer = null;
+
+    const normalizar = txt => String(txt || '')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+    const textoItem = item => normalizar(`${item.title || ''} ${item.name || ''}`);
+    const ehVento = item => {
+      const t = textoItem(item);
+      return t.includes('vento') || t.includes('wind');
+    };
+    const ehDirecao = item => {
+      const t = textoItem(item);
+      return t.includes('direcao') || t.includes('direction') || t.includes('dir_vento') || t.includes('wind_dir');
+    };
+    const ehVelocidade = item => {
+      const t = textoItem(item);
+      return t.includes('veloc') || t.includes('speed') || t.includes('wind_speed');
+    };
+
+    function scoreGenerico(item) {
+      const t = textoItem(item);
+      let score = 0;
+      if (t.includes('vento') || t.includes('wind')) score += 20;
+      if (t.includes('wrf')) score += 5;
+      if (t.includes('10m') || t.includes('superficie') || t.includes('surface')) score += 4;
+      if (ehDirecao(item)) score -= 4;
+      if (ehVelocidade(item)) score -= 4;
+      if (t.includes('rajada') || t.includes('gust')) score -= 5;
+      return score;
+    }
+
+    function camadaWms(item, opacity = .82) {
+      return L.tileLayer.wms(WMS, {
+        layers: item.name,
+        format: 'image/png',
+        transparent: true,
+        version: '1.1.1',
+        opacity,
+        pane: 'windPane',
+        attribution: 'CENSIPAM / CPTEC-INPE — Vento'
+      });
+    }
+
+    async function descobrir() {
+      try {
+        const url = `${WMS}?service=WMS&version=1.1.1&request=GetCapabilities&_=${Date.now()}`;
+        const r = await fetch(url, {cache:'no-store'});
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const xml = new DOMParser().parseFromString(await r.text(), 'text/xml');
+        const items = [...xml.querySelectorAll('Layer')]
+          .map(el => ({
+            name: el.querySelector(':scope > Name')?.textContent?.trim(),
+            title: el.querySelector(':scope > Title')?.textContent?.trim()
+          }))
+          .filter(x => x.name && ehVento(x));
+
+        if (!items.length) throw new Error('camada de vento não localizada');
+
+        const generico = [...items]
+          .sort((a, b) => scoreGenerico(b) - scoreGenerico(a))[0];
+        const direcao = items.find(ehDirecao);
+        const velocidade = items.find(ehVelocidade);
+        const genericoEhEspecifico = generico && (ehDirecao(generico) || ehVelocidade(generico));
+
+        if (direcao && velocidade && direcao.name !== velocidade.name && genericoEhEspecifico) {
+          windLayer = L.layerGroup([
+            camadaWms(velocidade, .68),
+            camadaWms(direcao, .92)
+          ]);
+          btn.title = `Vento — direção e velocidade • ${direcao.title || direcao.name} + ${velocidade.title || velocidade.name}`;
+        } else {
+          windLayer = camadaWms(generico, .82);
+          btn.title = `Vento — direção e velocidade próximas à superfície • ${generico.title || generico.name}`;
+        }
+
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.onclick = () => {
+          if (!windLayer) return;
+          if (map.hasLayer(windLayer)) {
+            map.removeLayer(windLayer);
+            btn.classList.remove('active');
+            btn.innerHTML = '🌬️ VENTO';
+          } else {
+            windLayer.addTo(map);
+            btn.classList.add('active');
+            btn.innerHTML = '🌬️ VENTO ✓';
+          }
+        };
+      } catch (e) {
+        console.warn('Falha ao descobrir camada de vento do CENSIPAM', e);
+        btn.disabled = true;
+        btn.style.opacity = '.42';
+        btn.title = 'Camada de vento não localizada neste acesso ao Painel do Fogo';
+      }
+    }
+
+    descobrir();
+    return true;
+  }
+
   function instalarProximidadesCensipam() {
     if (document.getElementById('proximityControls')) return;
     if (typeof map === 'undefined' || typeof L === 'undefined') return;
@@ -313,10 +442,14 @@
     descobrir();
   }
 
-  const observer = new MutationObserver(organizarRegua);
+  const observer = new MutationObserver(() => {
+    organizarRegua();
+    instalarVentoCensipam();
+  });
   observer.observe(actions, {childList:true, subtree:true});
 
   instalarRelevo();
+  instalarVentoCensipam();
   instalarProximidadesCensipam();
   instalarAcessoRelatorioSidebar();
 
@@ -325,6 +458,7 @@
   app.onload = () => {
     organizarRegua();
     instalarRelevo();
+    instalarVentoCensipam();
     instalarProximidadesCensipam();
     instalarAcessoRelatorioSidebar();
     carregarRelatorioDiario();
@@ -334,6 +468,9 @@
     setTimeout(organizarRegua, 100);
     setTimeout(organizarRegua, 600);
     setTimeout(organizarRegua, 1600);
+    setTimeout(instalarVentoCensipam, 100);
+    setTimeout(instalarVentoCensipam, 600);
+    setTimeout(instalarVentoCensipam, 1600);
   };
   app.onerror = () => console.error('Falha ao carregar as interações do mapa operacional');
   document.head.appendChild(app);
