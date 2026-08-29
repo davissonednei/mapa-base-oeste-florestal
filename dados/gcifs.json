@@ -90,10 +90,11 @@
     "lng": -44.98638525003264
   },
   "14": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Destino informado",
+    "status": "Em deslocamento",
+    "lat": -12.901729,
+    "lng": -45.867237
   },
   "15": {
     "municipio": "Não informado",
