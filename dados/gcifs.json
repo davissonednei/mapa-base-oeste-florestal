@@ -69,10 +69,11 @@
     "lng": -43.22503280000063
   },
   "11": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
+    "municipio": "Não informado",
+    "local": "Ponto informado — junto à GCIF 14",
     "status": "Em prontidão",
-    "tipo": "base"
+    "lat": -12.908473,
+    "lng": -45.86518
   },
   "12": {
     "municipio": "Não informado",
@@ -92,8 +93,8 @@
     "municipio": "Não informado",
     "local": "Destino informado",
     "status": "Em deslocamento",
-    "lat": -12.901729,
-    "lng": -45.867237
+    "lat": -12.908473,
+    "lng": -45.86518
   },
   "15": {
     "municipio": "Não informado",
