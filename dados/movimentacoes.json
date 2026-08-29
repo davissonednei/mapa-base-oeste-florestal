@@ -51,6 +51,7 @@
     {"hora":"18:20","gcifs":["03"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIF 03 retornou à base em Formosa do Rio Preto e ficou em prontidão."},
     {"hora":"18:31","gcifs":["04"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 04 retornou à base em Luís Eduardo Magalhães e ficou em prontidão."},
     {"hora":"18:40","gcifs":["02","05"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIFs 02 e 05 chegaram à base em Formosa do Rio Preto às 18:40 e ficaram em prontidão."},
+    {"hora":"20:40","gcifs":["14"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIF 14 chegou à Base Florestal Oeste às 20:40 e permaneceu em prontidão.","tipo":"registro retroativo"},
     {"hora":"21:54","gcifs":["06"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"Registro retroativo: GCIF 06 chegou à base em Luís Eduardo Magalhães às 21:54 e ficou em prontidão.","tipo":"registro retroativo"}
   ],
   "2026-08-29": [
