@@ -18,10 +18,10 @@
   },
   "04": {
     "municipio": "Luís Eduardo Magalhães",
-    "local": "Posição de monitoramento",
-    "status": "Em monitoramento",
-    "lat": -11.572305,
-    "lng": -45.513614,
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.530257,
+    "lng": -45.531809,
     "base_lat": -12.08484699693512,
     "base_lng": -45.80686448717999,
     "base_local": "Base da GCIF 04 — Luís Eduardo Magalhães"
@@ -44,8 +44,8 @@
     "municipio": "Não informado",
     "local": "Posição de combate",
     "status": "Em Combate",
-    "lat": -12.256402,
-    "lng": -45.053912
+    "lat": -11.69351,
+    "lng": -45.37356
   },
   "08": {
     "municipio": "Não informado",
@@ -65,8 +65,8 @@
     "municipio": "Não informado",
     "local": "Posição de combate",
     "status": "Em Combate",
-    "lat": -12.270181,
-    "lng": -45.034236
+    "lat": -11.69351,
+    "lng": -45.37356
   },
   "11": {
     "municipio": "Não informado",
