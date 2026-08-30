@@ -251,6 +251,11 @@
     buscaEvento.onerror = () => console.error('Falha ao carregar busca por ID de evento');
     document.head.appendChild(buscaEvento);
 
+    const cicloFogo = document.createElement('script');
+    cicloFogo.src = `js/fire-event-lifecycle.js?v=${Date.now()}`;
+    cicloFogo.onerror = () => console.error('Falha ao carregar ciclo de vida dos Eventos de Fogo');
+    document.head.appendChild(cicloFogo);
+
     const ventoAnimado = document.createElement('script');
     ventoAnimado.src = `js/wind-animation.js?v=${Date.now()}`;
     ventoAnimado.onerror = () => console.error('Falha ao carregar animação de vento');
