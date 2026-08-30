@@ -8,10 +8,10 @@
   },
   "03": {
     "municipio": "Formosa do Rio Preto",
-    "local": "Base temporária da GCIF 03",
-    "status": "Em prontidão",
-    "lat": -11.173606367950294,
-    "lng": -45.82171846212338,
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.16363,
+    "lng": -45.589147,
     "base_lat": -11.173606367950294,
     "base_lng": -45.82171846212338,
     "base_local": "Base temporária da GCIF 03"
