@@ -81,6 +81,7 @@
     {"hora":"19:05","gcifs":["11","14"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIFs 11 e 14 chegaram à Base Florestal Oeste às 19:05 e ficaram em prontidão, encerrando as atividades do dia.","tipo":"registro retroativo"}
   ],
   "2026-08-30": [
+    {"hora":"06:00","gcifs":["02","05"],"status":"Em Combate","local":"Posição de combate","lat":-11.23582,"lng":-45.067302,"descricao":"Registro retroativo: GCIFs 02 e 05 estão em combate no ponto informado desde 06:00.","tipo":"registro retroativo"},
     {"hora":"06:51","gcifs":["08","12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-11.491366,"lng":-45.069351,"descricao":"GCIFs 08, 12, 13 e 15 passaram para combate juntas no ponto informado."},
     {"hora":"06:51","gcifs":["07","10"],"status":"Em deslocamento","local":"Destino: Base Florestal Oeste","lat":-12.150803,"lng":-44.998157,"descricao":"GCIFs 07 e 10 iniciaram deslocamento para a Base Florestal Oeste; marcadas no destino para acompanhamento."},
     {"hora":"06:51","gcifs":["11","14"],"status":"Em Combate","local":"Posição de combate","lat":-12.908473,"lng":-45.86518,"descricao":"Situação de combate das GCIFs 11 e 14 confirmada, mantendo a mesma localização.","tipo":"confirmação"},
