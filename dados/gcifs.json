@@ -41,17 +41,18 @@
     "lng": -45.80686448717999
   },
   "07": {
-    "municipio": "Barra",
-    "local": "Base em Barra",
-    "status": "Em prontidão",
-    "lat": -12.174756530820794,
-    "lng": -43.22503280000063
+    "municipio": "Barreiras",
+    "local": "Destino: Base Florestal Oeste",
+    "status": "Em deslocamento",
+    "lat": -12.150803,
+    "lng": -44.998157
   },
   "08": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.491366,
+    "lng": -45.069351
   },
   "09": {
     "municipio": "Barra",
@@ -61,11 +62,11 @@
     "lng": -43.172589699999996
   },
   "10": {
-    "municipio": "Barra",
-    "local": "Base em Barra",
-    "status": "Em prontidão",
-    "lat": -12.174756530820794,
-    "lng": -43.22503280000063
+    "municipio": "Barreiras",
+    "local": "Destino: Base Florestal Oeste",
+    "status": "Em deslocamento",
+    "lat": -12.150803,
+    "lng": -44.998157
   },
   "11": {
     "municipio": "Não informado",
@@ -75,16 +76,18 @@
     "lng": -45.86518
   },
   "12": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.491366,
+    "lng": -45.069351
   },
   "13": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.491366,
+    "lng": -45.069351
   },
   "14": {
     "municipio": "Não informado",
@@ -94,10 +97,11 @@
     "lng": -45.86518
   },
   "15": {
-    "municipio": "Barreiras",
-    "local": "Base Florestal Oeste",
-    "status": "Em prontidão",
-    "tipo": "base"
+    "municipio": "Não informado",
+    "local": "Posição de combate",
+    "status": "Em Combate",
+    "lat": -11.491366,
+    "lng": -45.069351
   },
   "16": {
     "municipio": "Oliveira dos Brejinhos",
