@@ -82,6 +82,8 @@
   "2026-08-30": [
     {"hora":"06:51","gcifs":["08","12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-11.491366,"lng":-45.069351,"descricao":"GCIFs 08, 12, 13 e 15 passaram para combate juntas no ponto informado."},
     {"hora":"06:51","gcifs":["07","10"],"status":"Em deslocamento","local":"Destino: Base Florestal Oeste","lat":-12.150803,"lng":-44.998157,"descricao":"GCIFs 07 e 10 iniciaram deslocamento para a Base Florestal Oeste; marcadas no destino para acompanhamento."},
-    {"hora":"06:51","gcifs":["11","14"],"status":"Em Combate","local":"Posição de combate","lat":-12.908473,"lng":-45.86518,"descricao":"Situação de combate das GCIFs 11 e 14 confirmada, mantendo a mesma localização.","tipo":"confirmação"}
+    {"hora":"06:51","gcifs":["11","14"],"status":"Em Combate","local":"Posição de combate","lat":-12.908473,"lng":-45.86518,"descricao":"Situação de combate das GCIFs 11 e 14 confirmada, mantendo a mesma localização.","tipo":"confirmação"},
+    {"hora":"07:08","gcifs":["04"],"status":"Em monitoramento","local":"Posição de monitoramento — último local de combate","lat":-11.572305,"lng":-45.513614,"descricao":"GCIF 04 passou para monitoramento no último local de combate."},
+    {"hora":"07:08","gcifs":["06"],"status":"Em monitoramento","local":"Posição de monitoramento — último local de combate","lat":-12.07150802156333,"lng":-45.48951495430973,"descricao":"GCIF 06 passou para monitoramento no último local de combate."}
   ]
 }
