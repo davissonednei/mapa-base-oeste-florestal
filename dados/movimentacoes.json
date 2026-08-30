@@ -99,6 +99,7 @@
     {"hora":"16:30","gcifs":["07","10"],"status":"Em Combate","local":"Posição de combate","lat":-12.089176,"lng":-44.977213,"descricao":"GCIFs 07 e 10 passaram a combater juntas no ponto informado."},
     {"hora":"16:39","gcifs":["08","12","13","15"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 08, 12, 13 e 15 chegaram à Base Florestal Oeste e ficaram em prontidão."},
     {"hora":"16:57","gcifs":["13"],"status":"Em Combate","local":"Posição de combate","lat":-12.074335,"lng":-44.969273,"descricao":"GCIF 13 saiu da Base Florestal Oeste e passou para combate no ponto informado."},
-    {"hora":"16:57","gcifs":["08","12","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.118968,"lng":-45.023839,"descricao":"GCIFs 08, 12 e 15 saíram da Base Florestal Oeste e passaram para combate juntas no ponto informado."}
+    {"hora":"16:57","gcifs":["08","12","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.118968,"lng":-45.023839,"descricao":"GCIFs 08, 12 e 15 saíram da Base Florestal Oeste e passaram para combate juntas no ponto informado."},
+    {"hora":"17:04","gcifs":["03"],"status":"Em deslocamento","local":"Destino: Base temporária da GCIF 03 — Formosa do Rio Preto","lat":-11.173606367950294,"lng":-45.82171846212338,"descricao":"GCIF 03 iniciou deslocamento para sua base em Formosa do Rio Preto."}
   ]
 }
