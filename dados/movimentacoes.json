@@ -91,6 +91,7 @@
     {"hora":"09:45","gcifs":["07","10"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 07 e 10 chegaram à Base Florestal Oeste, ficaram em prontidão e passam a ter a Base Florestal Oeste como nova base operacional."},
     {"hora":"10:05","gcifs":["03"],"status":"Em Combate","local":"Posição de combate","lat":-11.16363,"lng":-45.589147,"descricao":"GCIF 03 passou para combate no ponto informado."},
     {"hora":"12:00","gcifs":["07","10"],"status":"Em Combate","local":"Posição de combate conjunta","lat":-12.256589698604063,"lng":-45.053845205166986,"descricao":"Correção dos registros anteriores: GCIFs 07 e 10 estão combatendo juntas neste ponto desde 12:00.","tipo":"correção"},
-    {"hora":"14:23","gcifs":["04"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 04 está em prontidão na base em Luís Eduardo Magalhães."}
+    {"hora":"14:23","gcifs":["04"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 04 está em prontidão na base em Luís Eduardo Magalhães."},
+    {"hora":"14:35","gcifs":["06"],"status":"Em prontidão","local":"Base da GCIF 04 — Luís Eduardo Magalhães","lat":-12.08484699693512,"lng":-45.80686448717999,"descricao":"GCIF 06 chegou à base em Luís Eduardo Magalhães e ficou em prontidão."}
   ]
 }
