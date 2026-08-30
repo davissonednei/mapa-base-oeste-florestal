@@ -1,5 +1,39 @@
 /* Compatibilidade operacional + campo de atuação oficial da Base Oeste + busca por ID de evento. */
 (() => {
+  /* Ponte temporária para manter o histórico consolidado antigo e usar um arquivo diário pequeno na operação atual. */
+  (() => {
+    if(window.__movimentacoesDiariasBridge) return;
+    window.__movimentacoesDiariasBridge = true;
+    const fetchOriginal = window.fetch.bind(window);
+    window.fetch = async function(input, init){
+      const url = typeof input === 'string' ? input : (input?.url || '');
+      if(!/dados\/movimentacoes\.json(?:\?|$)/.test(url)) return fetchOriginal(input, init);
+
+      const respostaLegada = await fetchOriginal(input, init);
+      if(!respostaLegada.ok) return respostaLegada;
+
+      try{
+        const agora = new Date();
+        const chaveHoje = `${agora.getFullYear()}-${String(agora.getMonth()+1).padStart(2,'0')}-${String(agora.getDate()).padStart(2,'0')}`;
+        const respostaDiaria = await fetchOriginal(`dados/movimentacoes/${chaveHoje}.json?v=${Date.now()}`, {cache:'no-store'});
+        if(!respostaDiaria.ok) return respostaLegada;
+
+        const [legado, diario] = await Promise.all([respostaLegada.clone().json(), respostaDiaria.json()]);
+        const movimentosHoje = Array.isArray(diario) ? diario : diario?.[chaveHoje];
+        if(!Array.isArray(movimentosHoje)) return respostaLegada;
+
+        legado[chaveHoje] = movimentosHoje;
+        return new Response(JSON.stringify(legado), {
+          status: 200,
+          headers: {'Content-Type':'application/json; charset=utf-8'}
+        });
+      }catch(e){
+        console.warn('Falha ao combinar histórico diário; usando movimentações consolidadas.', e);
+        return respostaLegada;
+      }
+    };
+  })();
+
   const CAMPO_ATUACAO_OESTE = new Set([
     'angical',
     'baianopolis',
