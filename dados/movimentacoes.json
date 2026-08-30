@@ -14,7 +14,7 @@
     {"hora":"13:19","gcifs":["15"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Situação da GCIF 15 confirmada na Base Florestal Oeste, em prontidão.","tipo":"confirmação"},
     {"hora":"14:48","gcifs":["08"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIF 08 retornou de monitoramento para a Base Florestal Oeste e ficou em prontidão."},
     {"hora":"14:54","gcifs":["02"],"status":"Em Combate","local":"Posição de combate","lat":-11.489084,"lng":-45.098883,"descricao":"GCIF 02 empregada em combate no ponto informado."},
-    {"hora":"15:00","gcifs":["05"],"status":"Em Combate","local":"Posição de combate","lat":-11.147907987952522,"lng":-45.061974290910584,"descricao":"GCIF 05 empregada em combate no ponto informado."},
+    {"hora":"15:00","gcifs":["05"],"status":"Em Combate","local":"Posição de combate","lat":-11.147907987952522,"lng":-45.061974290910584,"descricao":"GCIF 05 empregada em combate."},
     {"hora":"15:04","gcifs":["09","14"],"status":"Alteração de efetivo","local":"GCIF 09 → GCIF 14","descricao":"SD Paixão (Florestal 228) saiu da GCIF 09 e passou a integrar a GCIF 14.","tipo":"efetivo"},
     {"hora":"15:10","gcifs":["12"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIF 12 chegou à Base Florestal Oeste às 15:10 e permaneceu em prontidão.","tipo":"registro retroativo"},
     {"hora":"15:13","gcifs":["11"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIF 11 retornou à Base Florestal Oeste e ficou em prontidão."},
@@ -97,6 +97,8 @@
     {"hora":"15:13","gcifs":["04","06"],"status":"Em deslocamento","local":"Destino: Base Florestal Oeste","lat":-12.150803,"lng":-44.998157,"descricao":"GCIFs 04 e 06 iniciaram deslocamento para a Base Florestal Oeste, que passa a ser definida como nova base operacional das duas guarnições."},
     {"hora":"16:30","gcifs":["08","12","13","15"],"status":"Em deslocamento","local":"Destino: Base Florestal Oeste","lat":-12.150803,"lng":-44.998157,"descricao":"GCIFs 08, 12, 13 e 15 encerraram o combate e iniciaram deslocamento para a Base Florestal Oeste."},
     {"hora":"16:30","gcifs":["07","10"],"status":"Em Combate","local":"Posição de combate","lat":-12.089176,"lng":-44.977213,"descricao":"GCIFs 07 e 10 passaram a combater juntas no ponto informado."},
-    {"hora":"16:39","gcifs":["08","12","13","15"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 08, 12, 13 e 15 chegaram à Base Florestal Oeste e ficaram em prontidão."}
+    {"hora":"16:39","gcifs":["08","12","13","15"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 08, 12, 13 e 15 chegaram à Base Florestal Oeste e ficaram em prontidão."},
+    {"hora":"16:57","gcifs":["13"],"status":"Em Combate","local":"Posição de combate","lat":-12.074335,"lng":-44.969273,"descricao":"GCIF 13 saiu da Base Florestal Oeste e passou para combate no ponto informado."},
+    {"hora":"16:57","gcifs":["08","12","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.118968,"lng":-45.023839,"descricao":"GCIFs 08, 12 e 15 saíram da Base Florestal Oeste e passaram para combate juntas no ponto informado."}
   ]
 }
