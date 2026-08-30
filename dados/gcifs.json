@@ -42,10 +42,9 @@
   },
   "07": {
     "municipio": "Barreiras",
-    "local": "Destino: Base Florestal Oeste",
-    "status": "Em deslocamento",
-    "lat": -12.150803,
-    "lng": -44.998157
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "08": {
     "municipio": "Não informado",
@@ -63,10 +62,9 @@
   },
   "10": {
     "municipio": "Barreiras",
-    "local": "Destino: Base Florestal Oeste",
-    "status": "Em deslocamento",
-    "lat": -12.150803,
-    "lng": -44.998157
+    "local": "Base Florestal Oeste",
+    "status": "Em prontidão",
+    "tipo": "base"
   },
   "11": {
     "municipio": "Não informado",
