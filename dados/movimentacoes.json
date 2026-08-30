@@ -77,7 +77,8 @@
     {"hora":"17:41","gcifs":["03"],"status":"Em prontidão","local":"Base temporária da GCIF 03","lat":-11.173606367950294,"lng":-45.82171846212338,"descricao":"GCIF 03 posicionada em prontidão no ponto informado, definido como sua base temporária a partir deste registro."},
     {"hora":"17:42","gcifs":["13"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIF 13 chegou à Base Florestal Oeste às 17:42 e ficou em prontidão.","tipo":"registro retroativo"},
     {"hora":"18:13","gcifs":["08","12"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 08 e 12 retornaram à Base Florestal Oeste e ficaram em prontidão."},
-    {"hora":"18:20","gcifs":["02","05"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIFs 02 e 05 chegaram à base em Formosa do Rio Preto às 18:20 e ficaram em prontidão.","tipo":"registro retroativo"}
+    {"hora":"18:20","gcifs":["02","05"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIFs 02 e 05 chegaram à base em Formosa do Rio Preto às 18:20 e ficaram em prontidão.","tipo":"registro retroativo"},
+    {"hora":"19:05","gcifs":["11","14"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"Registro retroativo: GCIFs 11 e 14 chegaram à Base Florestal Oeste às 19:05 e ficaram em prontidão, encerrando as atividades do dia.","tipo":"registro retroativo"}
   ],
   "2026-08-30": [
     {"hora":"06:51","gcifs":["08","12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-11.491366,"lng":-45.069351,"descricao":"GCIFs 08, 12, 13 e 15 passaram para combate juntas no ponto informado."},
