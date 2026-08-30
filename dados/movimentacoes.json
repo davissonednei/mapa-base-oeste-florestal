@@ -86,6 +86,7 @@
     {"hora":"06:51","gcifs":["11","14"],"status":"Em Combate","local":"Posição de combate","lat":-12.908473,"lng":-45.86518,"descricao":"Situação de combate das GCIFs 11 e 14 confirmada, mantendo a mesma localização.","tipo":"confirmação"},
     {"hora":"07:08","gcifs":["04"],"status":"Em monitoramento","local":"Posição de monitoramento — último local de combate","lat":-11.572305,"lng":-45.513614,"descricao":"GCIF 04 passou para monitoramento no último local de combate."},
     {"hora":"07:08","gcifs":["06"],"status":"Em monitoramento","local":"Posição de monitoramento — último local de combate","lat":-12.07150802156333,"lng":-45.48951495430973,"descricao":"GCIF 06 passou para monitoramento no último local de combate."},
-    {"hora":"07:58","gcifs":["09"],"status":"Em prevenção","local":"Base em Barra","lat":-11.091696852583201,"lng":-43.172589699999996,"descricao":"GCIF 09 está realizando orientações preventivas, mantendo a posição informada em Barra."}
+    {"hora":"07:58","gcifs":["09"],"status":"Em prevenção","local":"Base em Barra","lat":-11.091696852583201,"lng":-43.172589699999996,"descricao":"GCIF 09 está realizando orientações preventivas, mantendo a posição informada em Barra."},
+    {"hora":"09:45","gcifs":["07","10"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 07 e 10 chegaram à Base Florestal Oeste, ficaram em prontidão e passam a ter a Base Florestal Oeste como nova base operacional."}
   ]
 }
