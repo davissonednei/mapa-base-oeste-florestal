@@ -23,5 +23,6 @@
   {"hora":"17:09","gcifs":["03"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIF 03 chegou à pousada em Formosa do Rio Preto e ficou em prontidão."},
   {"hora":"17:21","gcifs":["11","14"],"status":"Em prontidão","local":"Posição de prontidão","lat":-12.908637,"lng":-45.864745,"descricao":"GCIFs 11 e 14 estão em prontidão juntas no ponto informado."},
   {"hora":"17:21","gcifs":["04","06"],"status":"Em deslocamento","local":"Em deslocamento para Base Florestal Oeste","lat":-12.107729,"lng":-45.303523,"descricao":"GCIFs 04 e 06 permanecem em deslocamento para a Base Florestal Oeste e foram posicionadas no ponto informado para acompanhamento."},
-  {"hora":"17:27","gcifs":["11","14"],"status":"Em prontidão","local":"Base das GCIFs 11 e 14","lat":-12.997185890413133,"lng":-46.103953872119014,"descricao":"GCIFs 11 e 14 posicionadas em sua base operacional, definida neste ponto a partir deste registro."}
+  {"hora":"17:27","gcifs":["11","14"],"status":"Em prontidão","local":"Base das GCIFs 11 e 14","lat":-12.997185890413133,"lng":-46.103953872119014,"descricao":"GCIFs 11 e 14 posicionadas em sua base operacional, definida neste ponto a partir deste registro."},
+  {"hora":"17:41","gcifs":["09"],"status":"Em Combate","local":"Base em Barra","lat":-11.091696852583201,"lng":-43.172589699999996,"descricao":"GCIF 09 passou para combate, mantendo a mesma localização; somente o status foi alterado."}
 ]
