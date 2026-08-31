@@ -27,5 +27,11 @@
   {"hora":"17:41","gcifs":["09"],"status":"Em Combate","local":"Base em Barra","lat":-11.091696852583201,"lng":-43.172589699999996,"descricao":"GCIF 09 passou para combate, mantendo a mesma localização; somente o status foi alterado."},
   {"hora":"18:01","gcifs":["08","12","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.090462,"lng":-44.974914,"descricao":"GCIFs 08, 12 e 15 passaram a combater juntas no ponto informado."},
   {"hora":"19:24","gcifs":["13"],"status":"Em Combate","local":"Posição de combate","lat":-12.087208,"lng":-44.976807,"descricao":"Posição da GCIF 13 em combate atualizada para o ponto informado."},
-  {"hora":"19:42","gcifs":["04","06"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 04 e 06 chegaram à Base Florestal Oeste, ficaram em prontidão e a Base Florestal Oeste permanece definida como nova base operacional das duas guarnições."}
+  {"hora":"19:42","gcifs":["04","06"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 04 e 06 chegaram à Base Florestal Oeste, ficaram em prontidão e a Base Florestal Oeste permanece definida como nova base operacional das duas guarnições."},
+  {"hora":"21:38","gcifs":["02","05"],"status":"Em prontidão","local":"Pousada em Formosa do Rio Preto","lat":-11.048723986892952,"lng":-45.20648815169614,"descricao":"GCIFs 02 e 05 estão em prontidão em sua base em Formosa do Rio Preto."},
+  {"hora":"21:38","gcifs":["03"],"status":"Em prontidão","local":"Base temporária da GCIF 03","lat":-11.173606367950294,"lng":-45.82171846212338,"descricao":"GCIF 03 está em prontidão em sua base temporária em Formosa do Rio Preto."},
+  {"hora":"21:38","gcifs":["04","06","07","08","10","12","13","15"],"status":"Em prontidão","local":"Base Florestal Oeste","descricao":"GCIFs 04, 06, 07, 08, 10, 12, 13 e 15 estão em prontidão na Base Florestal Oeste."},
+  {"hora":"21:38","gcifs":["09"],"status":"Em prontidão","local":"Base em Barra","lat":-11.091696852583201,"lng":-43.172589699999996,"descricao":"GCIF 09 está em prontidão em sua base em Barra."},
+  {"hora":"21:38","gcifs":["11","14"],"status":"Em prontidão","local":"Base das GCIFs 11 e 14","lat":-12.997185890413133,"lng":-46.103953872119014,"descricao":"GCIFs 11 e 14 estão em prontidão em sua base operacional."},
+  {"hora":"21:38","gcifs":["16"],"status":"Em prontidão","local":"Base da GCIF 16 — Oliveira dos Brejinhos","lat":-12.316878977848237,"lng":-42.86306296574233,"descricao":"GCIF 16 está em prontidão em sua base em Oliveira dos Brejinhos."}
 ]
