@@ -1,63 +1,452 @@
-/* BLOQUEIO OPERACIONAL DE SEGURANÇA — VENTO
-   O botão de vento permanece desabilitado até existir uma integração cuja fonte,
-   produto, horário de referência e comportamento tenham sido verificados contra
-   uma fonte operacional confiável. Não usar GFS/Open-Meteo como substituto silencioso.
+/* Vento operacional validado.
+   O navegador NÃO consulta GFS/Open-Meteo nem qualquer modelo diretamente.
+   Ele lê somente dados preparados pelo job do repositório, com política:
+   1) CPTEC/INPE WRF 7 km; 2) ECMWF IFS 0,25° como fallback explícito;
+   3) sem fonte recente => botão desabilitado.
 */
 (() => {
+  if (window.__windAnimationInstalled) return;
   window.__windAnimationInstalled = true;
-  window.__windSourcePolicy = 'DISABLED_UNTIL_VERIFIED';
+  window.__windSourcePolicy = 'CPTEC_WRF_PRIMARY_ECMWF_EXPLICIT_FALLBACK';
 
-  const TEXTO = '🌬️ VENTO — INDISP.';
-  const TITULO = 'Vento desabilitado por segurança operacional: nenhuma fonte integrada foi validada como equivalente ao produto usado para planejamento.';
+  const DATA_URL = 'dados/vento/operational_wind.json';
+  const MAX_VALID_DELTA_MS = 3 * 60 * 60 * 1000;
+  const MAX_GENERATED_AGE_MS = 3 * 60 * 60 * 1000;
+  const FIELD_STEP = 34;
+  const REFRESH_MS = 10 * 60 * 1000;
 
-  function removerFallbacks() {
-    document.querySelectorAll('#toggleWindFallback, #windParticleCanvas').forEach(el => el.remove());
-    document.querySelectorAll('.wind-speed-label').forEach(el => el.remove());
+  let btn = null;
+  let data = null;
+  let samples = [];
+  let ativo = false;
+  let canvas = null;
+  let ctx = null;
+  let particles = [];
+  let field = null;
+  let speedLayer = null;
+  let badge = null;
+  let raf = 0;
+  let lastFrame = 0;
+  let moveTimer = 0;
+  let refreshTimer = 0;
+
+  const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+  const finite = v => Number.isFinite(Number(v));
+
+  function parseIso(s) {
+    const d = new Date(String(s || ''));
+    return Number.isFinite(d.getTime()) ? d : null;
   }
 
-  function bloquear() {
-    removerFallbacks();
-    const btn = document.getElementById('toggleWind');
-    if (!btn) return false;
+  function horarioBahia(s) {
+    const d = parseIso(s);
+    if (!d) return 'horário indisponível';
+    return new Intl.DateTimeFormat('pt-BR', {
+      timeZone: 'America/Bahia',
+      day: '2-digit',
+      month: '2-digit',
+      hour: '2-digit',
+      minute: '2-digit',
+      hour12: false
+    }).format(d).replace(',', '');
+  }
 
-    if (!btn.dataset.windSafetyLock) {
-      btn.dataset.windSafetyLock = '1';
+  function validarDados(payload) {
+    if (!payload || payload.available !== true || payload.operational !== true) {
+      return {ok:false, reason: payload?.reason || 'Nenhuma fonte validada disponível.'};
+    }
+    if (!Array.isArray(payload.points) || payload.points.length < 20) {
+      return {ok:false, reason:'Campo de vento insuficiente.'};
+    }
+    const valid = parseIso(payload.valid_utc);
+    const generated = parseIso(payload.generated_at_utc);
+    if (!valid || !generated) return {ok:false, reason:'Metadados de tempo do vento inválidos.'};
+    const agora = Date.now();
+    if (Math.abs(agora - valid.getTime()) > MAX_VALID_DELTA_MS) {
+      return {ok:false, reason:`Previsão fora da janela operacional. Válida: ${horarioBahia(payload.valid_utc)}.`};
+    }
+    if (agora - generated.getTime() > MAX_GENERATED_AGE_MS || agora < generated.getTime() - 10 * 60 * 1000) {
+      return {ok:false, reason:'Dados de vento não foram atualizados recentemente.'};
+    }
+    if (payload.source_priority === 'primary') {
+      if (payload.source !== 'CPTEC/INPE' || !/WRF\s*7\s*km/i.test(payload.model || '')) {
+        return {ok:false, reason:'Fonte primária não corresponde ao WRF 7 km do CPTEC/INPE.'};
+      }
+    } else if (payload.source_priority === 'fallback') {
+      if (!/ECMWF/i.test(payload.source || '') || !/IFS/i.test(payload.model || '')) {
+        return {ok:false, reason:'Fallback não corresponde ao ECMWF IFS autorizado.'};
+      }
+    } else {
+      return {ok:false, reason:'Prioridade da fonte meteorológica não reconhecida.'};
+    }
+    return {ok:true};
+  }
+
+  function normalizarSamples(payload) {
+    return payload.points
+      .map(p => {
+        const lat = Number(p.lat), lng = Number(p.lng);
+        const u = Number(p.u_ms), v = Number(p.v_ms);
+        const speed = Number(p.speed_kmh);
+        const dir = Number(p.direction_from_deg);
+        if (![lat,lng,u,v,speed,dir].every(Number.isFinite)) return null;
+        const mag = Math.hypot(u, v);
+        if (!(mag >= 0)) return null;
+        return {
+          lat, lng, u, v, speed, dir,
+          vx: mag > 0 ? u / mag : 0,
+          vy: mag > 0 ? -v / mag : 0
+        };
+      })
+      .filter(Boolean);
+  }
+
+  function assegurarCanvas() {
+    if (canvas) return true;
+    const wrap = document.querySelector('.map-wrap');
+    if (!wrap || typeof map === 'undefined') return false;
+    canvas = document.createElement('canvas');
+    canvas.id = 'windParticleCanvas';
+    canvas.style.cssText = 'position:absolute;inset:0;z-index:426;pointer-events:none;display:none;';
+    wrap.appendChild(canvas);
+    ctx = canvas.getContext('2d', {alpha:true});
+    resizeCanvas();
+    return true;
+  }
+
+  function assegurarVelocidades() {
+    if (typeof map === 'undefined' || typeof L === 'undefined') return false;
+    if (!map.getPane('windSpeedPane')) map.createPane('windSpeedPane');
+    const pane = map.getPane('windSpeedPane');
+    pane.style.zIndex = 427;
+    pane.style.pointerEvents = 'none';
+
+    if (!document.getElementById('windSpeedStyle')) {
+      const style = document.createElement('style');
+      style.id = 'windSpeedStyle';
+      style.textContent = `
+        .wind-speed-label{background:transparent!important;border:0!important;pointer-events:none!important}
+        .wind-speed-value{display:inline-flex;align-items:baseline;justify-content:center;gap:2px;min-width:52px;height:23px;padding:0 7px;border:1px solid rgba(186,230,253,.58);border-radius:999px;background:rgba(7,16,25,.80);color:#f0f9ff;box-shadow:0 2px 8px rgba(0,0,0,.24);backdrop-filter:blur(3px);font:900 10px/1 Inter,Segoe UI,Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+        .wind-speed-value small{font-size:7px;color:#bae6fd;font-weight:800}
+        .wind-meta-badge{position:absolute;z-index:428;left:50%;bottom:14px;transform:translateX(-50%);display:none;max-width:min(92%,760px);padding:7px 10px;border:1px solid rgba(125,211,252,.52);border-radius:9px;background:rgba(7,16,25,.90);color:#e0f2fe;box-shadow:0 4px 14px rgba(0,0,0,.28);backdrop-filter:blur(5px);font:800 9px/1.35 Inter,Segoe UI,Arial,sans-serif;text-align:center;pointer-events:none}
+        .wind-meta-badge.fallback{border-color:rgba(251,191,36,.62);color:#fef3c7}
+        @media(max-width:820px){.wind-speed-value{min-width:47px;height:21px;padding:0 6px;font-size:9px}.wind-speed-value small{font-size:6px}.wind-meta-badge{bottom:10px;font-size:8px;padding:6px 8px}}
+      `;
+      document.head.appendChild(style);
+    }
+
+    if (!speedLayer) speedLayer = L.layerGroup();
+    if (!badge) {
+      const wrap = document.querySelector('.map-wrap');
+      if (wrap) {
+        badge = document.createElement('div');
+        badge.id = 'windMetaBadge';
+        badge.className = 'wind-meta-badge';
+        wrap.appendChild(badge);
+      }
+    }
+    return true;
+  }
+
+  function fonteCurta() {
+    if (!data) return 'VENTO';
+    return data.source_priority === 'primary' ? 'VENTO WRF' : 'VENTO ECMWF';
+  }
+
+  function textoFonteCompleto() {
+    if (!data) return '';
+    const tipo = data.source_priority === 'primary' ? 'FONTE PRIMÁRIA' : 'FALLBACK EXPLÍCITO';
+    return `${tipo} • ${data.source} • ${data.model} • 10 m • rodada ${horarioBahia(data.run_utc)} • válido ${horarioBahia(data.valid_utc)}`;
+  }
+
+  function esconderVisualizacao() {
+    ativo = false;
+    cancelAnimationFrame(raf);
+    if (ctx && canvas && typeof map !== 'undefined') {
+      const size = map.getSize();
+      ctx.clearRect(0, 0, size.x, size.y);
+    }
+    if (canvas) canvas.style.display = 'none';
+    if (speedLayer && typeof map !== 'undefined') {
+      speedLayer.clearLayers();
+      if (map.hasLayer(speedLayer)) map.removeLayer(speedLayer);
+    }
+    if (badge) badge.style.display = 'none';
+    if (btn) btn.classList.remove('active');
+  }
+
+  function aplicarBotao() {
+    if (!btn) return;
+    const v = validarDados(data);
+    if (!v.ok) {
+      esconderVisualizacao();
+      btn.disabled = true;
+      btn.style.display = '';
+      btn.style.opacity = '.45';
+      btn.style.cursor = 'not-allowed';
+      btn.innerHTML = '🌬️ VENTO — INDISP.';
+      btn.title = v.reason;
+      btn.setAttribute('aria-disabled', 'true');
+      return;
+    }
+    btn.disabled = false;
+    btn.style.display = '';
+    btn.style.opacity = '';
+    btn.style.cursor = '';
+    btn.setAttribute('aria-disabled', 'false');
+    btn.innerHTML = ativo ? `🌬️ ${fonteCurta()} ✓` : `🌬️ ${fonteCurta()}`;
+    btn.title = textoFonteCompleto();
+  }
+
+  async function carregarDados() {
+    try {
+      const r = await fetch(`${DATA_URL}?v=${Date.now()}`, {cache:'no-store'});
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const payload = await r.json();
+      data = payload;
+      samples = validarDados(payload).ok ? normalizarSamples(payload) : [];
+      if (samples.length < 20 && payload.available) {
+        data = {...payload, available:false, reason:'Campo de vento decodificado com poucos pontos úteis.'};
+      }
+    } catch (e) {
+      data = {available:false, operational:false, reason:'Arquivo operacional de vento ainda não está disponível.'};
+      samples = [];
+      console.warn('Vento operacional indisponível', e);
+    }
+    aplicarBotao();
+    if (ativo) {
+      const v = validarDados(data);
+      if (!v.ok) esconderVisualizacao();
+      else {
+        construirCampo();
+        renderizarVelocidades();
+        atualizarBadge();
+      }
+    }
+  }
+
+  function resizeCanvas() {
+    if (!canvas || !ctx || typeof map === 'undefined') return;
+    const size = map.getSize();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.style.width = `${size.x}px`;
+    canvas.style.height = `${size.y}px`;
+    canvas.width = Math.max(1, Math.floor(size.x * dpr));
+    canvas.height = Math.max(1, Math.floor(size.y * dpr));
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    field = null;
+    criarParticulas();
+  }
+
+  function nearestSample(lat, lng) {
+    let best = null, bestD = Infinity;
+    for (const s of samples) {
+      const dx = (lng - s.lng) * Math.cos(lat * Math.PI / 180);
+      const dy = lat - s.lat;
+      const d = dx * dx + dy * dy;
+      if (d < bestD) { bestD = d; best = s; }
+    }
+    return best;
+  }
+
+  function construirCampo() {
+    if (!samples.length || !canvas || typeof map === 'undefined') return;
+    const size = map.getSize();
+    const cols = Math.ceil(size.x / FIELD_STEP) + 1;
+    const rows = Math.ceil(size.y / FIELD_STEP) + 1;
+    const arr = new Array(cols * rows);
+    for (let r = 0; r < rows; r++) {
+      const y = Math.min(size.y, r * FIELD_STEP);
+      for (let c = 0; c < cols; c++) {
+        const x = Math.min(size.x, c * FIELD_STEP);
+        const ll = map.containerPointToLatLng([x, y]);
+        const s = nearestSample(ll.lat, ll.lng);
+        arr[r * cols + c] = s ? {vx:s.vx, vy:s.vy, speed:s.speed} : null;
+      }
+    }
+    field = {cols, rows, data:arr};
+  }
+
+  function vetorEm(x, y) {
+    if (!field) return null;
+    const c = clamp(Math.floor(x / FIELD_STEP), 0, field.cols - 1);
+    const r = clamp(Math.floor(y / FIELD_STEP), 0, field.rows - 1);
+    return field.data[r * field.cols + c];
+  }
+
+  function novaParticula(p={}) {
+    const size = map.getSize();
+    p.x = Math.random() * size.x;
+    p.y = Math.random() * size.y;
+    p.px = p.x;
+    p.py = p.y;
+    p.age = Math.floor(Math.random() * 90);
+    p.maxAge = 70 + Math.floor(Math.random() * 90);
+    return p;
+  }
+
+  function criarParticulas() {
+    if (typeof map === 'undefined') return;
+    const size = map.getSize();
+    const qtd = clamp(Math.floor((size.x * size.y) / 1800), 220, 760);
+    particles = Array.from({length:qtd}, () => novaParticula({}));
+  }
+
+  function renderizarVelocidades() {
+    if (!ativo || !samples.length || !assegurarVelocidades() || typeof map === 'undefined') return;
+    speedLayer.clearLayers();
+    if (!map.hasLayer(speedLayer)) speedLayer.addTo(map);
+    const size = map.getSize();
+    const xs = size.x < 760 ? [.22,.50,.78] : [.16,.38,.62,.84];
+    const ys = [.22,.50,.78];
+    const usados = new Set();
+    for (const yf of ys) {
+      for (const xf of xs) {
+        const ll = map.containerPointToLatLng([size.x * xf, size.y * yf]);
+        const s = nearestSample(ll.lat, ll.lng);
+        if (!s || !finite(s.speed)) continue;
+        const key = `${s.lat.toFixed(4)}|${s.lng.toFixed(4)}`;
+        if (usados.has(key)) continue;
+        usados.add(key);
+        const icon = L.divIcon({
+          className:'wind-speed-label',
+          html:`<span class="wind-speed-value">${Math.round(s.speed)}<small>km/h</small></span>`,
+          iconSize:[58,23],
+          iconAnchor:[29,12]
+        });
+        L.marker([s.lat,s.lng], {pane:'windSpeedPane', icon, interactive:false, keyboard:false, opacity:.94}).addTo(speedLayer);
+      }
+    }
+  }
+
+  function atualizarBadge() {
+    if (!badge || !data || !ativo) return;
+    badge.classList.toggle('fallback', data.source_priority === 'fallback');
+    badge.textContent = textoFonteCompleto() + (data.source_priority === 'fallback' ? ' • NÃO É O WRF DO PAINEL DO FOGO' : '');
+    badge.style.display = 'block';
+  }
+
+  function desenhar(ts) {
+    if (!ativo || !canvas || !ctx) return;
+    raf = requestAnimationFrame(desenhar);
+    if (!field) return;
+    if (!lastFrame) lastFrame = ts;
+    const dt = clamp((ts - lastFrame) / 16.67, .45, 2.2);
+    lastFrame = ts;
+    const size = map.getSize();
+    ctx.globalCompositeOperation = 'destination-in';
+    ctx.fillStyle = 'rgba(0,0,0,.92)';
+    ctx.fillRect(0, 0, size.x, size.y);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.lineWidth = 1.15;
+    ctx.lineCap = 'round';
+    for (const p of particles) {
+      if (p.age++ > p.maxAge || p.x < 0 || p.y < 0 || p.x >= size.x || p.y >= size.y) {
+        novaParticula(p);
+        continue;
+      }
+      const v = vetorEm(p.x, p.y);
+      if (!v) { novaParticula(p); continue; }
+      p.px = p.x; p.py = p.y;
+      const speedPx = clamp(.45 + v.speed / 14, .55, 3.1) * dt;
+      p.x += v.vx * speedPx;
+      p.y += v.vy * speedPx;
+      const alpha = clamp(.30 + v.speed / 70, .34, .72);
+      ctx.strokeStyle = `rgba(225,243,255,${alpha})`;
+      ctx.beginPath();
+      ctx.moveTo(p.px, p.py);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+    }
+  }
+
+  function ligar() {
+    if (ativo || !validarDados(data).ok) return;
+    ativo = true;
+    assegurarCanvas();
+    assegurarVelocidades();
+    if (canvas) canvas.style.display = 'block';
+    resizeCanvas();
+    construirCampo();
+    criarParticulas();
+    renderizarVelocidades();
+    atualizarBadge();
+    aplicarBotao();
+    lastFrame = 0;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(desenhar);
+  }
+
+  function desligar() {
+    esconderVisualizacao();
+    aplicarBotao();
+  }
+
+  function assumirBotao() {
+    const alvo = document.getElementById('toggleWind');
+    const municipio = document.getElementById('toggleMunicipioSelect');
+    if (!alvo || !municipio || typeof map === 'undefined') return false;
+    btn = alvo;
+    if (municipio.nextElementSibling !== btn) municipio.insertAdjacentElement('afterend', btn);
+
+    if (!btn.dataset.operationalWindReady) {
+      btn.dataset.operationalWindReady = '1';
       btn.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();
         e.stopImmediatePropagation();
+        if (!validarDados(data).ok) return;
+        ativo ? desligar() : ligar();
       }, true);
+
+      map.on('resize', () => {
+        if (!ativo) return;
+        resizeCanvas();
+        construirCampo();
+        renderizarVelocidades();
+      });
+      map.on('movestart zoomstart', () => {
+        if (!ativo || !ctx || !canvas) return;
+        cancelAnimationFrame(raf);
+        const size = map.getSize();
+        ctx.clearRect(0, 0, size.x, size.y);
+        if (speedLayer) speedLayer.clearLayers();
+      });
+      map.on('moveend zoomend', () => {
+        if (!ativo) return;
+        clearTimeout(moveTimer);
+        moveTimer = setTimeout(() => {
+          resizeCanvas();
+          construirCampo();
+          renderizarVelocidades();
+          atualizarBadge();
+          lastFrame = 0;
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(desenhar);
+        }, 250);
+      });
     }
 
-    btn.disabled = true;
-    btn.onclick = null;
-    btn.classList.remove('active');
-    btn.style.display = '';
-    btn.style.opacity = '.45';
-    btn.style.cursor = 'not-allowed';
-    btn.innerHTML = TEXTO;
-    btn.title = TITULO;
-    btn.setAttribute('aria-disabled', 'true');
+    aplicarBotao();
+    carregarDados();
+    [1500, 4000, 9000].forEach(ms => setTimeout(aplicarBotao, ms));
+    clearInterval(refreshTimer);
+    refreshTimer = setInterval(carregarDados, REFRESH_MS);
     return true;
   }
 
-  bloquear();
+  function instalar() {
+    if (assumirBotao()) return;
+    const obs = new MutationObserver(() => {
+      if (assumirBotao()) obs.disconnect();
+    });
+    obs.observe(document.documentElement, {childList:true, subtree:true});
+    let tentativas = 0;
+    const timer = setInterval(() => {
+      tentativas++;
+      if (assumirBotao() || tentativas > 120) clearInterval(timer);
+    }, 250);
+  }
 
-  const obs = new MutationObserver(() => bloquear());
-  obs.observe(document.documentElement, {
-    childList: true,
-    subtree: true,
-    attributes: true,
-    attributeFilter: ['disabled', 'style', 'class']
-  });
-
-  /* O instalador oficial é assíncrono; reforça o bloqueio durante a inicialização. */
-  let tentativas = 0;
-  const timer = setInterval(() => {
-    bloquear();
-    tentativas += 1;
-    if (tentativas >= 120) clearInterval(timer);
-  }, 250);
-
-  console.warn('Vento desabilitado por segurança operacional até validação de uma fonte confiável equivalente.');
+  instalar();
 })();
