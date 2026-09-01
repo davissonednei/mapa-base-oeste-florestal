@@ -1,0 +1,50 @@
+name: Diagnosticar API vento CENSIPAM
+
+on:
+  push:
+    paths:
+      - '.github/workflows/inspect-censipam-wind.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Consultar endpoint oficial e resumir estrutura
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL='https://panorama.sipam.gov.br/painel-do-fogo/api/v1/meteorologia/wrf/vento'
+          curl --fail --silent --show-error --location \
+            --retry 2 --retry-delay 3 --connect-timeout 20 --max-time 180 \
+            -D /tmp/headers.txt "$URL" -o /tmp/vento.json
+          echo '=== HEADERS ==='
+          grep -Ei '^(HTTP/|content-type:|content-length:|x-wind-date:|access-control-allow-origin:)' /tmp/headers.txt || true
+          echo '=== SIZE ==='
+          wc -c /tmp/vento.json
+          echo '=== STRUCTURE ==='
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('/tmp/vento.json')
+          data=json.loads(p.read_text(encoding='utf-8'))
+          print('top_type=', type(data).__name__)
+          def brief(x, depth=0):
+              if depth>3: return type(x).__name__
+              if isinstance(x, dict):
+                  out={}
+                  for k,v in list(x.items())[:20]:
+                      if isinstance(v, (dict,list)):
+                          out[k]=brief(v, depth+1)
+                      else:
+                          out[k]={'type':type(v).__name__,'value':repr(v)[:160]}
+                  return out
+              if isinstance(x, list):
+                  return {'len':len(x),'first': brief(x[0], depth+1) if x else None}
+              return {'type':type(x).__name__,'value':repr(x)[:160]}
+          print(json.dumps(brief(data), ensure_ascii=False, indent=2)[:20000])
+          PY
