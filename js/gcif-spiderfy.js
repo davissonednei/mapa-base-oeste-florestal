@@ -292,6 +292,12 @@
 
     const ventoAnimado = document.createElement('script');
     ventoAnimado.src = `js/wind-animation.js?v=${Date.now()}`;
+    ventoAnimado.onload = () => {
+      const ventoLocal = document.createElement('script');
+      ventoLocal.src = `js/wind-local-probe.js?v=${Date.now()}`;
+      ventoLocal.onerror = () => console.error('Falha ao carregar leitura local do vento');
+      document.head.appendChild(ventoLocal);
+    };
     ventoAnimado.onerror = () => console.error('Falha ao carregar animação de vento');
     document.head.appendChild(ventoAnimado);
 
