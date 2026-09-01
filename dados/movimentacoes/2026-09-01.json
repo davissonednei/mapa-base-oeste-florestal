@@ -1,3 +1,7 @@
 [
-  {"hora":"07:42","gcifs":["12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.105306,"lng":-45.017424,"descricao":"GCIFs 12, 13 e 15 passaram para combate juntas no ponto informado."}
+  {"hora":"07:42","gcifs":["12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.105306,"lng":-45.017424,"descricao":"GCIFs 12, 13 e 15 passaram para combate juntas no ponto informado."},
+  {"hora":"07:58","gcifs":["10","12","13","15"],"status":"Em Combate","local":"Posição de combate","lat":-12.112268,"lng":-45.011888,"descricao":"GCIFs 10, 12, 13 e 15 estão combatendo juntas no ponto informado."},
+  {"hora":"07:58","gcifs":["07","08"],"status":"Em Combate","local":"Posição de combate","lat":-12.105258,"lng":-44.983872,"descricao":"GCIFs 07 e 08 estão combatendo juntas no ponto informado."},
+  {"hora":"07:58","gcifs":["04","06"],"status":"Em Combate","local":"Posição de combate","lat":-12.074248,"lng":-44.999529,"descricao":"GCIFs 04 e 06 estão combatendo juntas no ponto informado."},
+  {"hora":"07:58","gcifs":["09","16"],"status":"Em Combate","local":"Posição de combate","lat":-12.09138,"lng":-45.013605,"descricao":"GCIFs 09 e 16 estão combatendo juntas no ponto informado."}
 ]
