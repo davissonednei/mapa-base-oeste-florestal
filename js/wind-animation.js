@@ -1,11 +1,12 @@
-/* Vento operacional — CENSIPAM como fonte primária e GFS somente como fallback explícito.
-   A camada oficial continua sendo instalada por gcif-spiderfy-base.js.
-   Este módulo só entra se o botão oficial permanecer indisponível após a tentativa de conexão.
-   Quando isso ocorrer, a interface mostra claramente VENTO GFS para não confundir as fontes. */
+/* Vento operacional funcional.
+   O CENSIPAM continua sendo a referência oficial, mas a versão atual do Painel do Fogo
+   não expõe de forma confiável a camada WRF pelo WMS usado pelo mapa. Para não deixar
+   o operador sem vento, este módulo assume o botão e exibe explicitamente o fallback
+   GFS/Open-Meteo, sem apresentá-lo como dado oficial CENSIPAM. */
 (() => {
   if (window.__windAnimationInstalled) return;
   window.__windAnimationInstalled = true;
-  window.__windSourcePolicy = 'CENSIPAM_PRIMARY_GFS_EXPLICIT_FALLBACK';
+  window.__windSourcePolicy = 'GFS_EXPLICIT_FALLBACK';
 
   const API = 'https://api.open-meteo.com/v1/forecast';
   const GRID_COLS = 8;
@@ -13,7 +14,6 @@
   const FIELD_STEP = 34;
   const CACHE_MS = 10 * 60 * 1000;
   const REFRESH_MS = 20 * 60 * 1000;
-  const FALLBACK_WAIT_MS = 7000;
 
   let ativo = false;
   let btn = null;
@@ -58,12 +58,13 @@
       style.id = 'windSpeedStyle';
       style.textContent = `
         .wind-speed-label{background:transparent!important;border:0!important;pointer-events:none!important}
-        .wind-speed-value{display:inline-flex;align-items:baseline;justify-content:center;gap:2px;min-width:48px;height:23px;padding:0 7px;border:1px solid rgba(186,230,253,.58);border-radius:999px;background:rgba(7,16,25,.76);color:#f0f9ff;box-shadow:0 2px 8px rgba(0,0,0,.24);backdrop-filter:blur(3px);font:900 10px/1 Inter,Segoe UI,Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.5)}
+        .wind-speed-value{display:inline-flex;align-items:baseline;justify-content:center;gap:2px;min-width:58px;height:23px;padding:0 7px;border:1px solid rgba(186,230,253,.58);border-radius:999px;background:rgba(7,16,25,.82);color:#f0f9ff;box-shadow:0 2px 8px rgba(0,0,0,.24);backdrop-filter:blur(3px);font:900 10px/1 Inter,Segoe UI,Arial,sans-serif;white-space:nowrap;text-shadow:0 1px 2px rgba(0,0,0,.5)}
         .wind-speed-value small{font-size:7px;color:#bae6fd;font-weight:800}
-        @media(max-width:820px){.wind-speed-value{min-width:44px;height:21px;padding:0 6px;font-size:9px}.wind-speed-value small{font-size:6px}}
+        @media(max-width:820px){.wind-speed-value{min-width:52px;height:21px;padding:0 6px;font-size:9px}.wind-speed-value small{font-size:6px}}
       `;
       document.head.appendChild(style);
     }
+
     if (!speedLayer) speedLayer = L.layerGroup();
     return true;
   }
@@ -83,13 +84,16 @@
 
   function gridDaTela() {
     const b = map.getBounds();
-    const north = b.getNorth(), south = b.getSouth(), west = b.getWest(), east = b.getEast();
+    const north = b.getNorth();
+    const south = b.getSouth();
+    const west = b.getWest();
+    const east = b.getEast();
     const lats = [], lngs = [], pontos = [];
     for (let r = 0; r < GRID_ROWS; r++) {
-      const t = r / (GRID_ROWS - 1);
+      const t = GRID_ROWS === 1 ? .5 : r / (GRID_ROWS - 1);
       const lat = north + (south - north) * t;
       for (let c = 0; c < GRID_COLS; c++) {
-        const u = c / (GRID_COLS - 1);
+        const u = GRID_COLS === 1 ? .5 : c / (GRID_COLS - 1);
         const lng = west + (east - west) * u;
         lats.push(lat.toFixed(4));
         lngs.push(lng.toFixed(4));
@@ -109,20 +113,30 @@
     if (!ativo || !samples.length || !assegurarVelocidades()) return;
     speedLayer.clearLayers();
     if (!map.hasLayer(speedLayer)) speedLayer.addTo(map);
+
     const size = map.getSize();
-    const cols = size.x < 760 ? [1,4,6] : [1,3,5,7];
-    const rows = [1,3,5];
-    for (const r of rows) {
-      for (const c of cols) {
+    const mobile = size.x < 760;
+    const colsDesejadas = mobile ? [1, 4, 6] : [1, 3, 5, 7];
+    const rowsDesejadas = [1, 3, 5];
+
+    for (const r of rowsDesejadas) {
+      for (const c of colsDesejadas) {
         const s = samples[r * GRID_COLS + c];
         if (!s || !Number.isFinite(s.speed)) continue;
+        const valor = Math.round(s.speed);
         const icon = L.divIcon({
           className: 'wind-speed-label',
-          html: `<span class="wind-speed-value">${Math.round(s.speed)}<small>km/h GFS</small></span>`,
-          iconSize: [70,23],
-          iconAnchor: [35,12]
+          html: `<span class="wind-speed-value">${valor}<small>km/h GFS</small></span>`,
+          iconSize: [70, 23],
+          iconAnchor: [35, 12]
         });
-        L.marker([s.lat, s.lng], {pane:'windSpeedPane', icon, interactive:false, keyboard:false, opacity:.92}).addTo(speedLayer);
+        L.marker([s.lat, s.lng], {
+          pane: 'windSpeedPane',
+          icon,
+          interactive: false,
+          keyboard: false,
+          opacity: .92
+        }).addTo(speedLayer);
       }
     }
   }
@@ -135,12 +149,14 @@
       renderizarVelocidades();
       return;
     }
+
     fetching = true;
     if (btn) {
       btn.disabled = true;
       btn.style.opacity = '.65';
       btn.innerHTML = '🌬️ VENTO GFS…';
     }
+
     try {
       const g = gridDaTela();
       const params = new URLSearchParams({
@@ -180,11 +196,11 @@
       renderizarVelocidades();
       if (btn) {
         const media = samples.reduce((s, x) => s + x.speed, 0) / samples.length;
-        btn.title = `FALLBACK GFS/Open-Meteo a 10 m — NÃO é a camada CENSIPAM • média visível ${media.toFixed(0)} km/h`;
+        btn.title = `Vento GFS/Open-Meteo a 10 m — fallback, não CENSIPAM • média visível ${media.toFixed(0)} km/h`;
       }
     } catch (e) {
-      console.warn('Falha ao carregar fallback GFS de vento', e);
-      if (btn) btn.title = 'Fallback GFS indisponível nesta tentativa';
+      console.warn('Falha ao carregar vento GFS', e);
+      if (btn) btn.title = 'Vento GFS indisponível nesta tentativa';
     } finally {
       fetching = false;
       if (btn) {
@@ -196,7 +212,8 @@
   }
 
   function nearestSample(lat, lng) {
-    let best = null, bestD = Infinity;
+    let best = null;
+    let bestD = Infinity;
     for (const s of samples) {
       const dx = (lng - s.lng) * Math.cos(lat * Math.PI / 180);
       const dy = lat - s.lat;
@@ -221,7 +238,7 @@
         data[r * cols + c] = s ? {vx:s.vx, vy:s.vy, speed:s.speed} : null;
       }
     }
-    field = {cols, rows, data};
+    field = {cols, rows, data, width:size.x, height:size.y};
   }
 
   function vetorEm(x, y) {
@@ -256,6 +273,7 @@
     if (!lastFrame) lastFrame = ts;
     const dt = clamp((ts - lastFrame) / 16.67, .45, 2.2);
     lastFrame = ts;
+
     const size = map.getSize();
     ctx.globalCompositeOperation = 'destination-in';
     ctx.fillStyle = 'rgba(0,0,0,.92)';
@@ -263,6 +281,7 @@
     ctx.globalCompositeOperation = 'source-over';
     ctx.lineWidth = 1.15;
     ctx.lineCap = 'round';
+
     for (const p of particles) {
       if (p.age++ > p.maxAge || p.x < 0 || p.y < 0 || p.x >= size.x || p.y >= size.y) {
         novaParticula(p);
@@ -270,7 +289,8 @@
       }
       const v = vetorEm(p.x, p.y);
       if (!v) { novaParticula(p); continue; }
-      p.px = p.x; p.py = p.y;
+      p.px = p.x;
+      p.py = p.y;
       const speedPx = clamp(.45 + v.speed / 14, .55, 3.1) * dt;
       p.x += v.vx * speedPx;
       p.y += v.vy * speedPx;
@@ -318,25 +338,25 @@
     }
   }
 
-  function instalarFallback(oficial, municipio) {
-    if (document.getElementById('toggleWindFallback')) return true;
-    if (!oficial || !municipio || typeof map === 'undefined') return false;
-    if (!oficial.disabled) return false;
-
-    oficial.style.display = 'none';
-    btn = document.createElement('button');
-    btn.id = 'toggleWindFallback';
-    btn.className = oficial.className || 'map-btn';
-    btn.type = 'button';
-    btn.innerHTML = '🌬️ VENTO GFS';
-    btn.title = 'FALLBACK GFS/Open-Meteo a 10 m — NÃO é a camada CENSIPAM';
-    municipio.insertAdjacentElement('afterend', btn);
-
+  function takeoverButton() {
+    const alvo = document.getElementById('toggleWind');
+    const municipio = document.getElementById('toggleMunicipioSelect');
+    if (!alvo || !municipio || typeof map === 'undefined') return false;
+    btn = alvo;
+    if (municipio.nextElementSibling !== btn) municipio.insertAdjacentElement('afterend', btn);
+    btn.disabled = false;
+    btn.style.display = '';
+    btn.style.opacity = '';
+    btn.innerHTML = ativo ? '🌬️ VENTO GFS ✓' : '🌬️ VENTO GFS';
+    btn.title = 'Vento GFS/Open-Meteo a 10 m — fallback explícito, não CENSIPAM';
+    if (btn.dataset.gfsWindReady === '1') return true;
+    btn.dataset.gfsWindReady = '1';
     btn.addEventListener('click', e => {
       e.preventDefault();
       e.stopPropagation();
+      e.stopImmediatePropagation();
       ativo ? desligar() : ligar();
-    });
+    }, true);
 
     map.on('resize', () => {
       if (!ativo) return;
@@ -361,26 +381,21 @@
         raf = requestAnimationFrame(desenhar);
       }, 250);
     });
-    console.warn('Vento CENSIPAM indisponível: habilitado fallback claramente identificado como GFS/Open-Meteo.');
     return true;
   }
 
   function instalar() {
     assegurarCanvas();
     assegurarVelocidades();
-    const inicio = Date.now();
+    if (takeoverButton()) return;
+    const obs = new MutationObserver(() => {
+      if (takeoverButton()) obs.disconnect();
+    });
+    obs.observe(document.body, {childList:true, subtree:true});
+    let tentativas = 0;
     const timer = setInterval(() => {
-      const oficial = document.getElementById('toggleWind');
-      const municipio = document.getElementById('toggleMunicipioSelect');
-      if (!oficial || !municipio || typeof map === 'undefined') return;
-      if (!oficial.disabled) {
-        clearInterval(timer);
-        console.info('Vento: camada oficial CENSIPAM disponível; fallback GFS não será usado.');
-        return;
-      }
-      if (Date.now() - inicio < FALLBACK_WAIT_MS) return;
-      clearInterval(timer);
-      instalarFallback(oficial, municipio);
+      tentativas++;
+      if (takeoverButton() || tentativas > 120) clearInterval(timer);
     }, 250);
   }
 
