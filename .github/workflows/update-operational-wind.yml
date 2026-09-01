@@ -19,7 +19,7 @@ concurrency:
 jobs:
   update-wind:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,14 +31,10 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Dependências GRIB
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libeccodes0 libeccodes-data
-          python -m pip install --upgrade pip
-          python -m pip install requests numpy eccodes ecmwf-opendata
+      - name: Dependência HTTP
+        run: python -m pip install requests
 
-      - name: Gerar vento validado
+      - name: Gerar vento oficial do Painel do Fogo
         run: python scripts/update_operational_wind.py
 
       - name: Publicar JSON no repositório
@@ -50,6 +46,6 @@ jobs:
             echo "Sem alteração de vento para publicar."
             exit 0
           fi
-          git commit -m "Atualiza vento operacional validado [skip ci]"
+          git commit -m "Atualiza vento oficial do Painel do Fogo [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
