@@ -1,46 +1,35 @@
 #!/usr/bin/env python3
-"""Gera dados de vento para o mapa operacional.
+"""Gera o vento operacional usando EXCLUSIVAMENTE a API oficial do Painel do Fogo.
 
-Política de fonte:
-1) CPTEC/INPE WRF 7 km (mesma família de produto usada pelo Painel do Fogo),
-   extraído dos GRIB2 públicos do CPTEC por HTTP Range.
-2) ECMWF IFS 0,25° Open Data, somente como fallback explícito.
-3) Se nenhuma fonte passar nos critérios de atualidade, não publica dado novo.
+Fonte consumida:
+  GET https://panorama.sipam.gov.br/painel-do-fogo/api/v1/meteorologia/wrf/vento
 
-O navegador nunca consulta modelos externos diretamente: ele lê apenas o JSON gerado
-por este job, que contém fonte, rodada e horário válido para auditoria operacional.
+A API entrega os dois componentes do vento a 10 m (UGRD/VGRD), convertidos do
+GRIB2 para JSON, e informa o horário do prognóstico no header X-Wind-Date.
+
+Regra de segurança operacional: não há fallback meteorológico. Se a API oficial
+não estiver disponível, o arquivo é marcado como indisponível e o botão de vento
+do mapa deve permanecer desabilitado.
 """
 from __future__ import annotations
 
 import json
 import math
-import os
-import re
 import sys
-import tempfile
-from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
 
-import numpy as np
 import requests
 
 OUT = Path("dados/vento/operational_wind.json")
-CPTEC_BASE = "https://dataserver.cptec.inpe.br/dataserver_modelos/wrf/ams_07km/brutos"
+CENSIPAM_WIND_URL = "https://panorama.sipam.gov.br/painel-do-fogo/api/v1/meteorologia/wrf/vento"
 BBOX = {"south": -14.5, "north": -10.0, "west": -47.5, "east": -42.0}
-MAX_POINTS = 3500
-TIMEOUT = 30
-UA = "CBMBA-20BBM-operational-wind/1.0 (+https://github.com/davissonednei/mapa-base-oeste-florestal)"
+TIMEOUT = 180
+MAX_VALID_DELTA_SECONDS = 3 * 60 * 60
+UA = "CBMBA-20BBM-operational-wind/2.0 (+https://github.com/davissonednei/mapa-base-oeste-florestal)"
+
 SESSION = requests.Session()
-SESSION.headers.update({"User-Agent": UA})
-
-
-@dataclass
-class Field:
-    lat: np.ndarray
-    lon: np.ndarray
-    val: np.ndarray
+SESSION.headers.update({"User-Agent": UA, "Accept": "application/json"})
 
 
 class SourceUnavailable(RuntimeError):
@@ -55,323 +44,205 @@ def iso(dt: datetime) -> str:
     return dt.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
-def http_get(url: str, *, stream: bool = False, headers: dict | None = None) -> requests.Response:
-    r = SESSION.get(url, timeout=TIMEOUT, stream=stream, headers=headers)
-    return r
-
-
-def list_cptec_files(dir_url: str) -> list[tuple[str, datetime, datetime]]:
+def parse_iso(value: str) -> datetime:
     try:
-        r = http_get(dir_url)
-    except requests.RequestException as e:
-        raise SourceUnavailable(f"falha HTTP no diretório CPTEC: {e}") from e
-    if r.status_code != 200:
-        raise SourceUnavailable(f"diretório CPTEC HTTP {r.status_code}")
-    out: list[tuple[str, datetime, datetime]] = []
-    pattern = re.compile(
-        r'href=["\'](WRF_cpt_07KM_(\d{10})_(\d{10})\.grib2\.inv)["\']',
-        re.I,
-    )
-    for fname, run_s, valid_s in pattern.findall(r.text):
-        try:
-            run = datetime.strptime(run_s, "%Y%m%d%H").replace(tzinfo=timezone.utc)
-            valid = datetime.strptime(valid_s, "%Y%m%d%H").replace(tzinfo=timezone.utc)
-        except ValueError:
-            continue
-        out.append((fname, run, valid))
-    return out
-
-
-def choose_cptec_candidate(now: datetime) -> tuple[str, str, datetime, datetime]:
-    candidates: list[tuple[float, float, str, str, datetime, datetime]] = []
-    # O WRF costuma ter 00 UTC e, em alguns dias, 12 UTC. Procura hoje e até 2 dias atrás.
-    for back in range(0, 3):
-        day = (now - timedelta(days=back)).date()
-        for run_hour in (12, 0):
-            dir_url = f"{CPTEC_BASE}/{day:%Y/%m/%d}/{run_hour:02d}/"
-            try:
-                files = list_cptec_files(dir_url)
-            except SourceUnavailable:
-                continue
-            for inv_name, run, valid in files:
-                run_age_h = (now - run).total_seconds() / 3600
-                valid_delta_h = abs((valid - now).total_seconds()) / 3600
-                if run_age_h < -1 or run_age_h > 42:
-                    continue
-                if valid_delta_h > 2.1:
-                    continue
-                # Primeiro aproxima o horário válido do momento atual; em empate, prefere rodada mais nova.
-                candidates.append((valid_delta_h, run_age_h, dir_url, inv_name, run, valid))
-    if not candidates:
-        raise SourceUnavailable("nenhum WRF 7 km CPTEC recente com horário válido próximo do momento atual")
-    candidates.sort(key=lambda x: (x[0], x[1]))
-    _, _, dir_url, inv_name, run, valid = candidates[0]
-    return dir_url, inv_name, run, valid
-
-
-def parse_idx(text: str, grib_url: str) -> dict[str, tuple[int, int]]:
-    rows: list[tuple[int, str]] = []
-    for line in text.splitlines():
-        # Índice padrão wgrib2: numero:byte:d=...:VAR:nivel:...
-        m = re.match(r"^\s*\d+:(\d+):(.*)$", line)
-        if not m:
-            continue
-        rows.append((int(m.group(1)), m.group(2)))
-    if not rows:
-        raise SourceUnavailable("índice GRIB2 CPTEC sem offsets reconhecíveis")
-
-    content_length = None
-    try:
-        h = SESSION.head(grib_url, timeout=TIMEOUT, allow_redirects=True)
-        if h.ok and h.headers.get("Content-Length"):
-            content_length = int(h.headers["Content-Length"])
-    except Exception:
-        pass
-
-    found: dict[str, tuple[int, int]] = {}
-    for i, (start, desc) in enumerate(rows):
-        up = desc.upper()
-        is_10m = bool(re.search(r"(?:^|:)10\s*M(?:\s+ABOVE\s+GROUND)?(?:[:]|$)", up)) or "10 M ABOVE GROUND" in up
-        if not is_10m:
-            continue
-        key = None
-        if ":UGRD:" in f":{up}:" or re.search(r"(?:^|:)10U(?:[:]|$)", up):
-            key = "u"
-        elif ":VGRD:" in f":{up}:" or re.search(r"(?:^|:)10V(?:[:]|$)", up):
-            key = "v"
-        if not key:
-            continue
-        if i + 1 < len(rows):
-            end = rows[i + 1][0] - 1
-        elif content_length:
-            end = content_length - 1
-        else:
-            raise SourceUnavailable("não foi possível determinar o fim da mensagem GRIB2 de vento")
-        found[key] = (start, end)
-    if set(found) != {"u", "v"}:
-        raise SourceUnavailable(f"índice CPTEC não contém U/V a 10 m reconhecíveis: {sorted(found)}")
-    return found
-
-
-def ranged_download(url: str, start: int, end: int, target: Path) -> None:
-    headers = {"Range": f"bytes={start}-{end}"}
-    try:
-        r = http_get(url, stream=True, headers=headers)
-    except requests.RequestException as e:
-        raise SourceUnavailable(f"falha ao baixar faixa GRIB2: {e}") from e
-    if r.status_code != 206:
-        r.close()
-        raise SourceUnavailable(f"servidor CPTEC não honrou Range (HTTP {r.status_code})")
-    with target.open("wb") as f:
-        for chunk in r.iter_content(chunk_size=1024 * 256):
-            if chunk:
-                f.write(chunk)
-
-
-def read_grib_fields(path: Path) -> list[tuple[str, Field]]:
-    try:
-        from eccodes import (
-            codes_get,
-            codes_get_array,
-            codes_grib_new_from_file,
-            codes_release,
-        )
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
     except Exception as e:
-        raise SourceUnavailable(f"ecCodes Python indisponível: {e}") from e
-
-    fields: list[tuple[str, Field]] = []
-    with path.open("rb") as f:
-        while True:
-            gid = codes_grib_new_from_file(f)
-            if gid is None:
-                break
-            try:
-                short = str(codes_get(gid, "shortName"))
-                lats = np.asarray(codes_get_array(gid, "latitudes"), dtype=float)
-                lons = np.asarray(codes_get_array(gid, "longitudes"), dtype=float)
-                vals = np.asarray(codes_get_array(gid, "values"), dtype=float)
-                lons = np.where(lons > 180.0, lons - 360.0, lons)
-                fields.append((short, Field(lats, lons, vals)))
-            finally:
-                codes_release(gid)
-    if not fields:
-        raise SourceUnavailable(f"nenhuma mensagem GRIB2 decodificada em {path}")
-    return fields
+        raise SourceUnavailable(f"data/hora inválida na API oficial: {value!r}") from e
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
 
 
-def only_field(path: Path) -> Field:
-    fields = read_grib_fields(path)
-    # Arquivos por range devem conter uma única mensagem; se houver mais, usa a primeira.
-    return fields[0][1]
+def normalize_lon(lon: float) -> float:
+    return lon - 360.0 if lon > 180.0 else lon
 
 
-def extract_points(u: Field, v: Field, *, max_points: int = MAX_POINTS) -> list[dict]:
-    if not (len(u.val) == len(v.val) == len(u.lat) == len(v.lat) == len(u.lon) == len(v.lon)):
-        raise SourceUnavailable("grades U/V têm tamanhos diferentes")
-    if len(u.val) == 0:
-        raise SourceUnavailable("grade de vento vazia")
-    # Mesma grade é requisito para combinar vetores.
-    if np.nanmax(np.abs(u.lat - v.lat)) > 1e-4 or np.nanmax(np.abs(u.lon - v.lon)) > 1e-4:
-        raise SourceUnavailable("grades U/V não coincidem")
+def finite_number(value) -> float | None:
+    try:
+        n = float(value)
+    except (TypeError, ValueError):
+        return None
+    return n if math.isfinite(n) else None
 
-    mask = (
-        np.isfinite(u.lat)
-        & np.isfinite(u.lon)
-        & np.isfinite(u.val)
-        & np.isfinite(v.val)
-        & (u.lat >= BBOX["south"])
-        & (u.lat <= BBOX["north"])
-        & (u.lon >= BBOX["west"])
-        & (u.lon <= BBOX["east"])
-        & (np.abs(u.val) < 100)
-        & (np.abs(v.val) < 100)
-    )
-    idx = np.flatnonzero(mask)
-    if len(idx) < 20:
-        raise SourceUnavailable(f"poucos pontos de vento dentro da área operacional: {len(idx)}")
-    if len(idx) > max_points:
-        step = math.ceil(len(idx) / max_points)
-        idx = idx[::step]
 
-    out: list[dict] = []
-    for i in idx:
-        uu = float(u.val[i])
-        vv = float(v.val[i])
-        speed_ms = math.hypot(uu, vv)
-        direction_from = (math.degrees(math.atan2(-uu, -vv)) + 360.0) % 360.0
-        out.append(
-            {
-                "lat": round(float(u.lat[i]), 5),
-                "lng": round(float(u.lon[i]), 5),
-                "u_ms": round(uu, 3),
-                "v_ms": round(vv, 3),
-                "speed_kmh": round(speed_ms * 3.6, 1),
-                "direction_from_deg": round(direction_from, 1),
-            }
+def identify_components(payload: list[dict]) -> tuple[dict, dict]:
+    u = v = None
+    for obj in payload:
+        if not isinstance(obj, dict):
+            continue
+        h = obj.get("header") or {}
+        name = str(h.get("parameterNumberName") or "").lower()
+        number = h.get("parameterNumber")
+        if "u-component" in name or number == 2:
+            u = obj
+        elif "v-component" in name or number == 3:
+            v = obj
+    if u is None or v is None:
+        raise SourceUnavailable("a API oficial não retornou simultaneamente UGRD e VGRD")
+    return u, v
+
+
+def validate_grid(u_obj: dict, v_obj: dict) -> dict:
+    uh = u_obj.get("header") or {}
+    vh = v_obj.get("header") or {}
+
+    required = ["nx", "ny", "lo1", "la1", "lo2", "la2", "dx", "dy", "scanMode", "surface1Value"]
+    missing = [k for k in required if k not in uh or k not in vh]
+    if missing:
+        raise SourceUnavailable(f"metadados de grade ausentes na API oficial: {missing}")
+
+    for k in required:
+        if uh.get(k) != vh.get(k):
+            raise SourceUnavailable(f"grades U/V divergentes no campo {k}")
+
+    if float(uh["surface1Value"]) != 10.0:
+        raise SourceUnavailable("a API oficial não retornou vento a 10 m")
+    if str(uh.get("gridDefinitionTemplateName", "")).lower() != "latitude_longitude":
+        raise SourceUnavailable("grade oficial não é latitude/longitude regular")
+
+    nx = int(uh["nx"])
+    ny = int(uh["ny"])
+    if nx <= 0 or ny <= 0:
+        raise SourceUnavailable("dimensões inválidas da grade oficial")
+
+    udata = u_obj.get("data")
+    vdata = v_obj.get("data")
+    if not isinstance(udata, list) or not isinstance(vdata, list):
+        raise SourceUnavailable("arrays U/V ausentes na resposta oficial")
+    expected = nx * ny
+    if len(udata) != expected or len(vdata) != expected:
+        raise SourceUnavailable(
+            f"tamanho U/V incompatível com a grade: esperado {expected}, recebido {len(udata)}/{len(vdata)}"
         )
-    return out
+
+    # A API atualmente publica scanMode=64: longitude cresce para leste e latitude cresce para norte.
+    # Em caso de mudança estrutural, falha fechado em vez de interpretar a grade de forma arriscada.
+    scan_mode = int(uh["scanMode"])
+    if scan_mode != 64:
+        raise SourceUnavailable(f"scanMode oficial inesperado ({scan_mode}); vento desabilitado por segurança")
+
+    return {
+        "nx": nx,
+        "ny": ny,
+        "lon1": normalize_lon(float(uh["lo1"])),
+        "lat1": float(uh["la1"]),
+        "lon2": normalize_lon(float(uh["lo2"])),
+        "lat2": float(uh["la2"]),
+        "dx": abs(float(uh["dx"])),
+        "dy": abs(float(uh["dy"])),
+        "scan_mode": scan_mode,
+        "udata": udata,
+        "vdata": vdata,
+        "run": parse_iso(uh["refTime"]),
+        "forecast_hours": float(uh.get("forecastTime", 0)),
+    }
 
 
-def cptec_payload(now: datetime) -> dict:
-    dir_url, inv_name, run, valid = choose_cptec_candidate(now)
-    inv_url = dir_url + inv_name
-    grib_name = inv_name.removesuffix(".inv")
-    grib_url = dir_url + grib_name
+def extract_bbox_points(grid: dict) -> list[dict]:
+    nx = grid["nx"]
+    ny = grid["ny"]
+    lon1 = grid["lon1"]
+    lat1 = grid["lat1"]
+    dx = grid["dx"]
+    dy = grid["dy"]
+    udata = grid["udata"]
+    vdata = grid["vdata"]
+
+    i0 = max(0, math.ceil((BBOX["west"] - lon1) / dx))
+    i1 = min(nx - 1, math.floor((BBOX["east"] - lon1) / dx))
+    j0 = max(0, math.ceil((BBOX["south"] - lat1) / dy))
+    j1 = min(ny - 1, math.floor((BBOX["north"] - lat1) / dy))
+
+    if i0 > i1 or j0 > j1:
+        raise SourceUnavailable("área operacional fora da grade oficial de vento")
+
+    points: list[dict] = []
+    for j in range(j0, j1 + 1):
+        lat = lat1 + j * dy
+        row = j * nx
+        for i in range(i0, i1 + 1):
+            lng = lon1 + i * dx
+            idx = row + i
+            u = finite_number(udata[idx])
+            v = finite_number(vdata[idx])
+            if u is None or v is None:
+                continue
+            if abs(u) >= 100 or abs(v) >= 100:
+                continue
+            speed_ms = math.hypot(u, v)
+            direction_from = (math.degrees(math.atan2(-u, -v)) + 360.0) % 360.0
+            points.append(
+                {
+                    "lat": round(lat, 5),
+                    "lng": round(lng, 5),
+                    "u_ms": round(u, 3),
+                    "v_ms": round(v, 3),
+                    "speed_kmh": round(speed_ms * 3.6, 1),
+                    "direction_from_deg": round(direction_from, 1),
+                }
+            )
+
+    if len(points) < 100:
+        raise SourceUnavailable(f"poucos vetores oficiais dentro da área operacional: {len(points)}")
+    return points
+
+
+def official_payload(now: datetime) -> dict:
+    try:
+        response = SESSION.get(CENSIPAM_WIND_URL, timeout=TIMEOUT)
+    except requests.RequestException as e:
+        raise SourceUnavailable(f"falha ao acessar API oficial do Painel do Fogo: {e}") from e
+
+    if response.status_code == 404:
+        raise SourceUnavailable("dados meteorológicos oficiais de vento não disponíveis (HTTP 404)")
+    if response.status_code != 200:
+        raise SourceUnavailable(f"API oficial de vento respondeu HTTP {response.status_code}")
+
+    wind_date_raw = response.headers.get("X-Wind-Date") or response.headers.get("x-wind-date")
+    if not wind_date_raw:
+        raise SourceUnavailable("header X-Wind-Date ausente na resposta oficial")
+    valid = parse_iso(wind_date_raw)
+
+    if abs((now - valid).total_seconds()) > MAX_VALID_DELTA_SECONDS:
+        raise SourceUnavailable(f"prognóstico oficial fora da janela operacional: {iso(valid)}")
 
     try:
-        r = http_get(inv_url)
-    except requests.RequestException as e:
-        raise SourceUnavailable(f"falha ao baixar inventário CPTEC: {e}") from e
-    if r.status_code != 200:
-        raise SourceUnavailable(f"inventário CPTEC HTTP {r.status_code}")
-    offsets = parse_idx(r.text, grib_url)
+        payload = response.json()
+    except Exception as e:
+        raise SourceUnavailable("resposta oficial de vento não é JSON válido") from e
 
-    with tempfile.TemporaryDirectory() as td:
-        td = Path(td)
-        upath = td / "u10.grib2"
-        vpath = td / "v10.grib2"
-        ranged_download(grib_url, *offsets["u"], upath)
-        ranged_download(grib_url, *offsets["v"], vpath)
-        u = only_field(upath)
-        v = only_field(vpath)
-        points = extract_points(u, v)
+    if not isinstance(payload, list) or len(payload) != 2:
+        raise SourceUnavailable("estrutura inesperada da API oficial de vento")
+
+    u_obj, v_obj = identify_components(payload)
+    grid = validate_grid(u_obj, v_obj)
+
+    calculated_valid = grid["run"] + __import__("datetime").timedelta(hours=grid["forecast_hours"])
+    if abs((calculated_valid - valid).total_seconds()) > 60:
+        raise SourceUnavailable(
+            f"X-Wind-Date diverge do prognóstico interno do GRIB: {iso(valid)} vs {iso(calculated_valid)}"
+        )
+
+    points = extract_bbox_points(grid)
 
     return {
         "available": True,
         "operational": True,
         "source_priority": "primary",
         "source": "CPTEC/INPE",
+        "delivery_source": "CENSIPAM Painel do Fogo API",
         "model": "WRF 7 km",
-        "product": "vento a 10 m",
-        "run_utc": iso(run),
+        "product": "UGRD/VGRD a 10 m",
+        "run_utc": iso(grid["run"]),
         "valid_utc": iso(valid),
         "generated_at_utc": iso(now),
-        "resolution": "7 km",
+        "resolution": f"{grid['dx']:.2f}° (~7 km)",
         "bbox": BBOX,
         "point_count": len(points),
-        "source_url": grib_url,
-        "note": "Previsão numérica CPTEC/INPE. Fonte primária do painel operacional.",
-        "points": points,
-    }
-
-
-def ecmwf_payload(now: datetime, cptec_error: str) -> dict:
-    try:
-        from ecmwf.opendata import Client
-    except Exception as e:
-        raise SourceUnavailable(f"cliente ECMWF Open Data indisponível: {e}") from e
-
-    client = Client(source="ecmwf", model="ifs", resol="0p25")
-    try:
-        latest = client.latest(type="fc", step=0, param=["10u", "10v"])
-    except Exception as e:
-        raise SourceUnavailable(f"falha ao consultar rodada ECMWF: {e}") from e
-    if latest is None:
-        raise SourceUnavailable("ECMWF não informou rodada disponível")
-    if latest.tzinfo is None:
-        run = latest.replace(tzinfo=timezone.utc)
-    else:
-        run = latest.astimezone(timezone.utc)
-    run_age_h = (now - run).total_seconds() / 3600
-    if run_age_h < -1 or run_age_h > 18:
-        raise SourceUnavailable(f"rodada ECMWF fora da janela operacional ({run_age_h:.1f} h)")
-
-    # IFS HRES aberto usa passos de 3 h no curto prazo; pega o horário válido mais próximo de agora.
-    raw_step = max(0.0, (now - run).total_seconds() / 3600)
-    step = int(round(raw_step / 3.0) * 3)
-    step = max(0, min(step, 90))
-    valid = run + timedelta(hours=step)
-    if abs((valid - now).total_seconds()) > 2.1 * 3600:
-        raise SourceUnavailable("ECMWF sem passo válido suficientemente próximo do momento atual")
-
-    with tempfile.TemporaryDirectory() as td:
-        target = Path(td) / "ecmwf.grib2"
-        try:
-            result = client.retrieve(
-                date=run.strftime("%Y%m%d"),
-                time=run.hour,
-                type="fc",
-                step=step,
-                param=["10u", "10v"],
-                target=str(target),
-            )
-        except Exception as e:
-            raise SourceUnavailable(f"falha ao baixar ECMWF 10m: {e}") from e
-        fields = read_grib_fields(target)
-
-    u = v = None
-    for short, field in fields:
-        s = short.lower()
-        if s in {"10u", "u10"}:
-            u = field
-        elif s in {"10v", "v10"}:
-            v = field
-    if u is None or v is None:
-        raise SourceUnavailable(f"ECMWF não retornou 10u/10v; campos: {[x[0] for x in fields]}")
-    points = extract_points(u, v, max_points=1500)
-
-    result_dt = getattr(result, "datetime", None)
-    if isinstance(result_dt, datetime):
-        result_run = result_dt.replace(tzinfo=timezone.utc) if result_dt.tzinfo is None else result_dt.astimezone(timezone.utc)
-        run = result_run
-        valid = run + timedelta(hours=step)
-
-    return {
-        "available": True,
-        "operational": True,
-        "source_priority": "fallback",
-        "source": "ECMWF Open Data",
-        "model": "IFS 0.25°",
-        "product": "vento a 10 m",
-        "run_utc": iso(run),
-        "valid_utc": iso(valid),
-        "generated_at_utc": iso(now),
-        "resolution": "0.25° (~28 km)",
-        "bbox": BBOX,
-        "point_count": len(points),
-        "source_url": "https://data.ecmwf.int/forecasts/",
-        "note": "Fallback explícito. Não é o WRF do Painel do Fogo; usado somente quando o CPTEC está indisponível ou fora da janela operacional.",
-        "primary_source_error": cptec_error,
+        "source_url": CENSIPAM_WIND_URL,
+        "api_x_wind_date": wind_date_raw,
+        "note": "Vento obtido diretamente da API oficial usada pelo Painel do Fogo. Sem fallback meteorológico.",
         "points": points,
     }
 
@@ -383,9 +254,10 @@ def current_file_is_still_usable(now: datetime) -> bool:
         data = json.loads(OUT.read_text(encoding="utf-8"))
         if not data.get("available") or not data.get("operational"):
             return False
-        valid = datetime.fromisoformat(data["valid_utc"].replace("Z", "+00:00"))
-        generated = datetime.fromisoformat(data["generated_at_utc"].replace("Z", "+00:00"))
-        return abs((now - valid).total_seconds()) <= 3 * 3600 and (now - generated).total_seconds() <= 3 * 3600
+        if data.get("source_url") != CENSIPAM_WIND_URL:
+            return False
+        valid = parse_iso(data["valid_utc"])
+        return abs((now - valid).total_seconds()) <= MAX_VALID_DELTA_SECONDS
     except Exception:
         return False
 
@@ -397,29 +269,22 @@ def write_json(payload: dict) -> None:
 
 def main() -> int:
     now = utcnow()
-    cptec_error = ""
     try:
-        payload = cptec_payload(now)
+        payload = official_payload(now)
         write_json(payload)
-        print(f"OK CPTEC: {payload['point_count']} pontos, válido {payload['valid_utc']}")
+        print(
+            f"OK Painel do Fogo: {payload['point_count']} vetores oficiais, "
+            f"rodada {payload['run_utc']}, válido {payload['valid_utc']}"
+        )
         return 0
     except Exception as e:
-        cptec_error = str(e)
-        print(f"CPTEC indisponível: {cptec_error}", file=sys.stderr)
+        error = str(e)
+        print(f"Vento oficial indisponível: {error}", file=sys.stderr)
 
-    try:
-        payload = ecmwf_payload(now, cptec_error)
-        write_json(payload)
-        print(f"OK ECMWF fallback: {payload['point_count']} pontos, válido {payload['valid_utc']}")
-        return 0
-    except Exception as e:
-        ecmwf_error = str(e)
-        print(f"ECMWF indisponível: {ecmwf_error}", file=sys.stderr)
-
-    # Não substitui um arquivo ainda utilizável por erro transitório. O front-end possui
-    # sua própria janela de validade e desabilita automaticamente quando ficar antigo.
+    # Mantém somente um arquivo ANTERIOR da própria API oficial enquanto ele ainda
+    # estiver dentro da janela operacional. Nunca reaproveita ECMWF/GFS/outro modelo.
     if current_file_is_still_usable(now):
-        print("Mantendo último arquivo ainda dentro da janela operacional.")
+        print("Mantendo a última leitura da própria API oficial ainda válida.")
         return 0
 
     write_json(
@@ -427,9 +292,9 @@ def main() -> int:
             "available": False,
             "operational": False,
             "generated_at_utc": iso(now),
-            "reason": "Nenhuma fonte validada disponível dentro da janela operacional.",
-            "cptec_error": cptec_error,
-            "ecmwf_error": ecmwf_error,
+            "source_url": CENSIPAM_WIND_URL,
+            "reason": "Vento oficial do Painel do Fogo temporariamente indisponível.",
+            "error": error,
             "points": [],
         }
     )
