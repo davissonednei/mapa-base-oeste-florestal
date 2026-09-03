@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-02T22:03:38.019493Z",
+  "atualizado_em": "2026-09-03T00:01:47.393637Z",
   "eventos": [
     {
       "id_evento": 6820396,
@@ -6538,7 +6538,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-23T15:58:00Z",
       "dt_maxima": "2026-09-02T18:43:00Z",
-      "dt_ultima_visao": "2026-09-02T18:43:00Z",
+      "dt_ultima_visao": "2026-09-02T22:20:20Z",
       "persistencia_dias": 10,
       "area_total_evento": 111.82391480179072,
       "latitude": -11.349467495875384,
@@ -21281,7 +21281,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -55830,7 +55830,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-08-30T03:38:00Z",
       "dt_maxima": "2026-09-01T17:15:00Z",
-      "dt_ultima_visao": "2026-09-02T17:10:20Z",
+      "dt_ultima_visao": "2026-09-02T23:20:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 27.835689519545824,
       "latitude": -10.831263798979226,
@@ -79474,7 +79474,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-31T03:55:00Z",
       "dt_maxima": "2026-09-02T17:32:00Z",
-      "dt_ultima_visao": "2026-09-02T21:40:20Z",
+      "dt_ultima_visao": "2026-09-02T23:40:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 35.66568144247757,
       "latitude": -10.8878769232052,
@@ -102950,7 +102950,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-01T03:36:00Z",
       "dt_maxima": "2026-09-01T16:11:00Z",
-      "dt_ultima_visao": "2026-09-01T16:11:00Z",
+      "dt_ultima_visao": "2026-09-02T23:20:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.8748430629753656,
       "latitude": -10.858704670229947,
@@ -105646,7 +105646,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-01T15:33:00Z",
       "dt_maxima": "2026-09-02T18:43:00Z",
-      "dt_ultima_visao": "2026-09-02T21:10:20Z",
+      "dt_ultima_visao": "2026-09-02T22:40:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 11.633026522405455,
       "latitude": -12.147067893812354,
@@ -110054,7 +110054,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-01T15:33:00Z",
       "dt_maxima": "2026-09-01T16:30:00Z",
-      "dt_ultima_visao": "2026-09-01T16:30:00Z",
+      "dt_ultima_visao": "2026-09-02T23:20:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.5875921555934516,
       "latitude": -14.61308660313865,
@@ -121071,7 +121071,7 @@
     },
     {
       "id_evento": 6887961,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-01T17:13:00Z",
       "dt_maxima": "2026-09-01T23:24:00Z",
       "dt_ultima_visao": "2026-09-01T23:24:00Z",
@@ -126066,9 +126066,9 @@
       "dt_maxima": "2026-09-02T18:43:00Z",
       "dt_ultima_visao": "2026-09-02T18:43:00Z",
       "persistencia_dias": 0,
-      "area_total_evento": 2.5351647251106213,
-      "latitude": -12.373203546570691,
-      "longitude": -39.58031633506763,
+      "area_total_evento": 2.643393433118566,
+      "latitude": -12.372893917716537,
+      "longitude": -39.58054345720785,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Rafael Jambeiro - BA",
@@ -126092,11 +126092,11 @@
             ],
             [
               -39.591469389,
-              -12.365482932
+              -12.364082931
             ],
             [
               -39.565900533,
-              -12.365482932
+              -12.364082931
             ],
             [
               -39.565900533,
@@ -126119,6 +126119,26 @@
         },
         "coordinates": [
           [
+            [
+              -39.583929363,
+              -12.378224761
+            ],
+            [
+              -39.584180755,
+              -12.378299137
+            ],
+            [
+              -39.584459369,
+              -12.378444764
+            ],
+            [
+              -39.585150075,
+              -12.378649111
+            ],
+            [
+              -39.585868065,
+              -12.378717066
+            ],
             [
               -39.586585744,
               -12.378646017
@@ -126220,56 +126240,64 @@
               -12.366738097
             ],
             [
-              -39.589080548,
-              -12.366405222
+              -39.589565017,
+              -12.366658446
             ],
             [
-              -39.588389872,
-              -12.366200883
+              -39.589456167,
+              -12.366308466
             ],
             [
-              -39.588228855,
-              -12.366185644
+              -39.58911476,
+              -12.365683859
             ],
             [
-              -39.588107418,
-              -12.366088108
+              -39.588655964,
+              -12.365136732
             ],
             [
-              -39.587470566,
-              -12.365755229
+              -39.588097408,
+              -12.364688108
             ],
             [
-              -39.586779892,
-              -12.365550886
+              -39.587460559,
+              -12.364355229
             ],
             [
-              -39.586061939,
-              -12.365482932
+              -39.58676989,
+              -12.364150886
             ],
             [
-              -39.585344295,
-              -12.365553978
+              -39.58605194,
+              -12.364082931
             ],
             [
-              -39.584654539,
-              -12.365761293
+              -39.5853343,
+              -12.364153977
             ],
             [
-              -39.584019176,
-              -12.366096912
+              -39.584644547,
+              -12.364361293
             ],
             [
-              -39.583462622,
-              -12.366547937
+              -39.584009187,
+              -12.364696911
             ],
             [
-              -39.583228973,
-              -12.366829069
+              -39.583452636,
+              -12.365147936
             ],
             [
-              -39.583099945,
-              -12.366790894
+              -39.582996282,
+              -12.365697035
+            ],
+            [
+              -39.582657662,
+              -12.366323107
+            ],
+            [
+              -39.582530939,
+              -12.36673703
             ],
             [
               -39.582381989,
@@ -126540,36 +126568,20 @@
               -12.377327069
             ],
             [
-              -39.582595686,
-              -12.377256031
+              -39.582578363,
+              -12.377257745
             ],
             [
-              -39.582856667,
-              -12.377177594
+              -39.582733911,
+              -12.377443241
             ],
             [
-              -39.583263914,
-              -12.377663246
+              -39.583292485,
+              -12.377891874
             ],
             [
-              -39.58382249,
-              -12.378111878
-            ],
-            [
-              -39.584459369,
-              -12.378444764
-            ],
-            [
-              -39.585150075,
-              -12.378649111
-            ],
-            [
-              -39.585868065,
-              -12.378717066
-            ],
-            [
-              -39.586585744,
-              -12.378646017
+              -39.583929363,
+              -12.378224761
             ]
           ]
         ]
@@ -128096,7 +128108,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-02T04:21:00Z",
       "dt_maxima": "2026-09-02T16:11:00Z",
-      "dt_ultima_visao": "2026-09-02T21:00:20Z",
+      "dt_ultima_visao": "2026-09-02T23:10:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.441580399222608,
       "latitude": -10.998214869472424,
@@ -129915,8 +129927,8 @@
       "dt_ultima_visao": "2026-09-02T16:54:00Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.0048163256414635,
-      "latitude": -16.318029472907423,
-      "longitude": -39.24134258267585,
+      "latitude": -16.31802947290742,
+      "longitude": -39.24134258267584,
       "dominio": "Privado",
       "pais": "BRA",
       "municipio": "Santa Cruz Cabrália - BA",
@@ -129967,10 +129979,6 @@
         },
         "coordinates": [
           [
-            [
-              -39.245147138,
-              -16.321119111
-            ],
             [
               -39.245794116,
               -16.320784202
@@ -130182,6 +130190,10 @@
             [
               -39.245147138,
               -16.321119111
+            ],
+            [
+              -39.245794116,
+              -16.320784202
             ]
           ]
         ]
