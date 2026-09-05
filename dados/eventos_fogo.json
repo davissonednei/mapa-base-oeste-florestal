@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-05T09:17:54.021630Z",
+  "atualizado_em": "2026-09-05T12:45:27.824496Z",
   "eventos": [
     {
       "id_evento": 6820396,
@@ -17411,7 +17411,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -34268,7 +34268,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-28T03:32:00Z",
       "dt_maxima": "2026-09-05T06:44:00Z",
-      "dt_ultima_visao": "2026-09-05T06:44:00Z",
+      "dt_ultima_visao": "2026-09-05T12:30:20Z",
       "persistencia_dias": 8,
       "area_total_evento": 5.338974777653662,
       "latitude": -12.430388422322498,
@@ -47266,7 +47266,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-30T03:38:00Z",
       "dt_maxima": "2026-09-04T23:44:00Z",
-      "dt_ultima_visao": "2026-09-04T23:44:00Z",
+      "dt_ultima_visao": "2026-09-05T12:30:20Z",
       "persistencia_dias": 5,
       "area_total_evento": 81.90767495822473,
       "latitude": -10.870661300423258,
@@ -138911,7 +138911,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA ASSU DA CAPIVARA, PA PAU BRASIL I, PA PAU BRASIL I, PA ASSU DA CAPIVARA",
+      "projeto_assentamento": "PA ASSU DA CAPIVARA, PA ASSU DA CAPIVARA, PA PAU BRASIL I, PA PAU BRASIL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -142500,7 +142500,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-05T05:06:00Z",
       "dt_maxima": "2026-09-05T05:06:00Z",
-      "dt_ultima_visao": "2026-09-05T09:00:20Z",
+      "dt_ultima_visao": "2026-09-05T12:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.4139747476034892,
       "latitude": -13.432307516750829,
