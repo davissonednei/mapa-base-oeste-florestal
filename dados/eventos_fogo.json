@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-05T12:45:27.824496Z",
+  "atualizado_em": "2026-09-05T15:34:15.622896Z",
   "eventos": [
     {
       "id_evento": 6820396,
@@ -17411,7 +17411,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
+      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -34268,7 +34268,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-28T03:32:00Z",
       "dt_maxima": "2026-09-05T06:44:00Z",
-      "dt_ultima_visao": "2026-09-05T12:30:20Z",
+      "dt_ultima_visao": "2026-09-05T13:50:20Z",
       "persistencia_dias": 8,
       "area_total_evento": 5.338974777653662,
       "latitude": -12.430388422322498,
@@ -47266,7 +47266,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-30T03:38:00Z",
       "dt_maxima": "2026-09-04T23:44:00Z",
-      "dt_ultima_visao": "2026-09-05T12:30:20Z",
+      "dt_ultima_visao": "2026-09-05T15:10:20Z",
       "persistencia_dias": 5,
       "area_total_evento": 81.90767495822473,
       "latitude": -10.870661300423258,
@@ -94964,7 +94964,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-01T17:13:00Z",
       "dt_maxima": "2026-09-02T16:56:00Z",
-      "dt_ultima_visao": "2026-09-02T16:56:00Z",
+      "dt_ultima_visao": "2026-09-05T15:10:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.471199505275483,
       "latitude": -14.070199954138847,
@@ -138911,7 +138911,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA ASSU DA CAPIVARA, PA ASSU DA CAPIVARA, PA PAU BRASIL I, PA PAU BRASIL I",
+      "projeto_assentamento": "PA ASSU DA CAPIVARA, PA PAU BRASIL I, PA PAU BRASIL I, PA ASSU DA CAPIVARA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -140592,7 +140592,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-04T16:56:00Z",
       "dt_maxima": "2026-09-04T18:19:00Z",
-      "dt_ultima_visao": "2026-09-04T18:19:00Z",
+      "dt_ultima_visao": "2026-09-05T15:10:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 3.2858940747474237,
       "latitude": -11.207742139485262,
@@ -142040,7 +142040,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-05T04:02:00Z",
       "dt_maxima": "2026-09-05T06:44:00Z",
-      "dt_ultima_visao": "2026-09-05T06:44:00Z",
+      "dt_ultima_visao": "2026-09-05T14:30:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.851924726300664,
       "latitude": -12.438499366256272,
@@ -142499,13 +142499,13 @@
       "id_evento": 6903193,
       "status_evento": "Ativo",
       "dt_minima": "2026-09-05T05:06:00Z",
-      "dt_maxima": "2026-09-05T05:06:00Z",
-      "dt_ultima_visao": "2026-09-05T12:00:20Z",
+      "dt_maxima": "2026-09-05T12:12:00Z",
+      "dt_ultima_visao": "2026-09-05T12:12:00Z",
       "persistencia_dias": 0,
-      "area_total_evento": 1.4139747476034892,
-      "latitude": -13.432307516750829,
-      "longitude": -43.82614747470664,
-      "dominio": "Privado",
+      "area_total_evento": 1.849746889781061,
+      "latitude": -13.433388138326231,
+      "longitude": -43.824768295081235,
+      "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Serra do Ramalho - BA",
       "terra_indigena": null,
@@ -142524,23 +142524,23 @@
           [
             [
               -43.833574324,
-              -13.439626198
+              -13.440206198
             ],
             [
               -43.833574324,
               -13.426533793
             ],
             [
-              -43.819525679,
+              -43.816385598,
               -13.426533793
             ],
             [
-              -43.819525679,
-              -13.439626198
+              -43.816385598,
+              -13.440206198
             ],
             [
               -43.833574324,
-              -13.439626198
+              -13.440206198
             ]
           ]
         ]
@@ -142556,48 +142556,48 @@
         "coordinates": [
           [
             [
-              -43.824341977,
-              -13.43955335
+              -43.826093489,
+              -13.440140075
             ],
             [
-              -43.825062392,
-              -13.439626198
+              -43.826787547,
+              -13.439937523
             ],
             [
-              -43.825783483,
-              -13.439560076
+              -43.827427896,
+              -13.439606325
             ],
             [
-              -43.82647754,
-              -13.439357524
+              -43.827989927,
+              -13.43915921
             ],
             [
-              -43.827117887,
-              -13.439026327
+              -43.828452041,
+              -13.438613361
             ],
             [
-              -43.827679917,
-              -13.438579213
+              -43.828796479,
+              -13.437989756
             ],
             [
-              -43.828142031,
-              -13.438033364
+              -43.829010006,
+              -13.437312358
             ],
             [
-              -43.828486469,
-              -13.437409759
+              -43.829084417,
+              -13.436607202
             ],
             [
-              -43.828699996,
-              -13.436732362
+              -43.829016853,
+              -13.435901386
             ],
             [
-              -43.828774407,
-              -13.436027206
+              -43.828809912,
+              -13.435222033
             ],
             [
-              -43.828706844,
-              -13.435321389
+              -43.82850392,
+              -13.434655218
             ],
             [
               -43.828499905,
@@ -142812,64 +142812,116 @@
               -13.432227894
             ],
             [
-              -43.820138465,
-              -13.432854685
+              -43.820111771,
+              -13.432805233
             ],
             [
-              -43.820595227,
-              -13.433404821
+              -43.820097679,
+              -13.432803808
             ],
             [
-              -43.821152861,
-              -13.433857162
+              -43.819376607,
+              -13.432869915
             ],
             [
-              -43.821789937,
-              -13.434194322
+              -43.818682566,
+              -13.433072449
             ],
             [
-              -43.82188708,
-              -13.434223663
+              -43.818042225,
+              -13.433403625
             ],
             [
-              -43.821673574,
-              -13.434610198
+              -43.817480192,
+              -13.433850717
             ],
             [
-              -43.82146003,
-              -13.435287588
+              -43.817018065,
+              -13.434396545
             ],
             [
-              -43.821385598,
-              -13.43599274
+              -43.816673603,
+              -13.435020132
             ],
             [
-              -43.821453139,
-              -13.436698557
+              -43.816460045,
+              -13.435697517
             ],
             [
-              -43.82166006,
-              -13.437377913
+              -43.816385598,
+              -13.436402666
             ],
             [
-              -43.821998409,
-              -13.438004703
+              -43.816453125,
+              -13.437108483
             ],
             [
-              -43.822455185,
-              -13.438554837
+              -43.816660031,
+              -13.437787842
             ],
             [
-              -43.823012834,
-              -13.439007174
+              -43.816998367,
+              -13.438414637
             ],
             [
-              -43.823649926,
-              -13.439344331
+              -43.817455131,
+              -13.43896478
             ],
             [
-              -43.824341977,
-              -13.43955335
+              -43.818012771,
+              -13.439417128
+            ],
+            [
+              -43.818649856,
+              -13.439754297
+            ],
+            [
+              -43.819341903,
+              -13.439963329
+            ],
+            [
+              -43.820062316,
+              -13.440036191
+            ],
+            [
+              -43.820783409,
+              -13.439970084
+            ],
+            [
+              -43.82147747,
+              -13.439767546
+            ],
+            [
+              -43.822117824,
+              -13.439436362
+            ],
+            [
+              -43.82265845,
+              -13.439006295
+            ],
+            [
+              -43.822765181,
+              -13.43913484
+            ],
+            [
+              -43.823322832,
+              -13.439587177
+            ],
+            [
+              -43.823959926,
+              -13.439924333
+            ],
+            [
+              -43.824651979,
+              -13.440133351
+            ],
+            [
+              -43.825372396,
+              -13.440206198
+            ],
+            [
+              -43.826093489,
+              -13.440140075
             ]
           ]
         ]
