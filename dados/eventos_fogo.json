@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-07T22:10:00.262927Z",
+  "atualizado_em": "2026-09-08T00:19:47.638686Z",
   "eventos": [
     {
       "id_evento": 6820396,
@@ -1554,7 +1554,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-08-23T15:58:00Z",
       "dt_maxima": "2026-09-07T17:39:00Z",
-      "dt_ultima_visao": "2026-09-07T21:50:20Z",
+      "dt_ultima_visao": "2026-09-08T00:00:20Z",
       "persistencia_dias": 15,
       "area_total_evento": 148.9120977037004,
       "latitude": -11.342377335144056,
@@ -13049,7 +13049,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -57797,7 +57797,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA PAU BRASIL I, PA ASSU DA CAPIVARA, PA ASSU DA CAPIVARA, PA PAU BRASIL I",
+      "projeto_assentamento": "PA ASSU DA CAPIVARA, PA PAU BRASIL I, PA ASSU DA CAPIVARA, PA PAU BRASIL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -62082,7 +62082,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-05T05:06:00Z",
       "dt_maxima": "2026-09-07T17:02:00Z",
-      "dt_ultima_visao": "2026-09-07T21:50:20Z",
+      "dt_ultima_visao": "2026-09-08T00:00:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 2.657114407510046,
       "latitude": -13.434419435046639,
@@ -69396,9 +69396,9 @@
       "dt_maxima": "2026-09-07T18:36:00Z",
       "dt_ultima_visao": "2026-09-07T18:36:00Z",
       "persistencia_dias": 2,
-      "area_total_evento": 6.86868779237414,
-      "latitude": -9.523583667670412,
-      "longitude": -41.994992341028926,
+      "area_total_evento": 6.868687792369105,
+      "latitude": -9.523583667670414,
+      "longitude": -41.99499234102893,
       "dominio": "Área Não Identificada",
       "pais": "BRA",
       "municipio": "Remanso - BA",
@@ -70176,6 +70176,10 @@
             [
               -41.993521487,
               -9.53646019
+            ],
+            [
+              -41.99356814,
+              -9.5364738
             ],
             [
               -41.99366074,
@@ -77499,7 +77503,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -85933,7 +85937,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA BOA SORTE UNA, PA DANDARA",
+      "projeto_assentamento": "PA DANDARA, PA BOA SORTE UNA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -87910,11 +87914,11 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-07T03:45:00Z",
       "dt_maxima": "2026-09-07T18:36:00Z",
-      "dt_ultima_visao": "2026-09-07T21:50:20Z",
+      "dt_ultima_visao": "2026-09-07T23:20:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 44.63893035147871,
       "latitude": -9.745851156221066,
-      "longitude": -43.431433502569476,
+      "longitude": -43.43143350256948,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Pilão Arcado - BA",
@@ -90572,22 +90576,6 @@
           ],
           [
             [
-              -43.46390123,
-              -9.744296194
-            ],
-            [
-              -43.464122553,
-              -9.744363885
-            ],
-            [
-              -43.464833466,
-              -9.744436578
-            ],
-            [
-              -43.464915203,
-              -9.744428963
-            ],
-            [
               -43.464657917,
               -9.744737106
             ],
@@ -90610,25 +90598,25 @@
             [
               -43.46390123,
               -9.744296194
+            ],
+            [
+              -43.464122553,
+              -9.744363885
+            ],
+            [
+              -43.464833466,
+              -9.744436578
+            ],
+            [
+              -43.464915203,
+              -9.744428963
+            ],
+            [
+              -43.464657917,
+              -9.744737106
             ]
           ],
           [
-            [
-              -43.464058024,
-              -9.746994001
-            ],
-            [
-              -43.464101141,
-              -9.747449477
-            ],
-            [
-              -43.464305498,
-              -9.748128855
-            ],
-            [
-              -43.464394833,
-              -9.74829648
-            ],
             [
               -43.464197482,
               -9.748236121
@@ -90652,25 +90640,25 @@
             [
               -43.464058024,
               -9.746994001
+            ],
+            [
+              -43.464101141,
+              -9.747449477
+            ],
+            [
+              -43.464305498,
+              -9.748128855
+            ],
+            [
+              -43.464394833,
+              -9.74829648
+            ],
+            [
+              -43.464197482,
+              -9.748236121
             ]
           ],
           [
-            [
-              -43.452657928,
-              -9.754316998
-            ],
-            [
-              -43.45231814,
-              -9.754940723
-            ],
-            [
-              -43.452189066,
-              -9.755355964
-            ],
-            [
-              -43.452128952,
-              -9.754720705
-            ],
             [
               -43.45192462,
               -9.754041322
@@ -90694,9 +90682,45 @@
             [
               -43.452657928,
               -9.754316998
+            ],
+            [
+              -43.45231814,
+              -9.754940723
+            ],
+            [
+              -43.452189066,
+              -9.755355964
+            ],
+            [
+              -43.452128952,
+              -9.754720705
+            ],
+            [
+              -43.45192462,
+              -9.754041322
             ]
           ],
           [
+            [
+              -43.490981946,
+              -9.752536079
+            ],
+            [
+              -43.491536439,
+              -9.752088751
+            ],
+            [
+              -43.491992302,
+              -9.751542707
+            ],
+            [
+              -43.492332018,
+              -9.750918931
+            ],
+            [
+              -43.492438625,
+              -9.750575815
+            ],
             [
               -43.492491113,
               -9.751129777
@@ -90752,26 +90776,6 @@
             [
               -43.490981946,
               -9.752536079
-            ],
-            [
-              -43.491536439,
-              -9.752088751
-            ],
-            [
-              -43.491992302,
-              -9.751542707
-            ],
-            [
-              -43.492332018,
-              -9.750918931
-            ],
-            [
-              -43.492438625,
-              -9.750575815
-            ],
-            [
-              -43.492491113,
-              -9.751129777
             ]
           ]
         ]
@@ -100295,7 +100299,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
