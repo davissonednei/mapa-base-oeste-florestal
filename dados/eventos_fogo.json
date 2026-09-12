@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-12T01:32:55.703223Z",
+  "atualizado_em": "2026-09-12T06:22:48.355798Z",
   "eventos": [
     {
       "id_evento": 6823012,
@@ -11845,7 +11845,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -41620,7 +41620,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-07T05:04:00Z",
       "dt_maxima": "2026-09-11T23:24:00Z",
-      "dt_ultima_visao": "2026-09-12T01:10:21Z",
+      "dt_ultima_visao": "2026-09-12T03:10:21Z",
       "persistencia_dias": 4,
       "area_total_evento": 1.8047160547989383,
       "latitude": -12.854303556269258,
@@ -56057,7 +56057,7 @@
     },
     {
       "id_evento": 6916725,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-09T03:49:00Z",
       "dt_maxima": "2026-09-11T04:08:00Z",
       "dt_ultima_visao": "2026-09-11T04:08:00Z",
@@ -61445,7 +61445,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -61881,7 +61881,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -62581,7 +62581,7 @@
     },
     {
       "id_evento": 6916757,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-09T03:51:00Z",
       "dt_maxima": "2026-09-11T04:53:00Z",
       "dt_ultima_visao": "2026-09-11T04:53:00Z",
@@ -67147,7 +67147,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MANGAL I, PA NOVA ESPERANÇA",
+      "projeto_assentamento": "PA NOVA ESPERANÇA, PA MANGAL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -68525,7 +68525,7 @@
     },
     {
       "id_evento": 6917107,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-09T15:39:00Z",
       "dt_maxima": "2026-09-11T04:10:00Z",
       "dt_ultima_visao": "2026-09-11T04:10:00Z",
@@ -71411,7 +71411,7 @@
     },
     {
       "id_evento": 6917416,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-09T16:26:00Z",
       "dt_maxima": "2026-09-11T04:53:00Z",
       "dt_ultima_visao": "2026-09-11T04:53:00Z",
@@ -81071,7 +81071,7 @@
     },
     {
       "id_evento": 6921157,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-10T16:05:00Z",
       "dt_maxima": "2026-09-11T04:08:00Z",
       "dt_ultima_visao": "2026-09-11T04:08:00Z",
@@ -88899,7 +88899,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -89963,7 +89963,7 @@
     },
     {
       "id_evento": 6922165,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-10T17:02:00Z",
       "dt_maxima": "2026-09-11T04:10:00Z",
       "dt_ultima_visao": "2026-09-11T04:10:00Z",
@@ -90599,7 +90599,7 @@
     },
     {
       "id_evento": 6925314,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-11T03:49:00Z",
       "dt_maxima": "2026-09-11T04:53:00Z",
       "dt_ultima_visao": "2026-09-11T04:53:00Z",
@@ -90955,7 +90955,7 @@
     },
     {
       "id_evento": 6925316,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-11T03:49:00Z",
       "dt_maxima": "2026-09-11T04:53:00Z",
       "dt_ultima_visao": "2026-09-11T04:53:00Z",
@@ -91243,7 +91243,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -92483,10 +92483,10 @@
     },
     {
       "id_evento": 6925478,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-11T04:51:00Z",
       "dt_maxima": "2026-09-11T04:51:00Z",
-      "dt_ultima_visao": "2026-09-11T04:51:00Z",
+      "dt_ultima_visao": "2026-09-12T04:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.5146566799693402,
       "latitude": -9.509914861886909,
