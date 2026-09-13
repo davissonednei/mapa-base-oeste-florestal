@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-13T13:54:43.229857Z",
+  "atualizado_em": "2026-09-13T17:05:11.802060Z",
   "eventos": [
     {
       "id_evento": 6823012,
@@ -1207,7 +1207,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL SERRA DA TABATINGA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -20674,7 +20674,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-07T03:45:00Z",
       "dt_maxima": "2026-09-13T04:51:00Z",
-      "dt_ultima_visao": "2026-09-13T12:50:21Z",
+      "dt_ultima_visao": "2026-09-13T16:50:21Z",
       "persistencia_dias": 6,
       "area_total_evento": 174.7109997868711,
       "latitude": -9.743067507334054,
@@ -31909,7 +31909,7 @@
     },
     {
       "id_evento": 6913368,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-08T15:39:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -33293,7 +33293,7 @@
     },
     {
       "id_evento": 6914155,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-08T15:58:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -35612,338 +35612,6 @@
       }
     },
     {
-      "id_evento": 6914237,
-      "status_evento": "Em observação",
-      "dt_minima": "2026-09-08T16:01:00Z",
-      "dt_maxima": "2026-09-09T11:30:00Z",
-      "dt_ultima_visao": "2026-09-09T11:30:00Z",
-      "persistencia_dias": 0,
-      "area_total_evento": 1.5997228934544088,
-      "latitude": -10.58687597124189,
-      "longitude": -45.74581598152251,
-      "dominio": "Área Não Identificada, Privado",
-      "pais": "BRA",
-      "municipio": "Formosa do Rio Preto - BA",
-      "terra_indigena": null,
-      "unidade_conservacao": null,
-      "quilombola": null,
-      "projeto_assentamento": null,
-      "retangulo_envolvente": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -45.752516213,
-              -10.593357388
-            ],
-            [
-              -45.752516213,
-              -10.58033261
-            ],
-            [
-              -45.739583743,
-              -10.58033261
-            ],
-            [
-              -45.739583743,
-              -10.593357388
-            ],
-            [
-              -45.752516213,
-              -10.593357388
-            ]
-          ]
-        ]
-      },
-      "geom": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -45.752241275,
-              -10.58759627
-            ],
-            [
-              -45.752447681,
-              -10.586917177
-            ],
-            [
-              -45.752516213,
-              -10.586211292
-            ],
-            [
-              -45.752444239,
-              -10.585505743
-            ],
-            [
-              -45.752234525,
-              -10.584827643
-            ],
-            [
-              -45.751895133,
-              -10.584203051
-            ],
-            [
-              -45.751439104,
-              -10.583655969
-            ],
-            [
-              -45.750883965,
-              -10.58320742
-            ],
-            [
-              -45.750861858,
-              -10.583195797
-            ],
-            [
-              -45.75066451,
-              -10.582557661
-            ],
-            [
-              -45.750325123,
-              -10.581933067
-            ],
-            [
-              -45.749869101,
-              -10.581385982
-            ],
-            [
-              -45.749313967,
-              -10.58093743
-            ],
-            [
-              -45.748681056,
-              -10.580604649
-            ],
-            [
-              -45.747994689,
-              -10.580400426
-            ],
-            [
-              -45.747281242,
-              -10.58033261
-            ],
-            [
-              -45.746568132,
-              -10.580403806
-            ],
-            [
-              -45.745882761,
-              -10.580611279
-            ],
-            [
-              -45.745251468,
-              -10.580947057
-            ],
-            [
-              -45.744941561,
-              -10.581199922
-            ],
-            [
-              -45.744304733,
-              -10.581010431
-            ],
-            [
-              -45.743591285,
-              -10.580942607
-            ],
-            [
-              -45.742878171,
-              -10.581013795
-            ],
-            [
-              -45.742192796,
-              -10.581221261
-            ],
-            [
-              -45.741561497,
-              -10.581557031
-            ],
-            [
-              -45.741008535,
-              -10.582008203
-            ],
-            [
-              -45.740555158,
-              -10.582557439
-            ],
-            [
-              -45.740218791,
-              -10.583183632
-            ],
-            [
-              -45.74001236,
-              -10.583862719
-            ],
-            [
-              -45.739943799,
-              -10.584568603
-            ],
-            [
-              -45.740015745,
-              -10.585274157
-            ],
-            [
-              -45.740199328,
-              -10.585867848
-            ],
-            [
-              -45.740082332,
-              -10.586252722
-            ],
-            [
-              -45.740013771,
-              -10.586958606
-            ],
-            [
-              -45.740067457,
-              -10.587485082
-            ],
-            [
-              -45.739858739,
-              -10.587873632
-            ],
-            [
-              -45.739652305,
-              -10.588552719
-            ],
-            [
-              -45.739583743,
-              -10.589258603
-            ],
-            [
-              -45.73965569,
-              -10.589964156
-            ],
-            [
-              -45.73986538,
-              -10.590642266
-            ],
-            [
-              -45.740204757,
-              -10.591266872
-            ],
-            [
-              -45.740660779,
-              -10.591813971
-            ],
-            [
-              -45.741215922,
-              -10.592262537
-            ],
-            [
-              -45.741848851,
-              -10.592595332
-            ],
-            [
-              -45.742535242,
-              -10.592799567
-            ],
-            [
-              -45.743248718,
-              -10.592867392
-            ],
-            [
-              -45.743961858,
-              -10.592796201
-            ],
-            [
-              -45.744647257,
-              -10.59258873
-            ],
-            [
-              -45.744867936,
-              -10.592471358
-            ],
-            [
-              -45.74521596,
-              -10.59275256
-            ],
-            [
-              -45.745848893,
-              -10.593085347
-            ],
-            [
-              -45.746535288,
-              -10.593289572
-            ],
-            [
-              -45.747248765,
-              -10.593357388
-            ],
-            [
-              -45.747961905,
-              -10.593286188
-            ],
-            [
-              -45.748647302,
-              -10.593078709
-            ],
-            [
-              -45.749278615,
-              -10.592742923
-            ],
-            [
-              -45.749831583,
-              -10.592291737
-            ],
-            [
-              -45.750284955,
-              -10.591742488
-            ],
-            [
-              -45.750621309,
-              -10.591116285
-            ],
-            [
-              -45.75082772,
-              -10.590437193
-            ],
-            [
-              -45.750896256,
-              -10.589731308
-            ],
-            [
-              -45.750862817,
-              -10.589403507
-            ],
-            [
-              -45.750904934,
-              -10.589352484
-            ],
-            [
-              -45.751033767,
-              -10.589112628
-            ],
-            [
-              -45.751451564,
-              -10.588771725
-            ],
-            [
-              -45.751904928,
-              -10.588222474
-            ],
-            [
-              -45.752241275,
-              -10.58759627
-            ]
-          ]
-        ]
-      }
-    },
-    {
       "id_evento": 6914362,
       "status_evento": "Em observação",
       "dt_minima": "2026-09-08T17:20:00Z",
@@ -36848,378 +36516,6 @@
       }
     },
     {
-      "id_evento": 6916726,
-      "status_evento": "Em observação",
-      "dt_minima": "2026-09-09T03:49:00Z",
-      "dt_maxima": "2026-09-09T11:30:00Z",
-      "dt_ultima_visao": "2026-09-09T11:30:00Z",
-      "persistencia_dias": 0,
-      "area_total_evento": 1.945366554812592,
-      "latitude": -11.00416042467356,
-      "longitude": -45.08149643069906,
-      "dominio": "Privado",
-      "pais": "BRA",
-      "municipio": "Formosa do Rio Preto - BA",
-      "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
-      "quilombola": null,
-      "projeto_assentamento": null,
-      "retangulo_envolvente": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -45.089641584,
-              -11.011237597
-            ],
-            [
-              -45.089641584,
-              -10.997112401
-            ],
-            [
-              -45.072898415,
-              -10.997112401
-            ],
-            [
-              -45.072898415,
-              -11.011237597
-            ],
-            [
-              -45.089641584,
-              -11.011237597
-            ]
-          ]
-        ]
-      },
-      "geom": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -45.080746619,
-              -11.011168276
-            ],
-            [
-              -45.081460994,
-              -11.011237597
-            ],
-            [
-              -45.082175331,
-              -11.011167893
-            ],
-            [
-              -45.082862177,
-              -11.010961844
-            ],
-            [
-              -45.083495136,
-              -11.010627369
-            ],
-            [
-              -45.084002874,
-              -11.010215459
-            ],
-            [
-              -45.084231028,
-              -11.010237597
-            ],
-            [
-              -45.084945362,
-              -11.010167886
-            ],
-            [
-              -45.085632203,
-              -11.009961832
-            ],
-            [
-              -45.086265157,
-              -11.009627351
-            ],
-            [
-              -45.086819899,
-              -11.009177298
-            ],
-            [
-              -45.08727511,
-              -11.008628969
-            ],
-            [
-              -45.087613297,
-              -11.008003437
-            ],
-            [
-              -45.087735458,
-              -11.00760515
-            ],
-            [
-              -45.08801516,
-              -11.007457339
-            ],
-            [
-              -45.088569895,
-              -11.007007283
-            ],
-            [
-              -45.089025099,
-              -11.006458952
-            ],
-            [
-              -45.08936328,
-              -11.005833418
-            ],
-            [
-              -45.089571441,
-              -11.005154721
-            ],
-            [
-              -45.089641584,
-              -11.004448942
-            ],
-            [
-              -45.089571015,
-              -11.003743204
-            ],
-            [
-              -45.089362446,
-              -11.003064629
-            ],
-            [
-              -45.089023893,
-              -11.002439294
-            ],
-            [
-              -45.088568367,
-              -11.001891229
-            ],
-            [
-              -45.088013375,
-              -11.001441495
-            ],
-            [
-              -45.087380243,
-              -11.001107376
-            ],
-            [
-              -45.087357721,
-              -11.001100633
-            ],
-            [
-              -45.087330985,
-              -11.000833231
-            ],
-            [
-              -45.087122423,
-              -11.000154654
-            ],
-            [
-              -45.086783878,
-              -10.999529316
-            ],
-            [
-              -45.086328361,
-              -10.998981247
-            ],
-            [
-              -45.085773378,
-              -10.998531509
-            ],
-            [
-              -45.085140255,
-              -10.998197385
-            ],
-            [
-              -45.084453323,
-              -10.997991715
-            ],
-            [
-              -45.083738979,
-              -10.997922401
-            ],
-            [
-              -45.083024674,
-              -10.997992108
-            ],
-            [
-              -45.082829535,
-              -10.998050651
-            ],
-            [
-              -45.082423406,
-              -10.997721532
-            ],
-            [
-              -45.081790289,
-              -10.9973874
-            ],
-            [
-              -45.081103361,
-              -10.997181722
-            ],
-            [
-              -45.08038902,
-              -10.997112401
-            ],
-            [
-              -45.079674716,
-              -10.9971821
-            ],
-            [
-              -45.0789879,
-              -10.997388142
-            ],
-            [
-              -45.078354964,
-              -10.997722607
-            ],
-            [
-              -45.07780023,
-              -10.998172645
-            ],
-            [
-              -45.077345018,
-              -10.99872096
-            ],
-            [
-              -45.07700682,
-              -10.999346481
-            ],
-            [
-              -45.076798634,
-              -11.00002517
-            ],
-            [
-              -45.076796677,
-              -11.000044853
-            ],
-            [
-              -45.076775007,
-              -11.000070954
-            ],
-            [
-              -45.076436807,
-              -11.000696475
-            ],
-            [
-              -45.076396377,
-              -11.000828274
-            ],
-            [
-              -45.075844753,
-              -11.000882092
-            ],
-            [
-              -45.075157925,
-              -11.001088124
-            ],
-            [
-              -45.074524977,
-              -11.001422582
-            ],
-            [
-              -45.07397023,
-              -11.001872613
-            ],
-            [
-              -45.073515005,
-              -11.002420922
-            ],
-            [
-              -45.073176795,
-              -11.003046439
-            ],
-            [
-              -45.072968598,
-              -11.003725125
-            ],
-            [
-              -45.072898415,
-              -11.004430901
-            ],
-            [
-              -45.072968945,
-              -11.005136642
-            ],
-            [
-              -45.073177478,
-              -11.005815229
-            ],
-            [
-              -45.073516002,
-              -11.006440582
-            ],
-            [
-              -45.073971506,
-              -11.00698867
-            ],
-            [
-              -45.074526488,
-              -11.007438429
-            ],
-            [
-              -45.075159619,
-              -11.007772575
-            ],
-            [
-              -45.075846568,
-              -11.007978266
-            ],
-            [
-              -45.076560934,
-              -11.008047598
-            ],
-            [
-              -45.077275264,
-              -11.007977906
-            ],
-            [
-              -45.077817787,
-              -11.007815161
-            ],
-            [
-              -45.077868918,
-              -11.0083267
-            ],
-            [
-              -45.078077465,
-              -11.009005283
-            ],
-            [
-              -45.078416002,
-              -11.009630631
-            ],
-            [
-              -45.078871521,
-              -11.010178711
-            ],
-            [
-              -45.079426517,
-              -11.010628461
-            ],
-            [
-              -45.08005966,
-              -11.010962596
-            ],
-            [
-              -45.080746619,
-              -11.011168276
-            ]
-          ]
-        ]
-      }
-    },
-    {
       "id_evento": 6916727,
       "status_evento": "Em observação",
       "dt_minima": "2026-09-09T03:49:00Z",
@@ -37504,7 +36800,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-09T03:49:00Z",
       "dt_maxima": "2026-09-13T00:03:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T16:50:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 21.40769518861594,
       "latitude": -11.39789469954836,
@@ -39493,7 +38789,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -42193,7 +41489,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -42981,7 +42277,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -48161,7 +47457,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MANGAL I, PA NOVA ESPERANÇA",
+      "projeto_assentamento": "PA NOVA ESPERANÇA, PA MANGAL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -53040,7 +52336,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-09T17:02:00Z",
       "dt_maxima": "2026-09-12T18:28:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T15:40:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 11.49777632411791,
       "latitude": -11.343632535592143,
@@ -54370,7 +53666,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-10T03:32:00Z",
       "dt_maxima": "2026-09-13T04:51:00Z",
-      "dt_ultima_visao": "2026-09-13T12:40:21Z",
+      "dt_ultima_visao": "2026-09-13T13:50:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 5.46600139117957,
       "latitude": -11.190588998558306,
@@ -57402,7 +56698,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-10T04:08:00Z",
       "dt_maxima": "2026-09-13T05:12:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T16:00:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 12.070724941412744,
       "latitude": -10.657201284414047,
@@ -57411,7 +56707,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -58859,7 +58155,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -59130,7 +58426,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-10T04:08:00Z",
       "dt_maxima": "2026-09-10T18:51:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T15:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 33.12513213276168,
       "latitude": -10.671744847111322,
@@ -59139,7 +58435,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -64055,7 +63351,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -70627,7 +69923,7 @@
     },
     {
       "id_evento": 6922141,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-10T17:02:00Z",
       "dt_maxima": "2026-09-12T16:05:00Z",
       "dt_ultima_visao": "2026-09-12T16:05:00Z",
@@ -71766,7 +71062,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-10T17:02:00Z",
       "dt_maxima": "2026-09-12T04:36:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T16:10:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 1.9012819910704726,
       "latitude": -14.676339461048249,
@@ -73074,7 +72370,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-11T04:08:00Z",
       "dt_maxima": "2026-09-13T05:12:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T15:40:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 11.71439689408675,
       "latitude": -10.63329133429184,
@@ -73083,7 +72379,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -74245,7 +73541,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -78657,7 +77953,7 @@
     },
     {
       "id_evento": 6925734,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-11T15:46:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -84340,7 +83636,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T03:49:00Z",
       "dt_maxima": "2026-09-13T06:54:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T16:00:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 17.21654728884768,
       "latitude": -11.815259934972575,
@@ -86750,7 +86046,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T03:49:00Z",
       "dt_maxima": "2026-09-13T00:03:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T14:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 6.265353057205766,
       "latitude": -11.283080622790695,
@@ -87553,7 +86849,7 @@
     },
     {
       "id_evento": 6930413,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -88209,7 +87505,7 @@
     },
     {
       "id_evento": 6930415,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T15:29:00Z",
       "dt_ultima_visao": "2026-09-12T15:29:00Z",
@@ -88865,7 +88161,7 @@
     },
     {
       "id_evento": 6930427,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -89525,7 +88821,7 @@
     },
     {
       "id_evento": 6930430,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -89813,7 +89109,7 @@
     },
     {
       "id_evento": 6930433,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:03:00Z",
       "dt_ultima_visao": "2026-09-12T16:03:00Z",
@@ -90457,7 +89753,7 @@
     },
     {
       "id_evento": 6930435,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -90741,7 +90037,7 @@
     },
     {
       "id_evento": 6930436,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -91032,7 +90328,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T18:28:00Z",
-      "dt_ultima_visao": "2026-09-13T13:40:21Z",
+      "dt_ultima_visao": "2026-09-13T16:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.789638059637207,
       "latitude": -14.0892104902246,
@@ -91477,7 +90773,7 @@
     },
     {
       "id_evento": 6930443,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -91805,7 +91101,7 @@
     },
     {
       "id_evento": 6930447,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -93845,7 +93141,7 @@
     },
     {
       "id_evento": 6930458,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T15:29:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -94945,7 +94241,7 @@
     },
     {
       "id_evento": 6930512,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-12T16:03:00Z",
       "dt_maxima": "2026-09-12T16:24:00Z",
       "dt_ultima_visao": "2026-09-12T16:24:00Z",
@@ -96492,7 +95788,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T16:05:00Z",
       "dt_maxima": "2026-09-13T05:12:00Z",
-      "dt_ultima_visao": "2026-09-13T12:50:21Z",
+      "dt_ultima_visao": "2026-09-13T15:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 4.001881028992831,
       "latitude": -10.754758537957246,
@@ -98140,7 +97436,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T17:07:00Z",
       "dt_maxima": "2026-09-12T17:07:00Z",
-      "dt_ultima_visao": "2026-09-12T17:07:00Z",
+      "dt_ultima_visao": "2026-09-13T16:50:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2030460600031472,
       "latitude": -15.302746092919822,
@@ -98440,7 +97736,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T17:07:00Z",
       "dt_maxima": "2026-09-12T18:26:00Z",
-      "dt_ultima_visao": "2026-09-12T18:26:00Z",
+      "dt_ultima_visao": "2026-09-13T15:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.038331750429348,
       "latitude": -15.219541611756464,
