@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-14T21:46:43.895691Z",
+  "atualizado_em": "2026-09-15T00:00:00.392797Z",
   "eventos": [
     {
       "id_evento": 6823012,
@@ -4385,8 +4385,8 @@
       "dt_ultima_visao": "2026-09-14T18:06:00Z",
       "persistencia_dias": 9,
       "area_total_evento": 9.227597282257932,
-      "latitude": -13.436766503297195,
-      "longitude": -43.82549681983283,
+      "latitude": -13.43676650329719,
+      "longitude": -43.825496819832885,
       "dominio": "Área Não Identificada, Assentamento Federal, Privado",
       "pais": "BRA",
       "municipio": "Serra do Ramalho - BA",
@@ -4437,10 +4437,6 @@
         },
         "coordinates": [
           [
-            [
-              -43.828949993,
-              -13.444158007
-            ],
             [
               -43.82928837,
               -13.444784789
@@ -5320,6 +5316,10 @@
             [
               -43.828949993,
               -13.444158007
+            ],
+            [
+              -43.82928837,
+              -13.444784789
             ]
           ]
         ]
@@ -5339,7 +5339,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -19490,7 +19490,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-07T05:04:00Z",
       "dt_maxima": "2026-09-14T04:53:00Z",
-      "dt_ultima_visao": "2026-09-14T04:53:00Z",
+      "dt_ultima_visao": "2026-09-14T23:40:21Z",
       "persistencia_dias": 6,
       "area_total_evento": 3.0027317623674357,
       "latitude": -12.854406044499349,
@@ -35958,11 +35958,11 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-10T03:32:00Z",
       "dt_maxima": "2026-09-14T18:06:00Z",
-      "dt_ultima_visao": "2026-09-14T21:30:21Z",
+      "dt_ultima_visao": "2026-09-14T23:00:21Z",
       "persistencia_dias": 4,
       "area_total_evento": 13.18416487615136,
-      "latitude": -11.186759344671888,
-      "longitude": -42.80004243222755,
+      "latitude": -11.186759344671877,
+      "longitude": -42.80004243222757,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Gentio do Ouro - BA",
@@ -36013,10 +36013,6 @@
         },
         "coordinates": [
           [
-            [
-              -42.820076015,
-              -11.178050459
-            ],
             [
               -42.819390759,
               -11.177839745
@@ -37156,9 +37152,17 @@
             [
               -42.820076015,
               -11.178050459
+            ],
+            [
+              -42.819390759,
+              -11.177839745
             ]
           ],
           [
+            [
+              -42.803735733,
+              -11.177328254
+            ],
             [
               -42.803730785,
               -11.177311706
@@ -37170,10 +37174,6 @@
             [
               -42.803735733,
               -11.177328254
-            ],
-            [
-              -42.803730785,
-              -11.177311706
             ]
           ]
         ]
@@ -39147,7 +39147,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -46193,7 +46193,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -47024,11 +47024,11 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-10T17:02:00Z",
       "dt_maxima": "2026-09-14T18:06:00Z",
-      "dt_ultima_visao": "2026-09-14T21:10:21Z",
+      "dt_ultima_visao": "2026-09-14T18:06:00Z",
       "persistencia_dias": 4,
-      "area_total_evento": 3.4267931312398,
-      "latitude": -14.678307379988231,
-      "longitude": -42.846784295816924,
+      "area_total_evento": 3.4267931312287954,
+      "latitude": -14.678307379988233,
+      "longitude": -42.84678429581693,
       "dominio": "Área Não Identificada, Autarq",
       "pais": "BRA",
       "municipio": "Sebastião Laranjeiras - BA",
@@ -48489,7 +48489,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -75042,7 +75042,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-12T16:05:00Z",
       "dt_maxima": "2026-09-14T17:28:00Z",
-      "dt_ultima_visao": "2026-09-14T21:10:21Z",
+      "dt_ultima_visao": "2026-09-14T23:40:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 16.70737830396362,
       "latitude": -10.773862170686527,
@@ -78295,8 +78295,8 @@
       "dt_ultima_visao": "2026-09-14T18:06:00Z",
       "persistencia_dias": 2,
       "area_total_evento": 1.182223530392725,
-      "latitude": -14.059147959642448,
-      "longitude": -40.75316728425332,
+      "latitude": -14.059147959642452,
+      "longitude": -40.75316728425334,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Manoel Vitorino - BA",
@@ -78347,10 +78347,6 @@
         },
         "coordinates": [
           [
-            [
-              -40.755997579,
-              -14.060625073
-            ],
             [
               -40.756719515,
               -14.060550356
@@ -78590,6 +78586,10 @@
             [
               -40.755997579,
               -14.060625073
+            ],
+            [
+              -40.756719515,
+              -14.060550356
             ]
           ]
         ]
@@ -81900,11 +81900,11 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-13T15:46:00Z",
       "dt_maxima": "2026-09-14T18:06:00Z",
-      "dt_ultima_visao": "2026-09-14T21:30:21Z",
+      "dt_ultima_visao": "2026-09-14T23:40:21Z",
       "persistencia_dias": 1,
-      "area_total_evento": 14.860443063597293,
+      "area_total_evento": 14.860443063574772,
       "latitude": -11.231824610520048,
-      "longitude": -43.44521985406646,
+      "longitude": -43.44521985406645,
       "dominio": "Área Não Identificada",
       "pais": "BRA",
       "municipio": "Barra - BA",
@@ -83184,14 +83184,6 @@
           ],
           [
             [
-              -43.447883313,
-              -11.250086761
-            ],
-            [
-              -43.448036982,
-              -11.250596511
-            ],
-            [
               -43.448033318,
               -11.250599447
             ],
@@ -83238,17 +83230,17 @@
             [
               -43.447883313,
               -11.250086761
+            ],
+            [
+              -43.448036982,
+              -11.250596511
+            ],
+            [
+              -43.448033318,
+              -11.250599447
             ]
           ],
           [
-            [
-              -43.455945984,
-              -11.221611783
-            ],
-            [
-              -43.455562958,
-              -11.22181136
-            ],
             [
               -43.455443717,
               -11.221666374
@@ -83272,6 +83264,14 @@
             [
               -43.455945984,
               -11.221611783
+            ],
+            [
+              -43.455562958,
+              -11.22181136
+            ],
+            [
+              -43.455443717,
+              -11.221666374
             ]
           ]
         ]
@@ -97438,7 +97438,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-14T15:46:00Z",
       "dt_maxima": "2026-09-14T16:33:00Z",
-      "dt_ultima_visao": "2026-09-14T21:30:21Z",
+      "dt_ultima_visao": "2026-09-14T23:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 8.422364642888903,
       "latitude": -11.514243122898469,
@@ -99862,16 +99862,16 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-14T15:46:00Z",
       "dt_maxima": "2026-09-14T18:06:00Z",
-      "dt_ultima_visao": "2026-09-14T21:30:21Z",
+      "dt_ultima_visao": "2026-09-14T18:06:00Z",
       "persistencia_dias": 0,
-      "area_total_evento": 3.0061117021547994,
-      "latitude": -11.11041947267921,
-      "longitude": -40.4771508792546,
+      "area_total_evento": 3.006111702134072,
+      "latitude": -11.110419472679201,
+      "longitude": -40.47715087925461,
       "dominio": "Área Não Identificada, Privado, Uc",
       "pais": "BRA",
       "municipio": "Jacobina - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -99917,6 +99917,54 @@
         },
         "coordinates": [
           [
+            [
+              -40.469375338,
+              -11.110515729
+            ],
+            [
+              -40.46904009,
+              -11.111142605
+            ],
+            [
+              -40.468835113,
+              -11.11182203
+            ],
+            [
+              -40.468768284,
+              -11.112527894
+            ],
+            [
+              -40.468842174,
+              -11.113233071
+            ],
+            [
+              -40.469053943,
+              -11.113910462
+            ],
+            [
+              -40.469395454,
+              -11.114534034
+            ],
+            [
+              -40.469853583,
+              -11.115079823
+            ],
+            [
+              -40.470410725,
+              -11.115526854
+            ],
+            [
+              -40.471045469,
+              -11.115857948
+            ],
+            [
+              -40.471733422,
+              -11.116060381
+            ],
+            [
+              -40.472448144,
+              -11.116126373
+            ],
             [
               -40.472532649,
               -11.116117735
@@ -100076,6 +100124,10 @@
             [
               -40.485639931,
               -11.110807241
+            ],
+            [
+              -40.485662084,
+              -11.110733797
             ],
             [
               -40.485662084,
@@ -100276,54 +100328,6 @@
             [
               -40.469375338,
               -11.110515729
-            ],
-            [
-              -40.46904009,
-              -11.111142605
-            ],
-            [
-              -40.468835113,
-              -11.11182203
-            ],
-            [
-              -40.468768284,
-              -11.112527894
-            ],
-            [
-              -40.468842174,
-              -11.113233071
-            ],
-            [
-              -40.469053943,
-              -11.113910462
-            ],
-            [
-              -40.469395454,
-              -11.114534034
-            ],
-            [
-              -40.469853583,
-              -11.115079823
-            ],
-            [
-              -40.470410725,
-              -11.115526854
-            ],
-            [
-              -40.471045469,
-              -11.115857948
-            ],
-            [
-              -40.471733422,
-              -11.116060381
-            ],
-            [
-              -40.472448144,
-              -11.116126373
-            ],
-            [
-              -40.472532649,
-              -11.116117735
             ]
           ]
         ]
@@ -102078,7 +102082,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-14T15:46:00Z",
       "dt_maxima": "2026-09-14T18:06:00Z",
-      "dt_ultima_visao": "2026-09-14T21:10:21Z",
+      "dt_ultima_visao": "2026-09-14T18:06:00Z",
       "persistencia_dias": 0,
       "area_total_evento": 6.581143228022644,
       "latitude": -12.481395345107511,
