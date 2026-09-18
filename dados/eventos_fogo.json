@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-17T23:38:40.689713Z",
+  "atualizado_em": "2026-09-18T01:26:23.277433Z",
   "eventos": [
     {
       "id_evento": 6895969,
@@ -31023,7 +31023,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -40558,7 +40558,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-13T15:46:00Z",
       "dt_maxima": "2026-09-17T18:21:00Z",
-      "dt_ultima_visao": "2026-09-17T23:20:20Z",
+      "dt_ultima_visao": "2026-09-18T01:10:20Z",
       "persistencia_dias": 4,
       "area_total_evento": 43.85076169259559,
       "latitude": -11.246390810775235,
@@ -43951,7 +43951,7 @@
       "pais": "BRA",
       "municipio": "Lençóis - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DA CHAPADA DIAMANTINA, ÁREA DE PROTEÇÃO AMBIENTAL MARIMBUS / IRAQUARA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL MARIMBUS / IRAQUARA, PARQUE NACIONAL DA CHAPADA DIAMANTINA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -61297,7 +61297,7 @@
       "pais": "BRA",
       "municipio": "Jacobina - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA GANESHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PEDRA VERDE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TENDEIRO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RIO DA ONÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PEDRA VERDE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA GANESHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RIO DA ONÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TENDEIRO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -77636,7 +77636,7 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha -  ",
+      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  ",
       "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
@@ -94101,7 +94101,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -122658,7 +122658,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-16T03:19:00Z",
       "dt_maxima": "2026-09-16T04:17:00Z",
-      "dt_ultima_visao": "2026-09-17T23:20:20Z",
+      "dt_ultima_visao": "2026-09-18T00:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.3945897409826786,
       "latitude": -13.553533020766903,
@@ -135498,7 +135498,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-16T15:54:00Z",
       "dt_maxima": "2026-09-17T18:21:00Z",
-      "dt_ultima_visao": "2026-09-17T21:20:20Z",
+      "dt_ultima_visao": "2026-09-17T23:50:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 11.776071473753202,
       "latitude": -10.124129679466902,
@@ -136563,7 +136563,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -153195,7 +153195,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -154462,7 +154462,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-17T15:33:00Z",
       "dt_maxima": "2026-09-17T18:21:00Z",
-      "dt_ultima_visao": "2026-09-17T23:20:20Z",
+      "dt_ultima_visao": "2026-09-18T01:10:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 11.695144226518877,
       "latitude": -11.310868632432623,
