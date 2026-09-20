@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-20T21:31:23.679439Z",
+  "atualizado_em": "2026-09-20T23:22:59.875683Z",
   "eventos": [
     {
       "id_evento": 6895969,
@@ -15525,7 +15525,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -23203,7 +23203,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -47523,7 +47523,7 @@
       "pais": "BRA",
       "municipio": "Jacobina - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RIO DA ONÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA GANESHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PEDRA VERDE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TENDEIRO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL TENDEIRO, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CASA DO SOL, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA GANESHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA RECANTO DOS PÁSSAROS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA CANDEAL DO VALE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA SERRA DO LUAR, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA LENDAS DO COIÓ, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RESERVA TERRA QUE BRILHA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PEDRA VERDE, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL RIO DA ONÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL PAU D'ARCO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -49585,7 +49585,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -65133,7 +65133,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -79625,7 +79625,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -80892,7 +80892,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-17T15:33:00Z",
       "dt_maxima": "2026-09-20T17:13:00Z",
-      "dt_ultima_visao": "2026-09-20T21:10:20Z",
+      "dt_ultima_visao": "2026-09-20T21:40:20Z",
       "persistencia_dias": 3,
       "area_total_evento": 56.31687094232392,
       "latitude": -11.302838493596287,
@@ -118452,7 +118452,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-19T15:54:00Z",
       "dt_maxima": "2026-09-20T18:38:00Z",
-      "dt_ultima_visao": "2026-09-20T18:38:00Z",
+      "dt_ultima_visao": "2026-09-20T21:20:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 56.16307226733891,
       "latitude": -11.464750491282906,
@@ -124239,7 +124239,7 @@
       "pais": "BRA",
       "municipio": "Pilão Arcado - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL LAGO DE SOBRADINHO, ÁREA DE PROTEÇÃO AMBIENTAL DUNAS E VEREDAS DO BAIXO MÉDIO SÃO FRANCISCO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DUNAS E VEREDAS DO BAIXO MÉDIO SÃO FRANCISCO, ÁREA DE PROTEÇÃO AMBIENTAL LAGO DE SOBRADINHO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -126130,7 +126130,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T03:45:00Z",
       "dt_maxima": "2026-09-20T18:36:00Z",
-      "dt_ultima_visao": "2026-09-20T18:36:00Z",
+      "dt_ultima_visao": "2026-09-20T23:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 7.605615807469923,
       "latitude": -11.666081581293678,
