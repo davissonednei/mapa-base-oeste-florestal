@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-23T22:28:33.012829Z",
+  "atualizado_em": "2026-09-24T00:41:09.467717Z",
   "eventos": [
     {
       "id_evento": 6903193,
@@ -15853,7 +15853,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -33235,7 +33235,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -38141,7 +38141,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -44986,7 +44986,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-17T15:33:00Z",
       "dt_maxima": "2026-09-23T18:53:00Z",
-      "dt_ultima_visao": "2026-09-23T22:10:19Z",
+      "dt_ultima_visao": "2026-09-23T23:20:19Z",
       "persistencia_dias": 6,
       "area_total_evento": 70.95434121879805,
       "latitude": -11.306702405699998,
@@ -74206,7 +74206,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T03:45:00Z",
       "dt_maxima": "2026-09-23T18:53:00Z",
-      "dt_ultima_visao": "2026-09-23T22:10:19Z",
+      "dt_ultima_visao": "2026-09-23T23:00:19Z",
       "persistencia_dias": 3,
       "area_total_evento": 44.278961310292715,
       "latitude": -11.672473232507864,
@@ -125870,7 +125870,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-22T15:39:00Z",
       "dt_maxima": "2026-09-23T16:18:00Z",
-      "dt_ultima_visao": "2026-09-23T22:10:19Z",
+      "dt_ultima_visao": "2026-09-24T00:20:19Z",
       "persistencia_dias": 1,
       "area_total_evento": 3.9498525548567134,
       "latitude": -11.937190299593592,
@@ -163423,8 +163423,8 @@
       "dt_ultima_visao": "2026-09-23T18:51:00Z",
       "persistencia_dias": 0,
       "area_total_evento": 3.7866530035872867,
-      "latitude": -13.496344533783004,
-      "longitude": -40.73556896158168,
+      "latitude": -13.496344533783017,
+      "longitude": -40.7355689615817,
       "dominio": "Área Não Identificada",
       "pais": "BRA",
       "municipio": "Iramaia - BA",
@@ -163475,10 +163475,6 @@
         },
         "coordinates": [
           [
-            [
-              -40.738523067,
-              -13.488859884
-            ],
             [
               -40.738728386,
               -13.488180227
@@ -163962,6 +163958,10 @@
             [
               -40.738523067,
               -13.488859884
+            ],
+            [
+              -40.738728386,
+              -13.488180227
             ]
           ]
         ]
@@ -177462,9 +177462,9 @@
       "dt_maxima": "2026-09-23T18:51:00Z",
       "dt_ultima_visao": "2026-09-23T18:51:00Z",
       "persistencia_dias": 0,
-      "area_total_evento": 2.206930703699224,
+      "area_total_evento": 2.2069307037150323,
       "latitude": -14.057230423195538,
-      "longitude": -43.12052951859616,
+      "longitude": -43.120529518596165,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Palmas de Monte Alto - BA",
