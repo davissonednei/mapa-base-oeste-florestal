@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-24T22:04:19.887625Z",
+  "atualizado_em": "2026-09-25T00:27:45.817024Z",
   "eventos": [
     {
       "id_evento": 6903193,
@@ -15975,7 +15975,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -25263,7 +25263,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -85824,7 +85824,7 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  ",
+      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha -  ",
       "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
@@ -107150,7 +107150,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-22T15:39:00Z",
       "dt_maxima": "2026-09-24T17:54:00Z",
-      "dt_ultima_visao": "2026-09-24T21:40:19Z",
+      "dt_ultima_visao": "2026-09-25T00:10:19Z",
       "persistencia_dias": 2,
       "area_total_evento": 4.803522185913808,
       "latitude": -11.937654223453961,
@@ -168664,7 +168664,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-24T04:10:00Z",
       "dt_maxima": "2026-09-24T04:46:00Z",
-      "dt_ultima_visao": "2026-09-24T21:50:19Z",
+      "dt_ultima_visao": "2026-09-24T22:20:19Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1315297334364776,
       "latitude": -10.885110753572448,
