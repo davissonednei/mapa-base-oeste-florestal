@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-25T10:09:30.111775Z",
+  "atualizado_em": "2026-09-25T15:12:20.763164Z",
   "eventos": [
     {
       "id_evento": 6903193,
@@ -15975,7 +15975,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -25263,7 +25263,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -69608,7 +69608,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T17:13:00Z",
       "dt_maxima": "2026-09-25T04:49:00Z",
-      "dt_ultima_visao": "2026-09-25T04:49:00Z",
+      "dt_ultima_visao": "2026-09-25T14:30:20Z",
       "persistencia_dias": 4,
       "area_total_evento": 123.326020425005,
       "latitude": -14.685386349772376,
@@ -84662,7 +84662,7 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha -  ",
+      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  ",
       "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
@@ -105988,7 +105988,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-22T15:39:00Z",
       "dt_maxima": "2026-09-25T03:06:00Z",
-      "dt_ultima_visao": "2026-09-25T08:20:20Z",
+      "dt_ultima_visao": "2026-09-25T12:20:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 7.274867843517935,
       "latitude": -11.935686641413543,
