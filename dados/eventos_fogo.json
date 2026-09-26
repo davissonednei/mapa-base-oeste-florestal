@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-09-25T22:19:28.304986Z",
+  "atualizado_em": "2026-09-26T00:39:51.115065Z",
   "eventos": [
     {
       "id_evento": 6916728,
@@ -15175,7 +15175,7 @@
       "pais": "BRA",
       "municipio": "Formosa do Rio Preto - BA, Mateiros - TO",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ESTAÇÃO ECOLÓGICA SERRA GERAL DO TOCANTINS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -24463,7 +24463,7 @@
       "pais": "BRA",
       "municipio": "Barreiras do Piauí - PI, Formosa do Rio Preto - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, PARQUE NACIONAL DAS NASCENTES DO RIO PARNAIBA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -90390,7 +90390,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-22T15:39:00Z",
       "dt_maxima": "2026-09-25T03:06:00Z",
-      "dt_ultima_visao": "2026-09-25T21:20:19Z",
+      "dt_ultima_visao": "2026-09-26T00:20:19Z",
       "persistencia_dias": 2,
       "area_total_evento": 7.274867843517935,
       "latitude": -11.935686641413543,
