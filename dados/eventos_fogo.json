@@ -1,12 +1,12 @@
 {
-  "atualizado_em": "2026-10-04T14:59:26.811058Z",
+  "atualizado_em": "2026-10-04T18:31:36.180092Z",
   "eventos": [
     {
       "id_evento": 6951594,
       "status_evento": "Em observação",
       "dt_minima": "2026-09-17T15:33:00Z",
       "dt_maxima": "2026-10-03T03:55:00Z",
-      "dt_ultima_visao": "2026-10-03T15:50:20Z",
+      "dt_ultima_visao": "2026-10-04T17:50:20Z",
       "persistencia_dias": 15,
       "area_total_evento": 273.2495988108049,
       "latitude": -11.393412998529278,
@@ -13796,7 +13796,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T03:45:00Z",
       "dt_maxima": "2026-10-04T11:23:00Z",
-      "dt_ultima_visao": "2026-10-04T13:20:21Z",
+      "dt_ultima_visao": "2026-10-04T18:00:20Z",
       "persistencia_dias": 14,
       "area_total_evento": 273.79528788898097,
       "latitude": -11.694073686730357,
@@ -35955,7 +35955,7 @@
     },
     {
       "id_evento": 6978311,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-22T16:37:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -47928,7 +47928,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-26T16:05:00Z",
       "dt_maxima": "2026-10-02T16:50:00Z",
-      "dt_ultima_visao": "2026-10-02T16:50:00Z",
+      "dt_ultima_visao": "2026-10-04T15:30:21Z",
       "persistencia_dias": 6,
       "area_total_evento": 50.33598905531198,
       "latitude": -12.460568640460906,
@@ -75358,7 +75358,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-27T15:48:00Z",
       "dt_maxima": "2026-10-02T16:30:00Z",
-      "dt_ultima_visao": "2026-10-02T16:30:00Z",
+      "dt_ultima_visao": "2026-10-04T15:30:21Z",
       "persistencia_dias": 5,
       "area_total_evento": 24.140113519577667,
       "latitude": -10.709417972310172,
@@ -97053,7 +97053,7 @@
     },
     {
       "id_evento": 7009094,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-28T15:29:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -97341,7 +97341,7 @@
     },
     {
       "id_evento": 7009119,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-28T15:29:00Z",
       "dt_maxima": "2026-10-03T16:09:00Z",
       "dt_ultima_visao": "2026-10-03T16:09:00Z",
@@ -125808,7 +125808,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-29T16:05:00Z",
       "dt_maxima": "2026-10-03T04:40:00Z",
-      "dt_ultima_visao": "2026-10-04T14:10:21Z",
+      "dt_ultima_visao": "2026-10-04T16:20:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 8.775220150801092,
       "latitude": -11.84289025854627,
@@ -142146,7 +142146,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-09-30T15:46:00Z",
       "dt_maxima": "2026-10-02T16:50:00Z",
-      "dt_ultima_visao": "2026-10-04T13:50:21Z",
+      "dt_ultima_visao": "2026-10-04T18:10:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 34.5098787299312,
       "latitude": -11.258969347174661,
@@ -163747,7 +163747,7 @@
     },
     {
       "id_evento": 7019891,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-30T15:46:00Z",
       "dt_maxima": "2026-10-03T16:09:00Z",
       "dt_ultima_visao": "2026-10-03T16:09:00Z",
@@ -184509,7 +184509,7 @@
     },
     {
       "id_evento": 7021033,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-30T17:07:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -195430,7 +195430,7 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha -  ",
+      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  ",
       "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
@@ -198015,7 +198015,7 @@
     },
     {
       "id_evento": 7024065,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-01T15:29:00Z",
       "dt_maxima": "2026-10-03T15:33:00Z",
       "dt_ultima_visao": "2026-10-03T15:33:00Z",
@@ -198647,7 +198647,7 @@
     },
     {
       "id_evento": 7024076,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-01T15:29:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -223239,7 +223239,7 @@
     },
     {
       "id_evento": 7024816,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-01T16:48:00Z",
       "dt_maxima": "2026-10-03T15:33:00Z",
       "dt_ultima_visao": "2026-10-03T15:33:00Z",
@@ -243961,7 +243961,7 @@
     },
     {
       "id_evento": 7027712,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-02T15:52:00Z",
       "dt_maxima": "2026-10-03T17:13:00Z",
       "dt_ultima_visao": "2026-10-03T17:13:00Z",
@@ -253169,7 +253169,7 @@
     },
     {
       "id_evento": 7027928,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-02T15:54:00Z",
       "dt_maxima": "2026-10-03T16:11:00Z",
       "dt_ultima_visao": "2026-10-03T16:11:00Z",
@@ -255273,7 +255273,7 @@
     },
     {
       "id_evento": 7028067,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-02T16:30:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -258057,7 +258057,7 @@
     },
     {
       "id_evento": 7028145,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-02T16:30:00Z",
       "dt_maxima": "2026-10-03T15:33:00Z",
       "dt_ultima_visao": "2026-10-03T15:33:00Z",
@@ -263371,7 +263371,7 @@
     },
     {
       "id_evento": 7030974,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T03:55:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -263666,7 +263666,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-03T03:55:00Z",
       "dt_maxima": "2026-10-04T03:38:00Z",
-      "dt_ultima_visao": "2026-10-04T13:20:21Z",
+      "dt_ultima_visao": "2026-10-04T17:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.8879279529349804,
       "latitude": -11.707282399093447,
@@ -266151,7 +266151,7 @@
     },
     {
       "id_evento": 7030988,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T03:55:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -267719,7 +267719,7 @@
     },
     {
       "id_evento": 7031310,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T04:40:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -268019,7 +268019,7 @@
     },
     {
       "id_evento": 7031409,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T16:11:00Z",
       "dt_ultima_visao": "2026-10-03T16:11:00Z",
@@ -268295,7 +268295,7 @@
     },
     {
       "id_evento": 7031413,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T16:33:00Z",
       "dt_ultima_visao": "2026-10-03T16:33:00Z",
@@ -268579,7 +268579,7 @@
     },
     {
       "id_evento": 7031427,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -268855,7 +268855,7 @@
     },
     {
       "id_evento": 7031428,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -269159,7 +269159,7 @@
     },
     {
       "id_evento": 7031429,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -269467,7 +269467,7 @@
     },
     {
       "id_evento": 7031434,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T15:33:00Z",
       "dt_maxima": "2026-10-03T15:33:00Z",
       "dt_ultima_visao": "2026-10-03T15:33:00Z",
@@ -269783,7 +269783,7 @@
     },
     {
       "id_evento": 7031553,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T16:11:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -270063,7 +270063,7 @@
     },
     {
       "id_evento": 7031667,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-03T16:30:00Z",
       "dt_maxima": "2026-10-03T16:30:00Z",
       "dt_ultima_visao": "2026-10-03T16:30:00Z",
@@ -270658,8 +270658,8 @@
       "dominio": "Ti/Uc",
       "pais": "BRA",
       "municipio": "Porto Seguro - BA",
-      "terra_indigena": "Barra Velha -  , Barra Velha do Monte Pascoal -  , Barra Velha -  , Barra Velha do Monte Pascoal -  ",
-      "unidade_conservacao": "PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO",
+      "terra_indigena": "Barra Velha do Monte Pascoal -  , Barra Velha -  , Barra Velha -  , Barra Velha do Monte Pascoal -  ",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL, ÁREA DE PROTEÇÃO AMBIENTAL CARAÍVA/ TRANCOSO, PARQUE NACIONAL E HISTÓRICO DO MONTE PASCOAL",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
