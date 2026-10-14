@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-14T02:12:31.473495Z",
+  "atualizado_em": "2026-10-14T07:34:29.025244Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -14788,7 +14788,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T03:45:00Z",
       "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-14T01:30:20Z",
+      "dt_ultima_visao": "2026-10-14T06:40:20Z",
       "persistencia_dias": 23,
       "area_total_evento": 613.2734579190163,
       "latitude": -11.683652140357648,
@@ -58742,7 +58742,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-28T03:49:00Z",
       "dt_maxima": "2026-10-13T17:28:00Z",
-      "dt_ultima_visao": "2026-10-13T17:28:00Z",
+      "dt_ultima_visao": "2026-10-14T04:00:20Z",
       "persistencia_dias": 15,
       "area_total_evento": 104.40870594757632,
       "latitude": -11.200246117418263,
@@ -89422,7 +89422,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-04T15:52:00Z",
       "dt_maxima": "2026-10-13T17:28:00Z",
-      "dt_ultima_visao": "2026-10-14T01:00:20Z",
+      "dt_ultima_visao": "2026-10-14T02:10:20Z",
       "persistencia_dias": 9,
       "area_total_evento": 162.61820353166445,
       "latitude": -10.998898637867391,
@@ -151220,7 +151220,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-08T03:45:00Z",
       "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-14T01:20:20Z",
+      "dt_ultima_visao": "2026-10-14T05:10:20Z",
       "persistencia_dias": 5,
       "area_total_evento": 159.01791141865917,
       "latitude": -11.081216840965626,
@@ -151231,7 +151231,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE",
+      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -290229,7 +290229,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA FAZ REUNIDAS PAI JOÃO, PA PAI JOÃO FOAGRO",
+      "projeto_assentamento": "PA PAI JOÃO FOAGRO, PA FAZ REUNIDAS PAI JOÃO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -307075,7 +307075,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
