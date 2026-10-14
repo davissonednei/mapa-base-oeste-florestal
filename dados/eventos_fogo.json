@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-13T23:52:14.756832Z",
+  "atualizado_em": "2026-10-14T02:12:31.473495Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -14788,7 +14788,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-09-20T03:45:00Z",
       "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-13T18:26:00Z",
+      "dt_ultima_visao": "2026-10-14T01:30:20Z",
       "persistencia_dias": 23,
       "area_total_evento": 613.2734579190163,
       "latitude": -11.683652140357648,
@@ -89422,7 +89422,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-04T15:52:00Z",
       "dt_maxima": "2026-10-13T17:28:00Z",
-      "dt_ultima_visao": "2026-10-13T23:20:20Z",
+      "dt_ultima_visao": "2026-10-14T01:00:20Z",
       "persistencia_dias": 9,
       "area_total_evento": 162.61820353166445,
       "latitude": -10.998898637867391,
@@ -104236,7 +104236,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-05T04:04:00Z",
       "dt_maxima": "2026-10-13T16:43:00Z",
-      "dt_ultima_visao": "2026-10-13T16:43:00Z",
+      "dt_ultima_visao": "2026-10-14T01:00:20Z",
       "persistencia_dias": 8,
       "area_total_evento": 111.76394677463574,
       "latitude": -12.01003304797274,
@@ -123185,7 +123185,7 @@
     },
     {
       "id_evento": 7044010,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-06T16:18:00Z",
       "dt_maxima": "2026-10-12T23:54:00Z",
       "dt_ultima_visao": "2026-10-12T23:54:00Z",
@@ -137808,7 +137808,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-07T16:01:00Z",
       "dt_maxima": "2026-10-13T17:28:00Z",
-      "dt_ultima_visao": "2026-10-13T17:28:00Z",
+      "dt_ultima_visao": "2026-10-14T00:50:20Z",
       "persistencia_dias": 6,
       "area_total_evento": 72.23869386874378,
       "latitude": -11.778091477136746,
@@ -151220,7 +151220,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-08T03:45:00Z",
       "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-13T18:26:00Z",
+      "dt_ultima_visao": "2026-10-14T01:20:20Z",
       "persistencia_dias": 5,
       "area_total_evento": 159.01791141865917,
       "latitude": -11.081216840965626,
@@ -151231,7 +151231,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I",
+      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -214427,7 +214427,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MONTE DAS OLIVEIRAS, PA MUTUM",
+      "projeto_assentamento": "PA MUTUM, PA MONTE DAS OLIVEIRAS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -293711,7 +293711,7 @@
     },
     {
       "id_evento": 7076101,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T16:05:00Z",
       "dt_maxima": "2026-10-12T23:54:00Z",
       "dt_ultima_visao": "2026-10-13T19:00:20Z",
@@ -327242,7 +327242,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-13T15:48:00Z",
       "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-13T18:26:00Z",
+      "dt_ultima_visao": "2026-10-14T00:30:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 6.973047088115344,
       "latitude": -11.859882045847876,
@@ -328994,7 +328994,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-13T15:48:00Z",
       "dt_maxima": "2026-10-13T16:43:00Z",
-      "dt_ultima_visao": "2026-10-13T23:30:20Z",
+      "dt_ultima_visao": "2026-10-14T00:20:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.412526547571945,
       "latitude": -10.276886964152075,
@@ -334721,12 +334721,12 @@
       "id_evento": 7078382,
       "status_evento": "Ativo",
       "dt_minima": "2026-10-13T16:24:00Z",
-      "dt_maxima": "2026-10-13T18:26:00Z",
-      "dt_ultima_visao": "2026-10-13T18:26:00Z",
+      "dt_maxima": "2026-10-13T22:54:00Z",
+      "dt_ultima_visao": "2026-10-13T22:54:00Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.7059015684623122,
-      "latitude": -14.068272449134627,
-      "longitude": -39.492912612960716,
+      "latitude": -14.068272449134621,
+      "longitude": -39.49291261296071,
       "dominio": "Área Não Identificada",
       "pais": "BRA",
       "municipio": "Ibirapitanga - BA, Ubatã - BA",
@@ -334777,10 +334777,6 @@
         },
         "coordinates": [
           [
-            [
-              -39.496805077,
-              -14.075868426
-            ],
             [
               -39.497444917,
               -14.075532893
@@ -335084,6 +335080,10 @@
             [
               -39.496805077,
               -14.075868426
+            ],
+            [
+              -39.497444917,
+              -14.075532893
             ]
           ]
         ]
