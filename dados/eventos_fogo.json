@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-15T01:51:25.524702Z",
+  "atualizado_em": "2026-10-15T06:32:47.739514Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -112423,7 +112423,7 @@
     },
     {
       "id_evento": 7037551,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-05T04:04:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -144307,7 +144307,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE",
+      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -174460,7 +174460,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-08T17:22:00Z",
       "dt_maxima": "2026-10-14T23:33:00Z",
-      "dt_ultima_visao": "2026-10-14T23:33:00Z",
+      "dt_ultima_visao": "2026-10-15T05:10:20Z",
       "persistencia_dias": 6,
       "area_total_evento": 52.10874779088357,
       "latitude": -10.891965627550489,
@@ -178741,7 +178741,7 @@
     },
     {
       "id_evento": 7062603,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-09T04:27:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -183105,7 +183105,7 @@
     },
     {
       "id_evento": 7063174,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-09T15:58:00Z",
       "dt_maxima": "2026-10-14T03:49:00Z",
       "dt_ultima_visao": "2026-10-14T03:49:00Z",
@@ -185160,7 +185160,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-09T16:01:00Z",
       "dt_maxima": "2026-10-14T23:33:00Z",
-      "dt_ultima_visao": "2026-10-14T23:33:00Z",
+      "dt_ultima_visao": "2026-10-15T01:50:20Z",
       "persistencia_dias": 5,
       "area_total_evento": 18.440540994073036,
       "latitude": -10.997913656720987,
@@ -187153,7 +187153,7 @@
     },
     {
       "id_evento": 7063739,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-09T16:18:00Z",
       "dt_maxima": "2026-10-14T03:51:00Z",
       "dt_ultima_visao": "2026-10-14T03:51:00Z",
@@ -191831,7 +191831,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MONTE DAS OLIVEIRAS, PA MUTUM",
+      "projeto_assentamento": "PA MUTUM, PA MONTE DAS OLIVEIRAS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -217781,7 +217781,7 @@
     },
     {
       "id_evento": 7071895,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-11T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -240059,7 +240059,7 @@
     },
     {
       "id_evento": 7072950,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-11T16:26:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -242191,7 +242191,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MUTUM, PA MONTE DAS OLIVEIRAS, PA OLHO D'AGUA",
+      "projeto_assentamento": "PA MONTE DAS OLIVEIRAS, PA OLHO D'AGUA, PA MUTUM",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -246312,7 +246312,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-12T03:32:00Z",
       "dt_maxima": "2026-10-14T23:33:00Z",
-      "dt_ultima_visao": "2026-10-15T01:30:20Z",
+      "dt_ultima_visao": "2026-10-15T05:40:20Z",
       "persistencia_dias": 2,
       "area_total_evento": 32.225508364754305,
       "latitude": -10.378879132444938,
@@ -249209,7 +249209,7 @@
     },
     {
       "id_evento": 7075447,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T03:32:00Z",
       "dt_maxima": "2026-10-14T03:49:00Z",
       "dt_ultima_visao": "2026-10-14T03:49:00Z",
@@ -268589,7 +268589,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -274377,7 +274377,7 @@
     },
     {
       "id_evento": 7077487,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T15:46:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -294749,7 +294749,7 @@
     },
     {
       "id_evento": 7077816,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T15:48:00Z",
       "dt_maxima": "2026-10-14T05:10:00Z",
       "dt_ultima_visao": "2026-10-14T05:10:00Z",
@@ -308107,7 +308107,7 @@
     },
     {
       "id_evento": 7081868,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-14T05:12:00Z",
@@ -308427,7 +308427,7 @@
     },
     {
       "id_evento": 7081870,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -308747,7 +308747,7 @@
     },
     {
       "id_evento": 7081873,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:30:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -309059,7 +309059,7 @@
     },
     {
       "id_evento": 7081882,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T19:00:20Z",
@@ -309335,7 +309335,7 @@
     },
     {
       "id_evento": 7081888,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -309655,7 +309655,7 @@
     },
     {
       "id_evento": 7081891,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:32:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-14T05:12:00Z",
@@ -309669,7 +309669,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA MANGAL I, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -309979,7 +309979,7 @@
     },
     {
       "id_evento": 7081894,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-15T00:00:20Z",
@@ -310315,7 +310315,7 @@
     },
     {
       "id_evento": 7081895,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:32:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -310635,7 +310635,7 @@
     },
     {
       "id_evento": 7081897,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -310923,7 +310923,7 @@
     },
     {
       "id_evento": 7081898,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -311195,7 +311195,7 @@
     },
     {
       "id_evento": 7081900,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:49:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -311515,7 +311515,7 @@
     },
     {
       "id_evento": 7081907,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:51:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-14T05:12:00Z",
@@ -311847,7 +311847,7 @@
     },
     {
       "id_evento": 7081908,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:32:00Z",
       "dt_maxima": "2026-10-14T04:34:00Z",
       "dt_ultima_visao": "2026-10-14T04:34:00Z",
@@ -312167,7 +312167,7 @@
     },
     {
       "id_evento": 7081911,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:51:00Z",
       "dt_maxima": "2026-10-14T04:36:00Z",
       "dt_ultima_visao": "2026-10-14T23:20:20Z",
@@ -312503,7 +312503,7 @@
     },
     {
       "id_evento": 7081912,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:32:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-14T15:40:20Z",
@@ -314091,7 +314091,7 @@
     },
     {
       "id_evento": 7082218,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:32:00Z",
       "dt_maxima": "2026-10-14T05:12:00Z",
       "dt_ultima_visao": "2026-10-14T05:12:00Z",
@@ -314427,7 +314427,7 @@
     },
     {
       "id_evento": 7082244,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T04:36:00Z",
       "dt_maxima": "2026-10-14T04:36:00Z",
       "dt_ultima_visao": "2026-10-14T04:36:00Z",
@@ -348467,7 +348467,7 @@
       "pais": "BRA",
       "municipio": "Caravelas - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA EXTRATIVISTA DE CASSURUBÁ, ÁREA DE PROTEÇÃO AMBIENTAL PONTA DA BALEIA / ABROLHOS",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL PONTA DA BALEIA / ABROLHOS, RESERVA EXTRATIVISTA DE CASSURUBÁ",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
