@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-15T22:41:59.471645Z",
+  "atualizado_em": "2026-10-16T00:44:58.973417Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -136689,7 +136689,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE",
+      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -205405,7 +205405,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MUTUM, PA MONTE DAS OLIVEIRAS, PA OLHO D'AGUA",
+      "projeto_assentamento": "PA MUTUM, PA OLHO D'AGUA, PA MONTE DAS OLIVEIRAS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -213185,7 +213185,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA PAI JOÃO FOAGRO, PA FAZ REUNIDAS PAI JOÃO",
+      "projeto_assentamento": "PA FAZ REUNIDAS PAI JOÃO, PA PAI JOÃO FOAGRO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -280649,7 +280649,7 @@
     },
     {
       "id_evento": 7081924,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:51:00Z",
       "dt_maxima": "2026-10-14T23:31:00Z",
       "dt_ultima_visao": "2026-10-14T23:31:00Z",
@@ -318795,7 +318795,7 @@
     },
     {
       "id_evento": 7083054,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T16:03:00Z",
       "dt_maxima": "2026-10-14T23:31:00Z",
       "dt_ultima_visao": "2026-10-15T13:50:20Z",
@@ -353818,7 +353818,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-15T15:46:00Z",
       "dt_maxima": "2026-10-15T18:04:00Z",
-      "dt_ultima_visao": "2026-10-15T18:04:00Z",
+      "dt_ultima_visao": "2026-10-16T00:30:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 15.080851404384838,
       "latitude": -15.288029863537668,
@@ -355902,7 +355902,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-15T15:46:00Z",
       "dt_maxima": "2026-10-15T16:50:00Z",
-      "dt_ultima_visao": "2026-10-15T22:20:20Z",
+      "dt_ultima_visao": "2026-10-16T00:00:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.4048094407692728,
       "latitude": -14.858238484879948,
