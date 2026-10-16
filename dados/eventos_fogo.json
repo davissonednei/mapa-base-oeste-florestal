@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-16T00:44:58.973417Z",
+  "atualizado_em": "2026-10-16T05:02:30.594976Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -62987,7 +62987,7 @@
     },
     {
       "id_evento": 7008534,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-28T03:49:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T15:50:20Z",
@@ -72443,7 +72443,7 @@
     },
     {
       "id_evento": 7009457,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-28T16:03:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -79309,7 +79309,7 @@
     },
     {
       "id_evento": 7014299,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-09-29T03:32:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -106479,7 +106479,7 @@
     },
     {
       "id_evento": 7035069,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-04T15:52:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -115523,7 +115523,7 @@
     },
     {
       "id_evento": 7037551,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-05T04:04:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -136689,7 +136689,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I",
+      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -169735,7 +169735,7 @@
     },
     {
       "id_evento": 7063419,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-09T16:01:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -185715,7 +185715,7 @@
     },
     {
       "id_evento": 7068491,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-10T16:01:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -190087,7 +190087,7 @@
     },
     {
       "id_evento": 7071861,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-11T03:49:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -205405,7 +205405,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MUTUM, PA OLHO D'AGUA, PA MONTE DAS OLIVEIRAS",
+      "projeto_assentamento": "PA OLHO D'AGUA, PA MUTUM, PA MONTE DAS OLIVEIRAS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -233631,7 +233631,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -239419,7 +239419,7 @@
     },
     {
       "id_evento": 7077487,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T15:46:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -248269,7 +248269,7 @@
     },
     {
       "id_evento": 7077556,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T15:46:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -256773,7 +256773,7 @@
     },
     {
       "id_evento": 7077772,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T15:48:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -267207,7 +267207,7 @@
     },
     {
       "id_evento": 7078312,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-13T16:24:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -279881,7 +279881,7 @@
     },
     {
       "id_evento": 7081911,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T03:51:00Z",
       "dt_maxima": "2026-10-15T04:53:00Z",
       "dt_ultima_visao": "2026-10-15T04:53:00Z",
@@ -284945,7 +284945,7 @@
     },
     {
       "id_evento": 7082724,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T15:29:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -305559,7 +305559,7 @@
     },
     {
       "id_evento": 7082873,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T15:29:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -306079,7 +306079,7 @@
     },
     {
       "id_evento": 7082874,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T15:29:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -310371,7 +310371,7 @@
     },
     {
       "id_evento": 7082895,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T15:29:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -311611,7 +311611,7 @@
     },
     {
       "id_evento": 7082956,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T16:03:00Z",
       "dt_maxima": "2026-10-15T03:32:00Z",
       "dt_ultima_visao": "2026-10-15T03:32:00Z",
@@ -311623,7 +311623,7 @@
       "pais": "BRA",
       "municipio": "Taperoá - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -327639,7 +327639,7 @@
     },
     {
       "id_evento": 7084200,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T17:07:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -328259,7 +328259,7 @@
     },
     {
       "id_evento": 7084202,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T17:07:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -333073,7 +333073,7 @@
     },
     {
       "id_evento": 7086839,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -333537,7 +333537,7 @@
     },
     {
       "id_evento": 7086843,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T04:17:00Z",
       "dt_maxima": "2026-10-15T04:51:00Z",
       "dt_ultima_visao": "2026-10-15T04:51:00Z",
@@ -334325,7 +334325,7 @@
     },
     {
       "id_evento": 7086873,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:53:00Z",
       "dt_ultima_visao": "2026-10-15T04:53:00Z",
@@ -335585,7 +335585,7 @@
     },
     {
       "id_evento": 7086898,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -335981,7 +335981,7 @@
     },
     {
       "id_evento": 7086899,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
@@ -336313,7 +336313,7 @@
     },
     {
       "id_evento": 7086900,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
       "dt_ultima_visao": "2026-10-15T04:17:00Z",
