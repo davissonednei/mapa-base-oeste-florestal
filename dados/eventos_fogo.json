@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-16T22:58:59.360744Z",
+  "atualizado_em": "2026-10-17T01:02:08.505427Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -124829,7 +124829,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE",
+      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -154325,7 +154325,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MONTE DAS OLIVEIRAS, PA MUTUM",
+      "projeto_assentamento": "PA MUTUM, PA MONTE DAS OLIVEIRAS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -196053,7 +196053,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -241081,7 +241081,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I",
+      "projeto_assentamento": "PA MANGAL I, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -276445,7 +276445,7 @@
       "pais": "BRA",
       "municipio": "Taperoá - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -301144,7 +301144,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-15T04:17:00Z",
-      "dt_ultima_visao": "2026-10-16T21:10:20Z",
+      "dt_ultima_visao": "2026-10-17T00:20:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.68201342044438,
       "latitude": -13.516127664814025,
@@ -350902,7 +350902,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-16T15:48:00Z",
       "dt_maxima": "2026-10-16T16:33:00Z",
-      "dt_ultima_visao": "2026-10-16T22:40:20Z",
+      "dt_ultima_visao": "2026-10-16T23:30:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.0835747059097212,
       "latitude": -8.793703907006432,
