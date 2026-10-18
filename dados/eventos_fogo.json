@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-18T00:18:33.087048Z",
+  "atualizado_em": "2026-10-18T04:41:12.205647Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -121009,7 +121009,7 @@
       "terra_indigena": null,
       "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO, ÁREA DE PROTEÇÃO AMBIENTAL DO RIO PRETO",
       "quilombola": null,
-      "projeto_assentamento": "PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I",
+      "projeto_assentamento": "PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA I, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE, PA NOVA ESPLANADA CAPEFE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -165325,7 +165325,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MUTUM, PA OLHO D'AGUA, PA MONTE DAS OLIVEIRAS",
+      "projeto_assentamento": "PA MONTE DAS OLIVEIRAS, PA OLHO D'AGUA, PA MUTUM",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -171191,7 +171191,7 @@
     },
     {
       "id_evento": 7075524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T04:08:00Z",
       "dt_maxima": "2026-10-17T03:38:00Z",
       "dt_ultima_visao": "2026-10-17T03:38:00Z",
@@ -178475,7 +178475,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -241075,7 +241075,7 @@
       "pais": "BRA",
       "municipio": "Taperoá - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS",
+      "unidade_conservacao": "RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, RESERVA PARTICULAR DO PATRIMÔNIO NATURAL DAS ÁGUAS E DAS MATAS, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -249331,7 +249331,7 @@
       "pais": "BRA",
       "municipio": "Caravelas - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL PONTA DA BALEIA / ABROLHOS, RESERVA EXTRATIVISTA DE CASSURUBÁ",
+      "unidade_conservacao": "RESERVA EXTRATIVISTA DE CASSURUBÁ, ÁREA DE PROTEÇÃO AMBIENTAL PONTA DA BALEIA / ABROLHOS",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -265859,7 +265859,7 @@
     },
     {
       "id_evento": 7086898,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T03:32:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T20:10:20Z",
@@ -272663,7 +272663,7 @@
     },
     {
       "id_evento": 7087369,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T15:46:00Z",
       "dt_maxima": "2026-10-17T04:14:00Z",
       "dt_ultima_visao": "2026-10-17T04:14:00Z",
@@ -277777,7 +277777,7 @@
     },
     {
       "id_evento": 7087414,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T15:46:00Z",
       "dt_maxima": "2026-10-17T04:17:00Z",
       "dt_ultima_visao": "2026-10-17T04:17:00Z",
@@ -310933,7 +310933,7 @@
     },
     {
       "id_evento": 7092149,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-17T04:17:00Z",
       "dt_ultima_visao": "2026-10-17T04:17:00Z",
@@ -311289,7 +311289,7 @@
     },
     {
       "id_evento": 7092152,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -324277,7 +324277,7 @@
     },
     {
       "id_evento": 7092860,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T16:33:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -324601,7 +324601,7 @@
     },
     {
       "id_evento": 7092861,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T16:33:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -327737,7 +327737,7 @@
     },
     {
       "id_evento": 7093554,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T17:07:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -328773,7 +328773,7 @@
     },
     {
       "id_evento": 7093590,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T17:07:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -330725,7 +330725,7 @@
     },
     {
       "id_evento": 7096689,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T04:14:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -331021,7 +331021,7 @@
     },
     {
       "id_evento": 7096693,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T04:17:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -331297,7 +331297,7 @@
     },
     {
       "id_evento": 7096702,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -331605,7 +331605,7 @@
     },
     {
       "id_evento": 7096707,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T04:17:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -331885,7 +331885,7 @@
     },
     {
       "id_evento": 7096708,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -332157,7 +332157,7 @@
     },
     {
       "id_evento": 7096711,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:34:00Z",
       "dt_ultima_visao": "2026-10-17T04:34:00Z",
@@ -332449,7 +332449,7 @@
     },
     {
       "id_evento": 7096720,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:36:00Z",
       "dt_ultima_visao": "2026-10-17T04:36:00Z",
@@ -332757,7 +332757,7 @@
     },
     {
       "id_evento": 7096723,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:36:00Z",
       "dt_ultima_visao": "2026-10-17T04:36:00Z",
@@ -333365,7 +333365,7 @@
     },
     {
       "id_evento": 7096828,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:14:00Z",
       "dt_ultima_visao": "2026-10-17T04:14:00Z",
@@ -333641,7 +333641,7 @@
     },
     {
       "id_evento": 7096830,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:14:00Z",
       "dt_ultima_visao": "2026-10-17T04:14:00Z",
@@ -333933,7 +333933,7 @@
     },
     {
       "id_evento": 7096842,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-17T04:17:00Z",
       "dt_ultima_visao": "2026-10-17T04:17:00Z",
