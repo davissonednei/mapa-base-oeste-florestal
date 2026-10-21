@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-21T00:11:02.056994Z",
+  "atualizado_em": "2026-10-21T04:38:50.451366Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -59201,7 +59201,7 @@
     },
     {
       "id_evento": 7075524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T04:08:00Z",
       "dt_maxima": "2026-10-20T03:38:00Z",
       "dt_ultima_visao": "2026-10-20T03:38:00Z",
@@ -60513,7 +60513,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -63490,322 +63490,6 @@
             [
               -42.858651768,
               -13.948446748
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "id_evento": 7082765,
-      "status_evento": "Em observação",
-      "dt_minima": "2026-10-14T15:29:00Z",
-      "dt_maxima": "2026-10-16T23:14:00Z",
-      "dt_ultima_visao": "2026-10-16T23:14:00Z",
-      "persistencia_dias": 2,
-      "area_total_evento": 1.441523788891037,
-      "latitude": -10.140439578697533,
-      "longitude": -39.34880429934968,
-      "dominio": "Área Não Identificada",
-      "pais": "BRA",
-      "municipio": "Uauá - BA",
-      "terra_indigena": null,
-      "unidade_conservacao": null,
-      "quilombola": null,
-      "projeto_assentamento": null,
-      "retangulo_envolvente": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -39.355541272,
-              -10.146977731
-            ],
-            [
-              -39.355541272,
-              -10.134452267
-            ],
-            [
-              -39.342298686,
-              -10.134452267
-            ],
-            [
-              -39.342298686,
-              -10.146977731
-            ],
-            [
-              -39.355541272,
-              -10.146977731
-            ]
-          ]
-        ]
-      },
-      "geom": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -39.348296173,
-              -10.146907462
-            ],
-            [
-              -39.348980922,
-              -10.146700865
-            ],
-            [
-              -39.349611832,
-              -10.146365879
-            ],
-            [
-              -39.350164658,
-              -10.145915378
-            ],
-            [
-              -39.350618155,
-              -10.145366675
-            ],
-            [
-              -39.350798358,
-              -10.145031775
-            ],
-            [
-              -39.3511462,
-              -10.144997456
-            ],
-            [
-              -39.351830942,
-              -10.144790853
-            ],
-            [
-              -39.352461846,
-              -10.144455861
-            ],
-            [
-              -39.353014664,
-              -10.144005356
-            ],
-            [
-              -39.353468153,
-              -10.143456649
-            ],
-            [
-              -39.353804886,
-              -10.142830828
-            ],
-            [
-              -39.354011922,
-              -10.142151943
-            ],
-            [
-              -39.354079188,
-              -10.141467624
-            ],
-            [
-              -39.354474652,
-              -10.141145345
-            ],
-            [
-              -39.354928134,
-              -10.140596637
-            ],
-            [
-              -39.355264861,
-              -10.139970814
-            ],
-            [
-              -39.355471892,
-              -10.139291928
-            ],
-            [
-              -39.355541272,
-              -10.138586068
-            ],
-            [
-              -39.355470336,
-              -10.13788036
-            ],
-            [
-              -39.355261811,
-              -10.137201924
-            ],
-            [
-              -39.35492371,
-              -10.136576831
-            ],
-            [
-              -39.354469028,
-              -10.136029103
-            ],
-            [
-              -39.353915238,
-              -10.135579788
-            ],
-            [
-              -39.353283621,
-              -10.135246153
-            ],
-            [
-              -39.352598449,
-              -10.135041019
-            ],
-            [
-              -39.351886053,
-              -10.134972269
-            ],
-            [
-              -39.351173809,
-              -10.135042544
-            ],
-            [
-              -39.350489086,
-              -10.135249145
-            ],
-            [
-              -39.350394469,
-              -10.135299385
-            ],
-            [
-              -39.349763657,
-              -10.134966167
-            ],
-            [
-              -39.349473587,
-              -10.134879319
-            ],
-            [
-              -39.349183662,
-              -10.134726169
-            ],
-            [
-              -39.348498494,
-              -10.134521026
-            ],
-            [
-              -39.347786099,
-              -10.134452267
-            ],
-            [
-              -39.347073855,
-              -10.134522534
-            ],
-            [
-              -39.346389131,
-              -10.134729126
-            ],
-            [
-              -39.345758239,
-              -10.135064106
-            ],
-            [
-              -39.345205425,
-              -10.135514599
-            ],
-            [
-              -39.344751932,
-              -10.136063295
-            ],
-            [
-              -39.344415188,
-              -10.136689107
-            ],
-            [
-              -39.344208135,
-              -10.137367987
-            ],
-            [
-              -39.34413873,
-              -10.138073845
-            ],
-            [
-              -39.344209624,
-              -10.13877938
-            ],
-            [
-              -39.34391823,
-              -10.138934095
-            ],
-            [
-              -39.343365407,
-              -10.139384586
-            ],
-            [
-              -39.342911906,
-              -10.139933279
-            ],
-            [
-              -39.342575155,
-              -10.14055909
-            ],
-            [
-              -39.342368095,
-              -10.141237968
-            ],
-            [
-              -39.342298686,
-              -10.141943826
-            ],
-            [
-              -39.342369594,
-              -10.142649538
-            ],
-            [
-              -39.342578097,
-              -10.143327983
-            ],
-            [
-              -39.342916181,
-              -10.143953089
-            ],
-            [
-              -39.343370856,
-              -10.144500833
-            ],
-            [
-              -39.343924648,
-              -10.144950166
-            ],
-            [
-              -39.344474535,
-              -10.145240639
-            ],
-            [
-              -39.344546179,
-              -10.145373104
-            ],
-            [
-              -39.345000859,
-              -10.145920846
-            ],
-            [
-              -39.345554655,
-              -10.146370175
-            ],
-            [
-              -39.346186287,
-              -10.146703824
-            ],
-            [
-              -39.34687148,
-              -10.146908971
-            ],
-            [
-              -39.347583902,
-              -10.146977731
-            ],
-            [
-              -39.348296173,
-              -10.146907462
             ]
           ]
         ]
@@ -71849,7 +71533,7 @@
     },
     {
       "id_evento": 7091960,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T03:55:00Z",
       "dt_maxima": "2026-10-20T04:21:00Z",
       "dt_ultima_visao": "2026-10-20T04:21:00Z",
@@ -102476,7 +102160,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-18T15:52:00Z",
       "dt_maxima": "2026-10-18T16:30:00Z",
-      "dt_ultima_visao": "2026-10-18T16:30:00Z",
+      "dt_ultima_visao": "2026-10-21T04:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2007265932747246,
       "latitude": -13.179317313286862,
@@ -107225,7 +106909,7 @@
     },
     {
       "id_evento": 7102851,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-19T15:33:00Z",
       "dt_maxima": "2026-10-20T04:21:00Z",
       "dt_ultima_visao": "2026-10-20T04:21:00Z",
@@ -107857,7 +107541,7 @@
       "pais": "BRA",
       "municipio": "Cocos - BA, Januária - MG",
       "terra_indigena": null,
-      "unidade_conservacao": "PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS",
+      "unidade_conservacao": "PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -110877,7 +110561,7 @@
     },
     {
       "id_evento": 7106008,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T03:38:00Z",
       "dt_maxima": "2026-10-20T03:38:00Z",
       "dt_ultima_visao": "2026-10-20T03:38:00Z",
