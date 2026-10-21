@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-21T14:37:01.699888Z",
+  "atualizado_em": "2026-10-21T18:52:12.592932Z",
   "eventos": [
     {
       "id_evento": 6951594,
@@ -66845,7 +66845,7 @@
     },
     {
       "id_evento": 7087328,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-15T15:46:00Z",
       "dt_maxima": "2026-10-20T16:56:00Z",
       "dt_ultima_visao": "2026-10-20T16:56:00Z",
@@ -67650,322 +67650,6 @@
             [
               -42.329300599,
               -10.590007214
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "id_evento": 7087365,
-      "status_evento": "Em observação",
-      "dt_minima": "2026-10-15T15:46:00Z",
-      "dt_maxima": "2026-10-17T11:38:00Z",
-      "dt_ultima_visao": "2026-10-17T11:38:00Z",
-      "persistencia_dias": 1,
-      "area_total_evento": 1.3646668348365556,
-      "latitude": -10.171585251629086,
-      "longitude": -39.558067325990834,
-      "dominio": "Área Não Identificada",
-      "pais": "BRA",
-      "municipio": "Monte Santo - BA",
-      "terra_indigena": null,
-      "unidade_conservacao": null,
-      "quilombola": null,
-      "projeto_assentamento": null,
-      "retangulo_envolvente": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -39.565591529,
-              -10.17732762
-            ],
-            [
-              -39.565591529,
-              -10.16634238
-            ],
-            [
-              -39.551538457,
-              -10.16634238
-            ],
-            [
-              -39.551538457,
-              -10.17732762
-            ],
-            [
-              -39.565591529,
-              -10.17732762
-            ]
-          ]
-        ]
-      },
-      "geom": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -39.560931548,
-              -10.166945366
-            ],
-            [
-              -39.560246195,
-              -10.166740675
-            ],
-            [
-              -39.559533704,
-              -10.166672381
-            ],
-            [
-              -39.559328337,
-              -10.166692774
-            ],
-            [
-              -39.559181565,
-              -10.166615373
-            ],
-            [
-              -39.558496214,
-              -10.166410678
-            ],
-            [
-              -39.557783724,
-              -10.16634238
-            ],
-            [
-              -39.557071476,
-              -10.166413103
-            ],
-            [
-              -39.556386838,
-              -10.166620131
-            ],
-            [
-              -39.555756122,
-              -10.166955506
-            ],
-            [
-              -39.555203565,
-              -10.167406342
-            ],
-            [
-              -39.554885194,
-              -10.167792021
-            ],
-            [
-              -39.5544715,
-              -10.167833096
-            ],
-            [
-              -39.553786858,
-              -10.168040119
-            ],
-            [
-              -39.553156136,
-              -10.168375489
-            ],
-            [
-              -39.552603572,
-              -10.168826321
-            ],
-            [
-              -39.552150401,
-              -10.169375289
-            ],
-            [
-              -39.551814038,
-              -10.170001297
-            ],
-            [
-              -39.551607409,
-              -10.170680289
-            ],
-            [
-              -39.551538457,
-              -10.17138617
-            ],
-            [
-              -39.551609832,
-              -10.172091815
-            ],
-            [
-              -39.551759271,
-              -10.172576902
-            ],
-            [
-              -39.551627383,
-              -10.17301029
-            ],
-            [
-              -39.551558431,
-              -10.173716172
-            ],
-            [
-              -39.551629806,
-              -10.174421817
-            ],
-            [
-              -39.551838767,
-              -10.175100108
-            ],
-            [
-              -39.552177285,
-              -10.175724978
-            ],
-            [
-              -39.55263235,
-              -10.176272413
-            ],
-            [
-              -39.553186476,
-              -10.176721376
-            ],
-            [
-              -39.553818366,
-              -10.177054613
-            ],
-            [
-              -39.554503738,
-              -10.177259317
-            ],
-            [
-              -39.555216251,
-              -10.17732762
-            ],
-            [
-              -39.555928525,
-              -10.1772569
-            ],
-            [
-              -39.556613185,
-              -10.177049872
-            ],
-            [
-              -39.557243919,
-              -10.176714494
-            ],
-            [
-              -39.557659452,
-              -10.176375462
-            ],
-            [
-              -39.55778628,
-              -10.176387619
-            ],
-            [
-              -39.55849855,
-              -10.176316893
-            ],
-            [
-              -39.559183206,
-              -10.17610986
-            ],
-            [
-              -39.559813936,
-              -10.175774477
-            ],
-            [
-              -39.5603665,
-              -10.175323633
-            ],
-            [
-              -39.560819665,
-              -10.174774654
-            ],
-            [
-              -39.561110894,
-              -10.174232616
-            ],
-            [
-              -39.561233818,
-              -10.174269327
-            ],
-            [
-              -39.561946325,
-              -10.174337617
-            ],
-            [
-              -39.56265859,
-              -10.174266882
-            ],
-            [
-              -39.563343238,
-              -10.174059841
-            ],
-            [
-              -39.563973959,
-              -10.17372445
-            ],
-            [
-              -39.564526514,
-              -10.1732736
-            ],
-            [
-              -39.564979668,
-              -10.172724616
-            ],
-            [
-              -39.565316008,
-              -10.172098595
-            ],
-            [
-              -39.565522608,
-              -10.171419597
-            ],
-            [
-              -39.565591529,
-              -10.170713714
-            ],
-            [
-              -39.565520124,
-              -10.170008074
-            ],
-            [
-              -39.565311138,
-              -10.169329793
-            ],
-            [
-              -39.564972603,
-              -10.168704937
-            ],
-            [
-              -39.564517529,
-              -10.168157519
-            ],
-            [
-              -39.563963405,
-              -10.167708575
-            ],
-            [
-              -39.563331524,
-              -10.167375357
-            ],
-            [
-              -39.562646169,
-              -10.167170671
-            ],
-            [
-              -39.561933677,
-              -10.167102382
-            ],
-            [
-              -39.561340918,
-              -10.167161249
-            ],
-            [
-              -39.560931548,
-              -10.166945366
             ]
           ]
         ]
@@ -71401,7 +71085,7 @@
     },
     {
       "id_evento": 7092152,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -72184,7 +71868,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-17T17:07:00Z",
-      "dt_ultima_visao": "2026-10-17T17:07:00Z",
+      "dt_ultima_visao": "2026-10-21T18:30:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 2.660651796680514,
       "latitude": -13.504248869328196,
@@ -73237,7 +72921,7 @@
     },
     {
       "id_evento": 7092476,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T16:30:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -76641,7 +76325,7 @@
     },
     {
       "id_evento": 7096723,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -77261,7 +76945,7 @@
     },
     {
       "id_evento": 7096830,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-20T15:54:00Z",
       "dt_ultima_visao": "2026-10-20T15:54:00Z",
@@ -94217,7 +93901,7 @@
     },
     {
       "id_evento": 7098779,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T17:07:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -99069,7 +98753,7 @@
     },
     {
       "id_evento": 7100855,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-18T16:30:00Z",
       "dt_maxima": "2026-10-20T16:56:00Z",
       "dt_ultima_visao": "2026-10-20T16:56:00Z",
@@ -102829,7 +102513,7 @@
       "pais": "BRA",
       "municipio": "Cocos - BA, Januária - MG",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -103797,7 +103481,7 @@
     },
     {
       "id_evento": 7103344,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-19T16:30:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -106513,7 +106197,7 @@
     },
     {
       "id_evento": 7106460,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:16:00Z",
       "dt_maxima": "2026-10-20T16:13:00Z",
       "dt_ultima_visao": "2026-10-20T16:13:00Z",
@@ -106793,7 +106477,7 @@
     },
     {
       "id_evento": 7106487,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:16:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -107077,7 +106761,7 @@
     },
     {
       "id_evento": 7106489,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:16:00Z",
       "dt_maxima": "2026-10-20T15:52:00Z",
       "dt_ultima_visao": "2026-10-20T15:52:00Z",
@@ -107501,7 +107185,7 @@
     },
     {
       "id_evento": 7106510,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -107793,7 +107477,7 @@
     },
     {
       "id_evento": 7106524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T16:11:00Z",
       "dt_ultima_visao": "2026-10-20T16:11:00Z",
@@ -108081,7 +107765,7 @@
     },
     {
       "id_evento": 7106527,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -108405,7 +108089,7 @@
     },
     {
       "id_evento": 7106529,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T16:56:00Z",
       "dt_ultima_visao": "2026-10-20T16:56:00Z",
@@ -108705,7 +108389,7 @@
     },
     {
       "id_evento": 7106533,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-21T13:50:21Z",
@@ -109049,7 +108733,7 @@
     },
     {
       "id_evento": 7106534,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -109377,7 +109061,7 @@
     },
     {
       "id_evento": 7106602,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:54:00Z",
       "dt_maxima": "2026-10-20T16:56:00Z",
       "dt_ultima_visao": "2026-10-20T16:56:00Z",
@@ -109689,7 +109373,7 @@
     },
     {
       "id_evento": 7106763,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T16:11:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -110637,7 +110321,7 @@
     },
     {
       "id_evento": 7107452,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T16:56:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -110917,7 +110601,7 @@
     },
     {
       "id_evento": 7108477,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T17:32:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -111193,7 +110877,7 @@
     },
     {
       "id_evento": 7108479,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T17:32:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
       "dt_ultima_visao": "2026-10-20T17:32:00Z",
@@ -112370,7 +112054,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T04:04:00Z",
       "dt_maxima": "2026-10-21T04:59:00Z",
-      "dt_ultima_visao": "2026-10-21T04:59:00Z",
+      "dt_ultima_visao": "2026-10-21T18:30:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1097773912455597,
       "latitude": -11.884426508118734,
@@ -112662,7 +112346,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T04:04:00Z",
       "dt_maxima": "2026-10-21T04:40:00Z",
-      "dt_ultima_visao": "2026-10-21T13:50:21Z",
+      "dt_ultima_visao": "2026-10-21T16:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.3238255897281859,
       "latitude": -11.665455905211351,
