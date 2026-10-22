@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-21T22:00:17.517162Z",
+  "atualizado_em": "2026-10-22T00:27:34.396966Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -3958,7 +3958,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-16T03:55:00Z",
       "dt_maxima": "2026-10-21T06:25:00Z",
-      "dt_ultima_visao": "2026-10-21T06:25:00Z",
+      "dt_ultima_visao": "2026-10-21T23:40:21Z",
       "persistencia_dias": 5,
       "area_total_evento": 2.747935323095791,
       "latitude": -12.269841826400606,
@@ -18599,7 +18599,7 @@
       "pais": "BRA",
       "municipio": "Cocos - BA, Januária - MG",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO",
+      "unidade_conservacao": "PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO, PARQUE NACIONAL GRANDE SERTÃO VEREDAS, ÁREA DE PROTEÇÃO AMBIENTAL COCHÁ E GIBÃO",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -21622,7 +21622,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-20T03:38:00Z",
       "dt_maxima": "2026-10-20T03:38:00Z",
-      "dt_ultima_visao": "2026-10-21T21:40:21Z",
+      "dt_ultima_visao": "2026-10-22T00:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1024962644389174,
       "latitude": -12.460425684822875,
@@ -28880,7 +28880,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T04:04:00Z",
       "dt_maxima": "2026-10-21T18:34:00Z",
-      "dt_ultima_visao": "2026-10-21T21:40:21Z",
+      "dt_ultima_visao": "2026-10-21T22:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.2379779792914274,
       "latitude": -11.885737620725093,
@@ -32563,7 +32563,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
+      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -34576,7 +34576,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T15:52:00Z",
       "dt_maxima": "2026-10-21T17:34:00Z",
-      "dt_ultima_visao": "2026-10-21T17:34:00Z",
+      "dt_ultima_visao": "2026-10-21T22:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 3.8035690207275556,
       "latitude": -14.510587034381007,
@@ -39102,7 +39102,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T15:54:00Z",
       "dt_maxima": "2026-10-21T17:13:00Z",
-      "dt_ultima_visao": "2026-10-21T21:40:21Z",
+      "dt_ultima_visao": "2026-10-22T00:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1781827666201052,
       "latitude": -12.666770357341157,
