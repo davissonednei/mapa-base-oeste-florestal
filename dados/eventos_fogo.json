@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-23T10:11:59.587756Z",
+  "atualizado_em": "2026-10-23T15:01:47.275159Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -3586,7 +3586,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
-      "dt_ultima_visao": "2026-10-20T17:32:00Z",
+      "dt_ultima_visao": "2026-10-23T13:40:21Z",
       "persistencia_dias": 4,
       "area_total_evento": 1.8084438642590694,
       "latitude": -13.666318271710539,
@@ -35754,7 +35754,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T15:54:00Z",
       "dt_maxima": "2026-10-23T04:21:00Z",
-      "dt_ultima_visao": "2026-10-23T04:21:00Z",
+      "dt_ultima_visao": "2026-10-23T14:00:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 7.647919116810141,
       "latitude": -11.74805498664692,
@@ -39775,7 +39775,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II, PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA MANGAL II, PA VALE VERDE, PA MANGAL II, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -40629,7 +40629,7 @@
     },
     {
       "id_evento": 7110843,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T15:54:00Z",
       "dt_maxima": "2026-10-22T11:36:00Z",
       "dt_ultima_visao": "2026-10-22T11:36:00Z",
@@ -65311,7 +65311,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
+      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
