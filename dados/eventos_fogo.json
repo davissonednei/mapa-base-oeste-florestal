@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-24T13:01:42.942771Z",
+  "atualizado_em": "2026-10-24T16:28:26.767758Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -4782,7 +4782,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-20T17:32:00Z",
-      "dt_ultima_visao": "2026-10-20T17:32:00Z",
+      "dt_ultima_visao": "2026-10-24T16:10:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 1.124525656088301,
       "latitude": -14.103042767669386,
@@ -26499,7 +26499,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
+      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -29276,7 +29276,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-21T15:52:00Z",
       "dt_maxima": "2026-10-22T16:56:00Z",
-      "dt_ultima_visao": "2026-10-24T12:40:21Z",
+      "dt_ultima_visao": "2026-10-24T15:40:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 8.244632305414152,
       "latitude": -14.151499117724251,
@@ -32423,12 +32423,12 @@
       "id_evento": 7110786,
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T15:54:00Z",
-      "dt_maxima": "2026-10-24T04:04:00Z",
-      "dt_ultima_visao": "2026-10-24T12:40:21Z",
+      "dt_maxima": "2026-10-24T11:17:00Z",
+      "dt_ultima_visao": "2026-10-24T16:10:21Z",
       "persistencia_dias": 2,
-      "area_total_evento": 10.190129523165332,
-      "latitude": -11.75072217381544,
-      "longitude": -44.69491733396106,
+      "area_total_evento": 10.191469661028828,
+      "latitude": -11.750723414293995,
+      "longitude": -44.69491693916085,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Riachão das Neves - BA",
@@ -32480,20 +32480,12 @@
         "coordinates": [
           [
             [
-              -44.691743268,
-              -11.759813634
+              -44.691856721,
+              -11.760280662
             ],
             [
-              -44.692017065,
-              -11.760035534
-            ],
-            [
-              -44.692055215,
-              -11.76005568
-            ],
-            [
-              -44.692018788,
-              -11.76041606
+              -44.692038638,
+              -11.760616898
             ],
             [
               -44.692088545,
@@ -33392,8 +33384,12 @@
               -11.759822476
             ],
             [
-              -44.691743268,
-              -11.759813634
+              -44.691714359,
+              -11.759816408
+            ],
+            [
+              -44.691856721,
+              -11.760280662
             ]
           ]
         ]
@@ -40498,7 +40494,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-21T16:37:00Z",
       "dt_maxima": "2026-10-21T17:13:00Z",
-      "dt_ultima_visao": "2026-10-21T17:13:00Z",
+      "dt_ultima_visao": "2026-10-24T16:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 4.803189726109145,
       "latitude": -11.294148949894334,
@@ -72198,7 +72194,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:54:00Z",
       "dt_maxima": "2026-10-22T17:13:00Z",
-      "dt_ultima_visao": "2026-10-23T20:20:21Z",
+      "dt_ultima_visao": "2026-10-24T16:10:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2465056301284638,
       "latitude": -14.670723296011166,
@@ -73438,7 +73434,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-22T16:56:00Z",
       "dt_maxima": "2026-10-23T16:56:00Z",
-      "dt_ultima_visao": "2026-10-23T16:56:00Z",
+      "dt_ultima_visao": "2026-10-24T16:10:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 1.755208991445424,
       "latitude": -11.876995132979701,
@@ -84011,7 +84007,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -85007,7 +85003,7 @@
     },
     {
       "id_evento": 7119716,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:16:00Z",
       "dt_maxima": "2026-10-23T16:01:00Z",
       "dt_ultima_visao": "2026-10-23T16:01:00Z",
@@ -86922,7 +86918,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-23T16:56:00Z",
-      "dt_ultima_visao": "2026-10-23T16:56:00Z",
+      "dt_ultima_visao": "2026-10-24T15:30:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.4346948779274822,
       "latitude": -14.804148940587826,
@@ -88902,7 +88898,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-23T16:56:00Z",
-      "dt_ultima_visao": "2026-10-23T16:56:00Z",
+      "dt_ultima_visao": "2026-10-24T15:50:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.7110788693936847,
       "latitude": -14.573298279217617,
