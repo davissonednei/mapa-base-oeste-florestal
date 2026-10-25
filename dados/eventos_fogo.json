@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-25T14:56:43.763789Z",
+  "atualizado_em": "2026-10-25T17:59:38.935773Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -291,7 +291,7 @@
     },
     {
       "id_evento": 7076185,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T16:05:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -867,7 +867,7 @@
     },
     {
       "id_evento": 7082813,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-14T15:29:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -2559,7 +2559,7 @@
     },
     {
       "id_evento": 7092152,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-16T15:46:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -4507,7 +4507,7 @@
     },
     {
       "id_evento": 7096723,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T03:38:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -5405,7 +5405,7 @@
     },
     {
       "id_evento": 7098779,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-17T17:07:00Z",
       "dt_maxima": "2026-10-24T16:16:00Z",
       "dt_ultima_visao": "2026-10-24T16:16:00Z",
@@ -9009,7 +9009,7 @@
     },
     {
       "id_evento": 7103540,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-19T16:33:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -13617,7 +13617,7 @@
     },
     {
       "id_evento": 7106790,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T16:11:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -14277,7 +14277,7 @@
     },
     {
       "id_evento": 7106950,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T16:13:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -16813,7 +16813,7 @@
     },
     {
       "id_evento": 7110537,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T04:02:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -19763,7 +19763,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
+      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -29415,10 +29415,10 @@
     },
     {
       "id_evento": 7110838,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T15:54:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
-      "dt_ultima_visao": "2026-10-24T16:37:00Z",
+      "dt_ultima_visao": "2026-10-25T15:50:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 16.271519123765753,
       "latitude": -12.68943549047873,
@@ -31023,7 +31023,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MANGAL II, PA VALE VERDE, PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA MANGAL II, PA MANGAL II, PA VALE VERDE, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -38625,7 +38625,7 @@
     },
     {
       "id_evento": 7111356,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T16:37:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -41029,7 +41029,7 @@
     },
     {
       "id_evento": 7112162,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -42993,7 +42993,7 @@
     },
     {
       "id_evento": 7112186,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
       "dt_ultima_visao": "2026-10-24T17:22:00Z",
@@ -43007,7 +43007,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -43384,7 +43384,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
-      "dt_ultima_visao": "2026-10-25T04:27:00Z",
+      "dt_ultima_visao": "2026-10-25T17:40:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 5.451717560116993,
       "latitude": -12.047902777973533,
@@ -47473,7 +47473,7 @@
     },
     {
       "id_evento": 7112229,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -47821,7 +47821,7 @@
     },
     {
       "id_evento": 7113369,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T17:34:00Z",
       "dt_maxima": "2026-10-24T15:39:00Z",
       "dt_ultima_visao": "2026-10-24T15:39:00Z",
@@ -50649,7 +50649,7 @@
     },
     {
       "id_evento": 7114806,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T03:45:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -58581,7 +58581,7 @@
     },
     {
       "id_evento": 7115511,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T15:33:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -58873,7 +58873,7 @@
     },
     {
       "id_evento": 7115598,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -62865,7 +62865,7 @@
     },
     {
       "id_evento": 7115703,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -64115,7 +64115,7 @@
     },
     {
       "id_evento": 7115718,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -67895,7 +67895,7 @@
     },
     {
       "id_evento": 7116072,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:20:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -69501,7 +69501,7 @@
     },
     {
       "id_evento": 7116400,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:54:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -70353,7 +70353,7 @@
     },
     {
       "id_evento": 7116603,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:56:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -71321,10 +71321,10 @@
     },
     {
       "id_evento": 7116608,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:56:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
-      "dt_ultima_visao": "2026-10-24T17:22:00Z",
+      "dt_ultima_visao": "2026-10-25T15:40:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 2.240770319629681,
       "latitude": -11.878209957534633,
@@ -73617,7 +73617,7 @@
     },
     {
       "id_evento": 7116694,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:56:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -78885,7 +78885,7 @@
     },
     {
       "id_evento": 7118992,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T03:25:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -79257,7 +79257,7 @@
     },
     {
       "id_evento": 7118993,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T03:25:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -81649,7 +81649,7 @@
     },
     {
       "id_evento": 7119074,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T04:02:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -82329,7 +82329,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -84277,7 +84277,7 @@
     },
     {
       "id_evento": 7119759,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-24T16:16:00Z",
       "dt_ultima_visao": "2026-10-24T16:16:00Z",
@@ -84929,7 +84929,7 @@
     },
     {
       "id_evento": 7119762,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-24T16:16:00Z",
       "dt_ultima_visao": "2026-10-24T16:16:00Z",
@@ -86261,7 +86261,7 @@
     },
     {
       "id_evento": 7119766,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -91384,7 +91384,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T18:51:00Z",
-      "dt_ultima_visao": "2026-10-24T18:51:00Z",
+      "dt_ultima_visao": "2026-10-25T17:00:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 3.318086932742878,
       "latitude": -11.558499627044608,
@@ -91873,7 +91873,7 @@
     },
     {
       "id_evento": 7119894,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -93809,7 +93809,7 @@
     },
     {
       "id_evento": 7120027,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -95565,7 +95565,7 @@
     },
     {
       "id_evento": 7120037,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -97237,7 +97237,7 @@
     },
     {
       "id_evento": 7120070,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -98133,7 +98133,7 @@
     },
     {
       "id_evento": 7120079,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -99941,7 +99941,7 @@
     },
     {
       "id_evento": 7120439,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:35:00Z",
       "dt_maxima": "2026-10-24T17:20:00Z",
       "dt_ultima_visao": "2026-10-24T17:20:00Z",
@@ -103421,7 +103421,7 @@
     },
     {
       "id_evento": 7120494,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:35:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -107429,7 +107429,7 @@
     },
     {
       "id_evento": 7123870,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T16:18:00Z",
       "dt_ultima_visao": "2026-10-24T16:18:00Z",
@@ -111093,7 +111093,7 @@
     },
     {
       "id_evento": 7123887,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T15:39:00Z",
       "dt_ultima_visao": "2026-10-24T15:39:00Z",
@@ -111665,7 +111665,7 @@
     },
     {
       "id_evento": 7123998,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T04:04:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
       "dt_ultima_visao": "2026-10-24T17:22:00Z",
@@ -113185,10 +113185,10 @@
     },
     {
       "id_evento": 7124706,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
-      "dt_ultima_visao": "2026-10-24T17:22:00Z",
+      "dt_ultima_visao": "2026-10-25T15:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.5181745397656743,
       "latitude": -11.877976261386808,
@@ -114805,7 +114805,7 @@
     },
     {
       "id_evento": 7124722,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -115081,7 +115081,7 @@
     },
     {
       "id_evento": 7124729,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -115373,7 +115373,7 @@
     },
     {
       "id_evento": 7124738,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:18:00Z",
       "dt_ultima_visao": "2026-10-24T16:18:00Z",
@@ -115725,7 +115725,7 @@
     },
     {
       "id_evento": 7124740,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:18:00Z",
       "dt_ultima_visao": "2026-10-24T16:18:00Z",
@@ -116025,7 +116025,7 @@
     },
     {
       "id_evento": 7124748,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:18:00Z",
       "dt_ultima_visao": "2026-10-24T16:18:00Z",
@@ -116039,7 +116039,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA TALISMÃ, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA VALE VERDE, PA TALISMÃ, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -116373,7 +116373,7 @@
     },
     {
       "id_evento": 7124750,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
       "dt_ultima_visao": "2026-10-24T17:22:00Z",
@@ -116701,7 +116701,7 @@
     },
     {
       "id_evento": 7124752,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -116989,7 +116989,7 @@
     },
     {
       "id_evento": 7124753,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -117717,7 +117717,7 @@
     },
     {
       "id_evento": 7124756,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -118093,7 +118093,7 @@
     },
     {
       "id_evento": 7124759,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -118681,7 +118681,7 @@
     },
     {
       "id_evento": 7124774,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -119053,7 +119053,7 @@
     },
     {
       "id_evento": 7124775,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -119361,7 +119361,7 @@
     },
     {
       "id_evento": 7124781,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T15:39:00Z",
       "dt_ultima_visao": "2026-10-24T15:39:00Z",
@@ -119645,7 +119645,7 @@
     },
     {
       "id_evento": 7124785,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -119949,7 +119949,7 @@
     },
     {
       "id_evento": 7124786,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -120237,7 +120237,7 @@
     },
     {
       "id_evento": 7124793,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -120529,7 +120529,7 @@
     },
     {
       "id_evento": 7124797,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:39:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -120897,7 +120897,7 @@
     },
     {
       "id_evento": 7124923,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -121177,7 +121177,7 @@
     },
     {
       "id_evento": 7124955,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -121465,7 +121465,7 @@
     },
     {
       "id_evento": 7124960,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -121745,7 +121745,7 @@
     },
     {
       "id_evento": 7124963,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -122041,7 +122041,7 @@
     },
     {
       "id_evento": 7124965,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -122329,7 +122329,7 @@
     },
     {
       "id_evento": 7124966,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -122777,7 +122777,7 @@
     },
     {
       "id_evento": 7124988,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T15:41:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -123089,7 +123089,7 @@
     },
     {
       "id_evento": 7125070,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:16:00Z",
       "dt_ultima_visao": "2026-10-24T16:16:00Z",
@@ -123773,7 +123773,7 @@
     },
     {
       "id_evento": 7125080,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -124053,7 +124053,7 @@
     },
     {
       "id_evento": 7125081,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -124345,7 +124345,7 @@
     },
     {
       "id_evento": 7125087,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -124657,10 +124657,10 @@
     },
     {
       "id_evento": 7125088,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
-      "dt_ultima_visao": "2026-10-24T16:35:00Z",
+      "dt_ultima_visao": "2026-10-25T15:50:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.069737716130686,
       "latitude": -14.523398104812726,
@@ -124933,7 +124933,7 @@
     },
     {
       "id_evento": 7125095,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:16:00Z",
       "dt_maxima": "2026-10-24T16:35:00Z",
       "dt_ultima_visao": "2026-10-24T16:35:00Z",
@@ -125208,7 +125208,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-25T03:45:00Z",
-      "dt_ultima_visao": "2026-10-25T03:45:00Z",
+      "dt_ultima_visao": "2026-10-25T15:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2917138473029266,
       "latitude": -12.67853756657094,
@@ -125929,7 +125929,7 @@
     },
     {
       "id_evento": 7125279,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-24T17:22:00Z",
       "dt_ultima_visao": "2026-10-24T17:22:00Z",
@@ -127037,7 +127037,7 @@
     },
     {
       "id_evento": 7125292,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -127313,7 +127313,7 @@
     },
     {
       "id_evento": 7125301,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -127597,7 +127597,7 @@
     },
     {
       "id_evento": 7125302,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -127889,7 +127889,7 @@
     },
     {
       "id_evento": 7125320,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:18:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-25T00:00:21Z",
@@ -128265,7 +128265,7 @@
     },
     {
       "id_evento": 7125974,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:37:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -128549,7 +128549,7 @@
     },
     {
       "id_evento": 7126019,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:37:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -128841,7 +128841,7 @@
     },
     {
       "id_evento": 7126024,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:37:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-25T00:00:21Z",
@@ -129229,7 +129229,7 @@
     },
     {
       "id_evento": 7126025,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T16:37:00Z",
       "dt_maxima": "2026-10-24T16:37:00Z",
       "dt_ultima_visao": "2026-10-24T16:37:00Z",
@@ -129553,7 +129553,7 @@
     },
     {
       "id_evento": 7126669,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T17:20:00Z",
       "dt_maxima": "2026-10-24T17:20:00Z",
       "dt_ultima_visao": "2026-10-24T17:20:00Z",
@@ -131604,7 +131604,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-25T05:04:00Z",
-      "dt_ultima_visao": "2026-10-25T05:04:00Z",
+      "dt_ultima_visao": "2026-10-25T17:20:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2609958295288486,
       "latitude": -9.179887637827616,
@@ -132224,7 +132224,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
-      "dt_ultima_visao": "2026-10-25T05:06:00Z",
+      "dt_ultima_visao": "2026-10-25T15:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.10522273913247,
       "latitude": -12.59310043643802,
