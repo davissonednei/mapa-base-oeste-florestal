@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-25T11:13:31.402854Z",
+  "atualizado_em": "2026-10-25T14:56:43.763789Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -19763,7 +19763,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
+      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -22540,7 +22540,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T15:52:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
-      "dt_ultima_visao": "2026-10-25T04:27:00Z",
+      "dt_ultima_visao": "2026-10-25T14:00:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 14.63899052019221,
       "latitude": -14.161899088873971,
@@ -31023,7 +31023,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II, PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA MANGAL II, PA VALE VERDE, PA MANGAL II, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -62143,7 +62143,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
+      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -82329,7 +82329,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -116039,7 +116039,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PA TALISMÃ, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -133787,7 +133787,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RUMO NOVO, PA RESERVA OESTE",
+      "projeto_assentamento": "PA RESERVA OESTE, PA RUMO NOVO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -134076,7 +134076,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
-      "dt_ultima_visao": "2026-10-25T04:27:00Z",
+      "dt_ultima_visao": "2026-10-25T14:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1985541470246195,
       "latitude": -14.18916121000182,
@@ -134384,7 +134384,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
-      "dt_ultima_visao": "2026-10-25T05:06:00Z",
+      "dt_ultima_visao": "2026-10-25T13:50:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.626068552989372,
       "latitude": -14.567483502503517,
