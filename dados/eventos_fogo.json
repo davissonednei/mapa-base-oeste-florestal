@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-10-25T01:12:48.036715Z",
+  "atualizado_em": "2026-10-25T06:04:36.854314Z",
   "eventos": [
     {
       "id_evento": 7075524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T04:08:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -6145,7 +6145,7 @@
     },
     {
       "id_evento": 7100589,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-18T15:52:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -11165,7 +11165,7 @@
     },
     {
       "id_evento": 7106521,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-20T15:52:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -18787,7 +18787,7 @@
     },
     {
       "id_evento": 7110090,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T04:04:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -22793,7 +22793,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
+      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -34037,7 +34037,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II, PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA MANGAL II, PA MANGAL II, PA VALE VERDE, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -46398,7 +46398,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-24T23:29:00Z",
-      "dt_ultima_visao": "2026-10-24T23:29:00Z",
+      "dt_ultima_visao": "2026-10-25T03:30:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 4.153737024614619,
       "latitude": -12.045947679761916,
@@ -46935,7 +46935,7 @@
     },
     {
       "id_evento": 7112204,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T17:13:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -51423,7 +51423,7 @@
     },
     {
       "id_evento": 7114789,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T03:45:00Z",
       "dt_maxima": "2026-10-24T04:46:00Z",
       "dt_ultima_visao": "2026-10-24T04:46:00Z",
@@ -56119,7 +56119,7 @@
     },
     {
       "id_evento": 7114820,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T03:45:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -57159,7 +57159,7 @@
     },
     {
       "id_evento": 7114960,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T04:21:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -77143,7 +77143,7 @@
     },
     {
       "id_evento": 7116777,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T16:56:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -80547,7 +80547,7 @@
     },
     {
       "id_evento": 7117722,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T17:15:00Z",
       "dt_maxima": "2026-10-24T04:46:00Z",
       "dt_ultima_visao": "2026-10-24T04:46:00Z",
@@ -81027,7 +81027,7 @@
     },
     {
       "id_evento": 7118989,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T03:23:00Z",
       "dt_maxima": "2026-10-24T03:42:00Z",
       "dt_ultima_visao": "2026-10-24T03:42:00Z",
@@ -84491,7 +84491,7 @@
     },
     {
       "id_evento": 7119078,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T04:02:00Z",
       "dt_maxima": "2026-10-24T04:46:00Z",
       "dt_ultima_visao": "2026-10-24T04:46:00Z",
@@ -84827,7 +84827,7 @@
     },
     {
       "id_evento": 7119085,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T04:02:00Z",
       "dt_maxima": "2026-10-24T03:45:00Z",
       "dt_ultima_visao": "2026-10-24T03:45:00Z",
@@ -84839,7 +84839,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -85531,7 +85531,7 @@
     },
     {
       "id_evento": 7119268,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T04:21:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -100023,7 +100023,7 @@
     },
     {
       "id_evento": 7120076,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:01:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -101487,7 +101487,7 @@
     },
     {
       "id_evento": 7120369,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T16:35:00Z",
       "dt_maxima": "2026-10-24T04:46:00Z",
       "dt_ultima_visao": "2026-10-24T04:46:00Z",
@@ -109007,7 +109007,7 @@
     },
     {
       "id_evento": 7123848,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:06:00Z",
       "dt_maxima": "2026-10-24T03:06:00Z",
       "dt_ultima_visao": "2026-10-24T03:06:00Z",
@@ -109319,7 +109319,7 @@
     },
     {
       "id_evento": 7123863,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:42:00Z",
       "dt_maxima": "2026-10-24T03:42:00Z",
       "dt_ultima_visao": "2026-10-25T00:50:21Z",
@@ -110399,7 +110399,7 @@
     },
     {
       "id_evento": 7123874,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -110687,7 +110687,7 @@
     },
     {
       "id_evento": 7123875,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -110963,7 +110963,7 @@
     },
     {
       "id_evento": 7123877,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:46:00Z",
       "dt_ultima_visao": "2026-10-24T04:46:00Z",
@@ -111303,7 +111303,7 @@
     },
     {
       "id_evento": 7123879,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:04:00Z",
       "dt_ultima_visao": "2026-10-24T04:04:00Z",
@@ -111587,7 +111587,7 @@
     },
     {
       "id_evento": 7123880,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -111899,7 +111899,7 @@
     },
     {
       "id_evento": 7123882,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -112231,7 +112231,7 @@
     },
     {
       "id_evento": 7123883,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-24T04:49:00Z",
       "dt_ultima_visao": "2026-10-24T04:49:00Z",
@@ -115370,6 +115370,298 @@
       }
     },
     {
+      "id_evento": 7124708,
+      "status_evento": "Ativo",
+      "dt_minima": "2026-10-24T15:39:00Z",
+      "dt_maxima": "2026-10-24T23:29:00Z",
+      "dt_ultima_visao": "2026-10-24T23:29:00Z",
+      "persistencia_dias": 0,
+      "area_total_evento": 1.0998002818575834,
+      "latitude": -11.813941103989869,
+      "longitude": -41.32715727707319,
+      "dominio": "Área Não Identificada",
+      "pais": "BRA",
+      "municipio": "Bonito - BA, Cafarnaum - BA",
+      "terra_indigena": null,
+      "unidade_conservacao": null,
+      "quilombola": null,
+      "projeto_assentamento": null,
+      "retangulo_envolvente": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4674"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -41.332508952,
+              -11.819974395
+            ],
+            [
+              -41.332508952,
+              -11.807445596
+            ],
+            [
+              -41.322211053,
+              -11.807445596
+            ],
+            [
+              -41.322211053,
+              -11.819974395
+            ],
+            [
+              -41.332508952,
+              -11.819974395
+            ]
+          ]
+        ]
+      },
+      "geom": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4674"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -41.32887056,
+              -11.819974395
+            ],
+            [
+              -41.32958576,
+              -11.81989907
+            ],
+            [
+              -41.330272298,
+              -11.81968774
+            ],
+            [
+              -41.330903793,
+              -11.819348525
+            ],
+            [
+              -41.331455974,
+              -11.818894462
+            ],
+            [
+              -41.331907622,
+              -11.818343002
+            ],
+            [
+              -41.33224138,
+              -11.817715336
+            ],
+            [
+              -41.332444424,
+              -11.817035587
+            ],
+            [
+              -41.332508952,
+              -11.816329876
+            ],
+            [
+              -41.332432484,
+              -11.815625323
+            ],
+            [
+              -41.33221796,
+              -11.814949005
+            ],
+            [
+              -41.331873626,
+              -11.81432691
+            ],
+            [
+              -41.331412714,
+              -11.813782945
+            ],
+            [
+              -41.330852937,
+              -11.813338014
+            ],
+            [
+              -41.33038937,
+              -11.813098784
+            ],
+            [
+              -41.330386163,
+              -11.813088672
+            ],
+            [
+              -41.330408911,
+              -11.812839912
+            ],
+            [
+              -41.330332451,
+              -11.812135357
+            ],
+            [
+              -41.330117937,
+              -11.811459035
+            ],
+            [
+              -41.330059329,
+              -11.811353147
+            ],
+            [
+              -41.330088887,
+              -11.81102992
+            ],
+            [
+              -41.33001243,
+              -11.810325365
+            ],
+            [
+              -41.329797919,
+              -11.809649043
+            ],
+            [
+              -41.329453598,
+              -11.809026942
+            ],
+            [
+              -41.328992701,
+              -11.808482971
+            ],
+            [
+              -41.32843294,
+              -11.808038032
+            ],
+            [
+              -41.327795824,
+              -11.807709224
+            ],
+            [
+              -41.327105838,
+              -11.807509183
+            ],
+            [
+              -41.326389496,
+              -11.807445596
+            ],
+            [
+              -41.325674326,
+              -11.807520907
+            ],
+            [
+              -41.324987809,
+              -11.807732222
+            ],
+            [
+              -41.324356329,
+              -11.80807142
+            ],
+            [
+              -41.323804152,
+              -11.808525467
+            ],
+            [
+              -41.323352498,
+              -11.809076915
+            ],
+            [
+              -41.323018724,
+              -11.809704572
+            ],
+            [
+              -41.322815657,
+              -11.810384319
+            ],
+            [
+              -41.322751103,
+              -11.811090032
+            ],
+            [
+              -41.322827543,
+              -11.811794593
+            ],
+            [
+              -41.323036481,
+              -11.812453395
+            ],
+            [
+              -41.322812455,
+              -11.812726917
+            ],
+            [
+              -41.322478676,
+              -11.813354574
+            ],
+            [
+              -41.322275607,
+              -11.814034321
+            ],
+            [
+              -41.322211053,
+              -11.814740035
+            ],
+            [
+              -41.322287494,
+              -11.815444595
+            ],
+            [
+              -41.322501995,
+              -11.816120926
+            ],
+            [
+              -41.322846313,
+              -11.816743035
+            ],
+            [
+              -41.323307217,
+              -11.817287016
+            ],
+            [
+              -41.323866994,
+              -11.817731963
+            ],
+            [
+              -41.324504132,
+              -11.818060776
+            ],
+            [
+              -41.325194146,
+              -11.818260818
+            ],
+            [
+              -41.325760975,
+              -11.81831113
+            ],
+            [
+              -41.325806325,
+              -11.818393066
+            ],
+            [
+              -41.326267238,
+              -11.818937041
+            ],
+            [
+              -41.326827022,
+              -11.81938198
+            ],
+            [
+              -41.327464167,
+              -11.819710784
+            ],
+            [
+              -41.328154185,
+              -11.819910819
+            ],
+            [
+              -41.32887056,
+              -11.819974395
+            ]
+          ]
+        ]
+      }
+    },
+    {
       "id_evento": 7124715,
       "status_evento": "Ativo",
       "dt_minima": "2026-10-24T15:39:00Z",
@@ -117073,7 +117365,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PA TALISMÃ, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -127432,6 +127724,282 @@
             [
               -44.957291408,
               -13.07491197
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "id_evento": 7125290,
+      "status_evento": "Ativo",
+      "dt_minima": "2026-10-24T16:18:00Z",
+      "dt_maxima": "2026-10-24T23:29:00Z",
+      "dt_ultima_visao": "2026-10-24T23:29:00Z",
+      "persistencia_dias": 0,
+      "area_total_evento": 1.0445115212215892,
+      "latitude": -14.000238061224522,
+      "longitude": -42.94772850747248,
+      "dominio": "Área Não Identificada, Privado",
+      "pais": "BRA",
+      "municipio": "Guanambi - BA, Palmas de Monte Alto - BA",
+      "terra_indigena": null,
+      "unidade_conservacao": null,
+      "quilombola": null,
+      "projeto_assentamento": null,
+      "retangulo_envolvente": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4674"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -42.952821607,
+              -14.006244461
+            ],
+            [
+              -42.952821607,
+              -13.994445531
+            ],
+            [
+              -42.942668336,
+              -13.994445531
+            ],
+            [
+              -42.942668336,
+              -14.006244461
+            ],
+            [
+              -42.952821607,
+              -14.006244461
+            ]
+          ]
+        ]
+      },
+      "geom": {
+        "type": "Polygon",
+        "crs": {
+          "type": "name",
+          "properties": {
+            "name": "EPSG:4674"
+          }
+        },
+        "coordinates": [
+          [
+            [
+              -42.952179985,
+              -14.000094108
+            ],
+            [
+              -42.952527588,
+              -13.999472102
+            ],
+            [
+              -42.952744237,
+              -13.99879583
+            ],
+            [
+              -42.952821607,
+              -13.998091281
+            ],
+            [
+              -42.952756725,
+              -13.997385531
+            ],
+            [
+              -42.952552087,
+              -13.996705701
+            ],
+            [
+              -42.952215558,
+              -13.996077918
+            ],
+            [
+              -42.951760071,
+              -13.995526305
+            ],
+            [
+              -42.951203131,
+              -13.99507206
+            ],
+            [
+              -42.950566141,
+              -13.99473264
+            ],
+            [
+              -42.949873579,
+              -13.994521087
+            ],
+            [
+              -42.949152059,
+              -13.994445531
+            ],
+            [
+              -42.948429308,
+              -13.994508874
+            ],
+            [
+              -42.947733098,
+              -13.994708683
+            ],
+            [
+              -42.947385677,
+              -13.994886252
+            ],
+            [
+              -42.946899331,
+              -13.994928873
+            ],
+            [
+              -42.94620312,
+              -13.995128677
+            ],
+            [
+              -42.945560204,
+              -13.995457269
+            ],
+            [
+              -42.944995289,
+              -13.995902021
+            ],
+            [
+              -42.944530084,
+              -13.996445842
+            ],
+            [
+              -42.944182466,
+              -13.997067835
+            ],
+            [
+              -42.943965795,
+              -13.997744096
+            ],
+            [
+              -42.943888399,
+              -13.998448639
+            ],
+            [
+              -42.943953253,
+              -13.999154387
+            ],
+            [
+              -42.944137567,
+              -13.999766777
+            ],
+            [
+              -42.943775264,
+              -14.000052004
+            ],
+            [
+              -42.943310047,
+              -14.000595822
+            ],
+            [
+              -42.942962418,
+              -14.001217811
+            ],
+            [
+              -42.942745739,
+              -14.00189407
+            ],
+            [
+              -42.942668336,
+              -14.002598611
+            ],
+            [
+              -42.942733185,
+              -14.003304359
+            ],
+            [
+              -42.942937796,
+              -14.003984194
+            ],
+            [
+              -42.943274306,
+              -14.004611988
+            ],
+            [
+              -42.943729785,
+              -14.005163616
+            ],
+            [
+              -42.94428673,
+              -14.005617879
+            ],
+            [
+              -42.944923736,
+              -14.005957318
+            ],
+            [
+              -42.945616325,
+              -14.006168889
+            ],
+            [
+              -42.946337878,
+              -14.006244461
+            ],
+            [
+              -42.947060666,
+              -14.006181129
+            ],
+            [
+              -42.947756912,
+              -14.005981326
+            ],
+            [
+              -42.948399857,
+              -14.005652733
+            ],
+            [
+              -42.948964794,
+              -14.005207975
+            ],
+            [
+              -42.94943001,
+              -14.004664147
+            ],
+            [
+              -42.949775359,
+              -14.004046208
+            ],
+            [
+              -42.949896937,
+              -14.004011317
+            ],
+            [
+              -42.950539874,
+              -14.003682717
+            ],
+            [
+              -42.951104802,
+              -14.003237953
+            ],
+            [
+              -42.951570009,
+              -14.002694119
+            ],
+            [
+              -42.951917619,
+              -14.002072115
+            ],
+            [
+              -42.952134273,
+              -14.001395844
+            ],
+            [
+              -42.952211647,
+              -14.000691296
+            ],
+            [
+              -42.952159003,
+              -14.000118636
+            ],
+            [
+              -42.952179985,
+              -14.000094108
             ]
           ]
         ]
