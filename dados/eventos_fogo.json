@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-10-26T00:42:36.819440Z",
+  "atualizado_em": "2026-10-26T05:17:28.210199Z",
   "eventos": [
     {
       "id_evento": 7075524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-12T04:08:00Z",
       "dt_maxima": "2026-10-25T03:45:00Z",
       "dt_ultima_visao": "2026-10-25T03:45:00Z",
@@ -13865,7 +13865,7 @@
     },
     {
       "id_evento": 7110093,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T04:04:00Z",
       "dt_maxima": "2026-10-25T03:47:00Z",
       "dt_ultima_visao": "2026-10-25T03:47:00Z",
@@ -15243,7 +15243,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II, PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
+      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -17309,7 +17309,7 @@
     },
     {
       "id_evento": 7110733,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-21T15:52:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T14:00:21Z",
@@ -23991,7 +23991,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II, PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II, PA VALE VERDE, PA MANGAL II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -31743,7 +31743,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -32119,11 +32119,11 @@
       "id_evento": 7112192,
       "status_evento": "Ativo",
       "dt_minima": "2026-10-21T17:13:00Z",
-      "dt_maxima": "2026-10-25T17:39:00Z",
-      "dt_ultima_visao": "2026-10-25T17:39:00Z",
+      "dt_maxima": "2026-10-26T00:09:00Z",
+      "dt_ultima_visao": "2026-10-26T00:09:00Z",
       "persistencia_dias": 4,
       "area_total_evento": 5.602424062330816,
-      "latitude": -12.048183731470838,
+      "latitude": -12.048183731470845,
       "longitude": -44.345273311823945,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
@@ -32175,10 +32175,6 @@
         },
         "coordinates": [
           [
-            [
-              -44.337680954,
-              -12.053162665
-            ],
             [
               -44.338038313,
               -12.053351763
@@ -32714,6 +32710,10 @@
             [
               -44.337680954,
               -12.053162665
+            ],
+            [
+              -44.338038313,
+              -12.053351763
             ]
           ]
         ]
@@ -38861,7 +38861,7 @@
     },
     {
       "id_evento": 7114813,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T03:45:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -41525,7 +41525,7 @@
     },
     {
       "id_evento": 7114825,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-22T03:45:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -69853,7 +69853,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -72117,7 +72117,7 @@
     },
     {
       "id_evento": 7119760,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-25T03:47:00Z",
       "dt_ultima_visao": "2026-10-25T03:47:00Z",
@@ -72833,7 +72833,7 @@
     },
     {
       "id_evento": 7119763,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-23T15:58:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -95196,7 +95196,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:42:00Z",
       "dt_maxima": "2026-10-24T03:42:00Z",
-      "dt_ultima_visao": "2026-10-25T00:50:21Z",
+      "dt_ultima_visao": "2026-10-26T02:30:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2787757809040443,
       "latitude": -9.624082444614126,
@@ -97773,7 +97773,7 @@
     },
     {
       "id_evento": 7123881,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T03:45:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -100089,7 +100089,7 @@
     },
     {
       "id_evento": 7124002,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T04:04:00Z",
       "dt_maxima": "2026-10-25T05:04:00Z",
       "dt_ultima_visao": "2026-10-25T18:00:21Z",
@@ -104419,7 +104419,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA TALISMÃ, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ",
+      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA VALE VERDE, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -118353,7 +118353,7 @@
     },
     {
       "id_evento": 7127239,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-24T17:22:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -118745,7 +118745,7 @@
     },
     {
       "id_evento": 7129635,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:23:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -119429,7 +119429,7 @@
     },
     {
       "id_evento": 7129638,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:25:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -119701,7 +119701,7 @@
     },
     {
       "id_evento": 7129683,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -120441,7 +120441,7 @@
     },
     {
       "id_evento": 7129694,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -121169,7 +121169,7 @@
     },
     {
       "id_evento": 7129701,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T04:27:00Z",
@@ -121565,7 +121565,7 @@
     },
     {
       "id_evento": 7129709,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -121981,7 +121981,7 @@
     },
     {
       "id_evento": 7129710,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -122301,7 +122301,7 @@
     },
     {
       "id_evento": 7129711,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -122601,7 +122601,7 @@
     },
     {
       "id_evento": 7129718,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T04:27:00Z",
       "dt_ultima_visao": "2026-10-25T18:50:21Z",
@@ -122909,7 +122909,7 @@
     },
     {
       "id_evento": 7129720,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:47:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T13:50:21Z",
@@ -123349,7 +123349,7 @@
     },
     {
       "id_evento": 7130005,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T04:27:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
@@ -123681,7 +123681,7 @@
     },
     {
       "id_evento": 7130022,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T04:27:00Z",
       "dt_maxima": "2026-10-25T05:06:00Z",
       "dt_ultima_visao": "2026-10-25T05:06:00Z",
