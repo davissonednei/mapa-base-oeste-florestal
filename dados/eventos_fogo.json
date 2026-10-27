@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-27T00:47:03.858975Z",
+  "atualizado_em": "2026-10-27T05:39:03.624845Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -19279,7 +19279,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -29095,7 +29095,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS, PA RIO DAS RÃS II",
+      "projeto_assentamento": "PA RIO DAS RÃS II, PAQ ESPECIAL QUILOMBOLA RIO DAS RÃS",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -42917,7 +42917,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -78445,7 +78445,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ",
+      "projeto_assentamento": "PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -94659,7 +94659,7 @@
     },
     {
       "id_evento": 7129691,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-25T03:45:00Z",
       "dt_maxima": "2026-10-26T04:46:00Z",
       "dt_ultima_visao": "2026-10-26T04:46:00Z",
@@ -96897,7 +96897,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RESERVA OESTE, PA RUMO NOVO",
+      "projeto_assentamento": "PA RUMO NOVO, PA RESERVA OESTE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -107689,7 +107689,7 @@
     },
     {
       "id_evento": 7133777,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T03:25:00Z",
       "dt_maxima": "2026-10-26T04:08:00Z",
       "dt_ultima_visao": "2026-10-26T04:08:00Z",
@@ -108025,7 +108025,7 @@
     },
     {
       "id_evento": 7133779,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T03:25:00Z",
       "dt_maxima": "2026-10-26T04:08:00Z",
       "dt_ultima_visao": "2026-10-26T04:08:00Z",
@@ -108381,7 +108381,7 @@
     },
     {
       "id_evento": 7133780,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T03:25:00Z",
       "dt_maxima": "2026-10-26T04:10:00Z",
       "dt_ultima_visao": "2026-10-26T04:10:00Z",
@@ -108697,7 +108697,7 @@
     },
     {
       "id_evento": 7133827,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T04:08:00Z",
       "dt_maxima": "2026-10-26T04:08:00Z",
       "dt_ultima_visao": "2026-10-26T04:08:00Z",
@@ -108997,7 +108997,7 @@
     },
     {
       "id_evento": 7133836,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T04:10:00Z",
       "dt_maxima": "2026-10-26T05:06:00Z",
       "dt_ultima_visao": "2026-10-26T05:06:00Z",
