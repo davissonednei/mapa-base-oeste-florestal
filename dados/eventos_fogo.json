@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-27T20:36:28.171876Z",
+  "atualizado_em": "2026-10-27T23:57:27.812584Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -13891,7 +13891,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -26017,7 +26017,7 @@
       "pais": "BRA",
       "municipio": "Valença - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM, ÁREA DE PROTEÇÃO AMBIENTAL CAMINHOS ECOLÓGICOS DA BOA ESPERANÇA, ÁREA DE PROTEÇÃO AMBIENTAL GUAIBIM",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -43869,7 +43869,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
