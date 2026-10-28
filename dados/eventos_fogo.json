@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-28T09:54:43.116464Z",
+  "atualizado_em": "2026-10-28T16:18:29.910690Z",
   "eventos": [
     {
       "id_evento": 7075524,
@@ -13895,7 +13895,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -44017,7 +44017,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA TALISMÃ, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
+      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -62493,7 +62493,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA RUMO NOVO, PA RESERVA OESTE",
+      "projeto_assentamento": "PA RESERVA OESTE, PA RUMO NOVO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -79425,7 +79425,7 @@
     },
     {
       "id_evento": 7137635,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-27T04:27:00Z",
       "dt_maxima": "2026-10-27T11:34:00Z",
       "dt_ultima_visao": "2026-10-27T11:34:00Z",
@@ -80084,7 +80084,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-27T16:24:00Z",
       "dt_maxima": "2026-10-27T17:02:00Z",
-      "dt_ultima_visao": "2026-10-27T17:02:00Z",
+      "dt_ultima_visao": "2026-10-28T15:40:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.475136831431571,
       "latitude": -12.47075401406678,
