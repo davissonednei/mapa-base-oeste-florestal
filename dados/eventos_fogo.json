@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-30T23:25:22.982417Z",
+  "atualizado_em": "2026-10-31T02:32:52.005696Z",
   "eventos": [
     {
       "id_evento": 7110090,
@@ -353,7 +353,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -11178,7 +11178,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-28T03:32:00Z",
       "dt_maxima": "2026-10-28T04:27:00Z",
-      "dt_ultima_visao": "2026-10-30T01:10:20Z",
+      "dt_ultima_visao": "2026-10-31T01:40:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.1775931872146423,
       "latitude": -9.63195556041818,
@@ -21695,7 +21695,7 @@
     },
     {
       "id_evento": 7143868,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-29T03:49:00Z",
       "dt_maxima": "2026-10-29T23:29:00Z",
       "dt_ultima_visao": "2026-10-29T23:29:00Z",
@@ -32529,7 +32529,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA BRASILANDIA, PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO",
+      "projeto_assentamento": "PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO, PA BRASILANDIA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -51925,7 +51925,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA PAI JOÃO FOAGRO, PA FAZ REUNIDAS PAI JOÃO",
+      "projeto_assentamento": "PA FAZ REUNIDAS PAI JOÃO, PA PAI JOÃO FOAGRO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
