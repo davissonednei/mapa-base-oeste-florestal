@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-10-31T21:53:16.595103Z",
+  "atualizado_em": "2026-11-01T00:28:57.756405Z",
   "eventos": [
     {
       "id_evento": 7112186,
@@ -17,7 +17,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -11722,7 +11722,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-28T16:41:00Z",
       "dt_maxima": "2026-10-30T16:05:00Z",
-      "dt_ultima_visao": "2026-10-31T21:30:20Z",
+      "dt_ultima_visao": "2026-10-31T22:20:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 1.8784577860784364,
       "latitude": -12.57266984699689,
@@ -12786,7 +12786,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-28T16:41:00Z",
       "dt_maxima": "2026-10-31T17:26:00Z",
-      "dt_ultima_visao": "2026-10-31T17:26:00Z",
+      "dt_ultima_visao": "2026-10-31T22:20:20Z",
       "persistencia_dias": 3,
       "area_total_evento": 2.2292995873480272,
       "latitude": -13.40067993960277,
@@ -20951,7 +20951,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ",
+      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -48544,7 +48544,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-30T16:05:00Z",
       "dt_maxima": "2026-10-31T17:28:00Z",
-      "dt_ultima_visao": "2026-10-31T17:28:00Z",
+      "dt_ultima_visao": "2026-11-01T00:10:20Z",
       "persistencia_dias": 1,
       "area_total_evento": 1.8606697368039335,
       "latitude": -10.995950878334547,
@@ -59104,7 +59104,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-31T03:32:00Z",
       "dt_maxima": "2026-10-31T04:51:00Z",
-      "dt_ultima_visao": "2026-10-31T21:30:20Z",
+      "dt_ultima_visao": "2026-10-31T21:50:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.561927601726915,
       "latitude": -10.870175846635522,
