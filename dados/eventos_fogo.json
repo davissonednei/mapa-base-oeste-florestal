@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-01T22:17:42.058704Z",
+  "atualizado_em": "2026-11-02T01:31:59.866911Z",
   "eventos": [
     {
       "id_evento": 7112186,
@@ -10650,7 +10650,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-10-28T16:41:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
-      "dt_ultima_visao": "2026-11-01T21:50:20Z",
+      "dt_ultima_visao": "2026-11-01T22:50:20Z",
       "persistencia_dias": 4,
       "area_total_evento": 2.2292995873480272,
       "latitude": -13.400679939602771,
@@ -18543,7 +18543,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PA TALISMÃ, PA VALE VERDE",
+      "projeto_assentamento": "PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -30519,7 +30519,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO, PA BRASILANDIA",
+      "projeto_assentamento": "PA BRASILANDIA, PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -56355,7 +56355,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II",
+      "projeto_assentamento": "PA MANGAL II, PA VALE VERDE",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -94847,7 +94847,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I, PA VALE VERDE",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA MANGAL I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -97675,7 +97675,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "JUÁ-BANDEIRA, JUÁ-BANDEIRA",
-      "projeto_assentamento": "PA CAMPO GRANDE I, PA SÃO JOSÉ/CAMPO GRANDE II",
+      "projeto_assentamento": "PA SÃO JOSÉ/CAMPO GRANDE II, PA CAMPO GRANDE I",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -97995,12 +97995,12 @@
       "id_evento": 7158478,
       "status_evento": "Ativo",
       "dt_minima": "2026-11-01T17:28:00Z",
-      "dt_maxima": "2026-11-01T17:28:00Z",
-      "dt_ultima_visao": "2026-11-01T17:28:00Z",
+      "dt_maxima": "2026-11-01T19:00:00Z",
+      "dt_ultima_visao": "2026-11-01T19:00:00Z",
       "persistencia_dias": 0,
-      "area_total_evento": 1.2164516951032671,
-      "latitude": -12.39594148489755,
-      "longitude": -44.15254426194364,
+      "area_total_evento": 1.23365622967744,
+      "latitude": -12.395968076981482,
+      "longitude": -44.15247847349813,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Tabocas do Brejo Velho - BA",
@@ -98051,6 +98051,58 @@
         },
         "coordinates": [
           [
+            [
+              -44.146928881,
+              -12.396714297
+            ],
+            [
+              -44.147136062,
+              -12.397393451
+            ],
+            [
+              -44.147474056,
+              -12.398019824
+            ],
+            [
+              -44.147929875,
+              -12.398569345
+            ],
+            [
+              -44.148486002,
+              -12.399020896
+            ],
+            [
+              -44.148531818,
+              -12.399045153
+            ],
+            [
+              -44.148696039,
+              -12.399583469
+            ],
+            [
+              -44.14903404,
+              -12.40020984
+            ],
+            [
+              -44.149489866,
+              -12.400759359
+            ],
+            [
+              -44.150046001,
+              -12.401210908
+            ],
+            [
+              -44.150681072,
+              -12.401547132
+            ],
+            [
+              -44.151370675,
+              -12.401755111
+            ],
+            [
+              -44.152088306,
+              -12.401826851
+            ],
             [
               -44.152806387,
               -12.401759596
@@ -98232,60 +98284,12 @@
               -12.396319817
             ],
             [
-              -44.147179886,
-              -12.396869339
+              -44.146912688,
+              -12.396547209
             ],
             [
-              -44.147736009,
-              -12.397320891
-            ],
-            [
-              -44.148371068,
-              -12.39765712
-            ],
-            [
-              -44.148473272,
-              -12.397687946
-            ],
-            [
-              -44.148420442,
-              -12.398198482
-            ],
-            [
-              -44.148488853,
-              -12.398904316
-            ],
-            [
-              -44.148696039,
-              -12.399583469
-            ],
-            [
-              -44.14903404,
-              -12.40020984
-            ],
-            [
-              -44.149489866,
-              -12.400759359
-            ],
-            [
-              -44.150046001,
-              -12.401210908
-            ],
-            [
-              -44.150681072,
-              -12.401547132
-            ],
-            [
-              -44.151370675,
-              -12.401755111
-            ],
-            [
-              -44.152088306,
-              -12.401826851
-            ],
-            [
-              -44.152806387,
-              -12.401759596
+              -44.146928881,
+              -12.396714297
             ]
           ]
         ]
