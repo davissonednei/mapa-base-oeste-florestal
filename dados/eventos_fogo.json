@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-02T08:06:09.222587Z",
+  "atualizado_em": "2026-11-02T18:12:37.946755Z",
   "eventos": [
     {
       "id_evento": 7112186,
@@ -17,7 +17,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE, PA VALE VERDE",
+      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -1919,7 +1919,7 @@
     },
     {
       "id_evento": 7134114,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-26T15:39:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -5711,7 +5711,7 @@
     },
     {
       "id_evento": 7138668,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-27T17:02:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -6899,7 +6899,7 @@
     },
     {
       "id_evento": 7140504,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-28T16:05:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -7702,7 +7702,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-28T16:05:00Z",
       "dt_maxima": "2026-10-30T17:07:00Z",
-      "dt_ultima_visao": "2026-10-30T17:07:00Z",
+      "dt_ultima_visao": "2026-11-02T15:20:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 3.322626353856445,
       "latitude": -11.640053235433504,
@@ -9364,366 +9364,6 @@
             [
               -43.373287241,
               -12.576495736
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      "id_evento": 7140810,
-      "status_evento": "Em observação",
-      "dt_minima": "2026-10-28T16:41:00Z",
-      "dt_maxima": "2026-10-29T11:15:00Z",
-      "dt_ultima_visao": "2026-10-29T13:10:20Z",
-      "persistencia_dias": 0,
-      "area_total_evento": 1.7665901069585523,
-      "latitude": -12.53879791387534,
-      "longitude": -43.10343581768698,
-      "dominio": "Área Não Identificada, Privado",
-      "pais": "BRA",
-      "municipio": "Paratinga - BA",
-      "terra_indigena": null,
-      "unidade_conservacao": null,
-      "quilombola": null,
-      "projeto_assentamento": null,
-      "retangulo_envolvente": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -43.110709972,
-              -12.545285225
-            ],
-            [
-              -43.110709972,
-              -12.531124776
-            ],
-            [
-              -43.096180067,
-              -12.531124776
-            ],
-            [
-              -43.096180067,
-              -12.545285225
-            ],
-            [
-              -43.110709972,
-              -12.545285225
-            ]
-          ]
-        ]
-      },
-      "geom": {
-        "type": "Polygon",
-        "crs": {
-          "type": "name",
-          "properties": {
-            "name": "EPSG:4674"
-          }
-        },
-        "coordinates": [
-          [
-            [
-              -43.10787504,
-              -12.536770083
-            ],
-            [
-              -43.10821966,
-              -12.536147453
-            ],
-            [
-              -43.108434016,
-              -12.535470736
-            ],
-            [
-              -43.108509869,
-              -12.534765937
-            ],
-            [
-              -43.108444307,
-              -12.534060143
-            ],
-            [
-              -43.10823985,
-              -12.533380476
-            ],
-            [
-              -43.107904356,
-              -12.532753055
-            ],
-            [
-              -43.107450719,
-              -12.532201993
-            ],
-            [
-              -43.106896371,
-              -12.531748464
-            ],
-            [
-              -43.106262617,
-              -12.531409898
-            ],
-            [
-              -43.105573811,
-              -12.531199304
-            ],
-            [
-              -43.104856423,
-              -12.531124776
-            ],
-            [
-              -43.104138019,
-              -12.531189177
-            ],
-            [
-              -43.103446207,
-              -12.531390032
-            ],
-            [
-              -43.102807571,
-              -12.531719623
-            ],
-            [
-              -43.102246654,
-              -12.532165284
-            ],
-            [
-              -43.101785011,
-              -12.532709889
-            ],
-            [
-              -43.101440382,
-              -12.533332509
-            ],
-            [
-              -43.10132246,
-              -12.533704755
-            ],
-            [
-              -43.101173882,
-              -12.533659327
-            ],
-            [
-              -43.100456489,
-              -12.533584786
-            ],
-            [
-              -43.099738079,
-              -12.533649174
-            ],
-            [
-              -43.099046259,
-              -12.533850017
-            ],
-            [
-              -43.098407613,
-              -12.534179595
-            ],
-            [
-              -43.097846683,
-              -12.534625245
-            ],
-            [
-              -43.097385027,
-              -12.53516984
-            ],
-            [
-              -43.097040384,
-              -12.535792453
-            ],
-            [
-              -43.096825999,
-              -12.536469157
-            ],
-            [
-              -43.096750113,
-              -12.537173947
-            ],
-            [
-              -43.096815643,
-              -12.53787974
-            ],
-            [
-              -43.096957577,
-              -12.538351637
-            ],
-            [
-              -43.096814997,
-              -12.538519829
-            ],
-            [
-              -43.096470347,
-              -12.53914244
-            ],
-            [
-              -43.096255957,
-              -12.539819143
-            ],
-            [
-              -43.096180067,
-              -12.540523932
-            ],
-            [
-              -43.096245594,
-              -12.541229725
-            ],
-            [
-              -43.096450022,
-              -12.541909397
-            ],
-            [
-              -43.096785495,
-              -12.542536829
-            ],
-            [
-              -43.097239121,
-              -12.543087909
-            ],
-            [
-              -43.09779347,
-              -12.543541458
-            ],
-            [
-              -43.098427237,
-              -12.543880047
-            ],
-            [
-              -43.099116067,
-              -12.544090662
-            ],
-            [
-              -43.099833487,
-              -12.544165211
-            ],
-            [
-              -43.100551927,
-              -12.544100827
-            ],
-            [
-              -43.101142972,
-              -12.543929247
-            ],
-            [
-              -43.101353502,
-              -12.544101491
-            ],
-            [
-              -43.101987276,
-              -12.544440072
-            ],
-            [
-              -43.102676111,
-              -12.544650679
-            ],
-            [
-              -43.103393536,
-              -12.544725218
-            ],
-            [
-              -43.104111977,
-              -12.544660824
-            ],
-            [
-              -43.10473987,
-              -12.54447854
-            ],
-            [
-              -43.104963534,
-              -12.544661524
-            ],
-            [
-              -43.105597315,
-              -12.545000097
-            ],
-            [
-              -43.106286157,
-              -12.545210696
-            ],
-            [
-              -43.107003585,
-              -12.545285225
-            ],
-            [
-              -43.107722029,
-              -12.545220822
-            ],
-            [
-              -43.108413878,
-              -12.545019961
-            ],
-            [
-              -43.109052543,
-              -12.544690361
-            ],
-            [
-              -43.109613481,
-              -12.544244689
-            ],
-            [
-              -43.110075134,
-              -12.543700072
-            ],
-            [
-              -43.110419761,
-              -12.54307744
-            ],
-            [
-              -43.11063412,
-              -12.542400721
-            ],
-            [
-              -43.110709972,
-              -12.541695921
-            ],
-            [
-              -43.110644405,
-              -12.540990126
-            ],
-            [
-              -43.110439939,
-              -12.54031046
-            ],
-            [
-              -43.110104433,
-              -12.539683041
-            ],
-            [
-              -43.10965078,
-              -12.539131979
-            ],
-            [
-              -43.109096416,
-              -12.538678453
-            ],
-            [
-              -43.108462642,
-              -12.538339889
-            ],
-            [
-              -43.107773816,
-              -12.538129299
-            ],
-            [
-              -43.107634514,
-              -12.538114828
-            ],
-            [
-              -43.10766991,
-              -12.537785955
-            ],
-            [
-              -43.107605127,
-              -12.537088508
-            ],
-            [
-              -43.10787504,
-              -12.536770083
             ]
           ]
         ]
@@ -15771,7 +15411,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA VALE VERDE, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PA VALE VERDE",
+      "projeto_assentamento": "PA VALE VERDE, PA VALE VERDE, PA TALISMÃ, PAQ QUILOMBOLA BARRO VERMELHO, PAQ QUILOMBOLA BARRO VERMELHO, PA TALISMÃ",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -23373,7 +23013,7 @@
     },
     {
       "id_evento": 7144526,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-29T16:24:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -23387,7 +23027,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA NOVA ESPERANÇA",
+      "projeto_assentamento": "PA NOVA ESPERANÇA, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -23876,7 +23516,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-29T16:24:00Z",
       "dt_maxima": "2026-10-29T16:43:00Z",
-      "dt_ultima_visao": "2026-10-30T21:00:20Z",
+      "dt_ultima_visao": "2026-11-02T13:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2395162699052793,
       "latitude": -12.460999557538452,
@@ -24789,7 +24429,7 @@
     },
     {
       "id_evento": 7145062,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-29T16:43:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -27747,7 +27387,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA BRASILANDIA, PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO",
+      "projeto_assentamento": "PA GERAIS SALINAS/CAATINGA DE N. SRA. CONCEICAO, PA BRASILANDIA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -35613,7 +35253,7 @@
     },
     {
       "id_evento": 7148030,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T16:03:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -36725,7 +36365,7 @@
     },
     {
       "id_evento": 7148035,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T16:03:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -37397,7 +37037,7 @@
     },
     {
       "id_evento": 7148037,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T16:03:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -49521,7 +49161,7 @@
     },
     {
       "id_evento": 7148447,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T16:24:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -49853,7 +49493,7 @@
     },
     {
       "id_evento": 7148459,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T16:24:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -53877,7 +53517,7 @@
     },
     {
       "id_evento": 7149293,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T17:07:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -53891,7 +53531,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": null,
-      "projeto_assentamento": "PA MANGAL II, PA VALE VERDE",
+      "projeto_assentamento": "PA VALE VERDE, PA MANGAL II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -55857,7 +55497,7 @@
     },
     {
       "id_evento": 7149323,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T17:07:00Z",
       "dt_maxima": "2026-11-01T15:45:00Z",
       "dt_ultima_visao": "2026-11-01T15:45:00Z",
@@ -61789,7 +61429,7 @@
     },
     {
       "id_evento": 7151864,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T15:46:00Z",
       "dt_maxima": "2026-11-01T15:48:00Z",
       "dt_ultima_visao": "2026-11-01T15:48:00Z",
@@ -66465,7 +66105,7 @@
     },
     {
       "id_evento": 7151912,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T15:46:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -72409,7 +72049,7 @@
     },
     {
       "id_evento": 7152126,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T16:05:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -75997,7 +75637,7 @@
     },
     {
       "id_evento": 7152217,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T16:05:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -80377,7 +80017,7 @@
     },
     {
       "id_evento": 7152987,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T16:50:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -83360,7 +83000,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-31T16:50:00Z",
       "dt_maxima": "2026-10-31T17:26:00Z",
-      "dt_ultima_visao": "2026-10-31T17:26:00Z",
+      "dt_ultima_visao": "2026-11-02T17:50:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1370752884037192,
       "latitude": -14.593629169207263,
@@ -84929,7 +84569,7 @@
     },
     {
       "id_evento": 7154290,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-31T17:26:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -88665,7 +88305,7 @@
     },
     {
       "id_evento": 7156647,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:28:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -89289,7 +88929,7 @@
     },
     {
       "id_evento": 7156648,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:28:00Z",
       "dt_maxima": "2026-11-01T15:48:00Z",
       "dt_ultima_visao": "2026-11-01T15:48:00Z",
@@ -89573,7 +89213,7 @@
     },
     {
       "id_evento": 7156669,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:28:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -89929,7 +89569,7 @@
     },
     {
       "id_evento": 7156674,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:28:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -90265,7 +89905,7 @@
     },
     {
       "id_evento": 7156731,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -90557,7 +90197,7 @@
     },
     {
       "id_evento": 7156734,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T16:32:00Z",
       "dt_ultima_visao": "2026-11-01T16:32:00Z",
@@ -90897,7 +90537,7 @@
     },
     {
       "id_evento": 7156774,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T16:32:00Z",
       "dt_ultima_visao": "2026-11-01T16:32:00Z",
@@ -91201,7 +90841,7 @@
     },
     {
       "id_evento": 7156778,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T16:32:00Z",
       "dt_ultima_visao": "2026-11-01T16:32:00Z",
@@ -91493,7 +91133,7 @@
     },
     {
       "id_evento": 7156783,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T16:30:00Z",
       "dt_ultima_visao": "2026-11-01T16:30:00Z",
@@ -91769,7 +91409,7 @@
     },
     {
       "id_evento": 7156785,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T15:48:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -92085,7 +91725,7 @@
     },
     {
       "id_evento": 7156862,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:30:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -92397,7 +92037,7 @@
     },
     {
       "id_evento": 7156863,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:30:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -92411,7 +92051,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I, PA VALE VERDE",
+      "projeto_assentamento": "PA MANGAL I, PA VALE VERDE, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -92729,7 +92369,7 @@
     },
     {
       "id_evento": 7157019,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -93025,7 +92665,7 @@
     },
     {
       "id_evento": 7157027,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T16:32:00Z",
       "dt_ultima_visao": "2026-11-01T16:32:00Z",
@@ -93317,7 +92957,7 @@
     },
     {
       "id_evento": 7157028,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T16:32:00Z",
       "dt_ultima_visao": "2026-11-01T16:32:00Z",
@@ -93645,7 +93285,7 @@
     },
     {
       "id_evento": 7157065,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -93933,7 +93573,7 @@
     },
     {
       "id_evento": 7157088,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -94241,7 +93881,7 @@
     },
     {
       "id_evento": 7157089,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T16:32:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
       "dt_ultima_visao": "2026-11-01T17:28:00Z",
@@ -95209,7 +94849,7 @@
     },
     {
       "id_evento": 7157516,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T17:09:00Z",
       "dt_maxima": "2026-11-01T17:09:00Z",
       "dt_ultima_visao": "2026-11-01T17:09:00Z",
@@ -95525,10 +95165,10 @@
     },
     {
       "id_evento": 7158477,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T17:28:00Z",
       "dt_maxima": "2026-11-01T17:28:00Z",
-      "dt_ultima_visao": "2026-11-01T17:28:00Z",
+      "dt_ultima_visao": "2026-11-02T17:50:20Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.2905025041170493,
       "latitude": -12.978264991978843,
@@ -95539,7 +95179,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "JUÁ-BANDEIRA, JUÁ-BANDEIRA",
-      "projeto_assentamento": "PA SÃO JOSÉ/CAMPO GRANDE II, PA CAMPO GRANDE I",
+      "projeto_assentamento": "PA CAMPO GRANDE I, PA SÃO JOSÉ/CAMPO GRANDE II",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
