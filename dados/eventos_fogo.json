@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-07T01:16:33.043430Z",
+  "atualizado_em": "2026-11-07T07:12:57.842726Z",
   "eventos": [
     {
       "id_evento": 7137452,
@@ -3145,7 +3145,7 @@
     },
     {
       "id_evento": 7147331,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T02:53:00Z",
       "dt_maxima": "2026-11-06T04:01:00Z",
       "dt_ultima_visao": "2026-11-06T04:01:00Z",
@@ -16767,7 +16767,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA NOVA ESPERANÇA, PA MANGAL I, PAQ QUILOMBOLA BARRO VERMELHO",
+      "projeto_assentamento": "PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I, PA NOVA ESPERANÇA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -21883,7 +21883,7 @@
     },
     {
       "id_evento": 7160544,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-02T16:11:00Z",
       "dt_maxima": "2026-11-06T04:01:00Z",
       "dt_ultima_visao": "2026-11-06T19:30:21Z",
@@ -27619,7 +27619,7 @@
     },
     {
       "id_evento": 7163090,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-03T03:19:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -48717,7 +48717,7 @@
     },
     {
       "id_evento": 7164349,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-03T16:49:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -49921,7 +49921,7 @@
     },
     {
       "id_evento": 7167144,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-04T03:55:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -55675,7 +55675,7 @@
     },
     {
       "id_evento": 7167897,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-04T15:35:00Z",
       "dt_maxima": "2026-11-06T04:01:00Z",
       "dt_ultima_visao": "2026-11-06T04:01:00Z",
@@ -58431,7 +58431,7 @@
     },
     {
       "id_evento": 7167961,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-04T15:35:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -64579,7 +64579,7 @@
       "pais": "BRA",
       "municipio": "Itacaré - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL COSTA DE ITACARÉ/ SERRA GRANDE, ÁREA DE PROTEÇÃO AMBIENTAL BAÍA DE CAMAMU",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL BAÍA DE CAMAMU, ÁREA DE PROTEÇÃO AMBIENTAL COSTA DE ITACARÉ/ SERRA GRANDE",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -69299,7 +69299,7 @@
     },
     {
       "id_evento": 7171271,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-05T03:38:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -74357,7 +74357,7 @@
     },
     {
       "id_evento": 7172463,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-05T16:56:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -75693,7 +75693,7 @@
     },
     {
       "id_evento": 7172482,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-05T16:56:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -85201,7 +85201,7 @@
     },
     {
       "id_evento": 7174368,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T03:19:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -85485,7 +85485,7 @@
     },
     {
       "id_evento": 7174541,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:01:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -86105,7 +86105,7 @@
     },
     {
       "id_evento": 7174554,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:01:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -86693,7 +86693,7 @@
     },
     {
       "id_evento": 7174578,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:04:00Z",
       "dt_maxima": "2026-11-06T04:04:00Z",
       "dt_ultima_visao": "2026-11-06T04:04:00Z",
@@ -87033,7 +87033,7 @@
     },
     {
       "id_evento": 7174584,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:04:00Z",
       "dt_maxima": "2026-11-06T04:59:00Z",
       "dt_ultima_visao": "2026-11-06T04:59:00Z",
@@ -87357,7 +87357,7 @@
     },
     {
       "id_evento": 7174587,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:04:00Z",
       "dt_maxima": "2026-11-06T06:39:00Z",
       "dt_ultima_visao": "2026-11-06T06:39:00Z",
