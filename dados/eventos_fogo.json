@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-07T22:07:54.787056Z",
+  "atualizado_em": "2026-11-08T01:21:15.866009Z",
   "eventos": [
     {
       "id_evento": 7137452,
@@ -2305,7 +2305,7 @@
     },
     {
       "id_evento": 7147542,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T04:34:00Z",
       "dt_maxima": "2026-11-06T23:48:00Z",
       "dt_ultima_visao": "2026-11-06T23:48:00Z",
@@ -6068,7 +6068,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-10-31T04:17:00Z",
       "dt_maxima": "2026-11-03T23:26:00Z",
-      "dt_ultima_visao": "2026-11-07T21:50:21Z",
+      "dt_ultima_visao": "2026-11-08T00:50:21Z",
       "persistencia_dias": 3,
       "area_total_evento": 1.1444767022484266,
       "latitude": -12.033457693951897,
@@ -11113,7 +11113,7 @@
     },
     {
       "id_evento": 7155971,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-01T03:55:00Z",
       "dt_maxima": "2026-11-06T23:48:00Z",
       "dt_ultima_visao": "2026-11-06T23:48:00Z",
@@ -11839,7 +11839,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA NOVA ESPERANÇA, PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I",
+      "projeto_assentamento": "PA NOVA ESPERANÇA, PA MANGAL I, PAQ QUILOMBOLA BARRO VERMELHO",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -14854,7 +14854,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-11-02T16:11:00Z",
       "dt_maxima": "2026-11-07T17:15:00Z",
-      "dt_ultima_visao": "2026-11-07T21:50:21Z",
+      "dt_ultima_visao": "2026-11-07T23:10:21Z",
       "persistencia_dias": 5,
       "area_total_evento": 3.0284183613739333,
       "latitude": -11.11491622134994,
@@ -20527,7 +20527,7 @@
     },
     {
       "id_evento": 7163184,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-03T04:16:00Z",
       "dt_maxima": "2026-11-06T23:48:00Z",
       "dt_ultima_visao": "2026-11-06T23:48:00Z",
@@ -35946,7 +35946,7 @@
       "status_evento": "Em observação",
       "dt_minima": "2026-11-04T03:57:00Z",
       "dt_maxima": "2026-11-04T03:57:00Z",
-      "dt_ultima_visao": "2026-11-04T03:57:00Z",
+      "dt_ultima_visao": "2026-11-07T22:30:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 3.196123008525987,
       "latitude": -17.66449080001721,
@@ -47379,7 +47379,7 @@
       "pais": "BRA",
       "municipio": "Itacaré - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL COSTA DE ITACARÉ/ SERRA GRANDE, ÁREA DE PROTEÇÃO AMBIENTAL BAÍA DE CAMAMU",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL BAÍA DE CAMAMU, ÁREA DE PROTEÇÃO AMBIENTAL COSTA DE ITACARÉ/ SERRA GRANDE",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -55226,7 +55226,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-11-05T04:23:00Z",
       "dt_maxima": "2026-11-07T04:42:00Z",
-      "dt_ultima_visao": "2026-11-07T21:50:21Z",
+      "dt_ultima_visao": "2026-11-08T01:00:21Z",
       "persistencia_dias": 2,
       "area_total_evento": 3.2962291519670694,
       "latitude": -12.020079287356848,
@@ -60064,7 +60064,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-11-05T16:56:00Z",
       "dt_maxima": "2026-11-07T04:40:00Z",
-      "dt_ultima_visao": "2026-11-07T21:50:21Z",
+      "dt_ultima_visao": "2026-11-07T23:10:21Z",
       "persistencia_dias": 1,
       "area_total_evento": 2.3796036706615036,
       "latitude": -11.129514374194356,
@@ -71701,7 +71701,7 @@
     },
     {
       "id_evento": 7174577,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T04:04:00Z",
       "dt_maxima": "2026-11-06T23:48:00Z",
       "dt_ultima_visao": "2026-11-06T23:48:00Z",
@@ -97142,7 +97142,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-11-07T16:17:00Z",
       "dt_maxima": "2026-11-07T17:15:00Z",
-      "dt_ultima_visao": "2026-11-07T21:10:21Z",
+      "dt_ultima_visao": "2026-11-08T00:00:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 2.38482671246905,
       "latitude": -12.684963404014644,
@@ -98956,7 +98956,7 @@
       "status_evento": "Ativo",
       "dt_minima": "2026-11-07T16:17:00Z",
       "dt_maxima": "2026-11-07T17:13:00Z",
-      "dt_ultima_visao": "2026-11-07T17:13:00Z",
+      "dt_ultima_visao": "2026-11-07T23:40:21Z",
       "persistencia_dias": 0,
       "area_total_evento": 1.1112122250831342,
       "latitude": -13.852190983992188,
