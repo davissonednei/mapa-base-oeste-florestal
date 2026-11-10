@@ -1,9 +1,9 @@
 {
-  "atualizado_em": "2026-11-10T09:20:46.851677Z",
+  "atualizado_em": "2026-11-10T17:08:04.572228Z",
   "eventos": [
     {
       "id_evento": 7143851,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-29T03:49:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -1493,12 +1493,12 @@
       "id_evento": 7147331,
       "status_evento": "Ativo",
       "dt_minima": "2026-10-30T02:53:00Z",
-      "dt_maxima": "2026-11-10T03:44:00Z",
-      "dt_ultima_visao": "2026-11-10T03:44:00Z",
+      "dt_maxima": "2026-11-10T04:27:00Z",
+      "dt_ultima_visao": "2026-11-10T04:27:00Z",
       "persistencia_dias": 11,
-      "area_total_evento": 1.7382136410063902,
-      "latitude": -12.349249367548918,
-      "longitude": -38.196791057092945,
+      "area_total_evento": 1.7382189836209594,
+      "latitude": -12.34924938480971,
+      "longitude": -38.19679104350588,
       "dominio": "Área Não Identificada, Privado",
       "pais": "BRA",
       "municipio": "Pojuca - BA",
@@ -1550,64 +1550,12 @@
         "coordinates": [
           [
             [
-              -38.19049726,
-              -12.348401486
+              -38.192361878,
+              -12.354867411
             ],
             [
-              -38.190354505,
-              -12.348662164
-            ],
-            [
-              -38.190276461,
-              -12.348724746
-            ],
-            [
-              -38.189817256,
-              -12.349271479
-            ],
-            [
-              -38.189475364,
-              -12.349895782
-            ],
-            [
-              -38.189263923,
-              -12.350573664
-            ],
-            [
-              -38.189191061,
-              -12.351279076
-            ],
-            [
-              -38.189259578,
-              -12.351984908
-            ],
-            [
-              -38.189466843,
-              -12.352664036
-            ],
-            [
-              -38.189804891,
-              -12.353290361
-            ],
-            [
-              -38.190260732,
-              -12.353839814
-            ],
-            [
-              -38.190816848,
-              -12.354291279
-            ],
-            [
-              -38.191451869,
-              -12.354627405
-            ],
-            [
-              -38.19214139,
-              -12.354835276
-            ],
-            [
-              -38.19237582,
-              -12.354858677
+              -38.192401169,
+              -12.354879255
             ],
             [
               -38.192526861,
@@ -1844,6 +1792,66 @@
             [
               -38.19049726,
               -12.348401486
+            ],
+            [
+              -38.190354505,
+              -12.348662164
+            ],
+            [
+              -38.190276461,
+              -12.348724746
+            ],
+            [
+              -38.189817256,
+              -12.349271479
+            ],
+            [
+              -38.189475364,
+              -12.349895782
+            ],
+            [
+              -38.189263923,
+              -12.350573664
+            ],
+            [
+              -38.189191061,
+              -12.351279076
+            ],
+            [
+              -38.189259578,
+              -12.351984908
+            ],
+            [
+              -38.189466843,
+              -12.352664036
+            ],
+            [
+              -38.189804891,
+              -12.353290361
+            ],
+            [
+              -38.190260732,
+              -12.353839814
+            ],
+            [
+              -38.190816848,
+              -12.354291279
+            ],
+            [
+              -38.191451869,
+              -12.354627405
+            ],
+            [
+              -38.19214139,
+              -12.354835276
+            ],
+            [
+              -38.192338304,
+              -12.354854932
+            ],
+            [
+              -38.192361878,
+              -12.354867411
             ]
           ]
         ]
@@ -4529,7 +4537,7 @@
       "terra_indigena": null,
       "unidade_conservacao": null,
       "quilombola": "MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO, MANGAL E BARRO VERMELHO",
-      "projeto_assentamento": "PA NOVA ESPERANÇA, PAQ QUILOMBOLA BARRO VERMELHO, PA MANGAL I",
+      "projeto_assentamento": "PA MANGAL I, PAQ QUILOMBOLA BARRO VERMELHO, PA NOVA ESPERANÇA",
       "retangulo_envolvente": {
         "type": "Polygon",
         "crs": {
@@ -12405,7 +12413,7 @@
     },
     {
       "id_evento": 7164309,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-03T16:49:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -18441,7 +18449,7 @@
     },
     {
       "id_evento": 7168653,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-04T16:32:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -21397,7 +21405,7 @@
     },
     {
       "id_evento": 7172224,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-05T15:16:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -29009,7 +29017,7 @@
     },
     {
       "id_evento": 7175178,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T15:52:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -40953,7 +40961,7 @@
     },
     {
       "id_evento": 7176104,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-06T16:37:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -52315,7 +52323,7 @@
       "pais": "BRA",
       "municipio": "Xique-Xique - BA",
       "terra_indigena": null,
-      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL LAGOA DE ITAPARICA, ÁREA DE PROTEÇÃO AMBIENTAL DUNAS E VEREDAS DO BAIXO MÉDIO SÃO FRANCISCO",
+      "unidade_conservacao": "ÁREA DE PROTEÇÃO AMBIENTAL DUNAS E VEREDAS DO BAIXO MÉDIO SÃO FRANCISCO, ÁREA DE PROTEÇÃO AMBIENTAL LAGOA DE ITAPARICA",
       "quilombola": null,
       "projeto_assentamento": null,
       "retangulo_envolvente": {
@@ -62415,7 +62423,7 @@
     },
     {
       "id_evento": 7181053,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-07T17:15:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -67097,7 +67105,7 @@
     },
     {
       "id_evento": 7183535,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-08T04:23:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -68653,7 +68661,7 @@
     },
     {
       "id_evento": 7184093,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-08T16:00:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -70013,7 +70021,7 @@
     },
     {
       "id_evento": 7184145,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-08T16:00:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -73989,7 +73997,7 @@
     },
     {
       "id_evento": 7187358,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -74269,7 +74277,7 @@
     },
     {
       "id_evento": 7187462,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -74609,7 +74617,7 @@
     },
     {
       "id_evento": 7187471,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -75121,7 +75129,7 @@
     },
     {
       "id_evento": 7187479,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -75761,7 +75769,7 @@
     },
     {
       "id_evento": 7187498,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -76101,7 +76109,7 @@
     },
     {
       "id_evento": 7187524,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
@@ -76417,7 +76425,7 @@
     },
     {
       "id_evento": 7187530,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-09T16:39:00Z",
       "dt_maxima": "2026-11-09T16:39:00Z",
       "dt_ultima_visao": "2026-11-09T16:39:00Z",
