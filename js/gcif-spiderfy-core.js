@@ -46,7 +46,6 @@
   `;
   document.head.appendChild(style);
 
-  const BASE_OESTE_EXATA = L.latLng(-12.150803, -44.998157);
   const EVENTOS_CACHE_URL = "dados/eventos_fogo.json";
   const LIMITE_MIN_HORAS_CENSIPAM = 12;
   const LIMITE_MAX_HORAS_CENSIPAM = 24;
@@ -140,7 +139,7 @@
 
   function prepararSidebar(){
     const titulos=[...document.querySelectorAll(".section-title")];
-    const tituloMunicipios=titulos.find(el=>el.textContent.includes("Municípios da área Oeste"));
+    const tituloMunicipios=titulos.find(el=>el.textContent.includes("Municípios do Sudoeste"));
     const listaMunicipios=document.getElementById("munList");
     configurarAccordion(tituloMunicipios,listaMunicipios);
 
@@ -333,20 +332,6 @@
       iconSize:[46,46],iconAnchor:[23,52],popupAnchor:[0,-52]
     });
   };
-
-  function aplicarBaseOesteExata(){
-    baseOesteCoord = {lat:BASE_OESTE_EXATA.lat,lng:BASE_OESTE_EXATA.lng};
-    const oeste = BASES.find(b => b.id === "oeste");
-    if(oeste){oeste.lat=BASE_OESTE_EXATA.lat;oeste.lng=BASE_OESTE_EXATA.lng}
-    for(const layer of baseLayer.getLayers()){
-      const popup = layer.getPopup?.();
-      const content = popup?.getContent?.();
-      if(typeof content === "string" && content.includes("Base Oeste")){
-        layer.setLatLng(BASE_OESTE_EXATA);
-        break;
-      }
-    }
-  }
 
   function collapseSpider(){
     if(!spiderState) return;
@@ -687,11 +672,10 @@
     }
   });
 
-  // Garante a coordenada real da Base Oeste e a nova renderização após o GeoJSON carregar.
+  // Mantém o desenho das guarnições depois do carregamento da área Sudoeste.
   const waitForMap = setInterval(() => {
     if(!mapReady) return;
     clearInterval(waitForMap);
-    aplicarBaseOesteExata();
     renderGCIFs();
   },250);
 })();

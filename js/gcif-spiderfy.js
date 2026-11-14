@@ -1,4 +1,4 @@
-/* Compatibilidade operacional + campo de atuação oficial da Base Oeste + busca por ID de evento. */
+/* Compatibilidade operacional + recorte geográfico estimado da Base Sudoeste + busca por ID de evento. */
 (() => {
   /* Ponte temporária para manter o histórico consolidado antigo e usar um arquivo diário pequeno na operação atual. */
   (() => {
@@ -34,36 +34,13 @@
     };
   })();
 
-  const CAMPO_ATUACAO_OESTE = new Set([
-    'angical',
-    'baianopolis',
-    'barreiras',
-    'buritirama',
-    'catolandia',
-    'cotegipe',
-    'cristopolis',
-    'formosa do rio preto',
-    'mansidao',
-    'muquem do sao francisco',
-    'riachao das neves',
-    'santa rita de cassia',
-    'sao desiderio',
-    'wanderley',
-    'barra',
-    'luis eduardo magalhaes'
-  ]);
-
+  /* Critério PROVISÓRIO: município mais próximo da sede da Base Sudoeste
+   * entre as seis bases do PLANOP 002/2025. Não é uma delimitação administrativa oficial. */
   try {
-    /* A cobertura deixa de ser calculada por proximidade: vale exatamente a relação operacional acima. */
-    isCoberturaOeste = rec => CAMPO_ATUACAO_OESTE.has(norm(rec.nome));
-
-    /* Mantém a compatibilidade com trechos antigos que consultam COBERTURA_MANUAL. */
-    if (typeof COBERTURA_MANUAL !== 'undefined' && COBERTURA_MANUAL?.clear) {
-      COBERTURA_MANUAL.clear();
-      CAMPO_ATUACAO_OESTE.forEach(nome => COBERTURA_MANUAL.add(nome));
-    }
+    isCoberturaOeste = rec => rec.nearest?.id === "sudoeste";
+    if (typeof COBERTURA_MANUAL !== "undefined" && COBERTURA_MANUAL?.clear) COBERTURA_MANUAL.clear();
   } catch (e) {
-    console.warn('Falha ao aplicar o campo de atuação oficial da Base Oeste', e);
+    console.warn("Falha ao aplicar recorte geográfico estimado da Base Sudoeste", e);
   }
 
   /* Convenção operacional: monitoramento em amarelo e deslocamento em azul. */
