@@ -1,4 +1,4 @@
-/* Compatibilidade operacional + recorte geográfico estimado da Base Sudoeste + busca por ID de evento. */
+/* Compatibilidade operacional + recorte territorial por BBM da Base Sudoeste + busca por ID de evento. */
 (() => {
   /* Ponte temporária para manter o histórico consolidado antigo e usar um arquivo diário pequeno na operação atual. */
   (() => {
@@ -34,13 +34,13 @@
     };
   })();
 
-  /* Critério PROVISÓRIO: município mais próximo da sede da Base Sudoeste
-   * entre as seis bases do PLANOP 002/2025. Não é uma delimitação administrativa oficial. */
+  /* Recorte territorial exato informado pelo operador: união dos municípios
+   * do 4º, 6º, 7º, 8º e 18º BBM, conforme a Portaria 181/2023. */
   try {
-    isCoberturaOeste = rec => rec.nearest?.id === "sudoeste";
+    isCoberturaOeste = rec => CAMPO_ATUACAO_SUDOESTE.has(norm(rec.nome));
     if (typeof COBERTURA_MANUAL !== "undefined" && COBERTURA_MANUAL?.clear) COBERTURA_MANUAL.clear();
   } catch (e) {
-    console.warn("Falha ao aplicar recorte geográfico estimado da Base Sudoeste", e);
+    console.warn("Falha ao aplicar área territorial da Base Sudoeste", e);
   }
 
   /* Convenção operacional: monitoramento em amarelo e deslocamento em azul. */
