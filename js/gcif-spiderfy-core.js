@@ -155,6 +155,9 @@
       tituloBases.parentNode.insertBefore(titulo,tituloBases);
       tituloBases.parentNode.insertBefore(lista,tituloBases);
       configurarAccordion(titulo,lista);
+      lista.classList.add("open");
+      titulo.classList.add("open");
+      titulo.setAttribute("aria-expanded","true");
     }
 
     const search=document.getElementById("search");
@@ -415,8 +418,8 @@
 
   function irParaGcif(id){
     const ref=gcifNavRefs.get(id);
-    if(!ref) return;
     renderFichaRapida(id);
+    if(!ref) return; // Sem posição confirmada, a ficha segue acessível sem mover o mapa.
     const alvo=[ref.grupo.lat,ref.grupo.lng];
     const zoom=Math.max(map.getZoom(),13);
     map.setView(alvo,zoom,{animate:true});
@@ -484,7 +487,7 @@
       btn.className="gcif-nav";
       const viatura=VIATURAS.porGcif?.[id];
       const recurso=temDrone(id)?" • 🚁 Drone":"";
-      const detalhe=[g.municipio,viatura?`🚒 ${viatura}`:null].filter(Boolean).join(" • ")+recurso;
+      const detalhe=[g.municipio,viatura?`🚒 ${viatura}`:null,`${(EFETIVO_GCIFS?.[id]||[]).length} BM`].filter(Boolean).join(" • ")+recurso;
       btn.innerHTML=`<div><div class="gcif-nav-name">GCIF ${id}</div><div class="gcif-nav-meta">${detalhe}</div></div><span class="gcif-nav-status ${statusClasse(g.status)}">${g.status||"—"}</span>`;
       btn.onclick=()=>irParaGcif(id);
       box.appendChild(btn);

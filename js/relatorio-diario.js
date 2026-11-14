@@ -6,7 +6,7 @@
     efetivo: 'dados/efetivo.json',
     viaturas: 'dados/viaturas.json'
   };
-  const MIN_REPORT_DATE = '2026-08-28';
+  const MIN_REPORT_DATE = '2026-11-14';
   let selectedReportDate = null;
 
   const style = document.createElement('style');
@@ -74,7 +74,7 @@
     let overlay=document.getElementById('dailyReportOverlay');if(overlay)return overlay;
     const today=localDateKey(new Date());
     overlay=document.createElement('div');overlay.id='dailyReportOverlay';overlay.className='daily-report-overlay';
-    overlay.innerHTML=`<div class="daily-report-shell" role="dialog" aria-modal="true" aria-label="Relatório operacional diário"><div class="daily-report-top"><div class="daily-report-top-title"><b>Relatório Operacional Diário</b><span>20º BBM • Base Florestal Oeste</span></div><div class="daily-report-actions"><label class="daily-report-date">Data <input type="date" id="dailyReportDate" min="${MIN_REPORT_DATE}" max="${today}" value="${today}"></label><button type="button" class="daily-report-action" id="dailyReportRefresh">↻ Atualizar</button><button type="button" class="daily-report-action primary" id="dailyReportPrint">🖨 Imprimir / Salvar PDF</button><button type="button" class="daily-report-action" id="dailyReportClose">✕ Fechar</button></div></div><div class="daily-report-body" id="dailyReportBody"><div class="report-loading">Carregando relatório…</div></div></div>`;
+    overlay.innerHTML=`<div class="daily-report-shell" role="dialog" aria-modal="true" aria-label="Relatório operacional diário"><div class="daily-report-top"><div class="daily-report-top-title"><b>Relatório Operacional Diário</b><span>Operação Florestal • Base Sudoeste</span></div><div class="daily-report-actions"><label class="daily-report-date">Data <input type="date" id="dailyReportDate" min="${MIN_REPORT_DATE}" max="${today}" value="${today}"></label><button type="button" class="daily-report-action" id="dailyReportRefresh">↻ Atualizar</button><button type="button" class="daily-report-action primary" id="dailyReportPrint">🖨 Imprimir / Salvar PDF</button><button type="button" class="daily-report-action" id="dailyReportClose">✕ Fechar</button></div></div><div class="daily-report-body" id="dailyReportBody"><div class="report-loading">Carregando relatório…</div></div></div>`;
     document.body.appendChild(overlay);
     overlay.querySelector('#dailyReportClose').addEventListener('click',closeReport);
     overlay.querySelector('#dailyReportPrint').addEventListener('click',()=>window.print());
@@ -173,7 +173,7 @@
       const natureza=historical?'Consolidação histórica do dia selecionado, sujeita a registros retroativos':'Acompanhamento operacional diário sujeito a atualização';
 
       body.innerHTML=`
-        <div class="report-doc-head"><div><h1>RELATÓRIO OPERACIONAL DIÁRIO</h1><p><strong>20º BBM • Operação Florestal • Base Florestal Oeste</strong></p><p>Consolidação das movimentações, ocorrências, situação das GCIFs, efetivo e viaturas.</p></div><div class="report-doc-meta"><strong>Data: ${formatDateBR(dateKey)}</strong><br>Gerado em: ${escapeHtml(generated)}<br>Fonte: Mapa Operacional Base Oeste</div></div>
+        <div class="report-doc-head"><div><h1>RELATÓRIO OPERACIONAL DIÁRIO</h1><p><strong>Operação Florestal • Base Sudoeste</strong></p><p>Consolidação das movimentações, ocorrências, situação das GCIFs, efetivo e viaturas.</p></div><div class="report-doc-meta"><strong>Data: ${formatDateBR(dateKey)}</strong><br>Gerado em: ${escapeHtml(generated)}<br>Fonte: Mapa Operacional Base Oeste</div></div>
         <div class="report-meta-grid"><div class="report-meta-item"><span>Período de referência</span><strong>00h00 às ${escapeHtml(periodEnd)}${historical?' — dia encerrado':' — até o momento da geração'}</strong></div><div class="report-meta-item"><span>Natureza do documento</span><strong>${escapeHtml(natureza)}</strong></div></div>
         <div class="report-summary"><div class="report-kpi"><b>${ids.length}</b><span>GCIFs</span></div><div class="report-kpi combate"><b>${combate}</b><span>Em combate</span></div><div class="report-kpi prontidao"><b>${prontidao}</b><span>Em prontidão</span></div><div class="report-kpi monitoramento"><b>${monitoramento}</b><span>Monitoramento</span></div><div class="report-kpi deslocamento"><b>${deslocamento}</b><span>Deslocamento</span></div><div class="report-kpi"><b>${movimentos.length}</b><span>Lançamentos</span></div><div class="report-kpi"><b>${ocorrencias.length}</b><span>Ocorrências / frentes</span></div><div class="report-kpi"><b>${bmTotal}</b><span>BM total</span></div><div class="report-kpi"><b>${viaturasEmpregadas}</b><span>Viaturas vinculadas</span></div></div>
 
