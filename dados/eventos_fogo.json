@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14T01:20:25.167623Z",
+  "atualizado_em": "2026-11-14T07:39:27.315415Z",
   "eventos": [
     {
       "id_evento": 7143851,
@@ -1435,7 +1435,7 @@
     },
     {
       "id_evento": 7147331,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-10-30T02:53:00Z",
       "dt_maxima": "2026-11-13T04:27:00Z",
       "dt_ultima_visao": "2026-11-13T04:27:00Z",
@@ -4355,7 +4355,7 @@
     },
     {
       "id_evento": 7184529,
-      "status_evento": "Ativo",
+      "status_evento": "Em observação",
       "dt_minima": "2026-11-08T16:56:00Z",
       "dt_maxima": "2026-11-13T04:29:00Z",
       "dt_ultima_visao": "2026-11-13T04:29:00Z",
